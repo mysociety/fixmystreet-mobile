@@ -552,9 +552,9 @@
 
     #locating .radar {
         background: transparent url('../images/radar.svg') no-repeat top center;
-        width: 320px;
-        height: 320px;
-        background-size: 320px 320px;
+        width: 100%;
+        height: 260px;
+        background-size: 260px 260px;
     }
 
     #locating #progress {
