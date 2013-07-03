@@ -586,25 +586,25 @@
         background-size: 18px 18px;
     }
     .ui-icon-fms-account {
-        background-image: url(../i/user.png);
+        background-image: url(../images/user.png);
         background-size: 18px 18px;
     }
     .ui-icon-fms-photo-new {
-        background-image: url(../i/camera.png);
+        background-image: url(../images/camera.png);
     }
     .ui-icon-fms-photo-existing {
-        background-image: url(../i/photos.png);
+        background-image: url(../images/photos.png);
     }
 
     @media only screen and (min-resolution: 320dpi), 
     only screen and (-webkit-min-device-pixel-ratio: 2) {
         .ui-icon-fms-account {
-            background-image: url(../i/user@x2.png);
+            background-image: url(../images/user@x2.png);
         }
         .ui-icon-fms-photo-new {
-            background-image: url(../i/camera@x2.png);
+            background-image: url(../images/camera@x2.png);
         }
         .ui-icon-fms-photo-existing {
-            background-image: url(../i/photos@x2.png);
+            background-image: url(../images/photos@x2.png);
         }
     }

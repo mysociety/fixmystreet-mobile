@@ -65,35 +65,35 @@ function fixmystreet_onload() {
             backgroundGraphicZIndex: 10
         })
     });
-    var location_img = 'i/location_pin.png';
-    var location_bg_img = 'i/location_pin_shadow.png';
+    var location_img = 'images/location_pin.png';
+    var location_bg_img = 'images/location_pin_shadow.png';
     if ( typeof device !== 'undefined' &&
         (device.platform == 'Android' && parseInt(device.version, 10) > 2) ||
         (device.platform !== 'Android') ) {
-        location_img = 'i/pin.svg';
-        location_bg_img = 'i/pin_shadow.svg';
+        location_img = 'images/pin.svg';
+        location_bg_img = 'images/pin_shadow.svg';
     }
 
     pin_layer_style_map.addUniqueValueRules('default', 'size', {
         'normal': {
-            externalGraphic: "i/pin-${colour}.png",
+            externalGraphic: "images/pin-${colour}.png",
             graphicWidth: 48,
             graphicHeight: 64,
             graphicXOffset: -24,
             graphicYOffset: -64,
-            backgroundGraphic: "i/pin-shadow.png",
+            backgroundGraphic: "images/pin-shadow.png",
             backgroundWidth: 60,
             backgroundHeight: 30,
             backgroundXOffset: -7,
             backgroundYOffset: -30
         },
         'big': {
-            externalGraphic: "i/pin-${colour}-big.png",
+            externalGraphic: "images/pin-${colour}-big.png",
             graphicWidth: 78,
             graphicHeight: 105,
             graphicXOffset: -39,
             graphicYOffset: -105,
-            backgroundGraphic: "i/pin-shadow-big.png",
+            backgroundGraphic: "images/pin-shadow-big.png",
             backgroundWidth: 88,
             backgroundHeight: 40,
             backgroundXOffset: -10,
