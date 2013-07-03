@@ -11,6 +11,6 @@ www/js/config.js
 Android/bin/
 iPhone/FixMyStreet.xcodeproj/project.xcworkspace/xcuserdata
 iPhone/FixMyStreet.xcodeproj/xcuserdata
-iPhone/CordovaLib.xcodeproj/project.xcworkspace/xcuserdata
-iPhone/CordovaLib.xcodeproj/xcuserdata
+iPhone/CordovaLib/CordovaLib.xcodeproj/project.xcworkspace/xcuserdata
+iPhone/CordovaLib/CordovaLib.xcodeproj/xcuserdata
 Android/gen/
