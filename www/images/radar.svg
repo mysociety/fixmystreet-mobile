@@ -64,27 +64,6 @@
      	</g>
 
      </g>
-<g id="scanline">
-    <animateTransform attributeName="transform" type="rotate" from="0 320 320" to="360 320 320" dur="8s" repeatDur="indefinite"/>
-	<g>
-		<circle style="opacity:0.02;" cx="320" cy="320" r="320"/>
-		<g>
-			<g>
-				<g>
-					
-						<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-6182.6855" y1="-2381.0669" x2="-6296.6851" y2="-2342.0669" gradientTransform="matrix(7.605851e-04 -1 1 7.605851e-04 2534.6816 -5869.9629)">
-						<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.2"/>
-						<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
-					</linearGradient>
-					<path style="fill:url(#SVGID_2_);" d="M62.248,508.312l258.947-188.126L1.194,319.943
-						C1.141,390.377,23.799,455.464,62.248,508.312z"/>
-				</g>
-			</g>
-			
-				<line style="opacity:0.5;fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;" x1="1.194" y1="319.943" x2="321.195" y2="320.186"/>
-		</g>
-	</g>
-</g>
 <g id="logo">
 	<g>
 		<path style="fill:#FFECB5;" d="M320.005,208.692c-61.608,0-111.71,49.705-111.71,110.799s50.102,110.816,111.71,110.816
