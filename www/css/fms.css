@@ -350,6 +350,12 @@
         margin-top: 0.5em;
     }
 
+/* home screen */
+
+    #front-page div[data-role='content'] {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
 /* map */
 
     #map_box{
