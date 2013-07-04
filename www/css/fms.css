@@ -355,13 +355,6 @@
     #map_box{
         background-color: #534741;
         background-image: url('../images/mapbg.png');
-    }
-
-    #map{
-        opacity: 0.85;
-    }
-
-    .mapbox{
         position:absolute;
         top: 45px, left: 0, right: 0, bottom: 0;
         padding: 0px;
@@ -370,7 +363,8 @@
         width: 100%;
     }
 
-    .mapbox #map {
+    #map{
+        opacity: 0.85;
         width: 100%;
         height: 100%;
     }
