@@ -57,7 +57,9 @@
                 } else if ( FMS.currentPosition ) {
                     var info = { coordinates: FMS.currentPosition };
                     FMS.currentPosition = null;
-                    this.setMapPosition(info);
+                    if ( !fixmystreet.map ) {
+                        this.setMapPosition(info);
+                    }
                     this.displayButtons(false);
                     this.listenTo(FMS.locator, 'gps_current_position', this.positionUpdate);
                 } else {
