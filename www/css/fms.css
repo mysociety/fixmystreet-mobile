@@ -1,21 +1,104 @@
+/* element styles */
     *{
         -webkit-user-select: none;
         box-sizing:border-box;
     }
+
     label{
         display:none;
     }
-    input, textarea{
+
+    input,
+    select,
+    textarea{
         border:none;
         width:100%;
         padding: 0.5em;
         border-radius:0;
+        -webkit-border-radius:0;
     }
 
-    .ui-icon-plus, .ui-icon-minus, .ui-icon-delete, .ui-icon-arrow-r, .ui-icon-arrow-l, .ui-icon-arrow-u, .ui-icon-arrow-d, .ui-icon-check, .ui-icon-gear, .ui-icon-refresh, .ui-icon-forward, .ui-icon-back, .ui-icon-grid, .ui-icon-star, .ui-icon-alert, .ui-icon-info, .ui-icon-home, .ui-icon-bars, .ui-icon-edit, .ui-icon-search, .ui-icon-searchfield::after, .ui-icon-checkbox-off, .ui-icon-checkbox-on, .ui-icon-radio-off, .ui-icon-radio-on {
+    input,
+    textarea,
+    select,
+    a,
+    .ui-btn {
+        pointer-events: all;
+    }
+
+    input,
+    textarea,
+    select {
+        -webkit-user-select: auto;
+    }
+
+    textarea{
+        min-height: 10em;
+    }
+
+    select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        background: none;
+        background-color: #fff;
+
+        background-image: url(../images/dropdown-arrow.png);
+        background-image: url(../images/dropdown-arrow.svg);
+        background-size: auto 35%;
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+
+/* jquery mobile overrides */
+    .ui-icon-plus,
+    .ui-icon-minus,
+    .ui-icon-delete,
+    .ui-icon-arrow-r,
+    .ui-icon-arrow-l,
+    .ui-icon-arrow-u,
+    .ui-icon-arrow-d,
+    .ui-icon-check,
+    .ui-icon-gear,
+    .ui-icon-refresh,
+    .ui-icon-forward,
+    .ui-icon-back,
+    .ui-icon-grid,
+    .ui-icon-star,
+    .ui-icon-alert,
+    .ui-icon-info,
+    .ui-icon-home,
+    .ui-icon-bars,
+    .ui-icon-edit,
+    .ui-icon-search,
+    .ui-icon-searchfield::after,
+    .ui-icon-checkbox-off,
+    .ui-icon-checkbox-on,
+    .ui-icon-radio-off,
+    .ui-icon-radio-on {
         background-size: 810px 54px;
     }
 
+    .ui-input-search {
+        background-image: none;
+        background-color: rgba(255,255,255,0.95);
+    }
+
+    .ui-corner-all,
+    .ui-btn-corner-all {
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+    }
+    .ui-icon {
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+        background-color: rgba(0,0,0,0);
+    }
+    .ui-icon-shadow {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
     .ui-li .ui-btn-up-c {
         border-top-width: 0px;
         border-bottom-width: 0px;
@@ -39,9 +122,76 @@
     {
         border: none; border-width: 0;
     }
-    textarea{
-        min-height: 10em;
+
+    .ui-loader {
+        height: 100%;
+        width: 100%;
+        top: 0px !important;
+        left: 0px;
+        margin: 0px;
+        opacity: .58;
+        border-radius: 0px;
     }
+
+    .ui-loader .ui-icon-loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -23px;
+        margin-top: -23px;
+        width: 46px;
+        height: 46px;
+        background-size: 46px 46px;
+        opacity: 1;
+        background: url('images/ajax-loader.gif');
+    }
+
+    .ui-header .ui-title,
+    .ui-footer .ui-title
+    {
+        text-shadow:none;
+    }
+
+    .ui-page {
+        background-image: none;
+        background-color: rgba(0,0,0,0);
+    }
+
+/* all app classes and selectors */
+
+    /* This is a bit of hackery as without it jquerymobile never sets the page
+     * to be other than display: none. Should work out why and fix at source */
+    div[data-role="page"] {
+        display: block !important;
+    }
+
+    div.jquerymobile {
+        pointer-events: none;
+    }
+
+    #drafts,
+    div[data-role='content'] {
+        position: relative;
+        width: 95%;
+        margin: 20px auto;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .notopmargin {
+        margin-top: 0em;
+    }
+
+    .nodisplay {
+        display: none;
+    }
+
+    #drafts h2,
+    div[data-role='content'] p.top,
+    div[data-role='content'] h2 {
+        margin-top: 0px;
+    }
+
+/* form styles */
     .inputcard {
         font-size: 16px;
         padding:0;
@@ -51,8 +201,6 @@
         margin: 0px;
     }
     .gmailstyletest{
-        /*width:100%;*/
-        /*max-width:100%;*/
         font-size: 16px;
         padding:0;
         border: none;
@@ -96,99 +244,48 @@
             }
     }
 
-    select{
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        
-        width:100%;
-        border:none;
-        background:none;
-        background-color: #fff;
-        
-        background-image: url(../images/dropdown-arrow.png);
-        background-image: url(../images/dropdown-arrow.svg);
-        background-size: auto 35%;
-        background-repeat: no-repeat;
-        background-position: 95% 50%;
-        
-        padding: 0.5em;
-        border-radius:0;
-        -webkit-border-radius:0;
-    }
     select.noselection{
         color: #777;
     }
 
-    #details-extra-page div[data-role="content"] {
-        height: auto !important;
+/* form errors */
+
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color:    #777;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    #777;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    #777;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color:    #777;
     }
 
-    #category_meta {
-        margin: 0px 15px 15px 15px;
+    .error::-webkit-input-placeholder { /* WebKit browsers */
+        color:    red;
+    }
+    .error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    red;
+    }
+    .error::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    red;
+    }
+    .error:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color:    red;
+    }
+    input.form-error,
+    select.error {
+        border: 1px solid red;
     }
 
-    #category_meta h4 {
-        display: none;
+    div.form-error {
+        color: red;
     }
-
-    #category_meta label,
-    #category_meta input,
-    #category_meta textarea,
-    #category_meta select {
-        display: block;
-    }
-
-    #category_meta label:first {
-        padding-top: 1em;
-    }
-    #category_meta label {
-        padding-top: 0.5em;
-    }
-
-    h2{
-        /*padding: 0 0.25em;*/
-    }
-
-    .notopmargin {
-        margin-top: 0em;
-    }
-
-    #drafts,
-    div[data-role='content'] {
-        position: relative;
-        width: 95%;
-        margin: 20px auto;
-        background-color: rgba(255, 255, 255, 0.8);
-    }
-
-    #drafts {
-        padding: 15px;
-        pointer-events: none;
-    }
-
-    #around-page div[data-role='content'] {
-        position: static;
-        margin: auto;
-        width: auto;
-        height: auto;
-        background-color: rgba(255, 255, 255, 0);
-    }
-
+/* in progress report screen */
     #existing div[data-role='content'] {
         background-color: white;
-    }
-
-    #details-page div[data-role='content'] {
-        position: static;
-        padding: 0px;
-        margin-bottom: 0px;
-    }
-
-    #drafts h2,
-    div[data-role='content'] p.top,
-    div[data-role='content'] h2 {
-        margin-top: 0px;
     }
 
     #existing h3 {
@@ -253,17 +350,15 @@
         margin-top: 0.5em;
     }
 
-    .frontpage-menu{
-        padding: 0px;
+/* map */
+
+    #map_box{
+        background-color: #534741;
+        background-image: url('../images/mapbg.png');
     }
 
-    #front-howto {
-        padding: 0.3em;
-        background-color: rgba(255,255,255,0.8);
-    }
-
-    .nodisplay {
-        display: none;
+    #map{
+        opacity: 0.85;
     }
 
     .mapbox{
@@ -293,79 +388,10 @@
         text-align:center;
         background-color: rgba(255,255,255,0.5);
     }
+
     .olControlAttribution img{
         max-height: 15px;
         vertical-align:middle;
-    }
-
-    .map-bottom-btn {
-        position: absolute;
-        bottom: 20px;
-        left: 15px;
-        right: 15px;
-    }
-
-    .bottom-btn {
-        position: absolute;
-        bottom: 5px;
-        left: 15px;
-        right: 15px;
-    }
-
-    #confirm,
-    #confirm-map,
-    #reposition,
-    #view-my-reports,
-    #login-options,
-    #mark-here {
-        display: block;
-        z-index: 3000;
-    }
-    #mark-here .ui-btn-text{
-        font-size:1.2em;
-        padding: 0.5em 0;
-        display:block;
-    }
-
-    #reposition {
-        bottom: 65px;
-    }
-
-    #view-my-reports,
-    #login-options a.loggedin
-    {
-        text-align:left;
-        font-weight:normal;
-    }
-    #view-my-reports strong{
-        display:block;
-        margin-bottom: 0.25em;
-    }
-    #view-my-reports .draft_count{
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        background-color: rgb(186,21,28);
-        padding: 0 0.4em;
-        color: #fff;
-        text-shadow: none;
-        font-weight: bold;
-        border: 1px solid #ffea3d;
-        min-width: 1em;
-        display: inline-block;
-    }
-
-    #relocate {
-        display: block;
-        height: 40px;
-        width: 40px;
-        padding: 5px;
-        margin: 0px;
-        background-color: rgba(248,248,248,0.8);
-    }
-
-    #locating p {
-        margin-left: 15px;
-        margin-right: 15px;
     }
 
     #OpenLayers_Control_Crosshairs_crosshairs {
@@ -375,178 +401,17 @@
     }
 
     /* it seems the mobile safari doesn't support resolution */
-    @media only screen and (min-resolution: 320dpi), 
+    @media only screen and (min-resolution: 320dpi),
     only screen and (-webkit-min-device-pixel-ratio: 2) {
         #OpenLayers_Control_Crosshairs_crosshairs {
             background-image: url(../images/crosshairs@x2.png);
         }
     }
 
-    #login-options a.loggedin .signout{
-        display:block;
-
-    }
-    #map_box{
-        background-color: #534741;
-        background-image: url('../images/mapbg.png');
-    }
-    #map{
-        opacity: 0.85;
-    }
-
-    ::-webkit-input-placeholder { /* WebKit browsers */
-        color:    #777;
-    }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color:    #777;
-    }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color:    #777;
-    }
-    :-ms-input-placeholder { /* Internet Explorer 10+ */
-        color:    #777;
-    }
-    
-    
-    .error::-webkit-input-placeholder { /* WebKit browsers */
-        color:    red;
-    }
-    .error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color:    red;
-    }
-    .error::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color:    red;
-    }
-    .error:-ms-input-placeholder { /* Internet Explorer 10+ */
-        color:    red;
-    }
-    input.form-error,
-    select.error {
-        border: 1px solid red;
-    }
-
-    div.form-error {
-        color: red;
-    }
-
-    div.photo {
-        margin: 0.1em 0em;
-        text-align: center;
-    }
-
-    img.small {
-        min-height: 45%;
-        max-width: 85%;
-        max-height: 70%;
-    }
-
-    #details-page div[data-role="content"] {
-        background-color: rgba(255, 255, 255, 0) !important;
-    }
-
-    #errors {
-        display: none;
-        margin-bottom: 1em;
-    }
-
-    #errors ul {
-        padding: 0px 0px 0px 20px;
-    }
-
-    #errors li.plain {
-        font-weight: bold;
-        margin-left: -20px;
-        list-style: none;
-    }
-
-    #password-options {
-        width: 100%;
-    }
-
-    #password-options > div {
-        width: 100%;
-    }
-
-    #password-options a {
-        border-radius: 0px !important;
-        width: 50%;
-    }
-
-    #password-options .ui-btn-inner {
-        padding: 0.6em 0px;
-    }
-
-    .ui-loader {
-        height: 100%;
-        width: 100%;
-        top: 0px !important;
-        left: 0px;
-        margin: 0px;
-        opacity: .58;
-        border-radius: 0px;
-    }
-
-    .ui-loader .ui-icon-loading {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -23px;
-        margin-top: -23px;
-        width: 46px;
-        height: 46px;
-        background-size: 46px 46px;
-        opacity: 1;
-        background: url('images/ajax-loader.gif');
-    }
-    
-    .ui-header .ui-title, 
-    .ui-footer .ui-title
-    {
-        text-shadow:none;
-    }
-
-    .ui-page {
-        background-image: none;
-        background-color: rgba(0,0,0,0);
-    }
-
-    /* This is a bit of hackery as without it jquerymobile never sets the page
-     * to be other than display: none. Should work out why and fix at source */
-    div[data-role="page"] {
-        display: block !important;
-    }
-
-    div.jquerymobile {
-        pointer-events: none;
-    }
-
-    input,
-    textarea,
-    select,
-    a,
-    .ui-btn {
-        pointer-events: all;
-    }
-
-    input,
-    textarea,
-    select {
-        -webkit-user-select: auto;
-    }
-
-    .ui-input-search {
-        background-image: none;
-        background-color: rgba(255,255,255,0.95);
-    }
-
-    .ui-corner-all,
-    .ui-btn-corner-all {
-        -webkit-border-radius: 0px;
-        border-radius: 0px;
-    }
+/* locating screen */
 
     #locating {
-        position: absolute; 
+        position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -577,15 +442,121 @@
         height: 13px;
     }
 
-    .ui-icon {
-        -webkit-border-radius: 0px;
-        border-radius: 0px;
-        background-color: rgba(0,0,0,0);
+    #locating p {
+        margin-left: 15px;
+        margin-right: 15px;
     }
-    .ui-icon-shadow {
-        -webkit-box-shadow: none;
-        box-shadow: none;
+
+/* around screen */
+    #around-page div[data-role='content'] {
+        position: static;
+        margin: auto;
+        width: auto;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0);
     }
+
+    .frontpage-menu{
+        padding: 0px;
+    }
+
+    #front-howto {
+        padding: 0.3em;
+        background-color: rgba(255,255,255,0.8);
+    }
+
+    .map-bottom-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 15px;
+        right: 15px;
+    }
+
+    .bottom-btn {
+        position: absolute;
+        bottom: 5px;
+        left: 15px;
+        right: 15px;
+    }
+
+    #confirm,
+    #confirm-map,
+    #reposition,
+    #view-my-reports,
+    #login-options,
+    #mark-here {
+        display: block;
+        z-index: 3000;
+    }
+
+    #mark-here .ui-btn-text{
+        font-size:1.2em;
+        padding: 0.5em 0;
+        display:block;
+    }
+
+    #reposition {
+        bottom: 65px;
+    }
+
+    #view-my-reports,
+    #login-options a.loggedin
+    {
+        text-align:left;
+        font-weight:normal;
+    }
+
+    #view-my-reports strong{
+        display:block;
+        margin-bottom: 0.25em;
+    }
+
+    #view-my-reports .draft_count{
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-color: rgb(186,21,28);
+        padding: 0 0.4em;
+        color: #fff;
+        text-shadow: none;
+        font-weight: bold;
+        border: 1px solid #ffea3d;
+        min-width: 1em;
+        display: inline-block;
+    }
+
+    #login-options a.loggedin .signout{
+        display:block;
+
+    }
+
+    #relocate {
+        display: block;
+        height: 40px;
+        width: 40px;
+        padding: 5px;
+        margin: 0px;
+        background-color: rgba(248,248,248,0.8);
+    }
+
+/* drafts screen */
+
+    #drafts {
+        padding: 15px;
+        pointer-events: none;
+    }
+
+/* photo screen */
+    div.photo {
+        margin: 0.1em 0em;
+        text-align: center;
+    }
+
+    img.small {
+        min-height: 45%;
+        max-width: 85%;
+        max-height: 70%;
+    }
+
     .ui-icon-fms-photo-existing,
     .ui-icon-fms-photo-new {
         position: static;
@@ -614,4 +585,59 @@
         .ui-icon-fms-photo-existing {
             background-image: url(../images/photos@x2.png);
         }
+    }
+/* details screen */
+
+    #details-page div[data-role="content"] {
+        background-color: rgba(255, 255, 255, 0) !important;
+    }
+
+    #details-page div[data-role='content'] {
+        position: static;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+
+/* open311 extra fields screen */
+
+    #details-extra-page div[data-role="content"] {
+        height: auto !important;
+    }
+    #category_meta {
+        margin: 0px 15px 15px 15px;
+    }
+
+    #category_meta h4 {
+        display: none;
+    }
+
+    #category_meta label,
+    #category_meta input,
+    #category_meta textarea,
+    #category_meta select {
+        display: block;
+    }
+
+    #category_meta label:first {
+        padding-top: 1em;
+    }
+    #category_meta label {
+        padding-top: 0.5em;
+    }
+
+/* submission pages */
+
+    #errors {
+        display: none;
+        margin-bottom: 1em;
+    }
+
+    #errors ul {
+        padding: 0px 0px 0px 20px;
+    }
+
+    #errors li.plain {
+        font-weight: bold;
+        margin-left: -20px;
+        list-style: none;
     }
