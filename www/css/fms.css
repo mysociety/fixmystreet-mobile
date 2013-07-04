@@ -186,6 +186,7 @@
     }
 
     #drafts h2,
+    div[data-role='content'] p.top,
     div[data-role='content'] h2 {
         margin-top: 0px;
     }
@@ -440,6 +441,7 @@
 
     #errors {
         display: none;
+        margin-bottom: 1em;
     }
 
     #errors ul {
