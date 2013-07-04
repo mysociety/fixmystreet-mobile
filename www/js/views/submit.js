@@ -149,6 +149,7 @@
             onClickSetPassword: function(e) {
                 e.preventDefault();
                 if ( this.validate() ) {
+                    this.model.set('submit_clicked', 'submit_register');
                     FMS.currentUser.set('email', $('#form_email').val());
                     this.navigate( 'submit-set-password' );
                 }
@@ -350,7 +351,9 @@
             onClickContinue: function(e) {
                 e.preventDefault();
                 $('#continue').focus();
-                this.model.set('submit_clicked', 'submit_sign_in');
+                if ( ! this.model.get('submit_clicked') ) {
+                    this.model.set('submit_clicked', 'submit_sign_in');
+                }
                 FMS.currentUser.set('password', $('#form_password').val());
                 this.navigate( this.next );
             }
