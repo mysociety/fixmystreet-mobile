@@ -189,8 +189,7 @@
                 'pagebeforeshow': 'beforeDisplay',
                 'pageshow': 'afterDisplay',
                 'vclick .ui-btn-left': 'onClickButtonPrev',
-                'vclick #send_confirm': 'onClickSubmit',
-                'vclick #set_password': 'onClickPassword'
+                'vclick #send_confirm': 'onClickSubmit'
             },
 
             initialize: function() {
@@ -223,18 +222,6 @@
                 }
 
                 return isValid;
-            },
-
-            onClickPassword: function() {
-                if ( this.validate() ) {
-                    this.model.set('submit_clicked', 'submit_register');
-                    FMS.currentUser.set('name', $('#form_name').val());
-                    FMS.currentUser.set('phone', $('#form_phone').val());
-                    if ( this.model.get('title_list') && this.model.get('title_list').length > 0 ) {
-                        FMS.currentUser.set('title', $('#form_title').val());
-                    }
-                    this.navigate( 'submit-set-password' );
-                }
             },
 
             beforeSubmit: function() {
