@@ -180,6 +180,7 @@
                         fixmystreet.bbox_strategy.activate();
                         fixmystreet.report_location.setVisibility(false);
                         fixmystreet.markers.setVisibility(true);
+                        fixmystreet.select_feature.deactivate();
                         fixmystreet.select_feature.activate();
                     }
                 }
