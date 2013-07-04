@@ -130,12 +130,16 @@
             },
 
             updateCurrentReport: function() {
-                if ( $('#form_category').val() && $('#form_title').val() && $('#form_detail').val() ) {
+                var category = $('#form_category').val();
+                if ( category === '-- Pick a category --' ) {
+                    category = '';
+                }
+                if ( category && $('#form_title').val() && $('#form_detail').val() ) {
                     $('#next').addClass('page_complete_btn');
                 } else {
                     $('#next').removeClass('page_complete_btn');
                 }
-                this.model.set('category', $('#form_category').val());
+                this.model.set('category', category);
                 this.model.set('title', $('#form_title').val());
                 this.model.set('details', $('#form_detail').val());
                 FMS.saveCurrentDraft();
