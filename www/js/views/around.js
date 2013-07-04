@@ -54,6 +54,7 @@
                     this.displayButtons(true);
                     this.setReportPosition({ lat: this.model.get('lat'), lon: this.model.get('lon') }, true);
                     this.listenTo(FMS.locator, 'gps_current_position', this.positionUpdate);
+                    FMS.locator.trackPosition();
                 } else if ( FMS.currentPosition ) {
                     var info = { coordinates: FMS.currentPosition };
                     FMS.currentPosition = null;
@@ -62,6 +63,7 @@
                     }
                     this.displayButtons(false);
                     this.listenTo(FMS.locator, 'gps_current_position', this.positionUpdate);
+                    FMS.locator.trackPosition();
                 } else {
                     this.locate();
                     this.displayButtons(false);
