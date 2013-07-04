@@ -53,7 +53,8 @@
                 }
             },
 
-            onClickLogout: function() {
+            onClickLogout: function(e) {
+                e.preventDefault();
                 var that = this;
                 $.ajax( {
                     url: CONFIG.FMS_URL + '/auth/ajax/sign_out',
