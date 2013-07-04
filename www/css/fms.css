@@ -431,7 +431,7 @@
     img.small {
         min-height: 45%;
         max-width: 85%;
-        max-height: 45%;
+        max-height: 70%;
     }
 
     #details-page div[data-role="content"] {
