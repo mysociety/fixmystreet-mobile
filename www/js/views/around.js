@@ -210,9 +210,23 @@
                 if ( this.model.isPartial() ) {
                     FMS.clearCurrentDraft();
                 } else {
+                    // it's not partial but we've created a draft anyway so
+                    // delete it
+                    if ( this.model.id ) {
+                        var del = FMS.removeDraft( this.model.id, true );
+                        var that = this;
+                        del.done( function() { that.decrementDraftCount(); } );
+                    }
                     this.model.set('lat', null);
                     this.model.set('lon', null);
                 }
+            },
+
+            decrementDraftCount: function() {
+                var counter = $('#view-my-reports .draft_count');
+                var count = counter.text();
+                count--;
+                counter.text(count);
             },
 
             onClickReposition: function(e) {
