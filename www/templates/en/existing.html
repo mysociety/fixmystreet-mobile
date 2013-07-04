@@ -8,15 +8,17 @@
     <% } %>
 
         <div class="meta">
+        <p>
         <% if (lat) { %>
-            <span>Saved with a location</span>
+            Saved with a location
         <% } %>
 
         <% if ( category && category != '-- Pick a category --' ) { %>
-            <span> in the <%= category %> category</span>
+            in the <%= category %> category
         <% } %>
+        </p>
 
-        <span> <% print( moment( created ).fromNow() ) %></span>
+        <p><% print( moment( created ).fromNow() ) %></p>
         </div>
 
         <% if ( file ) { %>

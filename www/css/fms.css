@@ -205,6 +205,11 @@
         margin-bottom: 0.5em;
     }
 
+    #existing_report div.meta p {
+        margin-top: 0em;
+        margin-bottom: 0em;
+    }
+
     #existing_report div.photo {
         text-align: right;
         float: right;
