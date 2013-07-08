@@ -546,6 +546,49 @@
         background-color: rgba(248,248,248,0.8);
     }
 
+    #pc {
+        padding-left: 0.2em;
+        border-left: 1px solid #F6BE41;
+    }
+
+    #postcodeForm .ui-icon-searchfield::after {
+        background-color: rgba(0,0,0,0);
+        height: 30px;
+        width: 30px;
+        left: 0px;
+        margin-top: -14px;
+        background-size: 30px 30px;
+        background-position: 0px 0px;
+        background-image: url(../images/search.png);
+    }
+    @media only screen and (min-resolution: 320dpi),
+    only screen and (-webkit-min-device-pixel-ratio: 2) {
+        #postcodeForm .ui-icon-searchfield::after {
+            background-image: url(../images/search@x2.png);
+        }
+    }
+
+    #postcodeForm .ui-btn {
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    #postcodeForm .ui-btn-up-c,
+    #postcodeForm .ui-btn-down-c {
+        background-image: none;
+        background-color: rgba(0,0,0,0);
+    }
+
+    #postcodeForm .ui-icon {
+        background-image: url(images/icons-18-black.png);
+    }
+    @media only screen and (min-resolution: 320dpi),
+    only screen and (-webkit-min-device-pixel-ratio: 2) {
+        #postcodeForm .ui-icon {
+            background-image: url(images/icons-36-black.png);
+        }
+    }
 /* drafts screen */
 
     #drafts {
