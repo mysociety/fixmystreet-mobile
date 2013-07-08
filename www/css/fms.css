@@ -553,6 +553,11 @@
         pointer-events: none;
     }
 
+    #drafts li.ui-li-has-alt > a .ui-btn {
+        border: 1px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
     #drafts li.ui-li-has-alt > a .ui-icon {
         background-image: url(images/icons-18-black.png);
     }
@@ -561,6 +566,11 @@
         #drafts li.ui-li-has-alt > a .ui-icon {
             background-image: url(images/icons-36-black.png);
         }
+    }
+
+    #drafts li.ui-btn-down-c,
+    #drafts li.ui-btn-up-c {
+        border: none;
     }
 
 /* photo screen */
