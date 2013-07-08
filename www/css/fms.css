@@ -117,6 +117,14 @@
     {
         background-image: url(images/icons-18-white.png);
     }
+    @media only screen and (min-resolution: 320dpi),
+    only screen and (-webkit-min-device-pixel-ratio: 2) {
+        .ui-icon.ui-icon-checkbox-on,
+        .ui-icon.ui-icon-checkbox-off
+        {
+            background-image: url(images/icons-36-white.png);
+        }
+    }
     .ui-controlgroup-controls .ui-checkbox label,
     .ui-controlgroup-controls .ui-checkbox label
     {
