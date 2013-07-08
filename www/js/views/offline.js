@@ -17,6 +17,7 @@
                 'vclick #id_existing': 'addPhoto',
                 'vclick #id_del_photo_button': 'deletePhoto',
                 'vclick #locate': 'locate',
+                'vclick #locate_cancel': 'onClickCancel',
                 'blur input': 'toggleNextButton',
                 'blur textarea': 'toggleNextButton'
             },
@@ -104,6 +105,10 @@
                     $('#display_photo').hide();
                     $('#add_photo').show();
                 });
+            },
+
+            onClickCancel: function() {
+                this.finishedLocating();
             },
 
             onClickButtonNext: function() {
