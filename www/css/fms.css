@@ -52,6 +52,11 @@
     }
 
 /* jquery mobile overrides */
+    .ui-mobile-viewport {
+        background-color: #534741;
+        background-image: url('../images/mapbg.png');
+    }
+
     .ui-icon-plus,
     .ui-icon-minus,
     .ui-icon-delete,
@@ -379,8 +384,7 @@
 /* map */
 
     #map_box{
-        background-color: #534741;
-        background-image: url('../images/mapbg.png');
+        background-color: rgba(0,0,0,0);
         position:absolute;
         top: 45px, left: 0, right: 0, bottom: 0;
         padding: 0px;
