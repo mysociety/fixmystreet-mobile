@@ -553,6 +553,16 @@
         pointer-events: none;
     }
 
+    #drafts li.ui-li-has-alt > a .ui-icon {
+        background-image: url(images/icons-18-black.png);
+    }
+    @media only screen and (min-resolution: 320dpi),
+    only screen and (-webkit-min-device-pixel-ratio: 2) {
+        #drafts li.ui-li-has-alt > a .ui-icon {
+            background-image: url(images/icons-36-black.png);
+        }
+    }
+
 /* photo screen */
     div.photo {
         margin: 0.1em 0em;
