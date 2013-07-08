@@ -125,6 +125,18 @@
             background-image: url(images/icons-36-white.png);
         }
     }
+
+    div[data-role='header'] .ui-icon
+    {
+        background-image: url(images/icons-18-black.png);
+    }
+    @media only screen and (min-resolution: 320dpi),
+    only screen and (-webkit-min-device-pixel-ratio: 2) {
+        div[data-role='header'] .ui-icon
+        {
+            background-image: url(images/icons-36-black.png);
+        }
+    }
     .ui-controlgroup-controls .ui-checkbox label,
     .ui-controlgroup-controls .ui-checkbox label
     {
@@ -634,7 +646,7 @@
         float: left;
         background-size: 18px 18px;
     }
-    .ui-icon-fms-account {
+    div[data-role='header'] .ui-icon-fms-account {
         background-image: url(../images/user.png);
         background-size: 18px 18px;
     }
@@ -647,7 +659,7 @@
 
     @media only screen and (min-resolution: 320dpi), 
     only screen and (-webkit-min-device-pixel-ratio: 2) {
-        .ui-icon-fms-account {
+        div[data-role='header'] .ui-icon-fms-account {
             background-image: url(../images/user@x2.png);
         }
         .ui-icon-fms-photo-new {
