@@ -23,7 +23,7 @@
                 } else {
                     desc += 'Untitled draft';
                 }
-                desc += ', ' + this.createdDate();
+                desc += '<br><small>' + moment.utc( this.get('created') ).fromNow() + '</small>';
 
                 return desc;
             },

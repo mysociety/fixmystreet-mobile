@@ -634,6 +634,55 @@
         border: none;
     }
 
+    #drafts .use_report {
+        text-align: left;
+        margin-left: 50px;
+    }
+
+    #drafts .with_photo.with_location .use_report {
+        margin-left: 0px;
+        padding-left: 5px;
+    }
+
+    #drafts li.with_photo.with_location:before {
+        content: url(../images/photos.png);
+        background-image: url(../images/pin.png);
+        background-size: 18px 18px;
+        background-repeat: no-repeat;
+        background-position: center left;
+        display: block;
+        float: left;
+        height: 18px;
+        width: 36px;
+        padding-left: 18px;
+        margin-top: 1.5em;
+        margin-left: 5px;
+    }
+
+    #drafts li.with_photo:before {
+        content: url(../images/photos.png);
+        display: block;
+        float: left;
+        height: 18px;
+        width: 18px;
+        margin-top: 1.5em;
+        margin-left: 5px;
+    }
+
+    #drafts li.with_location:before {
+        content: '';
+        background-image: url(../images/pin.png);
+        display: block;
+        float: left;
+        background-size: 18px 18px;
+        background-repeat: no-repeat;
+        background-position: center left;
+        height: 18px;
+        width: 18px;
+        margin-top: 1.5em;
+        margin-left: 5px;
+    }
+
 /* photo screen */
     div.photo {
         margin: 0.1em 0em;
