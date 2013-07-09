@@ -13,6 +13,10 @@
                 'vclick #discard': 'discardReport'
             },
 
+            setHeight: function(content, height) {
+                content.css( 'min-height', content + 'px');
+            },
+
             useReport: function(e) {
                 e.preventDefault();
                 FMS.setCurrentDraft(this.model);
