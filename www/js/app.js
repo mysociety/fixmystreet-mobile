@@ -90,9 +90,11 @@ var tpl = {
 
         saveCurrentDraft: function() {
             FMS.router.pause();
-            FMS.allDrafts.add( FMS.currentDraft );
-            FMS.currentDraft.save();
-            localStorage.currentDraftID = FMS.currentDraft.id;
+            if ( FMS.currentDraft.isPartial() ) {
+                FMS.allDrafts.add( FMS.currentDraft );
+                FMS.currentDraft.save();
+                localStorage.currentDraftID = FMS.currentDraft.id;
+            }
         },
 
         loadCurrentDraft: function() {
