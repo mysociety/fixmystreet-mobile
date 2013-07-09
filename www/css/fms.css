@@ -238,6 +238,7 @@
         border:none;
         border-bottom: 1px solid #ccc;
     }
+    .inputcard > div.noborder,
     .gmailstyletest > div.noborder {
         border:none;
     }
