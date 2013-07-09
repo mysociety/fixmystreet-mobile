@@ -42,7 +42,11 @@
                 viewHeight = $(window).height(),
                 contentHeight = viewHeight - header.outerHeight() - this.bottomMargin;
 
-                content.height( contentHeight - top );
+                this.setHeight( content, contentHeight - top );
+            },
+
+            setHeight: function(content, height) {
+                content.height(height);
             },
 
             afterRender: function() {},

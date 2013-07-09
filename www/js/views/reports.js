@@ -26,6 +26,10 @@
                 del.fail( function() { that.onRemoveDraft(el); } );
             },
 
+            setHeight: function(content, height) {
+                content.css( 'min-height', content + 'px');
+            },
+
             useReport: function(e) {
                 e.preventDefault();
                 var el = $(e.target);
