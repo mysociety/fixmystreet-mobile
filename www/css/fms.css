@@ -339,8 +339,9 @@
         margin: 0em 0em 0.5em 0em;
     }
 
-    #existing_report div.photo img.small {
+    #existing_report img.small {
         width: 200px;
+        min-height: 0px;
     }
 
     /* taken and modified from http://www.mobify.com/blog/multiline-ellipsis-in-pure-css/ */
