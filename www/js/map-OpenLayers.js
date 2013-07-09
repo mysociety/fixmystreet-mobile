@@ -207,7 +207,7 @@ function show_map(event) {
             footer = $('[data-role=footer]').height(),
             content = screen - header - footer;
         $('#map_box').css({
-            position: 'absolute',
+            position: 'fixed',
             top: 45, left: 0, right: 0, bottom: 0,
             height: content,
             margin: 0
