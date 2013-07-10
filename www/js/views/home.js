@@ -23,6 +23,7 @@
             },
 
             afterDisplay: function() {
+                $('#load-screen').hide();
                 if ( FMS.isOffline ) {
                     this.navigate( 'offline' );
                 } else if ( FMS.currentDraft && (

@@ -436,6 +436,7 @@
 
 /* locating screen */
 
+    #load-screen,
     #locating {
         position: absolute;
         top: 0;
@@ -448,6 +449,7 @@
         padding-top:40px;
     }
 
+    #load-screen .radar,
     #locating .radar {
         background: transparent url('../images/radar.svg') no-repeat top center;
         width: 100%;
