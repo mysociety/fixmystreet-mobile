@@ -476,6 +476,11 @@
         margin-right: 15px;
     }
 
+    #locating .ui-shadow {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
 /* around screen */
     #around-page div[data-role='content'] {
         position: static;
