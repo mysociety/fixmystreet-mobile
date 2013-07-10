@@ -30,8 +30,10 @@
     NSInteger _loadCount;
     NSInteger _state;
     NSInteger _curLoadToken;
+    NSInteger _loadStartPollCount;
 }
 
 - (id)initWithDelegate:(NSObject <UIWebViewDelegate>*)delegate;
+- (BOOL)request:(NSURLRequest*)newRequest isFragmentIdentifierToRequest:(NSURLRequest*)originalRequest;
 
 @end

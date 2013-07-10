@@ -13,6 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDC13BBADB100FB74C0 /* Localizable.strings */; };
 		1F766FE213BBADB100FB74C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDF13BBADB100FB74C0 /* Localizable.strings */; };
+		2425571F178DA08700E2E208 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2425571E178DA08700E2E208 /* ImageIO.framework */; };
+		24255721178DA08D00E2E208 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24255720178DA08D00E2E208 /* OpenAL.framework */; };
 		244F330B1774574C00699B27 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 244F330A1774574C00699B27 /* Default.png */; };
 		244F330D1774575000699B27 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 244F330C1774575000699B27 /* Default@2x.png */; };
 		244F330F17746FC200699B27 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 244F330E17746FC200699B27 /* Default-568h@2x.png */; };
@@ -69,6 +71,8 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1F766FDD13BBADB100FB74C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		1F766FE013BBADB100FB74C0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Localizable.strings; sourceTree = "<group>"; };
+		2425571E178DA08700E2E208 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		24255720178DA08D00E2E208 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		244F330A1774574C00699B27 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		244F330C1774575000699B27 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		244F330E17746FC200699B27 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24255721178DA08D00E2E208 /* OpenAL.framework in Frameworks */,
+				2425571F178DA08700E2E208 /* ImageIO.framework in Frameworks */,
 				246C8F801700A4010052666F /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -178,6 +184,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				24255720178DA08D00E2E208 /* OpenAL.framework */,
+				2425571E178DA08700E2E208 /* ImageIO.framework */,
 				244F330E17746FC200699B27 /* Default-568h@2x.png */,
 				244F330C1774575000699B27 /* Default@2x.png */,
 				244F330A1774574C00699B27 /* Default.png */,
@@ -485,6 +493,19 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "FixMyStreet/FixMyStreet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-forceload",
+					"-ObjC",
+				);
 				PRODUCT_NAME = FixMyStreet;
 				PROVISIONING_PROFILE = "292D4D07-F19C-44F9-A9C3-7EF8BBE5B672";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "292D4D07-F19C-44F9-A9C3-7EF8BBE5B672";
@@ -506,6 +527,19 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "FixMyStreet/FixMyStreet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-forceload",
+					"-ObjC",
+				);
 				PRODUCT_NAME = FixMyStreet;
 				PROVISIONING_PROFILE = "487B7C0B-5882-4446-BB20-5FF010122FF3";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "487B7C0B-5882-4446-BB20-5FF010122FF3";

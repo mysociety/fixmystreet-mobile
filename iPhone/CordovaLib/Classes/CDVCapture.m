@@ -108,7 +108,6 @@
     if ([options isKindOfClass:[NSNull class]]) {
         options = [NSDictionary dictionary];
     }
-    NSString* mode = [options objectForKey:@"mode"];
 
     // options could contain limit and mode neither of which are supported at this time
     // taking more than one picture (limit) is only supported if provide own controls via cameraOverlayView property
@@ -139,7 +138,6 @@
         }*/
         // CDVImagePicker specific property
         pickerController.callbackId = callbackId;
-        pickerController.mimeType = mode;
 
         if ([self.viewController respondsToSelector:@selector(presentViewController:::)]) {
             [self.viewController presentViewController:pickerController animated:YES completion:nil];
@@ -169,7 +167,7 @@
     }
 
     // write to temp directory and return URI
-    NSString* docsPath = [NSTemporaryDirectory ()stringByStandardizingPath];  // use file system temporary directory
+    NSString* docsPath = [NSTemporaryDirectory()stringByStandardizingPath];   // use file system temporary directory
     NSError* err = nil;
     NSFileManager* fileMgr = [[NSFileManager alloc] init];
 
@@ -206,9 +204,9 @@
         options = [NSDictionary dictionary];
     }
 
-    // options could contain limit, duration and mode, only duration is supported (but is not due to apple bug)
+    // options could contain limit, duration and mode
     // taking more than one video (limit) is only supported if provide own controls via cameraOverlayView property
-    // NSNumber* duration = [options objectForKey:@"duration"];
+    NSNumber* duration = [options objectForKey:@"duration"];
     NSString* mediaType = nil;
 
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
@@ -240,12 +238,12 @@
         // iOS 3.0
         pickerController.mediaTypes = [NSArray arrayWithObjects:mediaType, nil];
 
-        /*if ([mediaType isEqualToString:(NSString*)kUTTypeMovie]){
+        if ([mediaType isEqualToString:(NSString*)kUTTypeMovie]){
             if (duration) {
                 pickerController.videoMaximumDuration = [duration doubleValue];
             }
             //NSLog(@"pickerController.videoMaximumDuration = %f", pickerController.videoMaximumDuration);
-        }*/
+        }
 
         // iOS 4.0
         if ([pickerController respondsToSelector:@selector(cameraCaptureMode)]) {
@@ -439,7 +437,7 @@
         if ([command isKindOfClass:[CDVFile class]]) {
             CDVFile* cdvFile = (CDVFile*)command;
             NSString* mimeType = [cdvFile getMimeTypeFromPath:fullPath];
-            [fileDict setObject:(mimeType != nil ? (NSObject*)mimeType:[NSNull null]) forKey:@"type"];
+            [fileDict setObject:(mimeType != nil ? (NSObject*)mimeType : [NSNull null]) forKey:@"type"];
         }
     }
     NSDictionary* fileAttrs = [fileMgr attributesOfItemAtPath:fullPath error:nil];
@@ -533,7 +531,6 @@
         // delegate to CVDAudioRecorderViewController
         return [self.topViewController supportedInterfaceOrientations];
     }
-
 #endif
 
 @end
@@ -663,7 +660,7 @@
 
     // create file to record to in temporary dir
 
-    NSString* docsPath = [NSTemporaryDirectory ()stringByStandardizingPath];  // use file system temporary directory
+    NSString* docsPath = [NSTemporaryDirectory()stringByStandardizingPath];   // use file system temporary directory
     NSError* err = nil;
     NSFileManager* fileMgr = [[NSFileManager alloc] init];
 
@@ -701,7 +698,6 @@
         orientation = orientation | (supported & UIInterfaceOrientationMaskPortraitUpsideDown);
         return orientation;
     }
-
 #endif
 
 - (void)viewDidUnload
@@ -766,7 +762,7 @@
         BOOL isUIAccessibilityAnnouncementNotification = (&UIAccessibilityAnnouncementNotification != NULL);
         if (isUIAccessibilityAnnouncementNotification) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 500ull * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
-                    UIAccessibilityPostNotification (UIAccessibilityAnnouncementNotification, NSLocalizedString (@"timed recording complete", nil));
+                    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, NSLocalizedString(@"timed recording complete", nil));
                 });
         }
     } else {
