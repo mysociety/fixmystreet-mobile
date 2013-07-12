@@ -7,7 +7,7 @@ tags
 
 *.mo
 
-www/js/config.js
+src/js/config.js
 Android/bin/
 iPhone/FixMyStreet.xcodeproj/project.xcworkspace/xcuserdata
 iPhone/FixMyStreet.xcodeproj/xcuserdata

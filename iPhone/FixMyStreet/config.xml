@@ -37,7 +37,7 @@
     <access origin="struan.fixmystreet.dev.mysociety.org"/>
 
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
-    <content src="index.html" />
+    <content src="src/index.html" />
 
     <!-- Preferences for iOS -->
     <preference name="AllowInlineMediaPlayback" value="false" />

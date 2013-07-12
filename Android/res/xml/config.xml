@@ -39,7 +39,7 @@
     <access origin="debug.phonegap.com"/>
 
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
-    <content src="index.html" />
+    <content src="src/index.html" />
 
     <preference name="loglevel" value="DEBUG" />
     <!--
