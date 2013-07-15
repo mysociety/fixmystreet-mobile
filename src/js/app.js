@@ -143,6 +143,9 @@ var tpl = {
                 return this;
             }
             FMS.initialized = 1;
+            if ( navigator && navigator.splashscreen ) {
+                navigator.splashscreen.hide();
+            }
             tpl.loadTemplates( FMS.templates, function() {
 
                 if ( typeof device !== 'undefined' && device.platform === 'Android' ) {
