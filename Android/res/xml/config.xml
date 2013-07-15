@@ -30,13 +30,12 @@
         Apache Cordova Team
     </author>
 
-    <access origin="*.tile.openstreetmap.org"/>
-    <access origin="*.tilma.mysociety.org"/>
-    <access origin="*.virtualearth.net"/>
+    <access origin=".*.tile.openstreetmap.org"/>
+    <access origin="tilma.mysociety.org"/>
+    <access origin=".*.tilma.mysociety.org"/>
+    <access origin=".*.virtualearth.net"/>
     <access origin="mapit.mysociety.org"/>
     <access origin="struan.fixmystreet.dev.mysociety.org"/>
-    <access origin="192.168.1.13"/>
-    <access origin="debug.phonegap.com"/>
 
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
     <content src="src/index.html" />
