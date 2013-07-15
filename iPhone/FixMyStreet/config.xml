@@ -18,16 +18,16 @@
  under the License.
 -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
-        id        = "io.cordova.helloCordova"
+        id        = "org.mysociety.fixmystreet"
         version   = "2.0.0">
-    <name>Hello Cordova</name>
+    <name>FixMyStreet</name>
 
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Report problems on FixMyStreet
     </description>
 
-    <author href="http://cordova.io" email="dev@cordova.apache.org">
-        Apache Cordova Team
+    <author href="http://mysociety.org" email="team@mysociety.org">
+        mySociety
     </author>
 
     <access origin="*.tile.openstreetmap.org"/>
