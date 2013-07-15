@@ -109,7 +109,15 @@
 
         var move = $.Deferred();
 
-        src.moveTo( dest, null, move.resolve, move.reject);
+        var destPath = dest.fullPath + '/' + src.name;
+        var srcPath = src.fullPath + '';
+        if ( srcPath === destPath ) {
+            console.log('not moving because files are the same');
+            move.resolve( src );
+        } else {
+            console.log('paths differ so moving');
+            src.moveTo( dest, null, move.resolve, move.reject);
+        }
 
         return move.promise();
     }
