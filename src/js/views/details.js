@@ -47,6 +47,8 @@
 
             onClickButtonNext: function(e) {
                 e.preventDefault();
+                // dismiss on screen keyboard
+                $('.ui-btn-right').focus();
                 this.clearValidationErrors();
                 var valid = 1;
 
