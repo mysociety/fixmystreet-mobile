@@ -47,6 +47,7 @@ var tpl = {
         users: new FMS.Users(),
         currentUser: null,
         currentPosition: null,
+        isAndroid: false,
 
         currentDraft: new FMS.Draft(),
         allDrafts: new FMS.Drafts(),
@@ -150,6 +151,7 @@ var tpl = {
 
                 if ( typeof device !== 'undefined' && device.platform === 'Android' ) {
                     $.mobile.defaultPageTransition = 'none';
+                    FMS.isAndroid = true;
                 }
 
                 _.extend(FMS, {
