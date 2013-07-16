@@ -40,7 +40,19 @@
             },
 
             addPhotoSuccess: function(imgURI) {
-                var move = FMS.files.moveURI( imgURI );
+                console.log(imgURI);
+                var move;
+                // on iOS the photos go into a temp folder in the apps own filespace so we
+                // can move them, and indeed have to as the tmp space is cleaned out by the OS
+                // so draft reports might have their images removed. on android you access the
+                // images where they are stored on the filesystem so if you move, and then delete
+                // them, you are moving and deleting the only copy of them which is likely to be
+                // surprising and unwelcome so we copy them instead.
+                if ( FMS.isAndroid ) {
+                    move = FMS.files.copyURI( imgURI );
+                } else {
+                    move = FMS.files.moveURI( imgURI );
+                }
 
                 var that = this;
                 move.done( function( file ) {

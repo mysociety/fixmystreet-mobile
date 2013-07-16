@@ -26,6 +26,25 @@
                     });
             },
 
+            copyURI: function (srcURI, dest ) {
+
+                var fileEntry;
+                return getFileFromURI(srcURI)
+                    .pipe( function (file) {
+                        fileEntry = file;
+
+                        return getFileSystem();
+                    })
+                    .pipe( function (filesystem) {
+                        console.log('Filesystem returned: ' + filesystem);
+
+                        return getDirectory(filesystem.root, CONFIG.FILES_DIR, {create: true});
+                    })
+                    .pipe( function(directory) {
+                        return copyFile( fileEntry, directory );
+                    });
+            },
+
             deleteURI: function (uri) {
                 console.log('Deleting URI: ' + uri);
 
@@ -120,6 +139,25 @@
         }
 
         return move.promise();
+    }
+
+    function copyFile (src, dest, options) {
+
+        console.log( 'copying file ' + src.fullPath + ' to ' + dest.fullPath );
+
+        var copy = $.Deferred();
+
+        var destPath = dest.fullPath + '/' + src.name;
+        var srcPath = src.fullPath + '';
+        if ( srcPath === destPath ) {
+            console.log('not copying because files are the same');
+            copy.resolve( src );
+        } else {
+            console.log('paths differ so copying');
+            src.copyTo( dest, null, copy.resolve, copy.reject);
+        }
+
+        return copy.promise();
     }
 
     function getFileFromURI(uri) {
