@@ -356,7 +356,7 @@
                 if ( !fixmystreet.map ) {
                     this.$('#mark-here').hide();
                     this.$('#relocate').hide();
-                    $('#front-howto').html('<p>' + FMS.strings.locate_dismissed + '</msg>');
+                    $('#front-howto').html('<p>' + FMS.strings.locate_dismissed + '</p>');
                     $('#front-howto').show();
                 }
                 this.finishedLocating();
