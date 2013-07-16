@@ -48,10 +48,11 @@
                 // images where they are stored on the filesystem so if you move, and then delete
                 // them, you are moving and deleting the only copy of them which is likely to be
                 // surprising and unwelcome so we copy them instead.
+                var fileName = CONFIG.NAMESPACE + '_' + this.model.cid + '_' + moment().unix() + '.jpg';
                 if ( FMS.isAndroid ) {
-                    move = FMS.files.copyURI( imgURI );
+                    move = FMS.files.copyURI( imgURI, fileName );
                 } else {
-                    move = FMS.files.moveURI( imgURI );
+                    move = FMS.files.moveURI( imgURI, fileName );
                 }
 
                 var that = this;

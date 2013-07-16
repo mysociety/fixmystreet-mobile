@@ -7,7 +7,7 @@
     _.extend(FMS, {
         files: {
             // move  a file at from a uri to a desination directory. maintains file name
-            moveURI: function (srcURI, dest ) {
+            moveURI: function (srcURI, newName ) {
 
                 var fileEntry;
                 return getFileFromURI(srcURI)
@@ -22,11 +22,11 @@
                         return getDirectory(filesystem.root, CONFIG.FILES_DIR, {create: true});
                     })
                     .pipe( function(directory) {
-                        return moveFile( fileEntry, directory );
+                        return moveFile( fileEntry, directory, newName );
                     });
             },
 
-            copyURI: function (srcURI, dest ) {
+            copyURI: function (srcURI, newName ) {
 
                 var fileEntry;
                 return getFileFromURI(srcURI)
@@ -41,7 +41,7 @@
                         return getDirectory(filesystem.root, CONFIG.FILES_DIR, {create: true});
                     })
                     .pipe( function(directory) {
-                        return copyFile( fileEntry, directory );
+                        return copyFile( fileEntry, directory, newName );
                     });
             },
 
@@ -122,7 +122,7 @@
         return file.promise();
     }
 
-    function moveFile (src, dest, options) {
+    function moveFile (src, dest, newName) {
 
         console.log( 'moveing file ' + src.fullPath + ' to ' + dest.fullPath );
 
@@ -135,13 +135,13 @@
             move.resolve( src );
         } else {
             console.log('paths differ so moving');
-            src.moveTo( dest, null, move.resolve, move.reject);
+            src.moveTo( dest, newName, move.resolve, move.reject);
         }
 
         return move.promise();
     }
 
-    function copyFile (src, dest, options) {
+    function copyFile (src, dest, newName) {
 
         console.log( 'copying file ' + src.fullPath + ' to ' + dest.fullPath );
 
@@ -154,7 +154,7 @@
             copy.resolve( src );
         } else {
             console.log('paths differ so copying');
-            src.copyTo( dest, null, copy.resolve, copy.reject);
+            src.copyTo( dest, newName, copy.resolve, copy.reject);
         }
 
         return copy.promise();
