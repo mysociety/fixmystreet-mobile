@@ -32,6 +32,7 @@
             report_send_error: 'There was a problem submitting your report. Please try again',
             missing_location: 'Please enter a location',
             location_check_failed: 'There was a problem checking we cover this location. Please try again later.',
+            category_extra_check_error: 'There was a problem checking if we have all the details we need. Please try again later',
             locate_dismissed: 'Please search for a street name and area, or postcode.',
             geolocation_failed: 'Could not determine your location, please search for a street name and area, or postcode instead.',
             geolocation_denied: 'Could not access location services. Please check permissions.',
