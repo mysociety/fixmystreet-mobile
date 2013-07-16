@@ -259,7 +259,7 @@
                     this.navigate( 'offline' );
                 } else {
                     this.listenTo(FMS.locator, 'gps_located', this.goPhoto);
-                    this.listenTo(FMS.locator, 'gps_failed', this.noMap );
+                    this.listenTo(FMS.locator, 'gps_failed', this.locationCheckFailed );
                     FMS.locator.check_location( { latitude: position.lat, longitude: position.lon } );
                 }
             },
@@ -345,6 +345,10 @@
                 FMS.saveCurrentDraft();
 
                 this.navigate( 'photo' );
+            },
+
+            locationCheckFailed: function() {
+                alert(FMS.strings.location_check_failed);
             },
 
             goSearch: function(e) {
