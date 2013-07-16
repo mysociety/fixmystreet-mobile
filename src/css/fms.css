@@ -210,6 +210,10 @@
         display: none;
     }
 
+    .center {
+        text-align: center;
+    }
+
     #drafts h2,
     div[data-role='content'] p.top,
     div[data-role='content'] h2 {
