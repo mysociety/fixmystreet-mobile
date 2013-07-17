@@ -76,21 +76,23 @@
             },
 
             onReportInvalid: function(model, err, options) {
-                var errors = err.errors;
-                var errorList = '<ul><li class="plain">' + FMS.strings.invalid_report + '</li>';
-                var validErrors = [ 'password', 'category', 'name' ];
-                for ( var k in errors ) {
-                    if ( validErrors.indexOf(k) >= 0 || errors[k].match(/required/) ) {
-                        if ( k === 'password' ) {
-                            error = FMS.strings.password_problem;
-                        } else if ( k !== '') {
-                            error = errors[k];
+                if ( !this._handleInvalid( model, err, options ) ) {
+                    var errors = err.errors;
+                    var errorList = '<ul><li class="plain">' + FMS.strings.invalid_report + '</li>';
+                    var validErrors = [ 'password', 'category', 'name' ];
+                    for ( var k in errors ) {
+                        if ( validErrors.indexOf(k) >= 0 || errors[k].match(/required/) ) {
+                            if ( k === 'password' ) {
+                                error = FMS.strings.password_problem;
+                            } else if ( k !== '') {
+                                error = errors[k];
+                            }
+                            errorList += '<li>' + error + '</li>';
                         }
-                        errorList += '<li>' + error + '</li>';
                     }
+                    errorList += '</ul>';
+                    $('#errors').html(errorList).show();
                 }
-                errorList += '</ul>';
-                $('#errors').html(errorList).show();
             },
 
             onReportError: function(model, err, options) {
@@ -103,6 +105,10 @@
 
             beforeSubmit: function() {},
             afterSubmit: function() {},
+
+            _handleInvalid: function() {
+                return false;
+            },
 
             _destroy: function() {
                 this.stopListening();
@@ -300,18 +306,15 @@
                 FMS.isLoggedIn = 1;
             },
 
-            onReportError: function(model, err, options) {
+            _handleInvalid: function(model, err, options) {
                 if ( err.check_name ) {
                     $('#form_name').val(err.check_name);
                     $('#password_row').hide();
                     $('#check_name').show();
                     $('#confirm_name').focus();
-                } else {
-                    if ( err.errors && err.errors.password ) {
-                        this.validationError('form_password', err.errors.password );
-                    }
-                    $('#report').focus();
+                    return true;
                 }
+                return false;
             }
 
         })
