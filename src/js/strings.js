@@ -36,7 +36,7 @@
             locate_dismissed: 'Please search for a street name and area, or postcode.',
             geolocation_failed: 'Could not determine your location, please search for a street name and area, or postcode instead.',
             geolocation_denied: 'Could not access location services. Please check permissions.',
-            select_category: '-- Pick a categoy --',
+            select_category: '-- Pick a category --',
             required: 'required',
             invalid_email: 'Invalid email',
             invalid_report: 'Invalid report',
