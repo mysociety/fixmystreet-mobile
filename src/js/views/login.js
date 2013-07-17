@@ -3,7 +3,8 @@
         LoginView: FMS.FMSView.extend({
             template: 'login',
             id: 'login',
-            next: 'home',
+            next: 'around',
+            prev: 'around',
 
             events: {
                 'pagehide': 'destroy',
