@@ -15,47 +15,49 @@
         </p>
     </div>
 <div data-role="content">
-    <p class="notopmargin">
-    Sorry, there doesn't seem to be any internet connection. You can create a report and complete it later though.
-    </p>
+    <div>
+        <p class="notopmargin">
+        Sorry, there doesn't seem to be any internet connection. You can create a report and complete it later though.
+        </p>
 
-    <p id="locate_result">
-    <% if ( lat ) { %>
-    Report has position ( <% print( lat.toFixed(2) + ', ' + lon.toFixed(2) ) %> )
-    <% } else { %>
-    <input type="button" data-role="button" data-theme="a" id="locate" value="Locate" >
-    <% } %>
-    </p>
+        <p id="locate_result">
+        <% if ( lat ) { %>
+        Report has position ( <% print( lat.toFixed(2) + ', ' + lon.toFixed(2) ) %> )
+        <% } else { %>
+        <input type="button" data-role="button" data-theme="a" id="locate" value="Locate" >
+        <% } %>
+        </p>
 
-    <div class="inputcard">
-        <div>
-            <input data-role="none" type="text" value="<%= title %>" name="title" id="form_title" placeholder="Provide a title" required>
+        <div class="inputcard">
+            <div>
+                <input data-role="none" type="text" value="<%= title %>" name="title" id="form_title" placeholder="Provide a title" required>
+            </div>
+
+            <div>
+                <textarea data-role="none" rows="7" cols="26" name="detail" id="form_detail" placeholder="Please fill in details of the problem." required><%= details %></textarea>
+            </div>
         </div>
 
-        <div>
-            <textarea data-role="none" rows="7" cols="26" name="detail" id="form_detail" placeholder="Please fill in details of the problem." required><%= details %></textarea>
+        <% if ( file != '' ) { %>
+        <div id="add_photo" style="display: none">
+        <% } else { %>
+        <div id="add_photo">
+        <% } %>
+            <label>Add a Photo <em>(optional)</em></label>
+            <input data-icon="fms-photo-new" value="Take a new photo" type="button" name="photo_button" id="id_photo_button" data-role="button" data-theme="a">
+            <input data-icon="fms-photo-existing" value="Add an existing photo" type="button" name="existing" id="id_existing" data-role="button" data-theme="c">
         </div>
-    </div>
 
-    <% if ( file != '' ) { %>
-    <div id="add_photo" style="display: none">
-    <% } else { %>
-    <div id="add_photo">
-    <% } %>
-        <label>Add a Photo <em>(optional)</em></label>
-        <input data-icon="fms-photo-new" value="Take a new photo" type="button" name="photo_button" id="id_photo_button" data-role="button" data-theme="a">
-        <input data-icon="fms-photo-existing" value="Add an existing photo" type="button" name="existing" id="id_existing" data-role="button" data-theme="c">
-    </div>
-
-    <% if ( file == '' ) { %>
-    <div id="display_photo" style="display: none">
-    <% } else { %>
-    <div id="display_photo">
-    <% } %>
-        <label>Your Photo</label>
-        <div class="photo">
-        <img class="small" id="photo" src="<%= file %>" />
+        <% if ( file == '' ) { %>
+        <div id="display_photo" style="display: none">
+        <% } else { %>
+        <div id="display_photo">
+        <% } %>
+            <label>Your Photo</label>
+            <div class="photo">
+            <img class="small" id="photo" src="<%= file %>" />
+            </div>
+            <input value="Remove Photo" type="button" name="del_photo_button" id="id_del_photo_button" data-role="button" data-theme="a">
         </div>
-        <input value="Remove Photo" type="button" name="del_photo_button" id="id_del_photo_button" data-role="button" data-theme="a">
     </div>
 </div>
