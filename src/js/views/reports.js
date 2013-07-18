@@ -31,6 +31,14 @@
                 content.css( 'min-height', content + 'px');
             },
 
+            beforeDisplay: function() {
+                if ( FMS.allDrafts.length === 0 ) {
+                    $('#noreports').show();
+                } else {
+                    $('#report-list').show();
+                }
+            },
+
             useReport: function(e) {
                 e.preventDefault();
                 var el = $(e.target);
@@ -41,6 +49,10 @@
 
             onRemoveDraft: function(el) {
                 el.parents('li').remove();
+                if ( FMS.allDrafts.length === 0 ) {
+                    $('#report-list').hide();
+                    $('#noreports').show();
+                }
             },
 
             render: function(){
