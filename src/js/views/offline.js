@@ -3,7 +3,7 @@
         OfflineView: FMS.LocatorView.extend({
             template: 'offline',
             id: 'offline',
-            prev: 'home',
+            prev: 'around',
             next: 'reports',
             skipLocationCheck: true,
 
