@@ -703,6 +703,18 @@
         max-height: 70%;
     }
 
+    img.placeholder {
+        height: 199px;
+        width: 270px;
+    }
+
+    @media only screen and (max-width: 800px) and (min-width: 600px) {
+        img.placeholder {
+            height: 398px;
+            width: 540px;
+        }
+    }
+
     .ui-icon-fms-photo-existing,
     .ui-icon-fms-photo-new {
         position: static;

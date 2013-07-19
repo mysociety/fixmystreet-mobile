@@ -57,7 +57,7 @@
 
                 var that = this;
                 move.done( function( file ) {
-                    $('#photo').attr('src', file.toURL());
+                    $('#photo').attr('src', file.toURL()).addClass('small').removeClass('placeholder');
                     that.model.set('file', file.toURL());
                     FMS.saveCurrentDraft();
 
@@ -86,7 +86,7 @@
                 del.done( function() {
                     that.model.set('file', '');
                     FMS.saveCurrentDraft();
-                    $('#photo').attr('src', 'images/placeholder-photo.png');
+                    $('#photo').attr('src', 'images/placeholder-photo.png').addClass('placeholder').removeClass('small');
 
                     $('#photo-next-btn .ui-btn-text').text('Skip');
                     $('#id_del_photo_button').parents('.ui-btn').hide();
