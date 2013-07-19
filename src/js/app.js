@@ -66,6 +66,8 @@ var tpl = {
             if ( navigator && navigator.connection && ( navigator.connection.type == Connection.NONE ||
                     navigator.connection.type == Connection.UNKNOWN ) ) {
                 FMS.offline();
+            } else {
+                FMS.online();
             }
         },
 
