@@ -47,6 +47,7 @@
 
             afterDisplay: function() {
                 if ( FMS.isOffline ) {
+                    $('#locating').hide();
                     this.navigate( 'offline' );
                 } else if ( this.model && this.model.get('lat') ) {
                     var modelInfo = { coordinates: { latitude: this.model.get('lat'), longitude: this.model.get('lon') } };
