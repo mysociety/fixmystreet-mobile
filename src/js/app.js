@@ -171,8 +171,8 @@ var tpl = {
                     FMS.currentUser = new FMS.User({id: 1});
                 }
 
-                document.addEventListener('pause', function() { FMS.saveCurrentDraft(); }, false);
-                document.addEventListener('resume', function() { FMS.checkOnlineStatus(); FMS.loadCurrentDraft(); }, false);
+                document.addEventListener('pause', function() { FMS.locator.stopTracking(); FMS.saveCurrentDraft(); }, false);
+                document.addEventListener('resume', onResume, false);
                 document.addEventListener('backbutton', function() { FMS.router.back(); }, true);
                 document.addEventListener('offline', function() { FMS.offline(); }, true);
                 document.addEventListener('online', function() { FMS.online(); }, true);
@@ -191,6 +191,14 @@ var tpl = {
             });
         }
     });
+
+    function onResume() {
+        FMS.checkOnlineStatus();
+        FMS.loadCurrentDraft();
+        if ( ( FMS.router.currentView.id == 'front-page' || FMS.router.currentView.id == 'around-page' ) && FMS.currentPosition !== null ) {
+            FMS.locator.trackPosition();
+        }
+    }
 })(FMS, Backbone, _, $);
 
 var androidStartUp = function() {
