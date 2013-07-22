@@ -97,9 +97,9 @@
 
             onReportError: function(model, err, options) {
                 if ( err.errors ) {
-                    alert( FMS.strings.sync_error + ': ' + err.errors);
+                    navigator.notification.alert( FMS.strings.sync_error + ': ' + err.errors, null, 'FixMyStreet' );
                 } else {
-                    alert( FMS.strings.unknown_sync_error );
+                    navigator.notification.alert( FMS.strings.unknown_sync_error, null, 'FixMyStreet' );
                 }
             },
 

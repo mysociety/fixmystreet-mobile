@@ -100,8 +100,10 @@
                             }
                             if ( data.success ) {
                                 that.trigger('sync', that, data, options);
-                            } else {
+                            } else if ( data.errors ) {
                                 that.trigger('invalid', that, data, options);
+                            } else {
+                                that.trigger('error', that, FMS.strings.report_send_error, options);
                             }
                         } else {
                             that.trigger('error', that, FMS.strings.report_send_error, options);
@@ -141,7 +143,7 @@
                         },
                         error: function (data, status, errorThrown ) {
                             console.log(FMS.strings.report_send_error);
-                            options.error( data, status, errorThrown );
+                            that.trigger('error', that, data, status, errorThrown );
                         }
                     } );
                 }
