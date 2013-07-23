@@ -88,7 +88,7 @@
                 if ( message != 'no image selected' &&
                     message != 'Selection cancelled.' &&
                     message != 'Camera cancelled.' ) {
-                    this.displayError(FMS.strings.photo_failed);
+                    this.displayAlert(FMS.strings.photo_failed);
                 }
             },
 

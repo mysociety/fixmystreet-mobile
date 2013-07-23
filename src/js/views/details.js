@@ -94,7 +94,7 @@
                                 }
                             },
                             error: function() {
-                                alert(FMS.strings.category_extra_check_error);
+                                that.displayAlert(FMS.strings.category_extra_check_error);
                             }
                         } );
                     }

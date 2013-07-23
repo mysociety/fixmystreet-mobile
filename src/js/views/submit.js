@@ -52,6 +52,9 @@
             },
 
             onReportSync: function(model, resp, options) {
+                if ( model.success !== 1 ) {
+                    return;
+                }
                 this.stopListening();
                 this.afterSubmit();
                 if ( FMS.currentUser ) {
@@ -97,9 +100,9 @@
 
             onReportError: function(model, err, options) {
                 if ( err.errors ) {
-                    navigator.notification.alert( FMS.strings.sync_error + ': ' + err.errors, null, 'FixMyStreet' );
+                    this.displayAlert(FMS.strings.sync_error + ': ' + err.errors);
                 } else {
-                    navigator.notification.alert( FMS.strings.unknown_sync_error, null, 'FixMyStreet' );
+                    this.displayAlert(FMS.strings.unknown_sync_error);
                 }
             },
 
