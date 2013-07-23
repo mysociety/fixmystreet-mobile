@@ -415,8 +415,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "rsync -pvtrlL --cvs-exclude \\\n$PROJECT_DIR/../src* \\\n$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/www";
+			shellPath = /bin/bash;
+			shellScript = "DIR_SRC=\"$PROJECT_DIR/../src\"\nDIR_DEST=\"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/www\"\nCOMMAND=(rsync -pvtrlL --cvs-exclude \"$DIR_SRC\" \"$DIR_DEST\")\n\n\"${COMMAND[@]}\"";
 		};
 		304B58A110DAC018002A0835 /* Touch www folder */ = {
 			isa = PBXShellScriptBuildPhase;
