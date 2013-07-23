@@ -52,6 +52,9 @@
             },
 
             onReportSync: function(model, resp, options) {
+                if ( model.success !== 1 ) {
+                    return;
+                }
                 this.stopListening();
                 this.afterSubmit();
                 if ( FMS.currentUser ) {

@@ -99,6 +99,7 @@
                                 data = {};
                             }
                             if ( data.success ) {
+                                that.success = 1;
                                 that.trigger('sync', that, data, options);
                             } else if ( data.errors ) {
                                 that.trigger('invalid', that, data, options);
@@ -136,6 +137,7 @@
                         timeout: 30000,
                         success: function(data) {
                             if ( data.success ) {
+                                that.success = 1;
                                 that.trigger('sync', that, data, options);
                             } else {
                                 that.trigger('invalid', that, data, options);
