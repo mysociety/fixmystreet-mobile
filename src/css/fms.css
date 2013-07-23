@@ -199,7 +199,7 @@
         position: relative;
         width: 95%;
         margin: 20px auto;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .notopmargin {
@@ -393,6 +393,12 @@
         display:block;
         height: 100%;
         width: 100%;
+        transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+    }
+    #map_box.background-map{
+        -webkit-filter: blur(3px);
+        opacity: 0.9;
     }
 
     #map{
