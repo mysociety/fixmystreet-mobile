@@ -349,7 +349,7 @@
             },
 
             locationCheckFailed: function() {
-                alert(FMS.strings.location_check_failed);
+                this.displayAlert(FMS.strings.location_check_failed);
             },
 
             goSearch: function(e) {

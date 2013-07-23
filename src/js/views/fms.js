@@ -75,8 +75,8 @@
                 this.navigate( this.next );
             },
 
-            displayError: function(msg) {
-                alert(msg);
+            displayAlert: function(msg) {
+                navigator.notification.alert(msg, null, CONFIG.APP_NAME);
             },
 
             validationError: function( id, error ) {
