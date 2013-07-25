@@ -151,6 +151,7 @@
                 if ( !fixmystreet.map ) {
                     $('#relocate').hide();
                     $('#mark-here').hide();
+                    $('#pc').focus();
                 }
                 $('#front-howto').html('<p>' + msg + '</msg>');
                 $('#front-howto').show();
