@@ -107,7 +107,8 @@
                 });
             },
 
-            onClickCancel: function() {
+            onClickCancel: function(e) {
+                e.preventDefault();
                 this.finishedLocating();
             },
 

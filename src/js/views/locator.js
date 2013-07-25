@@ -3,7 +3,8 @@
         LocatorView: FMS.FMSView.extend({
             skipLocationCheck: false,
 
-            locate: function() {
+            locate: function(e) {
+                e.preventDefault();
                 $(document).delegate('.ui-content', 'touchmove', false);
                 $('#locating').show();
                 this.listenTo(FMS.locator, 'gps_located', this.gotLocation);
