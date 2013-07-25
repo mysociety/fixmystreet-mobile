@@ -42,6 +42,7 @@
                 $('#login-options').hide();
                 $('#postcodeForm').hide();
                 $('#cancel').hide();
+                $('#map_box').removeClass('background-map');
                 this.fixPageHeight();
             },
 
@@ -329,6 +330,7 @@
             pauseMap: function() {
                 this.stopListening(FMS.locator);
                 FMS.locator.stopTracking();
+                $('#map_box').addClass('background-map');
                 if ( fixmystreet.map ) {
                     fixmystreet.nav.deactivate();
                     fixmystreet.actionafterdrag.deactivate();
