@@ -8,6 +8,7 @@
                 'pagehide': 'destroy',
                 'pagebeforeshow': 'beforeDisplay',
                 'pageshow': 'afterDisplay',
+                'touchstart #map': 'mapTouchStart',
                 'vclick #locate_cancel': 'goSearch',
                 'vclick #login-options': 'goLogin',
                 'vclick #view-my-reports': 'goReports',
@@ -197,6 +198,10 @@
                 fixmystreet.report_location.removeAllFeatures();
                 fixmystreet.report_location.addFeatures( markers );
                 fixmystreet.report_location.setVisibility(true);
+            },
+
+            mapTouchStart: function(e) {
+                $('#OpenLayers_Control_Crosshairs_crosshairs').show();
             },
 
             onClickMark: function(e) {
