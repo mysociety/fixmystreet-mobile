@@ -8,7 +8,6 @@
                 'pagehide': 'destroy',
                 'pagebeforeshow': 'beforeDisplay',
                 'pageshow': 'afterDisplay',
-                'touchstart #map': 'mapTouchStart',
                 'vclick #locate_cancel': 'goSearch',
                 'vclick #login-options': 'goLogin',
                 'vclick #view-my-reports': 'goReports',
@@ -45,6 +44,7 @@
                 $('#cancel').hide();
                 $('#map_box').removeClass('background-map');
                 this.fixPageHeight();
+                $('#map_box').on('touchend', function() { if ( ! $('#popup').length ) { $('#OpenLayers_Control_Crosshairs_crosshairs').show(); } } );
             },
 
             afterDisplay: function() {
@@ -201,10 +201,6 @@
                 fixmystreet.report_location.setVisibility(true);
             },
 
-            mapTouchStart: function(e) {
-                $('#OpenLayers_Control_Crosshairs_crosshairs').show();
-            },
-
             onClickMark: function(e) {
                 e.preventDefault();
                 this.displayButtons(true);
@@ -337,6 +333,7 @@
                 this.stopListening(FMS.locator);
                 FMS.locator.stopTracking();
                 $('#map_box').addClass('background-map');
+                $('#map_box').off('touchend');
                 if ( fixmystreet.map ) {
                     fixmystreet.nav.deactivate();
                     fixmystreet.actionafterdrag.deactivate();
