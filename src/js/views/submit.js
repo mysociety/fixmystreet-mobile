@@ -35,6 +35,10 @@
             onClickSubmit: function(e) {
                 // in case we are getting here from a form submission
                 e.preventDefault();
+                this.doSubmit();
+            },
+
+            doSubmit: function() {
                 this.beforeSubmit();
 
                 if ( this.validate() ) {
@@ -99,10 +103,25 @@
             },
 
             onReportError: function(model, err, options) {
+                var msg = FMS.strings.unknown_sync_error;
                 if ( err.errors ) {
-                    this.displayAlert(FMS.strings.sync_error + ': ' + err.errors);
-                } else {
-                    this.displayAlert(FMS.strings.unknown_sync_error);
+                    msg = msg + ': ' + err.errors;
+                }
+                var that = this;
+                navigator.notification.confirm(
+                    msg,
+                    function(index) { that.handleReportError(index); },
+                    CONFIG.APP_NAME,
+                    'Save for Later,Try Again');
+            },
+
+            handleReportError: function(index) {
+                if ( index === 1 ) {
+                    this.stopListening();
+                    FMS.clearCurrentDraft();
+                    this.navigate('reports');
+                } else if ( index === 2 ) {
+                    this.doSubmit();
                 }
             },
 
