@@ -1,0 +1,17 @@
+<div id="report-created-header" data-role="header">
+    <a class="ui-btn-left">[% loc('Home') %]</a>
+    <h1>[% loc('Report Created') %]</h1>
+</div>
+<div data-role="content">
+    <% if ( typeof email_confirm != 'undefined' && email_confirm === 1 ) { %>
+    <h3>[% loc('Confirmation email sent') %]</h3>
+
+    <p>
+    [% loc("We've sent you a confirmation email which may take a few minutes to arrive. Once it arrives click the link in the email to confirm your report.") %]
+    </p>
+    <% } else { %>
+    <h3>[% loc('Thanks. Your report will be sent to the authorities immediately.') %]</h3>
+
+    <p class="center"><a onclick="FMS.openExternal(event); return false;" href="<%= site_url %>">[% loc('View it on the site') %]</a></p>
+    <% } %>
+</div>

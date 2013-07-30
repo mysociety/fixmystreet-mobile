@@ -1,0 +1,36 @@
+#!/bin/env perl
+
+use strict;
+use warnings;
+use Template;
+use mySociety::Locale;
+
+mySociety::Locale::negotiate_language('de-ch,German,de_CH');
+mySociety::Locale::gettext_domain('ZurichMobileApp');
+mySociety::Locale::change('de-ch');
+
+sub loc {
+    my @args = @_;
+    return _(@args);
+}
+
+sub tprintf {
+    my ( $format, @args ) = @_;
+    @args = @{$args[0]} if ref $args[0] eq 'ARRAY';
+    return sprintf $format, @args;
+}
+
+my $t = Template->new({
+    INCLUDE_PATH => 'templates',
+    OUTPUT_PATH  => 'compiled'
+});
+
+my $vars = {
+    loc => \&loc,
+    tprintf => \&tprintf,
+};
+
+for my $file ( glob('templates/*') ) {
+    $file =~ s%templates/%%;
+    $t->process( $file, $vars, $file ) or warn $t->error;
+}
