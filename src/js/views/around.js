@@ -204,6 +204,8 @@
             onClickMark: function(e) {
                 e.preventDefault();
                 this.displayButtons(true);
+                $('#popup').hide();
+                $('#OpenLayers_Control_Crosshairs_crosshairs').show();
                 $('#reposition').hide();
 
                 var lonlat = this.getCrossHairPosition();
