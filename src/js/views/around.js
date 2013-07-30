@@ -216,6 +216,8 @@
                 e.preventDefault();
                 fixmystreet.markers.removeAllFeatures();
                 fixmystreet_activate_drag();
+                // force pins to be refetched and displayed
+                fixmystreet.bbox_strategy.update({force: true});
                 this.displayButtons(false);
                 if ( this.model.isPartial() ) {
                     FMS.clearCurrentDraft();
