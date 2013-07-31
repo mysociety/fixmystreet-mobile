@@ -23,21 +23,21 @@ symbolic link, on iOS by a build script.
 
 Basic structure
 ---------------
-Android - android project
-iPhone - iOS version
-src - JS, HTML, CSS and image files
-templates - templates with strings to be translated
-locale - gettext translation files
-bin - helper scripts for translation
+* Android - android project
+* iPhone - iOS version
+* src - JS, HTML, CSS and image files
+* templates - templates with strings to be translated
+* locale - gettext translation files
+* bin - helper scripts for translation
 
 src Stucture
 ------------
-css - css files
-js - project javascript files
-js/views - backbone view files
-js/models - backgone model files
-jslib - third party javascript libraries and files
-templates - underscore templates for the pages
+* css - css files
+* js - project javascript files
+* js/views - backbone view files
+* js/models - backgone model files
+* jslib - third party javascript libraries and files
+* templates - underscore templates for the pages
 
 Translation
 -----------
