@@ -26,6 +26,9 @@ Basic structure
 Android - android project
 iPhone - iOS version
 src - JS, HTML, CSS and image files
+templates - templates with strings to be translated
+locale - gettext translation files
+bin - helper scripts for translation
 
 src Stucture
 ------------
@@ -35,3 +38,14 @@ js/views - backbone view files
 js/models - backgone model files
 jslib - third party javascript libraries and files
 templates - underscore templates for the pages
+
+Translation
+-----------
+We use gettext for translation with a series of templated files that use the Template Toolkit
+Perl module. The scripts are based on those used for the FixMyStreet website. In the templates
+directory are a set of page templates marked up for translation. These are parsed by the scripts
+and a set of strings to be translated are extracted. These strings are then used to generate a
+a set of .po files for each language under locales, which in turn generate a set of translated
+template files for use in the app. For more details see the translating file.
+
+The app only supports one language at a time at the moment.
