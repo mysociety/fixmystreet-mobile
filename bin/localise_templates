@@ -5,9 +5,16 @@ use warnings;
 use Template;
 use mySociety::Locale;
 
-mySociety::Locale::negotiate_language('de-ch,German,de_CH');
-mySociety::Locale::gettext_domain('ZurichMobileApp');
-mySociety::Locale::change('de-ch');
+sub get_langs {
+    my $lang_list = 'locale/lang_list';
+    my @langs = do {
+        open my $f, '<', $lang_list
+            or die "Can't open $lang_list: $!\n";
+        <$f>;
+    };
+
+    return @langs;
+}
 
 sub loc {
     my @args = @_;
@@ -20,17 +27,26 @@ sub tprintf {
     return sprintf $format, @args;
 }
 
-my $t = Template->new({
-    INCLUDE_PATH => 'templates',
-    OUTPUT_PATH  => 'compiled'
-});
 
 my $vars = {
     loc => \&loc,
     tprintf => \&tprintf,
 };
 
-for my $file ( glob('templates/*') ) {
-    $file =~ s%templates/%%;
-    $t->process( $file, $vars, $file ) or warn $t->error;
+for my $lang ( get_langs() ) {
+    my @lang_parts = split(',', $lang);
+
+    mySociety::Locale::negotiate_language($lang);
+    mySociety::Locale::gettext_domain('FixMyStreetMobileApp');
+    mySociety::Locale::change($lang_parts[0]);
+
+    my $t = Template->new({
+        INCLUDE_PATH => 'templates',
+        OUTPUT_PATH  => 'compiled/' . $lang_parts[0]
+    });
+
+    for my $file ( glob('templates/*') ) {
+        $file =~ s%templates/%%;
+        $t->process( $file, $vars, $file ) or warn $t->error;
+    }
 }
