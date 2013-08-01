@@ -12,6 +12,8 @@
                 'vclick #login-options': 'goLogin',
                 'vclick #view-my-reports': 'goReports',
                 'vclick #search': 'goSearch',
+                'vclick .ui-input-clear': 'clearSearchErrors',
+                'blur #pc': 'clearSearchErrors',
                 'vclick #relocate': 'centerMapOnPosition',
                 'vclick #cancel': 'onClickCancel',
                 'vclick #confirm': 'onClickReport',
@@ -38,6 +40,7 @@
             },
 
             beforeDisplay: function() {
+                this.origPcPlaceholder = $('#pc').attr('placeholder');
                 $('a[data-role="button"]').hide();
                 $('#view-my-reports').hide();
                 $('#login-options').hide();
@@ -278,6 +281,7 @@
                 // this is to stop form submission
                 e.preventDefault();
                 $('#front-howto').hide();
+                this.clearSearchErrors();
                 this.clearValidationErrors();
                 var pc = this.$('#pc').val();
                 this.listenTo(FMS.locator, 'search_located', this.searchSuccess );
@@ -312,12 +316,28 @@
                 }
             },
 
+            searchError: function(msg) {
+                if ( msg.length < 30 ) {
+                    $('#pc').attr('placeholder', msg).addClass('error');;
+                } else {
+                    $('#front-howto').html(msg);
+                    $('#relocate').hide();
+                    $('#front-howto').show();
+                }
+            },
+
+            clearSearchErrors: function() {
+                $('#pc').attr('placeholder', this.origPcPlaceholder).removeClass('error');;
+                $('#front-howto').hide();
+                $('#relocate').show();
+            },
+
             searchFail: function( details ) {
                 // this makes sure any onscreen keyboard is dismissed
                 $('#submit').focus();
                 this.stopListening(FMS.locator);
                 if ( details.msg ) {
-                    this.validationError( 'pc', details.msg );
+                    this.searchError( details.msg );
                 } else if ( details.locations ) {
                     var multiple = '';
                     for ( var i = 0; i < details.locations.length; i++ ) {
@@ -330,7 +350,7 @@
                     $('#relocate').hide();
                     $('#front-howto').show();
                 } else {
-                    this.validationError( 'pc', FMS.strings.location_problem );
+                    this.searchError( FMS.strings.location_problem );
                 }
             },
 
