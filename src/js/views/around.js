@@ -336,7 +336,9 @@
             pauseMap: function() {
                 this.stopListening(FMS.locator);
                 FMS.locator.stopTracking();
-                $('#map_box').addClass('background-map');
+                if ( FMS.iPhoneModel > 3 ) {
+                    $('#map_box').addClass('background-map');
+                }
                 $('#map_box').off('touchend');
                 if ( fixmystreet.map ) {
                     fixmystreet.nav.deactivate();
