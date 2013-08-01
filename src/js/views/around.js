@@ -39,6 +39,7 @@
 
             beforeDisplay: function() {
                 $('a[data-role="button"]').hide();
+                $('#view-my-reports').hide();
                 $('#login-options').hide();
                 $('#postcodeForm').hide();
                 $('#cancel').hide();
