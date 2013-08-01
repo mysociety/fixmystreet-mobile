@@ -48,6 +48,7 @@ var tpl = {
         currentUser: null,
         currentPosition: null,
         isAndroid: false,
+        iPhoneModel: 0,
 
         currentDraft: new FMS.Draft(),
         allDrafts: new FMS.Drafts(),
@@ -154,6 +155,11 @@ var tpl = {
                 if ( typeof device !== 'undefined' && device.platform === 'Android' ) {
                     $.mobile.defaultPageTransition = 'none';
                     FMS.isAndroid = true;
+                }
+
+                if ( typeof device !== 'undefined' && device.platform === 'iOS' ) {
+                    var model = parseInt(device.model.replace('iPhone',''), 10);
+                    FMS.iPhoneModel = model;
                 }
 
                 _.extend(FMS, {
