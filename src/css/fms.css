@@ -429,7 +429,9 @@
     #OpenLayers_Control_Crosshairs_crosshairs {
         pointer-events: none;
         background-image: url(../images/crosshairs.png);
-        background-size: 100px 100px;
+        background-size: 50px 50px;
+        background-position: center center;
+        background-repeat: no-repeat;
     }
 
     /* it seems the mobile safari doesn't support resolution */
@@ -725,7 +727,7 @@
     .ui-icon-fms-photo-new {
         position: static;
         float: left;
-        background-size: 18px 18px;
+        background-size: 16px 16px;
     }
     div[data-role='header'] .ui-icon-fms-account {
         background-image: url(../images/user@x2.png);
