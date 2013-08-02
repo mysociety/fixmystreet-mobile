@@ -17,7 +17,11 @@
 <div data-role="content">
     <div>
         <p class="notopmargin">
+        <% if ( typeof id != 'undefined' ) { %>
+        [% loc("Oh dear - we can't detect an internet connection. However you can still edit the report now and send it later.") %]
+        <% } else { %>
         [% loc("Oh dear - we can't detect an internet connection. However you can still start a report now and complete it later, by going to 'drafts' when you're back online.") %]
+        <% } %>
         </p>
 
         <p id="locate_result">

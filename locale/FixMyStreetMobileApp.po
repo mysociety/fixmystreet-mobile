@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: templates/offline.html:46 templates/photo.html:10
+#: templates/offline.html:50 templates/photo.html:10
 msgid "(optional)"
 msgstr ""
 
@@ -37,11 +37,11 @@ msgstr ""
 msgid "Add a Photo"
 msgstr ""
 
-#: templates/offline.html:46
+#: templates/offline.html:50
 msgid "Add a Photo "
 msgstr ""
 
-#: templates/offline.html:48 templates/photo.html:19
+#: templates/offline.html:52 templates/photo.html:19
 msgid "Add an existing photo"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Invalid report"
 msgstr ""
 
-#: templates/offline.html:27
+#: templates/offline.html:31
 msgid "Locate"
 msgstr ""
 
@@ -177,7 +177,11 @@ msgstr ""
 msgid "Offline"
 msgstr ""
 
-#: templates/offline.html:20
+#: templates/offline.html:21
+msgid "Oh dear - we can't detect an internet connection. However you can still edit the report now and send it later."
+msgstr ""
+
+#: templates/offline.html:23
 msgid "Oh dear - we can't detect an internet connection. However you can still start a report now and complete it later, by going to 'drafts' when you're back online."
 msgstr ""
 
@@ -249,11 +253,11 @@ msgstr ""
 msgid "Please search for a street name and area, or postcode."
 msgstr ""
 
-#: templates/details.html:9 templates/offline.html:33
+#: templates/details.html:9 templates/offline.html:37
 msgid "Provide a title"
 msgstr ""
 
-#: templates/offline.html:60 templates/photo.html:21
+#: templates/offline.html:64 templates/photo.html:21
 msgid "Remove Photo"
 msgstr ""
 
@@ -305,7 +309,7 @@ msgstr ""
 msgid "Subject"
 msgstr ""
 
-#: templates/offline.html:47 templates/photo.html:20
+#: templates/offline.html:51 templates/photo.html:20
 msgid "Take a new photo"
 msgstr ""
 
@@ -365,7 +369,7 @@ msgstr ""
 msgid "This app needs to send you a confirmation email before we can send your report to the council."
 msgstr ""
 
-#: templates/offline.html:25
+#: templates/offline.html:29
 msgid "This report has a position."
 msgstr ""
 
@@ -403,7 +407,7 @@ msgstr ""
 msgid "Your Email"
 msgstr ""
 
-#: templates/offline.html:56
+#: templates/offline.html:60
 msgid "Your Photo"
 msgstr ""
 
