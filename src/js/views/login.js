@@ -43,11 +43,11 @@
                                 that.$('#password_row').hide();
                                 that.$('#success_row').show();
                             } else {
-                                that.validationError('form_email', FMS.strings.login_details_error);
+                                that.validationError('signinForm', FMS.strings.login_details_error);
                             }
                         },
                         error: function() {
-                            that.validationError('form_email', FMS.strings.login_error);
+                            that.validationError('signinForm', FMS.strings.login_error);
                         }
                     } );
                 }
