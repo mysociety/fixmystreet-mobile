@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-07-30 16:37+0100\n"
+"POT-Creation-Date: 2013-08-02 16:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -176,7 +176,7 @@ msgstr ""
 #: templates/strings.js:44
 msgid ""
 "No network connection available for submitting your report. Please try again "
-"later"
+"later."
 msgstr ""
 
 #: templates/submit_name.html:9
@@ -351,7 +351,7 @@ msgstr ""
 #: templates/strings.js:35
 msgid ""
 "There was a problem checking if we have all the details we need. Please try "
-"again later"
+"again later."
 msgstr ""
 
 #: templates/strings.js:34
@@ -365,34 +365,34 @@ msgid ""
 msgstr ""
 
 #: templates/strings.js:23
-msgid "There was a problem logging you in. Please try later"
+msgid "There was a problem logging you in. Please try again later."
 msgstr ""
 
 #: templates/strings.js:24
-msgid "There was a problem logging you out. Please try later"
+msgid "There was a problem logging you out. Please try again later."
 msgstr ""
 
 #: templates/strings.js:28
-msgid "There was a problem looking up your location"
-msgstr ""
-
-#: templates/strings.js:32
-msgid "There was a problem submitting your report. Please try again"
+msgid "There was a problem looking up your location."
 msgstr ""
 
 #: templates/strings.js:31
 msgid "There was a problem submitting your report. Please try again later."
 msgstr ""
 
+#: templates/strings.js:32
+msgid "There was a problem submitting your report. Please try again."
+msgstr ""
+
 #: templates/strings.js:43
-msgid "There was a problem taking your photo"
+msgid "There was a problem taking your photo."
 msgstr ""
 
 #: templates/strings.js:26
 msgid ""
 "There was a problem with your email/password combination. If you have "
 "forgotten your password, or do not have one, you can set one by returning to "
-"the email screen and selecting the set password option"
+"the email screen and selecting the set password option."
 msgstr ""
 
 #: templates/submit_email.html:13
