@@ -36,9 +36,9 @@
                 }
             },
 
-            back: function() {
+            back: function(e) {
                 if (this.currentView && this.currentView.prev) {
-                    this.currentView.onClickButtonPrev();
+                    this.currentView.onClickButtonPrev(e);
                 }
             },
 

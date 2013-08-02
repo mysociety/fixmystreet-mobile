@@ -197,8 +197,7 @@
     #drafts,
     div[data-role='content'] {
         position: relative;
-        width: 95%;
-        margin: 20px auto;
+        margin: 20px 10px;
         background-color: rgba(255, 255, 255, 0.9);
     }
 
@@ -428,20 +427,12 @@
 
     #OpenLayers_Control_Crosshairs_crosshairs {
         pointer-events: none;
-        background-image: url(../images/crosshairs.png);
         background-size: 50px 50px;
         background-position: center center;
         background-repeat: no-repeat;
-    }
+        background-image: url(../images/crosshairs@x2.png);
 
-    /* it seems the mobile safari doesn't support resolution */
-    @media only screen and (min-resolution: 320dpi),
-    only screen and (-webkit-min-device-pixel-ratio: 2) {
-        #OpenLayers_Control_Crosshairs_crosshairs {
-            background-image: url(../images/crosshairs@x2.png);
-        }
     }
-
 /* locating screen */
 
     #load-screen,

@@ -13,7 +13,7 @@ var tpl = {
         var loadTemplate = function (index) {
             var name = names[index];
             console.log('Loading template: ' + name + ', index: ' + index);
-            $.get('templates/en/' + name + '.html', function (data) {
+            $.get('templates/' + CONFIG.LANGUAGE + '/' + name + '.html', function (data) {
                 that.templates[name] = data;
                 index++;
                 if (index < names.length) {
@@ -48,6 +48,7 @@ var tpl = {
         currentUser: null,
         currentPosition: null,
         isAndroid: false,
+        iPhoneModel: 0,
 
         currentDraft: new FMS.Draft(),
         allDrafts: new FMS.Drafts(),
@@ -156,6 +157,11 @@ var tpl = {
                     FMS.isAndroid = true;
                 }
 
+                if ( typeof device !== 'undefined' && device.platform === 'iOS' ) {
+                    var model = parseInt(device.model.replace('iPhone',''), 10);
+                    FMS.iPhoneModel = model;
+                }
+
                 _.extend(FMS, {
                     router: new FMS.appRouter(),
                     locator: new FMS.Locate()
@@ -173,7 +179,7 @@ var tpl = {
 
                 document.addEventListener('pause', function() { FMS.locator.stopTracking(); FMS.saveCurrentDraft(); }, false);
                 document.addEventListener('resume', onResume, false);
-                document.addEventListener('backbutton', function() { FMS.router.back(); }, true);
+                document.addEventListener('backbutton', function(e) { FMS.router.back(e); }, true);
                 document.addEventListener('offline', function() { FMS.offline(); }, true);
                 document.addEventListener('online', function() { FMS.online(); }, true);
 

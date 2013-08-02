@@ -270,7 +270,7 @@ function show_map(event) {
 
 
 OpenLayers.Control.Crosshairs = OpenLayers.Class.create();
-OpenLayers.Control.Crosshairs.CROSSHAIR_SIDE = 100;
+OpenLayers.Control.Crosshairs.CROSSHAIR_SIDE = 106;
 OpenLayers.Control.Crosshairs.DIV_ID = "OpenLayers_Control_Crosshairs_crosshairs";
 OpenLayers.Control.Crosshairs.prototype =
   OpenLayers.Class.inherit( OpenLayers.Control, {

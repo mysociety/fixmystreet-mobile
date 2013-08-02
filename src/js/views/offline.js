@@ -16,7 +16,7 @@
                 'vclick #id_photo_button': 'takePhoto',
                 'vclick #id_existing': 'addPhoto',
                 'vclick #id_del_photo_button': 'deletePhoto',
-                'vclick #locate': 'locate',
+                'vclick #locate': 'onClickLocate',
                 'vclick #locate_cancel': 'onClickCancel',
                 'blur input': 'toggleNextButton',
                 'blur textarea': 'toggleNextButton'
@@ -107,7 +107,13 @@
                 });
             },
 
-            onClickCancel: function() {
+            onClickLocate: function(e) {
+                e.preventDefault();
+                this.locate();
+            },
+
+            onClickCancel: function(e) {
+                e.preventDefault();
                 this.finishedLocating();
             },
 

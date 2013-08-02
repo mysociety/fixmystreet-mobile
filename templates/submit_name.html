@@ -1,0 +1,38 @@
+<div id="submit-header" data-role="header">
+    <h1>[% loc('Your details') %]</h1>
+</div>
+
+<div data-role="content">
+    <div id="errors"></div>
+    <p class="top">
+    <% if ( nopassword ) { %>
+    [% loc("No problem - we don't like faffing with passwords either.") %]
+    <% } %>
+    [% loc("Please give us some basic details, and you're nearly done.") %]
+    </p>
+    <div class="inputcard">
+        <% if ( typeof model.title_list !== 'undefined' ) { %>
+        <div>
+            <select data-role="none" placeholder="[% loc('Title') %]" id="form_title" name="title" required>
+                <option value="">[% loc('Title') %]</option>
+                <% for ( var i = 0; i < model.title_list.length; i++ ) { var title = model.title_list[i]; print( '<option value="' + title + '">' + title + '</option>' ); } %>
+            </select>
+        </div>
+        <% } %>
+        <div>
+            <input data-role="none" type="text" value="<%= user.name %>" name="name" id="form_name" placeholder="[% loc('Please enter your name') %]" required>
+        </div>
+        <div>
+            <input data-role="none" type="tel" value="<%= user.phone %>" name="name" id="form_phone" placeholder="[% loc('Optionally enter your phone number') %]">
+        </div>
+        <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+                <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" checked>
+                <label for="form_may_show_name">[% loc('Show my name publicly') %]</label>
+            </fieldset>
+        </div>
+    </div>
+    <div class="bottom-btn">
+        <input data-role="button" data-theme="a" type="button" id="send_confirm" name="send_confirm" value="[% loc('Send confirmation email') %]">
+    </div>
+</div>

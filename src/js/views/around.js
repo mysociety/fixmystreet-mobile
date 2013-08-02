@@ -12,6 +12,8 @@
                 'vclick #login-options': 'goLogin',
                 'vclick #view-my-reports': 'goReports',
                 'vclick #search': 'goSearch',
+                'vclick .ui-input-clear': 'clearSearchErrors',
+                'blur #pc': 'clearSearchErrors',
                 'vclick #relocate': 'centerMapOnPosition',
                 'vclick #cancel': 'onClickCancel',
                 'vclick #confirm': 'onClickReport',
@@ -38,11 +40,15 @@
             },
 
             beforeDisplay: function() {
+                this.origPcPlaceholder = $('#pc').attr('placeholder');
                 $('a[data-role="button"]').hide();
+                $('#view-my-reports').hide();
                 $('#login-options').hide();
                 $('#postcodeForm').hide();
                 $('#cancel').hide();
+                $('#map_box').removeClass('background-map');
                 this.fixPageHeight();
+                $('#map_box').on('touchend', function() { if ( ! $('#popup').length ) { $('#OpenLayers_Control_Crosshairs_crosshairs').show(); } } );
             },
 
             afterDisplay: function() {
@@ -149,6 +155,7 @@
                 if ( !fixmystreet.map ) {
                     $('#relocate').hide();
                     $('#mark-here').hide();
+                    $('#pc').focus();
                 }
                 $('#front-howto').html('<p>' + msg + '</msg>');
                 $('#front-howto').show();
@@ -201,6 +208,8 @@
             onClickMark: function(e) {
                 e.preventDefault();
                 this.displayButtons(true);
+                $('#popup').hide();
+                $('#OpenLayers_Control_Crosshairs_crosshairs').show();
                 $('#reposition').hide();
 
                 var lonlat = this.getCrossHairPosition();
@@ -211,6 +220,8 @@
                 e.preventDefault();
                 fixmystreet.markers.removeAllFeatures();
                 fixmystreet_activate_drag();
+                // force pins to be refetched and displayed
+                fixmystreet.bbox_strategy.update({force: true});
                 this.displayButtons(false);
                 if ( this.model.isPartial() ) {
                     FMS.clearCurrentDraft();
@@ -270,6 +281,7 @@
                 // this is to stop form submission
                 e.preventDefault();
                 $('#front-howto').hide();
+                this.clearSearchErrors();
                 this.clearValidationErrors();
                 var pc = this.$('#pc').val();
                 this.listenTo(FMS.locator, 'search_located', this.searchSuccess );
@@ -304,12 +316,28 @@
                 }
             },
 
+            searchError: function(msg) {
+                if ( msg.length < 30 ) {
+                    $('#pc').attr('placeholder', msg).addClass('error');;
+                } else {
+                    $('#front-howto').html(msg);
+                    $('#relocate').hide();
+                    $('#front-howto').show();
+                }
+            },
+
+            clearSearchErrors: function() {
+                $('#pc').attr('placeholder', this.origPcPlaceholder).removeClass('error');;
+                $('#front-howto').hide();
+                $('#relocate').show();
+            },
+
             searchFail: function( details ) {
                 // this makes sure any onscreen keyboard is dismissed
                 $('#submit').focus();
                 this.stopListening(FMS.locator);
                 if ( details.msg ) {
-                    this.validationError( 'pc', details.msg );
+                    this.searchError( details.msg );
                 } else if ( details.locations ) {
                     var multiple = '';
                     for ( var i = 0; i < details.locations.length; i++ ) {
@@ -322,13 +350,17 @@
                     $('#relocate').hide();
                     $('#front-howto').show();
                 } else {
-                    this.validationError( 'pc', FMS.strings.location_problem );
+                    this.searchError( FMS.strings.location_problem );
                 }
             },
 
             pauseMap: function() {
                 this.stopListening(FMS.locator);
                 FMS.locator.stopTracking();
+                if ( FMS.iPhoneModel > 3 ) {
+                    $('#map_box').addClass('background-map');
+                }
+                $('#map_box').off('touchend');
                 if ( fixmystreet.map ) {
                     fixmystreet.nav.deactivate();
                     fixmystreet.actionafterdrag.deactivate();
@@ -340,8 +372,8 @@
                 this.model.set('lat', info.coordinates.latitude );
                 this.model.set('lon', info.coordinates.longitude );
                 this.model.set('categories', info.details.category );
-                if ( info.details.title_list ) {
-                    this.model.set('title_list', info.details.title_list);
+                if ( info.details.titles_list ) {
+                    this.model.set('titles_list', info.details.titles_list);
                 }
                 FMS.saveCurrentDraft();
 

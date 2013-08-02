@@ -1,0 +1,43 @@
+<div id="submit-header" data-role="header">
+    <a id="reports-next-btn" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">[% loc('Home') %]</a>
+    <h1>[% loc('Login') %]</h1>
+</div>
+
+<div data-role="content">
+    <% if ( FMS.isLoggedIn ) { %>
+    <div id="signed_in_row">
+        <p class="notopmargin">[% tprintf('You are signed in as %s', '<%= email %>') %]</p>
+        <div id="err" class="nodisplay"></div>
+        <div class="bottom-btn">
+            <input type="button" id="logout" name="logout" value="[% loc('Sign Out') %]" data-theme="a">
+        </div>
+    </div>
+    <div id="password_row" class="nodisplay">
+        <p class="notopmargin">
+        [% loc('Signed out!') %]
+        </p>
+    <% } else { %>
+    <div id="password_row">
+    <% } %>
+        <form name="signinForm" class="inputcard" id="signinForm">
+        <div>
+            <input data-role="none" type="email" value="" name="email" id="form_email" placeholder="[% loc('Your Email') %]" required>
+        </div>
+        <div>
+            <input data-role="none" type="password" value="" name="password" id="form_password" placeholder="[% loc('Your password') %]" required>
+        </div>
+        <div class="bottom-btn">
+            <input type="submit" id="login" name="login" value="Login" data-theme="a">
+        </div>
+        </form>
+    </div>
+    <div id="success_row" class="nodisplay">
+        <p class="notopmargin">
+        [% loc('Signed in!') %]
+        </p>
+        <div id="err" class="nodisplay"></div>
+        <div class="bottom-btn">
+            <input type="button" id="logout" name="logout" value="[% loc('Sign Out') %]" data-theme="a">
+        </div>
+    </div>
+</div>

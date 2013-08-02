@@ -4,6 +4,7 @@
             skipLocationCheck: false,
 
             locate: function() {
+                $(document).delegate('.ui-content', 'touchmove', false);
                 $('#locating').show();
                 this.listenTo(FMS.locator, 'gps_located', this.gotLocation);
                 this.listenTo(FMS.locator, 'gps_failed', this.failedLocation);
@@ -35,6 +36,7 @@
             showLocateProgress: function() {
                 if ( !this.located && this.locateCount > 20 ) {
                     FMS.searchMessage = FMS.strings.geolocation_failed;
+                    $(document).undelegate('.ui-content', 'touchmove', false);
                     $('#locating').hide();
                     return;
                 }
@@ -49,6 +51,7 @@
                 this.stopListening(FMS.locator, 'gps_locating');
                 this.stopListening(FMS.locator, 'gps_located');
                 this.stopListening(FMS.locator, 'gps_failed');
+                $(document).undelegate('.ui-content', 'touchmove', false);
                 $('#locating').hide();
             },
 
