@@ -81,8 +81,6 @@ var tpl = {
                     dataType: 'json',
                     timeout: 30000,
                     success: function( data, status ) {
-                        console.log(data);
-                        console.log(status);
                         FMS.isLoggedIn = 1;
                     },
                     error: function() {
