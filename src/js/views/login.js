@@ -20,6 +20,7 @@
             onClickLogin: function(e) {
                 // prevent form submission from onscreen keyboard
                 e.preventDefault();
+                $('#login').focus();
                 if ( this.validate() ) {
                     var that = this;
                     $.ajax( {
@@ -41,9 +42,7 @@
                                 FMS.isLoggedIn = 1;
                                 that.$('#password_row').hide();
                                 that.$('#success_row').show();
-                                $('#logout').focus();
                             } else {
-                                $('#login').focus();
                                 that.validationError('form_email', FMS.strings.login_details_error);
                             }
                         },
