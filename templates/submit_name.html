@@ -11,11 +11,11 @@
     [% loc("Please give us some basic details, and you're nearly done.") %]
     </p>
     <div class="inputcard">
-        <% if ( typeof model.title_list !== 'undefined' ) { %>
+        <% if ( typeof model.titles_list !== 'undefined' ) { %>
         <div>
             <select data-role="none" placeholder="[% loc('Title') %]" id="form_title" name="title" required>
                 <option value="">[% loc('Title') %]</option>
-                <% for ( var i = 0; i < model.title_list.length; i++ ) { var title = model.title_list[i]; print( '<option value="' + title + '">' + title + '</option>' ); } %>
+                <% for ( var i = 0; i < model.titles_list.length; i++ ) { var title = model.titles_list[i]; print( '<option value="' + title + '">' + title + '</option>' ); } %>
             </select>
         </div>
         <% } %>
