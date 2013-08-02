@@ -242,6 +242,7 @@
         border-bottom: 1px solid #ccc;
     }
     .inputcard > div.noborder,
+    .inputcard > div.bottom-btn,
     .gmailstyletest > div.noborder {
         border:none;
     }
