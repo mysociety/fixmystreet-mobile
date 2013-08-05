@@ -362,12 +362,14 @@
 
             onClickContinue: function(e) {
                 e.preventDefault();
-                $('#continue').focus();
-                if ( ! this.model.get('submit_clicked') ) {
-                    this.model.set('submit_clicked', 'submit_sign_in');
+                if ( this.validate() ) {
+                    $('#continue').focus();
+                    if ( ! this.model.get('submit_clicked') ) {
+                        this.model.set('submit_clicked', 'submit_sign_in');
+                    }
+                    FMS.currentUser.set('password', $('#form_password').val());
+                    this.navigate( this.next );
                 }
-                FMS.currentUser.set('password', $('#form_password').val());
-                this.navigate( this.next );
             }
         })
     });
