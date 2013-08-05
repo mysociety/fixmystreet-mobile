@@ -428,8 +428,11 @@
 
     #OpenLayers_Control_Crosshairs_crosshairs {
         pointer-events: none;
+        background-size: 50px 50px;
+        background-position: center center;
+        background-repeat: no-repeat;
         background-image: url(../images/crosshairs@x2.png);
-        background-size: 106px 106px;
+
     }
 /* locating screen */
 
@@ -562,11 +565,15 @@
 
     #relocate {
         display: block;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         padding: 5px;
         margin: 0px;
-        background-color: rgba(248,248,248,0.8);
+        background-color: rgba(248,248,248,0.9);
+        background-image: url(../images/location@x2.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50%;
     }
 
     #pc {
@@ -716,7 +723,7 @@
     .ui-icon-fms-photo-new {
         position: static;
         float: left;
-        background-size: 18px 18px;
+        background-size: 16px 16px;
     }
     div[data-role='header'] .ui-icon-fms-account {
         background-image: url(../images/user@x2.png);
