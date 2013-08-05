@@ -140,10 +140,23 @@
     });
 })(FMS, Backbone, _, $);
 
+(function (FMS, Backbone, _, $) {
+    _.extend( FMS, {
+        SubmitInitialPageView: FMS.SubmitView.extend({
+            onClickButtonPrev: function() {
+                if ( this.model.get('hasExtras') == 1 ) {
+                    this.navigate( 'details_extra', true );
+                } else {
+                    this.navigate( 'details', true );
+                }
+            }
+        })
+    });
+})(FMS, Backbone, _, $);
 
 (function (FMS, Backbone, _, $) {
     _.extend( FMS, {
-        SubmitEmailView: FMS.SubmitView.extend({
+        SubmitEmailView: FMS.SubmitInitialPageView.extend({
             template: 'submit_email',
             id: 'submit-email-page',
             prev: 'details',
@@ -380,7 +393,7 @@
 
 (function (FMS, Backbone, _, $) {
     _.extend( FMS, {
-        SubmitConfirmView: FMS.SubmitView.extend({
+        SubmitConfirmView: FMS.SubmitInitialPageView.extend({
             template: 'submit_confirm',
             id: 'submit-confirm-page',
             prev: 'details',
