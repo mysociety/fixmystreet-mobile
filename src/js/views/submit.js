@@ -236,7 +236,7 @@
                     this.validationError('form_name', FMS.validationStrings.name.required );
                 } else {
                     var validNamePat = /\ba\s*n+on+((y|o)mo?u?s)?(ly)?\b/i;
-                    if ( name.length < 6 || !name.match( /\S/ ) || name.match( validNamePat ) ) {
+                    if ( name.length < 6 || !name.match( /\s/ ) || !name.match( /\S/ ) || name.match( validNamePat ) ) {
                         isValid = 0;
                         this.validationError('form_name', FMS.validationStrings.name.validName);
                     }
