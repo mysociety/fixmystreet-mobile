@@ -308,7 +308,8 @@
             },
 
             searchSuccess: function( info ) {
-                this.stopListening(FMS.locator);
+                this.stopListening(FMS.locator, 'search_located');
+                this.stopListening(FMS.locator, 'search_failed');
                 var coords = info.coordinates;
                 if ( fixmystreet.map ) {
                     fixmystreet.map.panTo(this.projectCoords( coords ));
@@ -352,7 +353,8 @@
             searchFail: function( details ) {
                 // this makes sure any onscreen keyboard is dismissed
                 $('#submit').focus();
-                this.stopListening(FMS.locator);
+                this.stopListening(FMS.locator, 'search_located');
+                this.stopListening(FMS.locator, 'search_failed');
                 if ( details.msg ) {
                     this.searchError( details.msg );
                 } else if ( details.locations ) {
