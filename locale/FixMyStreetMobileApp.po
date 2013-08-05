@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-07-30 16:37+0100\n"
+"POT-Creation-Date: 2013-08-02 17:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: templates/offline.html:46 templates/photo.html:10
+#: templates/offline.html:50 templates/photo.html:10
 msgid "(optional)"
 msgstr ""
 
@@ -37,11 +37,11 @@ msgstr ""
 msgid "Add a Photo"
 msgstr ""
 
-#: templates/offline.html:46
+#: templates/offline.html:50
 msgid "Add a Photo "
 msgstr ""
 
-#: templates/offline.html:48 templates/photo.html:19
+#: templates/offline.html:52 templates/photo.html:19
 msgid "Add an existing photo"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Invalid report"
 msgstr ""
 
-#: templates/offline.html:27
+#: templates/offline.html:31
 msgid "Locate"
 msgstr ""
 
@@ -166,7 +166,7 @@ msgid "Next"
 msgstr ""
 
 #: templates/strings.js:44
-msgid "No network connection available for submitting your report. Please try again later"
+msgid "No network connection available for submitting your report. Please try again later."
 msgstr ""
 
 #: templates/submit_name.html:9
@@ -177,7 +177,11 @@ msgstr ""
 msgid "Offline"
 msgstr ""
 
-#: templates/offline.html:20
+#: templates/offline.html:21
+msgid "Oh dear - we can't detect an internet connection. However you can still edit the report now and send it later."
+msgstr ""
+
+#: templates/offline.html:23
 msgid "Oh dear - we can't detect an internet connection. However you can still start a report now and complete it later, by going to 'drafts' when you're back online."
 msgstr ""
 
@@ -249,11 +253,11 @@ msgstr ""
 msgid "Please search for a street name and area, or postcode."
 msgstr ""
 
-#: templates/details.html:9 templates/offline.html:33
+#: templates/details.html:9 templates/offline.html:37
 msgid "Provide a title"
 msgstr ""
 
-#: templates/offline.html:60 templates/photo.html:21
+#: templates/offline.html:64 templates/photo.html:21
 msgid "Remove Photo"
 msgstr ""
 
@@ -305,7 +309,7 @@ msgstr ""
 msgid "Subject"
 msgstr ""
 
-#: templates/offline.html:47 templates/photo.html:20
+#: templates/offline.html:51 templates/photo.html:20
 msgid "Take a new photo"
 msgstr ""
 
@@ -322,7 +326,7 @@ msgid "There isn't an internet connection, do you want to save the current repor
 msgstr ""
 
 #: templates/strings.js:35
-msgid "There was a problem checking if we have all the details we need. Please try again later"
+msgid "There was a problem checking if we have all the details we need. Please try again later."
 msgstr ""
 
 #: templates/strings.js:34
@@ -334,38 +338,38 @@ msgid "There was a problem logging you in. Please check your email and password"
 msgstr ""
 
 #: templates/strings.js:23
-msgid "There was a problem logging you in. Please try later"
+msgid "There was a problem logging you in. Please try again later."
 msgstr ""
 
 #: templates/strings.js:24
-msgid "There was a problem logging you out. Please try later"
+msgid "There was a problem logging you out. Please try again later."
 msgstr ""
 
 #: templates/strings.js:28
-msgid "There was a problem looking up your location"
-msgstr ""
-
-#: templates/strings.js:32
-msgid "There was a problem submitting your report. Please try again"
+msgid "There was a problem looking up your location."
 msgstr ""
 
 #: templates/strings.js:31
 msgid "There was a problem submitting your report. Please try again later."
 msgstr ""
 
+#: templates/strings.js:32
+msgid "There was a problem submitting your report. Please try again."
+msgstr ""
+
 #: templates/strings.js:43
-msgid "There was a problem taking your photo"
+msgid "There was a problem taking your photo."
 msgstr ""
 
 #: templates/strings.js:26
-msgid "There was a problem with your email/password combination. If you have forgotten your password, or do not have one, you can set one by returning to the email screen and selecting the set password option"
+msgid "There was a problem with your email/password combination. If you have forgotten your password, or do not have one, you can set one by returning to the email screen and selecting the set password option."
 msgstr ""
 
 #: templates/submit_email.html:13
 msgid "This app needs to send you a confirmation email before we can send your report to the council."
 msgstr ""
 
-#: templates/offline.html:25
+#: templates/offline.html:29
 msgid "This report has a position."
 msgstr ""
 
@@ -393,17 +397,11 @@ msgstr ""
 msgid "We've sent you a confirmation email which may take a few minutes to arrive. Once it arrives click the link in the email to confirm your report."
 msgstr ""
 
-#. ('<%= user.email %>')
-#. ("<%= user.email %>")
-#: templates/submit_confirm.html:7
-msgid "You are logged in as %s"
-msgstr ""
-
 #: templates/login.html:24
 msgid "Your Email"
 msgstr ""
 
-#: templates/offline.html:56
+#: templates/offline.html:60
 msgid "Your Photo"
 msgstr ""
 

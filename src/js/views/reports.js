@@ -44,6 +44,22 @@
                 var el = $(e.target);
                 var id = el.parents('li').attr('id');
                 FMS.currentDraft = FMS.allDrafts.get(id);
+                $('#drafts').hide();
+                if ( FMS.currentDraft && FMS.currentDraft.get('lat') ) {
+                    var coords = { latitude: FMS.currentDraft.get('lat'), longitude: FMS.currentDraft.get('lon') };
+                    fixmystreet.latitude = coords.latitude;
+                    fixmystreet.longitude = coords.longitude;
+
+                    if ( fixmystreet.map ) {
+                        var centre = new OpenLayers.LonLat( coords.longitude, coords.latitude );
+                        centre.transform(
+                            new OpenLayers.Projection("EPSG:4326"),
+                            fixmystreet.map.getProjectionObject()
+                        );
+
+                        fixmystreet.map.panTo(centre);
+                    }
+                }
                 this.navigate('around');
             },
 
