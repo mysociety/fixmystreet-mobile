@@ -140,6 +140,23 @@
                 // is up so we probably should not recenter
                 if ( FMS.currentPosition ) {
                     fixmystreet.map.panTo(this.projectCoords( FMS.currentPosition ));
+
+                    // If we've confirmed the report position then we should be able
+                    // to reposition it if we've moved the map.
+                    if ( $('#confirm').css('display') == 'block' ) {
+                        var currentPos = this.projectCoords(FMS.currentPosition);
+                        var markerPos = this.getMarkerPosition(true);
+
+                        // Displaying the button if the report is in the same place as the 
+                        // GPS location could be confusing so check they are different.
+                        // The slight margin of error is there to account for both rounding
+                        // wiggle in the projectCoords and also so that small changes due to
+                        // GPS noise are ignored
+                        if ( Math.abs(markerPos.lat - currentPos.lat) > 1 ||
+                             Math.abs(markerPos.lon - currentPos.lon) > 1 ) {
+                            $('#reposition').show();
+                        }
+                    }
                 }
             },
 
@@ -420,10 +437,13 @@
                 return position;
             },
 
-            getMarkerPosition: function() {
+            getMarkerPosition: function(skipTransform) {
                 var marker = fixmystreet.report_location.features[0].geometry;
 
                 var position = new OpenLayers.LonLat( marker.x, marker.y );
+                if ( skipTransform ) {
+                    return position;
+                }
                 position.transform(
                     fixmystreet.map.getProjectionObject(),
                     new OpenLayers.Projection("EPSG:4326")
