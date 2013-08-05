@@ -172,7 +172,7 @@
                 if ( !fixmystreet.map ) {
                     $('#relocate').hide();
                     $('#mark-here').hide();
-                    $('#pc').attr('Search for a place or postcode.').focus();
+                    $('#pc').attr('placeholder', 'Search for a place or postcode.').focus();
                 }
                 $('#front-howto').html('<p>' + msg + '</msg>');
                 $('#front-howto').show();
