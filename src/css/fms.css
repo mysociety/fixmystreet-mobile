@@ -452,7 +452,7 @@
 
     #load-screen .radar,
     #locating .radar {
-        background: transparent url('../images/radar.svg') no-repeat top center;
+        background: transparent url('../images/radar.png') no-repeat top center;
         width: 100%;
         height: 260px;
         background-size: 260px 260px;
