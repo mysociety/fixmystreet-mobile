@@ -428,7 +428,7 @@
 
     #OpenLayers_Control_Crosshairs_crosshairs {
         pointer-events: none;
-        background-size: 50px 50px;
+        background-size: 106px 106px;
         background-position: center center;
         background-repeat: no-repeat;
         background-image: url(../images/crosshairs@x2.png);

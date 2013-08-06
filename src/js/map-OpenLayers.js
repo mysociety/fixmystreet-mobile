@@ -65,8 +65,8 @@ function fixmystreet_onload() {
             backgroundGraphicZIndex: 10
         })
     });
-    var location_img = 'images/pin.png';
-    var location_bg_img = 'images/pin_shadow.png';
+    var location_img = 'images/pin@x2.png';
+    var location_bg_img = 'images/pin_shadow@x2.png';
     if ( typeof device !== 'undefined' && (
         (device.platform == 'Android' && parseInt(device.version, 10) > 2) ||
         (device.platform !== 'Android') ) ) {
