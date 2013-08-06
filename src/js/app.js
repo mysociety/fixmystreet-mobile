@@ -144,6 +144,7 @@ var tpl = {
             if ( this.initialized == 1 ) {
                 return this;
             }
+            $('#load-screen').height( $(window).height() );
             FMS.initialized = 1;
             if ( navigator && navigator.splashscreen ) {
                 navigator.splashscreen.hide();
