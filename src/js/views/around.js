@@ -346,8 +346,10 @@
 
             clearSearchErrors: function() {
                 $('#pc').attr('placeholder', this.origPcPlaceholder).removeClass('error');;
-                $('#front-howto').hide();
-                $('#relocate').show();
+                if ( fixmystreet.map ) {
+                    $('#front-howto').hide();
+                    $('#relocate').show();
+                }
             },
 
             searchFail: function( details ) {
