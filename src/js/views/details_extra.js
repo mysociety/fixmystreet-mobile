@@ -23,6 +23,7 @@
             },
 
             onClickButtonPrev: function() {
+                this.model.set('hasExtras', 0);
                 this.updateCurrentReport();
                 this.navigate( this.prev, true );
             },
@@ -43,6 +44,7 @@
                 $('input').each(isRequired);
                 $('textarea').each(isRequired);
                 $('select').each(isRequired);
+                this.model.set('hasExtras', 1);
 
                 if ( valid ) {
                     this.clearValidationErrors();

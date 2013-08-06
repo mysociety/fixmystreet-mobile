@@ -140,6 +140,23 @@
                 // is up so we probably should not recenter
                 if ( FMS.currentPosition ) {
                     fixmystreet.map.panTo(this.projectCoords( FMS.currentPosition ));
+
+                    // If we've confirmed the report position then we should be able
+                    // to reposition it if we've moved the map.
+                    if ( $('#confirm').css('display') == 'block' ) {
+                        var currentPos = this.projectCoords(FMS.currentPosition);
+                        var markerPos = this.getMarkerPosition(true);
+
+                        // Displaying the button if the report is in the same place as the 
+                        // GPS location could be confusing so check they are different.
+                        // The slight margin of error is there to account for both rounding
+                        // wiggle in the projectCoords and also so that small changes due to
+                        // GPS noise are ignored
+                        if ( Math.abs(markerPos.lat - currentPos.lat) > 1 ||
+                             Math.abs(markerPos.lon - currentPos.lon) > 1 ) {
+                            $('#reposition').show();
+                        }
+                    }
                 }
             },
 
@@ -155,7 +172,7 @@
                 if ( !fixmystreet.map ) {
                     $('#relocate').hide();
                     $('#mark-here').hide();
-                    $('#pc').attr('Search for a place or postcode.').focus();
+                    $('#pc').attr('placeholder', 'Search for a place or postcode.').focus();
                 }
                 $('#front-howto').html('<p>' + msg + '</msg>');
                 $('#front-howto').show();
@@ -291,7 +308,8 @@
             },
 
             searchSuccess: function( info ) {
-                this.stopListening(FMS.locator);
+                this.stopListening(FMS.locator, 'search_located');
+                this.stopListening(FMS.locator, 'search_failed');
                 var coords = info.coordinates;
                 if ( fixmystreet.map ) {
                     fixmystreet.map.panTo(this.projectCoords( coords ));
@@ -335,7 +353,8 @@
             searchFail: function( details ) {
                 // this makes sure any onscreen keyboard is dismissed
                 $('#submit').focus();
-                this.stopListening(FMS.locator);
+                this.stopListening(FMS.locator, 'search_located');
+                this.stopListening(FMS.locator, 'search_failed');
                 if ( details.msg ) {
                     this.searchError( details.msg );
                 } else if ( details.locations ) {
@@ -420,10 +439,13 @@
                 return position;
             },
 
-            getMarkerPosition: function() {
+            getMarkerPosition: function(skipTransform) {
                 var marker = fixmystreet.report_location.features[0].geometry;
 
                 var position = new OpenLayers.LonLat( marker.x, marker.y );
+                if ( skipTransform ) {
+                    return position;
+                }
                 position.transform(
                     fixmystreet.map.getProjectionObject(),
                     new OpenLayers.Projection("EPSG:4326")

@@ -98,6 +98,7 @@
                         }
                     }
                     errorList += '</ul>';
+                    $('p.top').hide();
                     $('#errors').html(errorList).show();
                 }
             },
@@ -139,10 +140,23 @@
     });
 })(FMS, Backbone, _, $);
 
+(function (FMS, Backbone, _, $) {
+    _.extend( FMS, {
+        SubmitInitialPageView: FMS.SubmitView.extend({
+            onClickButtonPrev: function() {
+                if ( this.model.get('hasExtras') == 1 ) {
+                    this.navigate( 'details_extra', true );
+                } else {
+                    this.navigate( 'details', true );
+                }
+            }
+        })
+    });
+})(FMS, Backbone, _, $);
 
 (function (FMS, Backbone, _, $) {
     _.extend( FMS, {
-        SubmitEmailView: FMS.SubmitView.extend({
+        SubmitEmailView: FMS.SubmitInitialPageView.extend({
             template: 'submit_email',
             id: 'submit-email-page',
             prev: 'details',
@@ -236,7 +250,7 @@
                     this.validationError('form_name', FMS.validationStrings.name.required );
                 } else {
                     var validNamePat = /\ba\s*n+on+((y|o)mo?u?s)?(ly)?\b/i;
-                    if ( name.length < 6 || !name.match( /\S/ ) || name.match( validNamePat ) ) {
+                    if ( name.length < 6 || !name.match( /\s/ ) || !name.match( /\S/ ) || name.match( validNamePat ) ) {
                         isValid = 0;
                         this.validationError('form_name', FMS.validationStrings.name.validName);
                     }
@@ -253,6 +267,8 @@
             },
 
             beforeSubmit: function() {
+                $('#errors').hide();
+                $('p.top').show();
                 this.model.set('name', $('#form_name').val());
                 this.model.set('phone', $('#form_phone').val());
                 this.model.set('may_show_name', $('#form_may_show_name').val());
@@ -362,12 +378,14 @@
 
             onClickContinue: function(e) {
                 e.preventDefault();
-                $('#continue').focus();
-                if ( ! this.model.get('submit_clicked') ) {
-                    this.model.set('submit_clicked', 'submit_sign_in');
+                if ( this.validate() ) {
+                    $('#continue').focus();
+                    if ( ! this.model.get('submit_clicked') ) {
+                        this.model.set('submit_clicked', 'submit_sign_in');
+                    }
+                    FMS.currentUser.set('password', $('#form_password').val());
+                    this.navigate( this.next );
                 }
-                FMS.currentUser.set('password', $('#form_password').val());
-                this.navigate( this.next );
             }
         })
     });
@@ -375,7 +393,7 @@
 
 (function (FMS, Backbone, _, $) {
     _.extend( FMS, {
-        SubmitConfirmView: FMS.SubmitView.extend({
+        SubmitConfirmView: FMS.SubmitInitialPageView.extend({
             template: 'submit_confirm',
             id: 'submit-confirm-page',
             prev: 'details',
