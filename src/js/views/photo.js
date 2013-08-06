@@ -29,12 +29,16 @@
 
             takePhoto: function(e) {
                 e.preventDefault();
+                $.mobile.loading('show');
+                $('#photo').hide();
                 var that = this;
                 navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, { saveToPhotoAlbum: true, quality: 49, destinationType: Camera.DestinationType.FILE_URI, sourceType: navigator.camera.PictureSourceType.CAMERA, correctOrientation: true });
             },
 
             addPhoto: function(e) {
                 e.preventDefault();
+                $.mobile.loading('show');
+                $('#photo').hide();
                 var that = this;
                 navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, { saveToPhotoAlbum: false, quality: 49, destinationType: Camera.DestinationType.FILE_URI, sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY, correctOrientation: true });
             },
@@ -65,12 +69,16 @@
                     $('#id_del_photo_button').parents('.ui-btn').show();
                     $('#id_photo_button').parents('.ui-btn').hide();
                     $('#id_existing').parents('.ui-btn').hide();
+                    $('#photo').show();
+                    window.setTimeout(function() { $.mobile.loading('hide') }, 100);
                 });
 
                 move.fail( function() { that.addPhotoFail(); } );
             },
 
             addPhotoFail: function() {
+                $('#photo').show();
+                $.mobile.loading('hide');
                 if ( message != 'no image selected' &&
                     message != 'Selection cancelled.' &&
                     message != 'Camera cancelled.' ) {
