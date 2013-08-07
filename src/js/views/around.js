@@ -45,6 +45,7 @@
                 $('#view-my-reports').hide();
                 $('#login-options').hide();
                 $('#postcodeForm').hide();
+                $('#relocate').hide();
                 $('#cancel').hide();
                 $('#map_box').removeClass('background-map');
                 this.fixPageHeight();
