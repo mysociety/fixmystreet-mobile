@@ -93,7 +93,7 @@
 
                 del.done( function() {
                     that.model.set('file', '');
-                    FMS.saveCurrentDraft();
+                    FMS.saveCurrentDraft(true);
                     $('#photo').attr('src', 'images/placeholder-photo.png').addClass('placeholder').removeClass('small');
 
                     $('#photo-next-btn .ui-btn-text').text('Skip');
