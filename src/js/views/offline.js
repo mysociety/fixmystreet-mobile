@@ -33,7 +33,13 @@
                 return hasContent;
             },
 
+            afterDisplay: function() {
+                $('body')[0].scrollTop = 0;
+                $('div[data-role="content"]').show();
+            },
+
             toggleNextButton: function() {
+                $('div[data-role="content"]').hide();
                 if ( this.draftHasContent() ) {
                     $('#offline-next-btn .ui-btn-text').text('Save');
                 } else {

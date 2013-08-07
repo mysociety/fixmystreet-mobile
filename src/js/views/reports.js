@@ -17,6 +17,20 @@
                 'vclick .ui-btn-right': 'onClickButtonNext'
             },
 
+            onClickButtonPrev: function(e) {
+                $('#drafts').hide();
+                $('body')[0].scrollTop = 0;
+                e.preventDefault();
+                this.navigate( this.prev, true );
+            },
+
+            onClickButtonNext: function(e) {
+                $('#drafts').hide();
+                $('body')[0].scrollTop = 0;
+                e.preventDefault();
+                this.navigate( this.next );
+            },
+
             deleteReport: function(e) {
                 e.preventDefault();
                 var el = $(e.target);
