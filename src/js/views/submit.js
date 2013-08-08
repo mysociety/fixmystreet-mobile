@@ -207,6 +207,7 @@
 
             onClickConfirm: function(e) {
                 e.preventDefault();
+                this.model.set('submit_clicked', '');
                 if ( this.validate() ) {
                     FMS.currentUser.set('email', $('#form_email').val());
                     this.navigate( 'submit-name' );
