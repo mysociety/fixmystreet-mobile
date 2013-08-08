@@ -126,7 +126,22 @@
                     fileOptions.chunkedMode = false;
 
                     var ft = new FileTransfer();
-                    $.mobile.loading('show');
+                    ft.onprogress = function(evt) {
+                        if (evt.lengthComputable) {
+                            var pcnt = (evt.loaded/evt.total) * 80;
+                            pcnt = pcnt + '%';
+                            $('.ui-loader #progress').css('display', 'block');
+                            $('.ui-loader #progress').css('width', pcnt);
+                            if ( pcnt == '80%' ) {
+                                $('.ui-loader #progress').css('background-color', 'green' );
+                            }
+                        }
+                    };
+                    $.mobile.loading('show', {
+                        text: 'loading images takes a while, please be patient',
+                        textVisible: true,
+                        html: '<span class="ui-icon ui-icon-loading"></span><h1>loading images takes a while, please be patient</h1><span id="progress"></span>'
+                    });
                     ft.upload(fileURI, CONFIG.FMS_URL + "report/new/mobile", fileUploadSuccess, fileUploadFail, fileOptions);
                 } else {
                     $.ajax( {

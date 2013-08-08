@@ -171,6 +171,22 @@
         background: url('images/ajax-loader.gif');
     }
 
+    .ui-loader h1 {
+        position: absolute;
+        top: 50%;
+        margin: 40px 10px 0px 10px;
+    }
+
+    .ui-loader #progress {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        margin-top: 80px;
+        background-color: white;
+        height: 10px;
+    }
+
     .ui-header .ui-title,
     .ui-footer .ui-title
     {
