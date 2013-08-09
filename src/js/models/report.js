@@ -138,9 +138,9 @@
                         }
                     };
                     $.mobile.loading('show', {
-                        text: 'loading images takes a while, please be patient',
+                        text: FMS.strings.photo_loading,
                         textVisible: true,
-                        html: '<span class="ui-icon ui-icon-loading"></span><h1>loading images takes a while, please be patient</h1><span id="progress"></span>'
+                        html: '<span class="ui-icon ui-icon-loading"></span><h1>' + FMS.strings.photo_loading + '</h1><span id="progress"></span>'
                     });
                     ft.upload(fileURI, CONFIG.FMS_URL + "report/new/mobile", fileUploadSuccess, fileUploadFail, fileOptions);
                 } else {

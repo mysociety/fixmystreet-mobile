@@ -41,6 +41,7 @@
             invalid_email: '[% loc('Invalid email') %]',
             invalid_report: '[% loc('Invalid report') %]',
             photo_failed: '[% loc('There was a problem taking your photo.') %]',
+            photo_loading: '[% loc('Uploading images may take some time, please be patient') %]',
             no_connection: '[% loc('No network connection available for submitting your report. Please try again later.') %]',
             more_details: '[% loc('More details') %]'
         }

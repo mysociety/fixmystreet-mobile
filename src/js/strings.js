@@ -41,6 +41,7 @@
             invalid_email: 'Invalid email',
             invalid_report: 'Invalid report',
             photo_failed: 'There was a problem taking your photo.',
+            photo_loading: 'Uploading images may take some time, please be patient',
             no_connection: 'No network connection available for submitting your report. Please try again later.',
             more_details: 'More details'
         }
