@@ -107,13 +107,15 @@
                 var msg = FMS.strings.unknown_sync_error;
                 if ( err.errors ) {
                     msg = msg + ': ' + err.errors;
+                } else if ( options.aborted ) {
+                    msg = FMS.strings.upload_aborted;
                 }
                 var that = this;
                 navigator.notification.confirm(
                     msg,
                     function(index) { that.handleReportError(index); },
                     CONFIG.APP_NAME,
-                    'Save for Later,Try Again');
+                    ['Save for Later','Try Again']);
             },
 
             handleReportError: function(index) {

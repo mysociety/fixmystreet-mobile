@@ -89,6 +89,7 @@
                 var that = this;
                 if ( model.get('file') && model.get('file') !== '' ) {
                     var fileUploadSuccess = function(r) {
+                        FMS.uploading = false;
                         $.mobile.loading('hide');
                         if ( r.response ) {
                             var data;
@@ -111,9 +112,15 @@
                         }
                     };
 
-                    var fileUploadFail = function() {
+                    var fileUploadFail = function(err) {
+                        FMS.uploading = false;
                         $.mobile.loading('hide');
-                        that.trigger('error', that, FMS.strings.report_send_error, options);
+                        if ( err.code == FileTransferError.ABORT_ERR ) {
+                            options.aborted = true;
+                            that.trigger('error', that, FMS.strings.report_send_error, options);
+                        } else {
+                            that.trigger('error', that, FMS.strings.report_send_error, options);
+                        }
                     };
 
                     fileURI = model.get('file');
@@ -126,23 +133,53 @@
                     fileOptions.chunkedMode = false;
 
                     var ft = new FileTransfer();
-                    ft.onprogress = function(evt) {
-                        if (evt.lengthComputable) {
-                            var pcnt = (evt.loaded/evt.total) * 80;
-                            pcnt = pcnt + '%';
-                            $('.ui-loader #progress').css('display', 'block');
-                            $('.ui-loader #progress').css('width', pcnt);
-                            if ( pcnt == '80%' ) {
-                                $('.ui-loader #progress').css('background-color', 'green' );
+
+                    FMS.uploading = false;
+                    var setupChecker = function() {
+                        var uploadPcnt = 0;
+                        var lastUploadPcnt = 0;
+                        var uploadComputable = false;
+                        var startTime = Date.now();
+                        var checkUpload = function() {
+                            if ( !FMS.uploading || ( uploadComputable && uploadPcnt == 80 ) ) {
+                                return;
                             }
-                        }
+
+                            var uploadTime = Date.now() - startTime;
+                            if ( ( lastUploadPcnt == 0 && uploadPcnt == 0 ) ||
+                                 ( lastUploadPcnt > 0 && uploadPcnt == lastUploadPcnt ) ||
+                                 uploadTime > 120000
+                               ) {
+                                ft.abort();
+                            } else {
+                                window.setTimeout( checkUpload, 15000 );
+                            }
+                            lastUploadPcnt = uploadPcnt;
+                        };
+                        ft.onprogress = function(evt) {
+                            if (evt.lengthComputable) {
+                                uploadComputable = true;
+                                uploadPcnt = (evt.loaded/evt.total) * 80;
+                                pcnt = uploadPcnt + '%';
+                                $('.ui-loader #progress').css('display', 'block');
+                                $('.ui-loader #progress').css('width', pcnt);
+                                if ( pcnt == '80%' ) {
+                                    $('.ui-loader #progress').css('background-color', 'green' );
+                                }
+                            } else {
+                                uploadPcnt++;
+                            }
+                        };
+                        $.mobile.loading('show', {
+                            text: FMS.strings.photo_loading,
+                            textVisible: true,
+                            html: '<span class="ui-icon ui-icon-loading"></span><h1>' + FMS.strings.photo_loading + '</h1><span id="progress"></span>'
+                        });
+                        window.setTimeout( checkUpload, 15000 );
+                        FMS.uploading = true;
+                        ft.upload(fileURI, CONFIG.FMS_URL + "report/new/mobile", fileUploadSuccess, fileUploadFail, fileOptions);
                     };
-                    $.mobile.loading('show', {
-                        text: FMS.strings.photo_loading,
-                        textVisible: true,
-                        html: '<span class="ui-icon ui-icon-loading"></span><h1>' + FMS.strings.photo_loading + '</h1><span id="progress"></span>'
-                    });
-                    ft.upload(fileURI, CONFIG.FMS_URL + "report/new/mobile", fileUploadSuccess, fileUploadFail, fileOptions);
+                    setupChecker();
                 } else {
                     $.ajax( {
                         url: CONFIG.FMS_URL + "report/new/mobile",

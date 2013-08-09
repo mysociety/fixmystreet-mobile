@@ -42,6 +42,7 @@
             invalid_report: 'Invalid report',
             photo_failed: 'There was a problem taking your photo.',
             photo_loading: 'Uploading images may take some time, please be patient',
+            upload_aborted: 'There was a problem uploading your report.',
             no_connection: 'No network connection available for submitting your report. Please try again later.',
             more_details: 'More details'
         }

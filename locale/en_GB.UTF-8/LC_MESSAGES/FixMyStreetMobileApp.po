@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-08-09 09:57+0100\n"
+"POT-Creation-Date: 2013-08-09 14:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -154,7 +154,7 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: templates/strings.js:46
+#: templates/strings.js:47
 msgid "More details"
 msgstr ""
 
@@ -173,7 +173,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: templates/strings.js:45
+#: templates/strings.js:46
 msgid ""
 "No network connection available for submitting your report. Please try again "
 "later."
@@ -386,6 +386,10 @@ msgstr ""
 
 #: templates/strings.js:43
 msgid "There was a problem taking your photo."
+msgstr ""
+
+#: templates/strings.js:45
+msgid "There was a problem uploading your report."
 msgstr ""
 
 #: templates/strings.js:26
