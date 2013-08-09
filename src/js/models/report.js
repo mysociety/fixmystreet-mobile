@@ -148,7 +148,7 @@
                             var uploadTime = Date.now() - startTime;
                             if ( ( lastUploadPcnt == 0 && uploadPcnt == 0 ) ||
                                  ( lastUploadPcnt > 0 && uploadPcnt == lastUploadPcnt ) ||
-                                 uploadTime > 120000
+                                 uploadTime > FMS.uploadTimeout
                                ) {
                                 ft.abort();
                             } else {

@@ -49,6 +49,7 @@ var tpl = {
         currentPosition: null,
         isAndroid: false,
         iPhoneModel: 0,
+        uploadTimeout: CONFIG.UPLOAD_TIMEOUT || 120000,
 
         currentDraft: new FMS.Draft(),
         allDrafts: new FMS.Drafts(),
