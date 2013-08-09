@@ -24,6 +24,7 @@
             logout_error: 'There was a problem logging you out. Please try again later.',
             login_details_error: 'There was a problem logging you in. Please check your email and password',
             password_problem: 'There was a problem with your email/password combination. If you have forgotten your password, or do not have one, you can set one by returning to the email screen and selecting the set password option.',
+            search_placeholder: 'Search for a place or postcode',
             location_error: 'Location error',
             location_problem: 'There was a problem looking up your location.',
             multiple_locations: 'More than one location matched that name. Select one below or try entering street name and area, or a postcode.',
