@@ -43,6 +43,8 @@
             photo_failed: '[% loc('There was a problem taking your photo.') %]',
             photo_loading: '[% loc('Uploading images may take some time, please be patient') %]',
             upload_aborted: '[% loc('There was a problem uploading your report.') %]',
+            try_again: '[% loc('Try Again') %]',
+            save_for_later: '[% loc('Save for Later') %]',
             no_connection: '[% loc('No network connection available for submitting your report. Please try again later.') %]',
             more_details: '[% loc('More details') %]'
         }

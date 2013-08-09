@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-08-09 14:51+0100\n"
+"POT-Creation-Date: 2013-08-09 15:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -149,7 +149,7 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: templates/strings.js:47
+#: templates/strings.js:49
 msgid "More details"
 msgstr ""
 
@@ -165,7 +165,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: templates/strings.js:46
+#: templates/strings.js:48
 msgid "No network connection available for submitting your report. Please try again later."
 msgstr ""
 
@@ -271,6 +271,10 @@ msgstr ""
 
 #: templates/around.html:40
 msgid "Reposition Report Here"
+msgstr ""
+
+#: templates/strings.js:47
+msgid "Save for Later"
 msgstr ""
 
 #: templates/existing.html:32
@@ -385,7 +389,7 @@ msgstr ""
 msgid "To skip this step in future, you can set a password now."
 msgstr ""
 
-#: templates/offline.html:2
+#: templates/offline.html:2 templates/strings.js:46
 msgid "Try Again"
 msgstr ""
 

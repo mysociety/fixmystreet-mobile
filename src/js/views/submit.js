@@ -115,7 +115,7 @@
                     msg,
                     function(index) { that.handleReportError(index); },
                     CONFIG.APP_NAME,
-                    ['Save for Later','Try Again']);
+                    [FMS.strings.save_for_later,FMS.strings.try_again);
             },
 
             handleReportError: function(index) {
