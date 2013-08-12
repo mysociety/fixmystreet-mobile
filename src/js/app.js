@@ -141,6 +141,41 @@ var tpl = {
             return false;
         },
 
+        setupHelp: function() {
+            var help = $('#help'),
+            viewWidth = $(window).width(),
+            viewHeight = $(window).height(),
+            helpHeight = viewHeight;
+
+            console.log( 'viewheight: ' + viewHeight );
+            console.log( 'top: ' + top );
+
+            help.height(helpHeight - 60);
+            help.css('left', viewWidth);
+            help.show();
+        },
+
+        helpShow: function(e) {
+            if (e) {
+                e.preventDefault();
+            }
+            var help = $('#help');
+            $('#display-help').hide();
+            help.animate({left: 0}, function() { $('#dismiss').show(); } );
+        },
+
+        helpHide: function(e) {
+            if (e) {
+                e.preventDefault();
+            }
+            console.log('helpHoide');
+            var help = $('#help'),
+            viewWidth = $(window).width();
+
+            $('#dismiss').hide();
+            help.animate({left: viewWidth}, 400, 'swing', function() { $('#display-help').show(); } );
+        },
+
         initialize: function () {
             if ( this.initialized == 1 ) {
                 return this;
@@ -186,14 +221,19 @@ var tpl = {
                 $(document).on('ajaxStart', function() { $.mobile.loading('show'); } );
                 $(document).on('ajaxStop', function() { $.mobile.loading('hide'); } );
 
+                $('#display-help').on('vclick', function(e) { FMS.helpShow(e); } );
+                $('#dismiss').on('vclick', function(e) { FMS.helpHide(e); } );
+
                 FMS.allDrafts.comparator = function(a,b) { var a_date = a.get('created'), b_date = b.get('created'); return a_date === b_date ? 0 : a_date < b_date ? 1 : -1; };
                 FMS.allDrafts.fetch();
                 FMS.checkOnlineStatus();
                 FMS.loadCurrentDraft();
                 FMS.checkLoggedInStatus();
+                FMS.setupHelp();
 
                 Backbone.history.start();
                 navigator.splashscreen.hide();
+                $('#display-help').show();
             });
         }
     });
