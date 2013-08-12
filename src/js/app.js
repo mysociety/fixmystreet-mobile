@@ -41,6 +41,7 @@ var tpl = {
             'home', 'around', 'offline', 'save_offline', 'reports', 'login', 'address_search', 'existing', 'photo', 'details', 'details_extra', 'submit', 'submit_email', 'submit_name', 'submit_set_password', 'submit_password', 'submit_confirm', 'sent'
         ],
 
+        usedBefore: 0,
         isLoggedIn: 0,
         isOffline: 0,
         initialized: 0,
@@ -176,6 +177,11 @@ var tpl = {
             help.animate({left: viewWidth}, 400, 'swing', function() { $('#display-help').show(); } );
         },
 
+        helpViewed: function() {
+            FMS.usedBefore = 1;
+            localStorage.usedBefore = 1;
+        },
+
         initialize: function () {
             if ( this.initialized == 1 ) {
                 return this;
@@ -210,6 +216,10 @@ var tpl = {
                 }
                 if ( FMS.currentUser === null ) {
                     FMS.currentUser = new FMS.User({id: 1});
+                }
+
+                if ( localStorage.usedBefore ) {
+                    FMS.usedBefore = 1;
                 }
 
                 document.addEventListener('pause', function() { FMS.locator.stopTracking(); FMS.saveCurrentDraft(); }, false);
