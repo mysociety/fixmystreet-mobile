@@ -174,7 +174,7 @@ var tpl = {
             viewWidth = $(window).width();
 
             $('#dismiss').hide();
-            help.animate({left: viewWidth}, 400, 'swing', function() { $('#display-help').show(); } );
+            help.animate({left: viewWidth}, 400, 'swing', function() { $('#display-help').show(); $('#help').scrollTop(0); } );
         },
 
         helpViewed: function() {
