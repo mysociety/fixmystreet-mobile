@@ -824,14 +824,23 @@
     #help {
         position: fixed;
         margin: 20px 0px 0px 1em;
-        padding: 0.5em;
         top: 40px;
         left: 1em;
         right:1em;
-        display: none;
-        background-color: rgba(255,255,255,0.95);
-        z-index: 3005;
         overflow: scroll;
+        display: none;
+        padding: 0.5em;
+        background-color: rgb(255,255,255);
+        z-index: 3005;
+    }
+
+    #help.android2 {
+        position: absolute;
+        margin: 0px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        overflow: auto;
     }
 
     #help h1 {

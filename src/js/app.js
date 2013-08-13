@@ -151,7 +151,9 @@ var tpl = {
             console.log( 'viewheight: ' + viewHeight );
             console.log( 'top: ' + top );
 
-            help.height(helpHeight - 60);
+            if ( !help.hasClass('android2') ) {
+                help.height(helpHeight - 60);
+            }
             help.css('left', viewWidth);
             help.show();
         },
@@ -162,7 +164,7 @@ var tpl = {
             }
             var help = $('#help');
             $('#display-help').hide();
-            help.animate({left: 0}, function() { $('#dismiss').show(); } );
+            help.animate({left: 0}, function() { $('#help').show(); $('#dismiss').show(); } );
         },
 
         helpHide: function(e) {
@@ -174,6 +176,9 @@ var tpl = {
             viewWidth = $(window).width();
 
             $('#dismiss').hide();
+            if ( help.hasClass('android2') ) {
+                $('body').scrollTop(0);
+            }
             help.animate({left: viewWidth}, 400, 'swing', function() { $('#display-help').show(); $('#help').scrollTop(0); } );
         },
 
@@ -196,6 +201,9 @@ var tpl = {
                 if ( typeof device !== 'undefined' && device.platform === 'Android' ) {
                     $.mobile.defaultPageTransition = 'none';
                     FMS.isAndroid = true;
+                    if ( parseInt(device.version) < 3 ) {
+                        $('#help').addClass('android2');
+                    }
                 }
 
                 if ( typeof device !== 'undefined' && device.platform === 'iOS' ) {
