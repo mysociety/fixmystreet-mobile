@@ -144,18 +144,19 @@ var tpl = {
 
         setupHelp: function() {
             var help = $('#help'),
+            helpContent = $('#helpContent'),
             viewWidth = $(window).width(),
             viewHeight = $(window).height(),
             helpHeight = viewHeight;
 
             var template = _.template( tpl.get('help') );
-            help.html(template());
+            helpContent.html(template());
 
             console.log( 'viewheight: ' + viewHeight );
             console.log( 'top: ' + top );
 
             if ( !help.hasClass('android2') ) {
-                help.height(helpHeight - 60);
+                helpContent.height(helpHeight - 60);
             }
             help.css('left', viewWidth);
             help.show();
@@ -182,7 +183,11 @@ var tpl = {
             if ( help.hasClass('android2') ) {
                 $('body').scrollTop(0);
             }
-            help.animate({left: viewWidth}, 400, 'swing', function() { $('#display-help').show(); $('#help').scrollTop(0); } );
+            var onHide = function() { 
+                $('#display-help').show();
+                $('#helpContent').scrollTop(0);
+            };
+            help.animate({left: viewWidth}, 400, 'swing', onHide );
         },
 
         helpViewed: function() {
