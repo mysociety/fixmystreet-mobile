@@ -152,9 +152,6 @@ var tpl = {
             var template = _.template( tpl.get('help') );
             helpContent.html(template());
 
-            console.log( 'viewheight: ' + viewHeight );
-            console.log( 'top: ' + top );
-
             if ( !help.hasClass('android2') ) {
                 helpContent.height(helpHeight - 60);
             }
@@ -179,7 +176,6 @@ var tpl = {
             if (e) {
                 e.preventDefault();
             }
-            console.log('helpHoide');
             var help = $('#help'),
             viewWidth = $(window).width();
 
