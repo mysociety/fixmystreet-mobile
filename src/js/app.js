@@ -38,7 +38,7 @@ var tpl = {
 (function (FMS, Backbone, _, $) {
     _.extend(FMS, {
         templates: [
-            'home', 'around', 'offline', 'save_offline', 'reports', 'login', 'address_search', 'existing', 'photo', 'details', 'details_extra', 'submit', 'submit_email', 'submit_name', 'submit_set_password', 'submit_password', 'submit_confirm', 'sent'
+            'home', 'help', 'around', 'offline', 'save_offline', 'reports', 'login', 'address_search', 'existing', 'photo', 'details', 'details_extra', 'submit', 'submit_email', 'submit_name', 'submit_set_password', 'submit_password', 'submit_confirm', 'sent'
         ],
 
         usedBefore: 0,
@@ -147,6 +147,9 @@ var tpl = {
             viewWidth = $(window).width(),
             viewHeight = $(window).height(),
             helpHeight = viewHeight;
+
+            var template = _.template( tpl.get('help') );
+            help.html(template());
 
             console.log( 'viewheight: ' + viewHeight );
             console.log( 'top: ' + top );
