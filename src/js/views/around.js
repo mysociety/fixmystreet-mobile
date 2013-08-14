@@ -110,8 +110,7 @@
                 fixmystreet.nav.activate();
 
                 if ( !FMS.usedBefore ) {
-                    FMS.helpShow();
-                    FMS.helpViewed();
+                    this.displayFirstTimeHelp();
                 }
             },
 
@@ -184,9 +183,13 @@
                 $('#front-howto').show();
 
                 if ( !FMS.usedBefore ) {
-                    FMS.helpShow();
-                    FMS.helpViewed();
+                    this.displayFirstTimeHelp();
                 }
+            },
+
+            displayFirstTimeHelp: function() {
+                FMS.helpShow();
+                FMS.helpViewed();
             },
 
             displayButtons: function(isLocationSet) {
