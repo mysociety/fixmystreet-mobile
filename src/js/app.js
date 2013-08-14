@@ -168,7 +168,11 @@ var tpl = {
             }
             var help = $('#help');
             $('#display-help').hide();
-            help.animate({left: 0}, function() { $('#help').show(); $('#dismiss').show(); } );
+            var onShow = function() {
+                $('#help').show();
+                $('#dismiss').show(); 
+            };
+            help.animate({left: 0}, onShow );
         },
 
         helpHide: function(e) {
