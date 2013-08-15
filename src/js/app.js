@@ -38,9 +38,10 @@ var tpl = {
 (function (FMS, Backbone, _, $) {
     _.extend(FMS, {
         templates: [
-            'home', 'around', 'offline', 'save_offline', 'reports', 'login', 'address_search', 'existing', 'photo', 'details', 'details_extra', 'submit', 'submit_email', 'submit_name', 'submit_set_password', 'submit_password', 'submit_confirm', 'sent'
+            'home', 'help', 'around', 'offline', 'save_offline', 'reports', 'login', 'address_search', 'existing', 'photo', 'details', 'details_extra', 'submit', 'submit_email', 'submit_name', 'submit_set_password', 'submit_password', 'submit_confirm', 'sent'
         ],
 
+        usedBefore: 0,
         isLoggedIn: 0,
         isOffline: 0,
         initialized: 0,
@@ -141,6 +142,59 @@ var tpl = {
             return false;
         },
 
+        setupHelp: function() {
+            var help = $('#help'),
+            helpContent = $('#helpContent'),
+            viewWidth = $(window).width(),
+            viewHeight = $(window).height(),
+            helpHeight = viewHeight;
+
+            var template = _.template( tpl.get('help') );
+            helpContent.html(template());
+
+            if ( !help.hasClass('android2') ) {
+                helpContent.height(helpHeight - 60);
+            }
+            help.css('left', viewWidth);
+            help.show();
+        },
+
+        helpShow: function(e) {
+            if (e) {
+                e.preventDefault();
+            }
+            var help = $('#help');
+            $('#display-help').hide();
+            var onShow = function() {
+                $('#help').show();
+                $('#dismiss').show(); 
+            };
+            help.animate({left: 0}, onShow );
+        },
+
+        helpHide: function(e) {
+            if (e) {
+                e.preventDefault();
+            }
+            var help = $('#help'),
+            viewWidth = $(window).width();
+
+            $('#dismiss').hide();
+            if ( help.hasClass('android2') ) {
+                $('body').scrollTop(0);
+            }
+            var onHide = function() { 
+                $('#display-help').show();
+                $('#helpContent').scrollTop(0);
+            };
+            help.animate({left: viewWidth}, 400, 'swing', onHide );
+        },
+
+        helpViewed: function() {
+            FMS.usedBefore = 1;
+            localStorage.usedBefore = 1;
+        },
+
         initialize: function () {
             if ( this.initialized == 1 ) {
                 return this;
@@ -155,6 +209,9 @@ var tpl = {
                 if ( typeof device !== 'undefined' && device.platform === 'Android' ) {
                     $.mobile.defaultPageTransition = 'none';
                     FMS.isAndroid = true;
+                    if ( parseInt(device.version) < 3 ) {
+                        $('#help').addClass('android2');
+                    }
                 }
 
                 if ( typeof device !== 'undefined' && device.platform === 'iOS' ) {
@@ -177,6 +234,10 @@ var tpl = {
                     FMS.currentUser = new FMS.User({id: 1});
                 }
 
+                if ( localStorage.usedBefore ) {
+                    FMS.usedBefore = 1;
+                }
+
                 document.addEventListener('pause', function() { FMS.locator.stopTracking(); FMS.saveCurrentDraft(); }, false);
                 document.addEventListener('resume', onResume, false);
                 document.addEventListener('backbutton', function(e) { FMS.router.back(e); }, true);
@@ -186,14 +247,19 @@ var tpl = {
                 $(document).on('ajaxStart', function() { $.mobile.loading('show'); } );
                 $(document).on('ajaxStop', function() { $.mobile.loading('hide'); } );
 
+                $('#display-help').on('vclick', function(e) { FMS.helpShow(e); } );
+                $('#dismiss').on('vclick', function(e) { FMS.helpHide(e); } );
+
                 FMS.allDrafts.comparator = function(a,b) { var a_date = a.get('created'), b_date = b.get('created'); return a_date === b_date ? 0 : a_date < b_date ? 1 : -1; };
                 FMS.allDrafts.fetch();
                 FMS.checkOnlineStatus();
                 FMS.loadCurrentDraft();
                 FMS.checkLoggedInStatus();
+                FMS.setupHelp();
 
                 Backbone.history.start();
                 navigator.splashscreen.hide();
+                $('#display-help').show();
             });
         }
     });

@@ -108,6 +108,7 @@
                 fixmystreet.select_feature.deactivate();
                 fixmystreet.select_feature.activate();
                 fixmystreet.nav.activate();
+                this.displayHelpIfFirstTime();
             },
 
             positionUpdate: function( info ) {
@@ -177,6 +178,15 @@
                 }
                 $('#front-howto').html('<p>' + msg + '</msg>');
                 $('#front-howto').show();
+
+                this.displayHelpIfFirstTime();
+            },
+
+            displayHelpIfFirstTime: function() {
+                if ( !FMS.usedBefore ) {
+                    FMS.helpShow();
+                    FMS.helpViewed();
+                }
             },
 
             displayButtons: function(isLocationSet) {
