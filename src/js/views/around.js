@@ -176,7 +176,8 @@
                     $('#mark-here').hide();
                     $('#pc').attr('placeholder', FMS.strings.search_placeholder).focus();
                 }
-                $('#front-howto').html('<p>' + msg + '</msg>');
+                console.log(msg);
+                $('#front-howto').html('<p>' + msg + '</p>');
                 $('#front-howto').show();
 
                 this.displayHelpIfFirstTime();
