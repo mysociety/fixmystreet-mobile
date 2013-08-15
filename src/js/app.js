@@ -51,6 +51,7 @@ var tpl = {
         isAndroid: false,
         iPhoneModel: 0,
         uploadTimeout: CONFIG.UPLOAD_TIMEOUT || 120000,
+        testing: 0,
 
         currentDraft: new FMS.Draft(),
         allDrafts: new FMS.Drafts(),
@@ -239,6 +240,10 @@ var tpl = {
 
                 if ( localStorage.usedBefore ) {
                     FMS.usedBefore = 1;
+                }
+
+                if ( CONFIG.TESTING ) {
+                    FMS.testing = 1;
                 }
 
                 document.addEventListener('pause', function() { FMS.locator.stopTracking(); FMS.saveCurrentDraft(); }, false);

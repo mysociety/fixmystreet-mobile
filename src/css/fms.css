@@ -635,6 +635,22 @@
             background-image: url(images/icons-36-black.png);
         }
     }
+
+    div.testing {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 40px;
+        width: 100%;
+        padding: 3px;
+        text-align: center;
+        font-size: 12px;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        text-shadow: none;
+        margin-bottom: 5px;
+    }
 /* drafts screen */
 
     #drafts {

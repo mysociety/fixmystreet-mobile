@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-08-09 15:48+0100\n"
+"POT-Creation-Date: 2013-08-15 15:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Complete report now"
 msgstr ""
 
-#: templates/around.html:43
+#: templates/around.html:48
 msgid "Confirm Location"
 msgstr ""
 
@@ -157,7 +157,7 @@ msgstr ""
 msgid "More than one location matched that name. Select one below or try entering street name and area, or a postcode."
 msgstr ""
 
-#: templates/around.html:37
+#: templates/around.html:42
 msgid "New Report Here"
 msgstr ""
 
@@ -269,7 +269,7 @@ msgstr ""
 msgid "Report Created"
 msgstr ""
 
-#: templates/around.html:40
+#: templates/around.html:45
 msgid "Reposition Report Here"
 msgstr ""
 
@@ -319,6 +319,10 @@ msgstr ""
 
 #: templates/offline.html:51 templates/photo.html:20
 msgid "Take a new photo"
+msgstr ""
+
+#: templates/around.html:32
+msgid "Test version. Reports will not be sent to the council."
 msgstr ""
 
 #: templates/sent.html:13

@@ -27,6 +27,11 @@
     <div class="frontpage-menu">
         <form class="inputcard" name="postcodeForm" id="postcodeForm">
         <input type="search" id="pc" name="pc" placeholder="[% loc('Search or scroll the map') %]">
+        <% if ( FMS.testing ) { %>
+        <div class="testing">
+            [% loc('Test version. Reports will not be sent to the council.') %]
+        </div>
+        <% } %>
         </form>
         <a data-role="none" id="relocate" class="nodisplay"></a>
 
