@@ -35,9 +35,8 @@
 
             showLocateProgress: function() {
                 if ( !this.located && this.locateCount > 20 ) {
-                    FMS.searchMessage = FMS.strings.geolocation_failed;
-                    $(document).undelegate('.ui-content', 'touchmove', false);
-                    $('#locating').hide();
+                    var details = { msg: FMS.strings.geolocation_failed };
+                    this.failedLocation(details);
                     return;
                 }
                 var percent = ( ( 20 - this.locateCount ) / 20 ) * 100;
