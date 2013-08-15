@@ -154,9 +154,9 @@ var tpl = {
 
             if ( !help.hasClass('android2') ) {
                 helpContent.height(helpHeight - 60);
+                help.show();
             }
             help.css('left', viewWidth);
-            help.show();
         },
 
         helpShow: function(e) {
@@ -186,6 +186,9 @@ var tpl = {
             var onHide = function() { 
                 $('#display-help').show();
                 $('#helpContent').scrollTop(0);
+                if ( $('#help').hasClass('android2') ) {
+                    $('#help').hide();
+                }
             };
             help.animate({left: viewWidth}, 400, 'swing', onHide );
         },
