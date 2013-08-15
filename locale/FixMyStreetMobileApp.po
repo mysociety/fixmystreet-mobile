@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-08-15 15:49+0100\n"
+"POT-Creation-Date: 2013-08-15 17:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -75,10 +75,6 @@ msgstr ""
 
 #: templates/strings.js:39
 msgid "Could not access location services. Please check permissions."
-msgstr ""
-
-#: templates/strings.js:38
-msgid "Could not determine your location, please search for a street name and area, or postcode instead."
 msgstr ""
 
 #: templates/reports.html:22
@@ -311,6 +307,10 @@ msgstr ""
 
 #: templates/offline.html:4 templates/photo.html:4
 msgid "Skip"
+msgstr ""
+
+#: templates/strings.js:38
+msgid "Sorry, but we weren't able to establish your location accurately enough to show you a map. Please enter a location in the search box instead"
 msgstr ""
 
 #: templates/details.html:8

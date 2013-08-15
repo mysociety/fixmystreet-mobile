@@ -35,7 +35,7 @@
             location_check_failed: '[% loc('There was a problem checking we cover this location. Please try again later.') %]',
             category_extra_check_error: '[% loc('There was a problem checking if we have all the details we need. Please try again later.') %]',
             locate_dismissed: '[% loc('Please search for a street name and area, or postcode.') %]',
-            geolocation_failed: '[% loc('Could not determine your location, please search for a street name and area, or postcode instead.') %]',
+            geolocation_failed: "[% loc("Sorry, but we weren't able to establish your location accurately enough to show you a map. Please enter a location in the search box instead") %]",
             geolocation_denied: '[% loc('Could not access location services. Please check permissions.') %]',
             select_category: '[% loc('-- Pick a category --') %]',
             required: '[% loc('required') %]',
