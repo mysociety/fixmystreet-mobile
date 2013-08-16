@@ -328,6 +328,8 @@
             },
 
             beforeSubmit: function() {
+                $('#errors').hide();
+                $('p.top').show();
                 $('#report').focus();
                 if ( $('#form_name').val() ) {
                     this.model.set('submit_clicked', 'submit_register');
