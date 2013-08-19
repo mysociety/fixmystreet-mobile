@@ -866,8 +866,9 @@
     }
 
     #help h1 {
-        font-size: 1.5em;
+        font-size: 1.25em;
         margin-top: 0px;
+        margin-right: 1.25em;
     }
 
     #help dt {
@@ -884,7 +885,6 @@
         font-size: 1em;
     }
 
-    #dismiss,
     #display-help {
         position: fixed;
         display: none;
@@ -897,14 +897,23 @@
         font-weight: bold;
         font-size: 2em;
         z-index: 3005;
-    }
-
-    #display-help {
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
     }
 
     #dismiss {
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
+        position: fixed;
+        display: none;
+        top: 60px;
+        right: 0.5em;
+        color: grey;
+        font-weight: bold;
+        font-size: 2em;
+        padding: 3px;
+        border-radius: 5px;
+    }
+
+    #help.android2 #dismiss {
+        top: 5px;
+        right: 5px;
     }
