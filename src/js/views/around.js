@@ -186,7 +186,6 @@
             displayHelpIfFirstTime: function() {
                 if ( !FMS.usedBefore ) {
                     FMS.helpShow();
-                    FMS.helpViewed();
                 }
             },
 

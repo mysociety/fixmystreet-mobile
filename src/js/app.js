@@ -38,7 +38,7 @@ var tpl = {
 (function (FMS, Backbone, _, $) {
     _.extend(FMS, {
         templates: [
-            'home', 'help', 'around', 'offline', 'save_offline', 'reports', 'login', 'address_search', 'existing', 'photo', 'details', 'details_extra', 'submit', 'submit_email', 'submit_name', 'submit_set_password', 'submit_password', 'submit_confirm', 'sent'
+            'home', 'help', 'initial_help', 'around', 'offline', 'save_offline', 'reports', 'login', 'address_search', 'existing', 'photo', 'details', 'details_extra', 'submit', 'submit_email', 'submit_name', 'submit_set_password', 'submit_password', 'submit_confirm', 'sent'
         ],
 
         usedBefore: 0,
@@ -150,7 +150,12 @@ var tpl = {
             viewHeight = $(window).height(),
             helpHeight = viewHeight;
 
-            var template = _.template( tpl.get('help') );
+            var template;
+            if ( !FMS.usedBefore ) {
+                template = _.template( tpl.get('initial_help') );
+            } else {
+                template = _.template( tpl.get('help') );
+            }
             helpContent.html(template());
 
             if ( !help.hasClass('android2') ) {
@@ -190,13 +195,14 @@ var tpl = {
                 if ( $('#help').hasClass('android2') ) {
                     $('#help').hide();
                 }
+                if ( !FMS.usedBefore ) {
+                    var template = _.template( tpl.get('help') );
+                    $('#helpContent').html(template());
+                    FMS.usedBefore = 1;
+                    localStorage.usedBefore = 1;
+                }
             };
             help.animate({left: viewWidth}, 400, 'swing', onHide );
-        },
-
-        helpViewed: function() {
-            FMS.usedBefore = 1;
-            localStorage.usedBefore = 1;
         },
 
         initialize: function () {
