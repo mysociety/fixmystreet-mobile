@@ -143,12 +143,17 @@ var tpl = {
             return false;
         },
 
+        setHelpHeight: function() {
+            var helpContent = $('#helpContent'),
+            viewHeight = $(window).height();
+
+            helpContent.height(viewHeight - 60);
+        },
+
         setupHelp: function() {
             var help = $('#help'),
             helpContent = $('#helpContent'),
-            viewWidth = $(window).width(),
-            viewHeight = $(window).height(),
-            helpHeight = viewHeight;
+            viewWidth = $(window).width();
 
             var template;
             if ( !FMS.usedBefore ) {
@@ -159,7 +164,9 @@ var tpl = {
             helpContent.html(template());
 
             if ( !help.hasClass('android2') ) {
-                helpContent.height(helpHeight - 60);
+                if ( FMS.usedBefore ) {
+                    FMS.setHelpHeight();
+                }
                 help.show();
             }
             help.css('left', viewWidth);
@@ -200,6 +207,9 @@ var tpl = {
                     $('#helpContent').html(template());
                     FMS.usedBefore = 1;
                     localStorage.usedBefore = 1;
+                    if ( !$('#help').hasClass('android2') ) {
+                        FMS.setHelpHeight();
+                    }
                 }
             };
             help.animate({left: viewWidth}, 400, 'swing', onHide );
