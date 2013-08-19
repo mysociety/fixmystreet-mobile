@@ -173,6 +173,12 @@
                 'vclick #email_confirm': 'onClickConfirm'
             },
 
+            afterRender: function() {
+                // if we are coming back to this page we want to reset how
+                // they are reporting
+                this.model.set('submit_clicked', '');
+            },
+
             validate: function() {
                 this.clearValidationErrors();
                 var isValid = 1;
@@ -209,7 +215,6 @@
 
             onClickConfirm: function(e) {
                 e.preventDefault();
-                this.model.set('submit_clicked', '');
                 if ( this.validate() ) {
                     FMS.currentUser.set('email', $('#form_email').val());
                     this.navigate( 'submit-name' );
