@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-08-15 17:44+0100\n"
+"POT-Creation-Date: 2013-08-20 11:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "An error was encountered when submitting your report: "
 msgstr ""
 
-#: templates/around.html:23 templates/around.html:5 templates/offline.html:14
+#: templates/around.html:22 templates/around.html:5 templates/offline.html:14
 msgid "Cancel"
 msgstr ""
 
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Complete report now"
 msgstr ""
 
-#: templates/around.html:48
+#: templates/around.html:47
 msgid "Confirm Location"
 msgstr ""
 
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Drafts"
 msgstr ""
 
-#: templates/around.html:19
+#: templates/around.html:18
 msgid "Finding your location"
 msgstr ""
 
@@ -153,11 +153,11 @@ msgstr ""
 msgid "More than one location matched that name. Select one below or try entering street name and area, or a postcode."
 msgstr ""
 
-#: templates/around.html:42
+#: templates/around.html:41
 msgid "New Report Here"
 msgstr ""
 
-#: templates/around.html:8 templates/details.html:3 templates/details_extra.html:3 templates/photo.html:6
+#: templates/details.html:3 templates/details_extra.html:3 templates/photo.html:6
 msgid "Next"
 msgstr ""
 
@@ -265,7 +265,7 @@ msgstr ""
 msgid "Report Created"
 msgstr ""
 
-#: templates/around.html:45
+#: templates/around.html:44
 msgid "Reposition Report Here"
 msgstr ""
 
@@ -281,7 +281,7 @@ msgstr ""
 msgid "Search for a place or postcode"
 msgstr ""
 
-#: templates/around.html:29
+#: templates/around.html:28
 msgid "Search or scroll the map"
 msgstr ""
 
@@ -313,6 +313,10 @@ msgstr ""
 msgid "Sorry, but we weren't able to establish your location accurately enough to show you a map. Please enter a location in the search box instead"
 msgstr ""
 
+#: templates/sent.html:20
+msgid "Start new report"
+msgstr ""
+
 #: templates/details.html:8
 msgid "Subject"
 msgstr ""
@@ -321,7 +325,7 @@ msgstr ""
 msgid "Take a new photo"
 msgstr ""
 
-#: templates/around.html:32
+#: templates/around.html:31
 msgid "Test version. Reports will not be sent to the council."
 msgstr ""
 

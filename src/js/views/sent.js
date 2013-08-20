@@ -10,6 +10,7 @@
                 'pagebeforeshow': 'beforeDisplay',
                 'pageshow': 'afterDisplay',
                 'vclick .ui-btn-left': 'onClickButtonPrev',
+                'vclick #id_report_another': 'onClickButtonPrev',
                 'vclick #rate_app': 'onClickRateApp'
             },
 
