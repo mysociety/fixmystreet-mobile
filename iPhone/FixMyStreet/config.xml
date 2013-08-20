@@ -34,7 +34,7 @@
     <access origin="*.tilma.mysociety.org"/>
     <access origin="*.virtualearth.net"/>
     <access origin="mapit.mysociety.org"/>
-    <access origin="struan.fixmystreet.dev.mysociety.org"/>
+    <access origin="mobile.fixmystreet.test.mysociety.org"/>
 
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
     <content src="src/index.html" />
