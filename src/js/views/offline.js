@@ -9,7 +9,7 @@
 
             events: {
                 'pagehide': 'destroy',
-                'pagebeforeshow': 'toggleNextButton',
+                'pagebeforeshow': 'beforeShow',
                 'pageshow': 'afterDisplay',
                 'vclick .ui-btn-left': 'onClickButtonPrev',
                 'vclick .ui-btn-right': 'onClickButtonNext',
@@ -38,8 +38,12 @@
                 $('div[data-role="content"]').show();
             },
 
-            toggleNextButton: function() {
+            beforeShow: function() {
                 $('div[data-role="content"]').hide();
+                this.toggleNextButton();
+            },
+
+            toggleNextButton: function() {
                 if ( this.draftHasContent() ) {
                     $('#offline-next-btn .ui-btn-text').text('Save');
                 } else {
