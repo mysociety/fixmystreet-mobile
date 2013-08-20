@@ -16,7 +16,6 @@
                 'blur #pc': 'clearSearchErrors',
                 'vclick #relocate': 'centerMapOnPosition',
                 'vclick #cancel': 'onClickCancel',
-                'vclick #confirm': 'onClickReport',
                 'vclick #confirm-map': 'onClickReport',
                 'vclick #mark-here': 'onClickMark',
                 'vclick #reposition': 'onClickReposition',
@@ -145,7 +144,7 @@
 
                     // If we've confirmed the report position then we should be able
                     // to reposition it if we've moved the map.
-                    if ( $('#confirm').css('display') == 'block' ) {
+                    if ( $('#confirm-map').css('display') == 'block' ) {
                         var currentPos = this.projectCoords(FMS.currentPosition);
                         var markerPos = this.getMarkerPosition(true);
 
@@ -196,7 +195,6 @@
                 }
                 if (isLocationSet) {
                     $('#cancel').addClass('ui-btn-left').show();
-                    $('#confirm').addClass('ui-btn-right ui-btn-icon-right').show();
                     $('#confirm-map').show();
                     $('#view-my-reports').hide();
                     $('#login-options').hide();
@@ -209,7 +207,6 @@
                     }
                 } else {
                     $('#cancel').hide().removeClass('ui-btn-left');
-                    $('#confirm').hide().removeClass('ui-btn-right ui-btn-icon-right');
                     $('#confirm-map').hide();
                     $('#view-my-reports').show();
                     $('#login-options').show();
