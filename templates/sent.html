@@ -12,6 +12,11 @@
     <% } else { %>
     <h3>[% loc('Thanks. Your report will be sent to the authorities immediately.') %]</h3>
 
-    <p class="center"><a onclick="FMS.openExternal(event); return false;" href="<%= site_url %>">[% loc('View it on the site') %]</a></p>
+    <p class="center"><input type="button" data-theme="a" id="open_report" value="[% loc('View it on the site') %]"></p>
     <% } %>
+
+
+    <div class="bottom-btn">
+        <input type="button" id="id_report_another" data-theme="a" value="[% loc('Start new report') %]" >
+    </div>
 </div>

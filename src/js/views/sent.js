@@ -10,6 +10,8 @@
                 'pagebeforeshow': 'beforeDisplay',
                 'pageshow': 'afterDisplay',
                 'vclick .ui-btn-left': 'onClickButtonPrev',
+                'vclick #id_report_another': 'onClickButtonPrev',
+                'vclick #open_report': 'onClickOpenReport',
                 'vclick #rate_app': 'onClickRateApp'
             },
 
@@ -22,6 +24,12 @@
                 this.$el.html(template(FMS.createdReport.toJSON()));
                 this.afterRender();
                 return this;
+            },
+
+            onClickOpenReport: function(e) {
+                e.preventDefault();
+                window.open(FMS.createdReport.get('site_url'), '_system');
+                return false;
             },
 
             onClickRateApp: function(e) {
