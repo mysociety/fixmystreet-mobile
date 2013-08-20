@@ -393,6 +393,12 @@
         margin-top: 0.5em;
     }
 
+/* offline report screen */
+
+    #offline div[data-role='content'] {
+        pointer-events: all;
+    }
+
 /* home screen */
 
     #front-page div[data-role='content'] {
