@@ -34,6 +34,9 @@
             },
 
             showLocateProgress: function() {
+                if ( $('#locating').css('display') == 'none' ) {
+                    return;
+                }
                 if ( !this.located && this.locateCount > 20 ) {
                     var details = { msg: FMS.strings.geolocation_failed };
                     this.failedLocation(details);
