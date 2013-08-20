@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-08-20 11:07+0100\n"
+"POT-Creation-Date: 2013-08-20 11:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid "Could not access location services. Please check permissions."
 msgstr ""
 
-#: templates/reports.html:22
+#: templates/reports.html:25
 msgid "Delete"
 msgstr ""
 
@@ -413,6 +413,12 @@ msgid ""
 "There was a problem with your email/password combination. If you have "
 "forgotten your password, or do not have one, you can set one by returning to "
 "the email screen and selecting the set password option."
+msgstr ""
+
+#: templates/reports.html:9
+msgid ""
+"These are your draft, unsent reports. To finish and send them, open a report "
+"when online."
 msgstr ""
 
 #: templates/submit_email.html:13

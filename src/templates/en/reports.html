@@ -5,6 +5,9 @@
 <div id="drafts">
     <p id="noreports" class="nodisplay">If you start compiling a report, but don't finish and send it, it'll appear in this menu so you can finish it later</p>
     <div id="report-list" class="nodisplay">
+        <p class="notopmargin">
+        These are your draft, unsent reports. To finish and send them, open a report when online.
+        </p>
         <ul data-role="listview" data-split-theme="c" data-inset="true" data-split-icon="delete" class="notopmargin reports">
             <% drafts.each(function(draft) {
                 if ( draft ) {
