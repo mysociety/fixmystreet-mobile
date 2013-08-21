@@ -8,16 +8,18 @@
 </div>
 <div data-role="content">
     <h2>[% loc('Add a Photo') %] <em>[% loc('(optional)') %]</em></h2>
+    <div class="photo-wrapper">
     <div class="photo">
     <% if ( file == '' ) { %>
         <img class="placeholder" src="images/placeholder-photo.png" alt="" id="photo">
     <% } else { %>
         <img class="small" id="photo" src="<%= file %>" />
     <% } %>
+    <a data-role="none" id="id_del_photo_button" class="photo-corner-button">X</a>
+    </div>
     </div>
     <div class="bottom-btn">
         <input data-icon="fms-photo-existing" type="button" id="id_existing" data-theme="c" value="[% loc('Add an existing photo') %]" >
         <input data-icon="fms-photo-new" id="id_photo_button" type="button" data-theme="a" value="[% loc('Take a new photo') %]">
-        <input id="id_del_photo_button" type="button" data-theme="a" value="[% loc('Remove Photo') %]">
     </div>
 </div>

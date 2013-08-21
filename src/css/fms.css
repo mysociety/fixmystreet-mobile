@@ -399,6 +399,11 @@
         pointer-events: all;
     }
 
+    #offline div.photo {
+        margin: 0.1em 0em;
+        text-align: center;
+    }
+
 /* home screen */
 
     #front-page div[data-role='content'] {
@@ -738,7 +743,12 @@
 
 /* photo screen */
     div.photo {
-        margin: 0.1em 0em;
+        position: relative;
+        display: inline-block;
+    }
+
+    div.photo-wrapper {
+        margin: auto;
         text-align: center;
     }
 
@@ -751,6 +761,20 @@
     img.placeholder {
         height: 199px;
         width: 270px;
+    }
+
+    #id_del_photo_button.photo-corner-button {
+        position: absolute;
+        bottom: -15px;
+        right: 0px;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-color: rgb(186,21,28);
+        padding: 12px;
+        color: #fff;
+        text-shadow: none;
+        font-weight: bold;
+        font-size: 30px;
     }
 
     @media only screen and (max-width: 800px) and (min-width: 600px) {

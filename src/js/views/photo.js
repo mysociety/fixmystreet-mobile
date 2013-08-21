@@ -23,7 +23,7 @@
                     $('#id_photo_button').parents('.ui-btn').hide();
                     $('#id_existing').parents('.ui-btn').hide();
                 } else {
-                    this.$('#id_del_photo_button').parents('.ui-btn').hide();
+                    this.$('#id_del_photo_button').hide();
                 }
             },
 
@@ -66,10 +66,10 @@
                     FMS.saveCurrentDraft();
 
                     $('#photo-next-btn .ui-btn-text').text('Next');
-                    $('#id_del_photo_button').parents('.ui-btn').show();
                     $('#id_photo_button').parents('.ui-btn').hide();
                     $('#id_existing').parents('.ui-btn').hide();
                     $('#photo').show();
+                    window.setTimeout(function() { $('#id_del_photo_button').show() }, 500);
                     window.setTimeout(function() { $.mobile.loading('hide') }, 100);
                 });
 
@@ -92,12 +92,12 @@
                 var del = FMS.files.deleteURI( this.model.get('file') );
 
                 del.done( function() {
+                    $('#id_del_photo_button').hide();
                     that.model.set('file', '');
                     FMS.saveCurrentDraft(true);
                     $('#photo').attr('src', 'images/placeholder-photo.png').addClass('placeholder').removeClass('small');
 
                     $('#photo-next-btn .ui-btn-text').text('Skip');
-                    $('#id_del_photo_button').parents('.ui-btn').hide();
                     $('#id_photo_button').parents('.ui-btn').show();
                     $('#id_existing').parents('.ui-btn').show();
                 });
