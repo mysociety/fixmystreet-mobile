@@ -42,7 +42,7 @@
                     this.failedLocation(details);
                     return;
                 }
-                var percent = ( ( 20 - this.locateCount ) / 20 ) * 100;
+                var percent = ( this.locateCount / 20 ) * 100;
                 $('#progress-bar').css( 'width', percent + '%' );
                 this.locateCount++;
                 var that = this;

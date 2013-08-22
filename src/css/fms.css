@@ -489,12 +489,12 @@
         margin-top: 1em;
         width:100%;
         height:15px;
-        background-color: #FFFF99;
+        background-color: grey;
     }
 
     #locating #progress-bar {
         width: 0%;
-        background-color: grey;
+        background-color: #FFFF99;
         height: 15px;
     }
 
