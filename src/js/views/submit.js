@@ -243,7 +243,6 @@
             },
 
             initialize: function() {
-                console.log('submit name initalize');
                 this.listenTo(this.model, 'sync', this.onReportSync );
                 this.listenTo( this.model, 'error', this.onReportError );
             },

@@ -183,7 +183,6 @@
                     $('#mark-here').hide();
                     $('#pc').attr('placeholder', FMS.strings.search_placeholder).focus();
                 }
-                console.log(msg);
                 $('#front-howto').html('<p>' + msg + '</p>');
                 $('#front-howto').show();
 

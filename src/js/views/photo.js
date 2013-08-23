@@ -44,7 +44,6 @@
             },
 
             addPhotoSuccess: function(imgURI) {
-                console.log(imgURI);
                 var move;
                 // on iOS the photos go into a temp folder in the apps own filespace so we
                 // can move them, and indeed have to as the tmp space is cleaned out by the OS

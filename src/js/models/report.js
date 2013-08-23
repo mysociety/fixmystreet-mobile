@@ -196,7 +196,6 @@
                             }
                         },
                         error: function (data, status, errorThrown ) {
-                            console.log(FMS.strings.report_send_error);
                             that.trigger('error', that, data, status, errorThrown );
                         }
                     } );

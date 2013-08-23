@@ -18,7 +18,6 @@
             },
 
             afterRender: function() {
-                console.log(this.model);
                 this.populateFields();
             },
 
@@ -98,7 +97,6 @@
             populateFields: function() {
                 var that = this;
                 var populate = function(index) {
-                    console.log(that.$(this).attr('name'));
                     that.$(this).val(that.model.get(that.$(this).attr('name')));
                 };
                 this.$('input').each(populate);
