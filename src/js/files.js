@@ -17,7 +17,7 @@
                         return getFileSystem();
                     })
                     .pipe( function (filesystem) {
-                        console.log('Filesystem returned: ' + filesystem);
+                        FMS.printDebug('Filesystem returned: ' + filesystem);
 
                         return getDirectory(filesystem.root, CONFIG.FILES_DIR, {create: true});
                     })
@@ -36,7 +36,7 @@
                         return getFileSystem();
                     })
                     .pipe( function (filesystem) {
-                        console.log('Filesystem returned: ' + filesystem);
+                        FMS.printDebug('Filesystem returned: ' + filesystem);
 
                         return getDirectory(filesystem.root, CONFIG.FILES_DIR, {create: true});
                     })
@@ -46,7 +46,7 @@
             },
 
             deleteURI: function (uri) {
-                console.log('Deleting URI: ' + uri);
+                FMS.printDebug('Deleting URI: ' + uri);
 
                 return getFileFromURI(uri)
                     .pipe( function (file) {
@@ -60,7 +60,7 @@
             // Delete a file from the filesystem
             deleteFile: function (path) {
 
-                console.log('Deleting file: ' + path);
+                FMS.printDebug('Deleting file: ' + path);
 
                 // Turn path into a filename
                 var filename = path.split('/').pop();
@@ -85,7 +85,7 @@
     // Wrap the async Phonegap way of getting a filesystem in a promise
     function getFileSystem() {
 
-        console.log('Getting the file system');
+        FMS.printDebug('Getting the file system');
 
         var filesystem = $.Deferred();
 
@@ -101,7 +101,7 @@
     // Wrap the async Phonegap way of getting a directory in a promise
     function getDirectory (rootDirectory, path, options) {
 
-        console.log('Getting a directory: ' + path);
+        FMS.printDebug('Getting a directory: ' + path);
 
         var directory = $.Deferred();
 
@@ -113,7 +113,7 @@
     // Wrap the async Phonegap way of getting a file in a promise
     function getFile (directory, path, options) {
 
-        console.log('Getting a file with path: ' + path + ' in directory: ' + directory.fullPath);
+        FMS.printDebug('Getting a file with path: ' + path + ' in directory: ' + directory.fullPath);
 
         var file = $.Deferred();
 
@@ -124,17 +124,17 @@
 
     function moveFile (src, dest, newName) {
 
-        console.log( 'moveing file ' + src.fullPath + ' to ' + dest.fullPath );
+        FMS.printDebug( 'moveing file ' + src.fullPath + ' to ' + dest.fullPath );
 
         var move = $.Deferred();
 
         var destPath = dest.fullPath + '/' + src.name;
         var srcPath = src.fullPath + '';
         if ( srcPath === destPath ) {
-            console.log('not moving because files are the same');
+            FMS.printDebug('not moving because files are the same');
             move.resolve( src );
         } else {
-            console.log('paths differ so moving');
+            FMS.printDebug('paths differ so moving');
             src.moveTo( dest, newName, move.resolve, move.reject);
         }
 
@@ -143,17 +143,17 @@
 
     function copyFile (src, dest, newName) {
 
-        console.log( 'copying file ' + src.fullPath + ' to ' + dest.fullPath );
+        FMS.printDebug( 'copying file ' + src.fullPath + ' to ' + dest.fullPath );
 
         var copy = $.Deferred();
 
         var destPath = dest.fullPath + '/' + src.name;
         var srcPath = src.fullPath + '';
         if ( srcPath === destPath ) {
-            console.log('not copying because files are the same');
+            FMS.printDebug('not copying because files are the same');
             copy.resolve( src );
         } else {
-            console.log('paths differ so copying');
+            FMS.printDebug('paths differ so copying');
             src.copyTo( dest, newName, copy.resolve, copy.reject);
         }
 
@@ -162,7 +162,7 @@
 
     function getFileFromURI(uri) {
 
-        console.log( 'getting file from uri ' + uri );
+        FMS.printDebug( 'getting file from uri ' + uri );
 
         var file = $.Deferred();
 

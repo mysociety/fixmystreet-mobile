@@ -23,7 +23,7 @@
 
             render: function(){
                 if ( !this.template ) {
-                    console.log('no template to render');
+                    FMS.printDebug('no template to render');
                     return;
                 }
                 template = _.template( tpl.get( this.template ) );
@@ -102,7 +102,7 @@
                 $('.form-error').removeClass('form-error');
             },
 
-            destroy: function() { console.log('destory for ' + this.id); this._destroy(); this.remove(); },
+            destroy: function() { FMS.printDebug('destory for ' + this.id); this._destroy(); this.remove(); },
 
             _destroy: function() {}
         })

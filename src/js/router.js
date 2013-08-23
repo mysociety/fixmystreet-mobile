@@ -147,7 +147,7 @@
             },
 
             changeView: function(view) {
-                console.log( 'change View to ' + view.id );
+                FMS.printDebug( 'change View to ' + view.id );
                 $(view.el).attr('data-role', 'page');
                 if ( view.prev ) {
                     $(view.el).attr('data-add-back-btn', 'true');
@@ -170,7 +170,7 @@
                 $.mobile.changePage($(view.el), options);
 
                 if ( view.id != 'front-page' ) {
-                    console.log('changed View to ' + view.id);
+                    FMS.printDebug('changed View to ' + view.id);
                     this.currentView = view;
                 }
             }

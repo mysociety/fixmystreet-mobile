@@ -42,7 +42,7 @@
                 var that = this;
                 this.watch_id = navigator.geolocation.watchPosition(
                     function(location) {
-                        if ( that.watch_id === undefined ) { console.log( 'no watch id' ); return; }
+                        if ( that.watch_id === undefined ) { FMS.printDebug( 'no watch id' ); return; }
 
                         if ( minAccuracy && location.coords.accuracy > minAccuracy ) {
                             that.trigger('gps_locating', location.coords.accuracy);

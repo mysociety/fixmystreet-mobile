@@ -19,7 +19,7 @@
 
             render: function(){
                 if ( !this.template ) {
-                    console.log('no template to render');
+                    FMS.printDebug('no template to render');
                     return;
                 }
                 template = _.template( tpl.get( this.template ) );

@@ -12,7 +12,7 @@ var tpl = {
 
         var loadTemplate = function (index) {
             var name = names[index];
-            console.log('Loading template: ' + name + ', index: ' + index);
+            FMS.printDebug('Loading template: ' + name + ', index: ' + index);
             $.get('templates/' + CONFIG.LANGUAGE + '/' + name + '.html', function (data) {
                 that.templates[name] = data;
                 index++;
@@ -64,6 +64,12 @@ var tpl = {
 
         offline: function() {
             FMS.isOffline = 1;
+        },
+
+        printDebug: function(msg) {
+            if ( CONFIG.DEBUG ) {
+                console.log(msg);
+            }
         },
 
         checkOnlineStatus: function() {
