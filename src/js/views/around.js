@@ -77,6 +77,14 @@
                 }
             },
 
+            _back: function(e) {
+                if ( $('#confirm-map').css('display') == 'block' ) {
+                    this.onClickCancel(e);
+                } else {
+                    navigator.app.exitApp();
+                }
+            },
+
             setMapPosition: function( info ) {
                 var coords = info.coordinates;
                 fixmystreet.latitude = coords.latitude;

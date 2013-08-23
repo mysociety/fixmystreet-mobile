@@ -13,6 +13,10 @@
                 'vclick #discard': 'discardReport'
             },
 
+            _back: function() {
+                navigator.app.exitApp();
+            },
+
             setHeight: function(content, height) {
                 content.css( 'min-height', content + 'px');
             },

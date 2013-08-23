@@ -22,6 +22,10 @@
                 'blur textarea': 'toggleNextButton'
             },
 
+            _back: function() {
+                navigator.app.exitApp();
+            },
+
             draftHasContent: function() {
                 var hasContent = false;
 

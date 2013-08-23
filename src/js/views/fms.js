@@ -13,6 +13,14 @@
                 'vclick .ui-btn-right': 'onClickButtonNext'
             },
 
+            back: function(e) {
+                if ( this._back ) {
+                    this._back(e);
+                } else if ( this.prev ) {
+                    this.onClickButtonPrev(e);
+                }
+            },
+
             render: function(){
                 if ( !this.template ) {
                     console.log('no template to render');

@@ -37,8 +37,8 @@
             },
 
             back: function(e) {
-                if (this.currentView && this.currentView.prev) {
-                    this.currentView.onClickButtonPrev(e);
+                if (this.currentView && this.currentView.back) {
+                    this.currentView.back(e);
                 }
             },
 
