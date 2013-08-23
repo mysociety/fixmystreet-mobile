@@ -169,8 +169,10 @@
 
                 $.mobile.changePage($(view.el), options);
 
-                console.log('changed View to ' + view.id);
-                this.currentView = view;
+                if ( view.id != 'front-page' ) {
+                    console.log('changed View to ' + view.id);
+                    this.currentView = view;
+                }
             }
         })
     });
