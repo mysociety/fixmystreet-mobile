@@ -19,11 +19,11 @@
 
             beforeDisplay: function() {
                 this.fixPageHeight();
+                this.$('#id_del_photo_button').hide();
                 if ( this.model.get('file') ) {
                     $('#id_photo_button').parents('.ui-btn').hide();
                     $('#id_existing').parents('.ui-btn').hide();
-                } else {
-                    this.$('#id_del_photo_button').hide();
+                    window.setTimeout( function() { $('#id_del_photo_button').show(); }, 250 );
                 }
             },
 
