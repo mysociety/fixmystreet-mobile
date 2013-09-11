@@ -48,7 +48,7 @@
                 content = this.$(this.contentSelector),
                 top = content.position().top,
                 viewHeight = $(window).height(),
-                contentHeight = viewHeight - header.outerHeight() - this.bottomMargin;
+                contentHeight = FMS.windowHeight - header.outerHeight() - this.bottomMargin;
 
                 this.setHeight( content, contentHeight - top );
             },
@@ -66,6 +66,10 @@
             afterDisplay: function() {},
 
             navigate: function( route, reverse ) {
+                if ( FMS.isAndroid ) {
+                    var softkeyboard = window.plugins.SoftKeyBoard;
+                    softkeyboard.hide();
+                }
                 if ( reverse ) {
                     FMS.router.reverseTransition();
                 }

@@ -106,6 +106,9 @@
     <feature name="InAppBrowser">
       <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
     </feature>
+    <feature name="SoftKeyBoard">
+      <param name="android-package" value="org.apache.cordova.plugins.SoftKeyBoard"/>
+    </feature>
     <!-- Deprecated plugins element. Remove in 3.0 -->
     <plugins>
     </plugins>

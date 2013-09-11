@@ -260,6 +260,8 @@ var tpl = {
                     FMS.currentUser = new FMS.User({id: 1});
                 }
 
+                FMS.windowHeight = $(window).height();
+
                 if ( localStorage.usedBefore ) {
                     FMS.usedBefore = 1;
                 }
