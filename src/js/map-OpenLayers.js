@@ -406,3 +406,28 @@ OpenLayers.Control.ActionAfterDrag = OpenLayers.Class(OpenLayers.Control, {
         }
     }
 });
+
+
+// Overload the PinchZoom control so we can stop zoom snapback when we
+// reach the limit of zooming
+OpenLayers.Control.PinchZoom = OpenLayers.Class(OpenLayers.Control.PinchZoom,{
+    pinchMove: function(evt,pinchData) {
+        var maxZoom = fixmystreet.numZoomLevels - 1;
+        var scale = pinchData.scale;
+        var containerOrigin = this.containerOrigin;
+        var pinchOrigin = this.pinchOrigin;
+        var current = evt.xy;
+        var dx = Math.round((current.x-pinchOrigin.x) + (scale-1) * (containerOrigin.x-pinchOrigin.x));
+        var dy = Math.round((current.y-pinchOrigin.y) + (scale-1) * (containerOrigin.y-pinchOrigin.y));
+
+        // if we are at the limits of the zoom then do nothing to stop zoom snapback effect
+        var mapZoom = this.map.getZoom();
+        if ( ( ( dx < 0 || dy < 0 ) && mapZoom == maxZoom ) || ( ( dx > 0 || dy > 0 ) && mapZoom == 0 ) ) {
+            return false;
+        }
+
+        this.applyTransform("translate("+dx+"px, "+dy+"px) scale("+scale+")");
+        this.currentCenter=current;
+    },
+    CLASS_NAME: "OpenLayers.Control.PinchZoom"
+});
