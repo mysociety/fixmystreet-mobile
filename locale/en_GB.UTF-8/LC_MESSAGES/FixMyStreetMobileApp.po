@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-08-20 11:48+0100\n"
+"POT-Creation-Date: 2013-09-12 10:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "Add a Photo "
 msgstr ""
 
-#: templates/offline.html:52 templates/photo.html:19
+#: templates/offline.html:52 templates/photo.html:22
 msgid "Add an existing photo"
 msgstr ""
 
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Confirmation email sent"
 msgstr ""
 
-#: templates/submit_set_password.html:15
+#: templates/submit_set_password.html:18
 msgid "Continue"
 msgstr ""
 
@@ -96,6 +96,12 @@ msgstr ""
 
 #: templates/around.html:3
 msgid "Drafts"
+msgstr ""
+
+#: templates/submit_set_password.html:10
+msgid ""
+"Enter a password for your account. This won't be activated till you click "
+"the link in the confirmation email"
 msgstr ""
 
 #: templates/around.html:18
@@ -271,7 +277,7 @@ msgstr ""
 msgid "Provide a title"
 msgstr ""
 
-#: templates/offline.html:64 templates/photo.html:21
+#: templates/offline.html:64
 msgid "Remove Photo"
 msgstr ""
 
@@ -342,7 +348,7 @@ msgstr ""
 msgid "Subject"
 msgstr ""
 
-#: templates/offline.html:51 templates/photo.html:20
+#: templates/offline.html:51 templates/photo.html:23
 msgid "Take a new photo"
 msgstr ""
 
@@ -476,7 +482,7 @@ msgid "Your details"
 msgstr ""
 
 #: templates/login.html:27 templates/submit_password.html:11
-#: templates/submit_set_password.html:11
+#: templates/submit_set_password.html:14
 msgid "Your password"
 msgstr ""
 
