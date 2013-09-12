@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-09-12 10:13+0100\n"
+"POT-Creation-Date: 2013-09-12 10:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -354,7 +354,7 @@ msgid "There was a problem checking we cover this location. Please try again lat
 msgstr ""
 
 #: templates/strings.js:25
-msgid "There was a problem logging you in. Please check your email and password"
+msgid "There was a problem logging you in. Please check your email and password and that you have confirmed your password."
 msgstr ""
 
 #: templates/strings.js:23
@@ -386,7 +386,7 @@ msgid "There was a problem uploading your report."
 msgstr ""
 
 #: templates/strings.js:26
-msgid "There was a problem with your email/password combination. If you have forgotten your password, or do not have one, you can set one by returning to the email screen and selecting the set password option."
+msgid "There was a problem with your email/password combination. If you have forgotten your password, or do not have one, you can set one by returning to the email screen and selecting the set password option. Passwords are not activated until the link in the confirmation email is clicked."
 msgstr ""
 
 #: templates/reports.html:9
