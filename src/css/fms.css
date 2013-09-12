@@ -875,6 +875,8 @@
         top: 0px;
         display: none;
         z-index: 3005;
+        height: 100%;
+        background-color: rgba(200,200,200,0.7);
     }
 
     #helpContent {
