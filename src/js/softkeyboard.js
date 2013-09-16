@@ -10,7 +10,6 @@
     };
 
     SoftKeyBoard.prototype.hide = function(win, fail) {
-        console.log('hiding keyboard');
         return cordova.exec(
                 function (args) { if(win !== undefined) { win(args); } },
                 function (args) { if(fail !== undefined) { fail(args); } },
