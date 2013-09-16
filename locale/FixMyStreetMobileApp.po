@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-09-16 17:01+0100\n"
+"POT-Creation-Date: 2013-09-16 17:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -78,7 +78,7 @@ msgid "Could not access location services. Please check permissions."
 msgstr ""
 
 #: templates/strings.js:42
-msgid "Could not get position."
+msgid "Could not get location."
 msgstr ""
 
 #: templates/reports.html:25
@@ -114,7 +114,7 @@ msgid "Further Details"
 msgstr ""
 
 #: templates/strings.js:41
-msgid "Got position."
+msgid "Got location."
 msgstr ""
 
 #: templates/login.html:2 templates/reports.html:2 templates/sent.html:2
