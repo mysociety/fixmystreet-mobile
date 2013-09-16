@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-09-12 10:30+0100\n"
+"POT-Creation-Date: 2013-09-16 12:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: templates/offline.html:50 templates/photo.html:10
+#: templates/offline.html:50 templates/photo.html:17
 msgid "(optional)"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Add Photo"
 msgstr ""
 
-#: templates/photo.html:10
+#: templates/photo.html:17
 msgid "Add a Photo"
 msgstr ""
 
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Add a Photo "
 msgstr ""
 
-#: templates/offline.html:52 templates/photo.html:22
+#: templates/offline.html:52 templates/photo.html:33
 msgid "Add an existing photo"
 msgstr ""
 
@@ -149,7 +149,7 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: templates/strings.js:50
+#: templates/strings.js:51
 msgid "More details"
 msgstr ""
 
@@ -165,7 +165,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: templates/strings.js:49
+#: templates/strings.js:50
 msgid "No network connection available for submitting your report. Please try again later."
 msgstr ""
 
@@ -187,6 +187,14 @@ msgstr ""
 
 #: templates/submit_confirm.html:21 templates/submit_name.html:26
 msgid "Optionally enter your phone number"
+msgstr ""
+
+#: templates/strings.js:45
+msgid "Photo added"
+msgstr ""
+
+#: templates/photo.html:20
+msgid "Photo for report"
 msgstr ""
 
 #: templates/strings.js:11
@@ -273,7 +281,7 @@ msgstr ""
 msgid "Reposition Report Here"
 msgstr ""
 
-#: templates/strings.js:48
+#: templates/strings.js:49
 msgid "Save for Later"
 msgstr ""
 
@@ -325,7 +333,7 @@ msgstr ""
 msgid "Subject"
 msgstr ""
 
-#: templates/offline.html:51 templates/photo.html:23
+#: templates/offline.html:51 templates/photo.html:34
 msgid "Take a new photo"
 msgstr ""
 
@@ -381,7 +389,7 @@ msgstr ""
 msgid "There was a problem taking your photo."
 msgstr ""
 
-#: templates/strings.js:46
+#: templates/strings.js:47
 msgid "There was a problem uploading your report."
 msgstr ""
 
@@ -409,7 +417,7 @@ msgstr ""
 msgid "To skip this step in future, you can set a password now."
 msgstr ""
 
-#: templates/offline.html:2 templates/strings.js:47
+#: templates/offline.html:2 templates/strings.js:48
 msgid "Try Again"
 msgstr ""
 
@@ -417,7 +425,7 @@ msgstr ""
 msgid "Unsent Report"
 msgstr ""
 
-#: templates/strings.js:45
+#: templates/strings.js:46
 msgid "Uploading images may take some time, please be patient"
 msgstr ""
 

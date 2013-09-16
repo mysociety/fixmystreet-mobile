@@ -42,6 +42,7 @@
             invalid_email: '[% loc('Invalid email') %]',
             invalid_report: '[% loc('Invalid report') %]',
             photo_failed: '[% loc('There was a problem taking your photo.') %]',
+            photo_added: '[% loc('Photo added') %]',
             photo_loading: '[% loc('Uploading images may take some time, please be patient') %]',
             upload_aborted: '[% loc('There was a problem uploading your report.') %]',
             try_again: '[% loc('Try Again') %]',

@@ -7,7 +7,18 @@
         <% } %>
 </div>
 <div data-role="content">
-    <h2>[% loc('Add a Photo') %] <em>[% loc('(optional)') %]</em></h2>
+        <% var photoClass = 'nodisplay', nophotoClass = 'nodisplay';
+        if ( file != '' ) { 
+            photoClass = '';
+        } else { 
+            nophotoClass = '';
+        } %>
+    <h2 id="nophoto_title" class="<% print( nophotoClass ); %>">
+        [% loc('Add a Photo') %] <em>[% loc('(optional)') %]</em>
+    </h2>
+    <h2 id="photo_title" class="<% print( photoClass ); %>">
+        [% loc('Photo for report') %]
+    </h2>
     <div class="photo-wrapper">
     <div class="photo">
     <% if ( file == '' ) { %>

@@ -42,6 +42,7 @@
             invalid_email: 'Invalid email',
             invalid_report: 'Invalid report',
             photo_failed: 'There was a problem taking your photo.',
+            photo_added: 'Photo added',
             photo_loading: 'Uploading images may take some time, please be patient',
             upload_aborted: 'There was a problem uploading your report.',
             try_again: 'Try Again',
