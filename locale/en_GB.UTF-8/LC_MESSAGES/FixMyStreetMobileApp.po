@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-09-16 13:05+0100\n"
+"POT-Creation-Date: 2013-09-16 13:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: templates/offline.html:50 templates/photo.html:17
+#: templates/offline.html:54 templates/photo.html:17
 msgid "(optional)"
 msgstr ""
 
@@ -38,11 +38,11 @@ msgstr ""
 msgid "Add a Photo"
 msgstr ""
 
-#: templates/offline.html:50
+#: templates/offline.html:54
 msgid "Add a Photo "
 msgstr ""
 
-#: templates/offline.html:52 templates/photo.html:33
+#: templates/offline.html:56 templates/photo.html:33
 msgid "Add an existing photo"
 msgstr ""
 
@@ -50,7 +50,7 @@ msgstr ""
 msgid "An error was encountered when submitting your report: "
 msgstr ""
 
-#: templates/around.html:22 templates/around.html:5 templates/offline.html:14
+#: templates/around.html:22 templates/around.html:5 templates/offline.html:18
 msgid "Cancel"
 msgstr ""
 
@@ -104,7 +104,7 @@ msgid ""
 "the link in the confirmation email"
 msgstr ""
 
-#: templates/around.html:18
+#: templates/around.html:18 templates/offline.html:14
 msgid "Finding your location"
 msgstr ""
 
@@ -142,7 +142,7 @@ msgstr ""
 msgid "Invalid report"
 msgstr ""
 
-#: templates/offline.html:31
+#: templates/offline.html:35
 msgid "Locate (optional)"
 msgstr ""
 
@@ -187,13 +187,13 @@ msgstr ""
 msgid "Offline"
 msgstr ""
 
-#: templates/offline.html:21
+#: templates/offline.html:25
 msgid ""
 "Oh dear - we can't detect an internet connection. However you can still edit "
 "the report now and send it later."
 msgstr ""
 
-#: templates/offline.html:23
+#: templates/offline.html:27
 msgid ""
 "Oh dear - we can't detect an internet connection. However you can still "
 "start a report now and complete it later, by going to 'drafts' when you're "
@@ -281,11 +281,11 @@ msgstr ""
 msgid "Please search for a street name and area, or postcode."
 msgstr ""
 
-#: templates/details.html:9 templates/offline.html:37
+#: templates/details.html:9 templates/offline.html:41
 msgid "Provide a title"
 msgstr ""
 
-#: templates/offline.html:64
+#: templates/offline.html:68
 msgid "Remove Photo"
 msgstr ""
 
@@ -356,7 +356,7 @@ msgstr ""
 msgid "Subject"
 msgstr ""
 
-#: templates/offline.html:51 templates/photo.html:34
+#: templates/offline.html:55 templates/photo.html:34
 msgid "Take a new photo"
 msgstr ""
 
@@ -443,7 +443,7 @@ msgid ""
 "report to the council."
 msgstr ""
 
-#: templates/offline.html:29
+#: templates/offline.html:33
 msgid "This report has a position."
 msgstr ""
 
@@ -481,7 +481,7 @@ msgstr ""
 msgid "Your Email"
 msgstr ""
 
-#: templates/offline.html:60
+#: templates/offline.html:64
 msgid "Your Photo"
 msgstr ""
 
