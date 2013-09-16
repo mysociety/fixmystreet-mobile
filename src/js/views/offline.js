@@ -59,7 +59,7 @@
                 this.finishedLocating();
                 this.locateCount = 21;
 
-                $('#locate_result').html('Could not get position');
+                $('#locate_result').html(FMS.strings.offline_failed_position);
             },
 
             gotLocation: function(info) {
@@ -68,7 +68,7 @@
                 this.model.set('lat', info.coordinates.latitude);
                 this.model.set('lon', info.coordinates.longitude);
 
-                $('#locate_result').html('Got position.');
+                $('#locate_result').html(FMS.strings.offline_got_position);
             },
 
             takePhoto: function() {

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-09-16 13:09+0100\n"
+"POT-Creation-Date: 2013-09-16 17:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -77,6 +77,10 @@ msgstr ""
 msgid "Could not access location services. Please check permissions."
 msgstr ""
 
+#: templates/strings.js:42
+msgid "Could not get position."
+msgstr ""
+
 #: templates/reports.html:25
 msgid "Delete"
 msgstr ""
@@ -109,6 +113,10 @@ msgstr ""
 msgid "Further Details"
 msgstr ""
 
+#: templates/strings.js:41
+msgid "Got position."
+msgstr ""
+
 #: templates/login.html:2 templates/reports.html:2 templates/sent.html:2
 msgid "Home"
 msgstr ""
@@ -129,11 +137,11 @@ msgstr ""
 msgid "If you start compiling a report, but don't finish and send it, it'll appear in this menu so you can finish it later"
 msgstr ""
 
-#: templates/strings.js:42
+#: templates/strings.js:44
 msgid "Invalid email"
 msgstr ""
 
-#: templates/strings.js:43
+#: templates/strings.js:45
 msgid "Invalid report"
 msgstr ""
 
@@ -149,7 +157,7 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: templates/strings.js:51
+#: templates/strings.js:53
 msgid "More details"
 msgstr ""
 
@@ -165,7 +173,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: templates/strings.js:50
+#: templates/strings.js:52
 msgid "No network connection available for submitting your report. Please try again later."
 msgstr ""
 
@@ -189,7 +197,7 @@ msgstr ""
 msgid "Optionally enter your phone number"
 msgstr ""
 
-#: templates/strings.js:45
+#: templates/strings.js:47
 msgid "Photo added"
 msgstr ""
 
@@ -281,7 +289,7 @@ msgstr ""
 msgid "Reposition Report Here"
 msgstr ""
 
-#: templates/strings.js:49
+#: templates/strings.js:51
 msgid "Save for Later"
 msgstr ""
 
@@ -385,11 +393,11 @@ msgstr ""
 msgid "There was a problem submitting your report. Please try again."
 msgstr ""
 
-#: templates/strings.js:44
+#: templates/strings.js:46
 msgid "There was a problem taking your photo."
 msgstr ""
 
-#: templates/strings.js:47
+#: templates/strings.js:49
 msgid "There was a problem uploading your report."
 msgstr ""
 
@@ -417,7 +425,7 @@ msgstr ""
 msgid "To skip this step in future, you can set a password now."
 msgstr ""
 
-#: templates/offline.html:2 templates/strings.js:48
+#: templates/offline.html:2 templates/strings.js:50
 msgid "Try Again"
 msgstr ""
 
@@ -425,7 +433,7 @@ msgstr ""
 msgid "Unsent Report"
 msgstr ""
 
-#: templates/strings.js:46
+#: templates/strings.js:48
 msgid "Uploading images may take some time, please be patient"
 msgstr ""
 
@@ -457,7 +465,7 @@ msgstr ""
 msgid "discard"
 msgstr ""
 
-#: templates/strings.js:41
+#: templates/strings.js:43
 msgid "required"
 msgstr ""
 
