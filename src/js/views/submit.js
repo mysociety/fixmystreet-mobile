@@ -278,8 +278,9 @@
                 $('p.top').show();
                 this.model.set('name', $('#form_name').val());
                 this.model.set('phone', $('#form_phone').val());
-                this.model.set('may_show_name', $('#form_may_show_name').val());
+                this.model.set('may_show_name', $('#form_may_show_name').is(':checked'));
                 FMS.currentUser.set('name', $('#form_name').val());
+                FMS.currentUser.set('may_show_name', $('#form_may_show_name').is(':checked'));
 
                 if ( this.model.get('title_list') && this.model.get('title_list').length > 0 ) {
                     FMS.currentUser.set('title', $('#form_title').val());
@@ -341,8 +342,9 @@
                     this.model.set('submit_clicked', 'submit_register');
                     this.model.set('phone', $('#form_phone').val());
                     this.model.set('name', $('#form_name').val());
-                    this.model.set('may_show_name', $('#form_may_show_name').val());
+                    this.model.set('may_show_name', $('#form_may_show_name').is(':checked'));
                     FMS.currentUser.set('name', $('#form_name').val());
+                    FMS.currentUser.set('may_show_name', $('#form_may_show_name').is(':checked'));
                 } else {
                     // if this is set then we are registering a password
                     if ( ! this.model.get('submit_clicked') ) {
@@ -440,9 +442,10 @@
             beforeSubmit: function() {
                 this.model.set('name', $('#form_name').val());
                 this.model.set('phone', $('#form_phone').val());
-                this.model.set('may_show_name', $('#form_may_show_name').val());
+                this.model.set('may_show_name', $('#form_may_show_name').is(':checked'));
                 this.model.set('submit_clicked', 'submit_register');
                 FMS.currentUser.set('name', $('#form_name').val());
+                FMS.currentUser.set('may_show_name', $('#form_may_show_name').is(':checked'));
             },
 
             onReportError: function(model, err, options) {

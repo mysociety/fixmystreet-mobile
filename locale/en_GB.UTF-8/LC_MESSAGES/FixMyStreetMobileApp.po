@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-09-16 17:29+0100\n"
+"POT-Creation-Date: 2013-09-17 17:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -208,7 +208,7 @@ msgid ""
 "back online."
 msgstr ""
 
-#: templates/submit_confirm.html:21 templates/submit_name.html:26
+#: templates/submit_confirm.html:23 templates/submit_name.html:26
 msgid "Optionally enter your phone number"
 msgstr ""
 
@@ -268,7 +268,7 @@ msgid ""
 "wish your name to be shown on the site, untick the box below"
 msgstr ""
 
-#: templates/strings.js:8 templates/submit_confirm.html:18
+#: templates/strings.js:8 templates/submit_confirm.html:20
 #: templates/submit_name.html:23
 msgid "Please enter your name"
 msgstr ""
@@ -297,7 +297,7 @@ msgstr ""
 msgid "Remove Photo"
 msgstr ""
 
-#: templates/submit_confirm.html:29 templates/submit_password.html:15
+#: templates/submit_confirm.html:31 templates/submit_password.html:15
 msgid "Report"
 msgstr ""
 
@@ -329,7 +329,7 @@ msgstr ""
 msgid "Send confirmation email"
 msgstr ""
 
-#: templates/submit_confirm.html:25 templates/submit_name.html:31
+#: templates/submit_confirm.html:27 templates/submit_name.html:31
 #: templates/submit_password.html:33
 msgid "Show my name publicly"
 msgstr ""
