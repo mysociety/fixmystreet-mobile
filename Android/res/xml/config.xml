@@ -37,16 +37,9 @@
     <access origin="mapit.mysociety.org"/>
     <access origin="mobile.fixmystreet.test.mysociety.org"/>
 
-    <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
     <content src="src/index.html" />
 
     <preference name="loglevel" value="DEBUG" />
-    <!--
-      <preference name="backgroundColor" value="0xFFF" />
-      <preference name="loadUrlTimeoutValue" value="20000" />
-      <preference name="InAppBrowserStorageEnabled" value="true" />
-      <preference name="disallowOverscroll" value="true" />
-    -->
     <preference name="errorUrl" value="file:///android_asset/www/src/android_error.html" />
 
     <feature name="App">
