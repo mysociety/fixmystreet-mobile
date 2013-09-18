@@ -23,7 +23,6 @@ public class AndroidActivity extends DroidGap {
                fields. */
         	getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         }
-        super.setIntegerProperty("splashscreen", R.drawable.splash);
         super.loadUrl("file:///android_asset/www/src/index.html", 30000);
     }
 }
