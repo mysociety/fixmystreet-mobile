@@ -239,6 +239,7 @@
 
             onClickMark: function(e) {
                 e.preventDefault();
+                this.clearSearchErrors();
                 this.displayButtons(true);
                 $('#popup').hide();
                 $('#OpenLayers_Control_Crosshairs_crosshairs').show();
