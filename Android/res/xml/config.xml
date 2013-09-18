@@ -47,6 +47,7 @@
       <preference name="InAppBrowserStorageEnabled" value="true" />
       <preference name="disallowOverscroll" value="true" />
     -->
+    <preference name="errorUrl" value="file:///android_asset/www/src/android_error.html" />
 
     <feature name="App">
       <param name="android-package" value="org.apache.cordova.App"/>
