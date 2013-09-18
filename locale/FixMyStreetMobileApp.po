@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-09-17 17:25+0100\n"
+"POT-Creation-Date: 2013-09-18 18:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Complete report now"
 msgstr ""
 
-#: templates/around.html:47
+#: templates/around.html:50
 msgid "Confirm Location"
 msgstr ""
 
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Oh dear - we can't detect an internet connection. However you can still start a report now and complete it later, by going to 'drafts' when you're back online."
 msgstr ""
 
-#: templates/submit_confirm.html:23 templates/submit_name.html:26
+#: templates/submit_confirm.html:21 templates/submit_name.html:26
 msgid "Optionally enter your phone number"
 msgstr ""
 
@@ -249,7 +249,7 @@ msgstr ""
 msgid "Please enter your full name, councils need this information - if you do not wish your name to be shown on the site, untick the box below"
 msgstr ""
 
-#: templates/strings.js:8 templates/submit_confirm.html:20 templates/submit_name.html:23
+#: templates/strings.js:8 templates/submit_confirm.html:18 templates/submit_name.html:23
 msgid "Please enter your name"
 msgstr ""
 
@@ -277,7 +277,7 @@ msgstr ""
 msgid "Remove Photo"
 msgstr ""
 
-#: templates/submit_confirm.html:31 templates/submit_password.html:15
+#: templates/submit_confirm.html:29 templates/submit_password.html:15
 msgid "Report"
 msgstr ""
 
@@ -285,7 +285,7 @@ msgstr ""
 msgid "Report Created"
 msgstr ""
 
-#: templates/around.html:44
+#: templates/around.html:47
 msgid "Reposition Report Here"
 msgstr ""
 
@@ -309,7 +309,11 @@ msgstr ""
 msgid "Send confirmation email"
 msgstr ""
 
-#: templates/submit_confirm.html:27 templates/submit_name.html:31 templates/submit_password.html:33
+#: templates/around.html:44
+msgid "Set Report Location"
+msgstr ""
+
+#: templates/submit_confirm.html:25 templates/submit_name.html:31 templates/submit_password.html:33
 msgid "Show my name publicly"
 msgstr ""
 

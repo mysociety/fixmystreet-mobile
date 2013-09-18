@@ -18,6 +18,7 @@
                 'vclick #cancel': 'onClickCancel',
                 'vclick #confirm-map': 'onClickReport',
                 'vclick #mark-here': 'onClickMark',
+                'vclick #locate-here': 'onClickMark',
                 'vclick #reposition': 'onClickReposition',
                 'vclick a.address': 'goAddress',
                 'submit #postcodeForm': 'search'
@@ -208,6 +209,7 @@
                     $('#view-my-reports').hide();
                     $('#login-options').hide();
                     $('#mark-here').hide();
+                    $('#locate-here').hide();
                     $('#postcodeForm').hide();
                     if ( fixmystreet.map ) {
                         fixmystreet.markers.setVisibility(false);
@@ -215,11 +217,19 @@
                         fixmystreet.bbox_strategy.deactivate();
                     }
                 } else {
-                    $('#cancel').hide().removeClass('ui-btn-left');
+                    if ( FMS.currentDraft.isPartial() ) {
+                        $('#cancel').addClass('ui-btn-left').show();
+                        $('#view-my-reports').hide();
+                        $('#login-options').hide();
+                        $('#locate-here').show();
+                    } else {
+                        $('#cancel').hide().removeClass('ui-btn-left');
+                        $('#view-my-reports').show();
+                        $('#login-options').show();
+                        $('#mark-here').show();
+                        $('#locate-here').hide();
+                    }
                     $('#confirm-map').hide();
-                    $('#view-my-reports').show();
-                    $('#login-options').show();
-                    $('#mark-here').show();
                     $('#postcodeForm').show();
                     $('#reposition').hide();
                     if ( fixmystreet.map ) {
@@ -257,7 +267,6 @@
                 fixmystreet_activate_drag();
                 // force pins to be refetched and displayed
                 fixmystreet.bbox_strategy.update({force: true});
-                this.displayButtons(false);
                 if ( this.model.isPartial() ) {
                     FMS.clearCurrentDraft();
                 } else {
@@ -271,6 +280,7 @@
                     this.model.set('lat', null);
                     this.model.set('lon', null);
                 }
+                this.displayButtons(false);
             },
 
             decrementDraftCount: function() {
