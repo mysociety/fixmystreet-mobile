@@ -62,7 +62,7 @@
                     lat: model.get('lat'),
                     lon: model.get('lon'),
                     pc: model.get('pc'),
-                    may_show_name: model.get('may_show_name'),
+                    may_show_name: model.get('may_show_name') ? 1 : 0,
                     used_map: 1,
                     name: model.get('name') || model.get('user').get('name'),
                     email: model.get('email') || model.get('user').get('email'),
