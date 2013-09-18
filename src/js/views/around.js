@@ -119,7 +119,9 @@
             },
 
             positionUpdate: function( info ) {
-                $('#relocate').show();
+                if ( $('#front-howto').is(':hidden') ) {
+                    $('#relocate').show();
+                }
                 FMS.currentPosition = info.coordinates;
                 var centre = this.projectCoords( info.coordinates );
 
