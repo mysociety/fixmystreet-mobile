@@ -217,6 +217,7 @@
                 e.preventDefault();
                 if ( this.validate() ) {
                     FMS.currentUser.set('email', $('#form_email').val());
+                    FMS.currentUser.save();
                     this.navigate( 'submit-name' );
                 }
             },
@@ -285,6 +286,10 @@
                 if ( this.model.get('title_list') && this.model.get('title_list').length > 0 ) {
                     FMS.currentUser.set('title', $('#form_title').val());
                 }
+
+                if ( FMS.currentUser ) {
+                    FMS.currentUser.save();
+                }
             }
         })
     });
@@ -345,6 +350,7 @@
                     this.model.set('may_show_name', $('#form_may_show_name').is(':checked'));
                     FMS.currentUser.set('name', $('#form_name').val());
                     FMS.currentUser.set('may_show_name', $('#form_may_show_name').is(':checked'));
+                    FMS.currentUser.save();
                 } else {
                     // if this is set then we are registering a password
                     if ( ! this.model.get('submit_clicked') ) {
