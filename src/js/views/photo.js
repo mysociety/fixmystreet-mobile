@@ -27,12 +27,35 @@
                 }
             },
 
+            getOptions: function(isFromAlbum) {
+                var options = {
+                    destinationType: Camera.DestinationType.FILE_URI,
+                    sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+                };
+
+                if ( ! isFromAlbum ) {
+                    options.saveToPhotoAlbum = true;
+                    options.sourceType = navigator.camera.PictureSourceType.CAMERA;
+                }
+
+                // this helps with out of memory errors on iPhones but not on Android it seems
+                if ( ! FMS.isAndroid ) {
+                    options.quality = 49;
+                    options.correctOrientation = true;
+                }
+
+                return options;
+            },
+
             takePhoto: function(e) {
                 e.preventDefault();
                 $.mobile.loading('show');
                 $('#photo').hide();
                 var that = this;
-                navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, { targetWidth: 2048, targetHeight: 2048, saveToPhotoAlbum: true, quality: 49, destinationType: Camera.DestinationType.FILE_URI, sourceType: navigator.camera.PictureSourceType.CAMERA, correctOrientation: true });
+
+                var options = this.getOptions();
+
+                navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, options);
             },
 
             addPhoto: function(e) {
@@ -40,7 +63,8 @@
                 $.mobile.loading('show');
                 $('#photo').hide();
                 var that = this;
-                navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, { targetWidth: 2048, targetHeight: 2048, saveToPhotoAlbum: false, quality: 49, destinationType: Camera.DestinationType.FILE_URI, sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY, correctOrientation: true });
+                var options = this.getOptions(true);
+                navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, options);
             },
 
             addPhotoSuccess: function(imgURI) {
