@@ -30,7 +30,10 @@
             getOptions: function(isFromAlbum) {
                 var options = {
                     destinationType: Camera.DestinationType.FILE_URI,
-                    sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+                    sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY,
+                    correctOrientation: true,
+                    targetHeight: 768,
+                    targetWidth: 1024
                 };
 
                 if ( ! isFromAlbum ) {
@@ -41,7 +44,6 @@
                 // this helps with out of memory errors on iPhones but not on Android it seems
                 if ( ! FMS.isAndroid ) {
                     options.quality = 49;
-                    options.correctOrientation = true;
                 }
 
                 return options;
