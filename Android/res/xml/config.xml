@@ -35,7 +35,7 @@
     <access origin=".*.tilma.mysociety.org"/>
     <access origin=".*.virtualearth.net"/>
     <access origin="mapit.mysociety.org"/>
-    <access origin="mobile.fixmystreet.test.mysociety.org"/>
+    <access origin="www.fixmystreet.com"/>
 
     <content src="src/index.html" />
 
