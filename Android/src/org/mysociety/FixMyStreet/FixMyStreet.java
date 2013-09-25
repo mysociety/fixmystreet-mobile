@@ -5,7 +5,7 @@ import android.view.WindowManager;
 
 import org.apache.cordova.*;
 
-public class AndroidActivity extends DroidGap {
+public class FixMyStreet extends DroidGap {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
