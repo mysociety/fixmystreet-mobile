@@ -65,11 +65,6 @@
         padding-top: 20px;
     }
 
-    .ios7 #locating,
-    .ios7 #load-screen {
-        margin-top: 20px;
-    }
-
     .ios7 .ui-bar-a,
     body.ios7 {
         background-color: #F6BE41;
@@ -502,7 +497,7 @@
         z-index: 3010;
         text-align: center;
         background: #F6BE41;
-        padding-top:40px;
+        padding-top:20px;
         color: white;
     }
 
