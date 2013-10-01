@@ -56,30 +56,6 @@
         background-color: #534741;
         background-image: url('../images/mapbg.png');
     }
-    .ios7 .ui-mobile-viewport {
-        background-color: none;
-        background-image: none;
-    }
-
-    .ios7 .ui-page-active {
-        padding-top: 20px;
-    }
-
-    .ios7 .ui-bar-a,
-    body.ios7 {
-        background-color: #F6BE41;
-        background-image: none;
-    }
-
-    .ios7 .ui-bar-a {
-        border-color: #F6BE41;
-    }
-
-    .ios7 #map_box {
-        top: 20px;
-        background-color: #534741;
-        background-image: url('../images/mapbg.png');
-    }
 
     .ui-icon-plus,
     .ui-icon-minus,
@@ -221,6 +197,33 @@
         background-image: none;
         background-color: rgba(0,0,0,0);
     }
+
+/* ios 7 tweaks to deal with different status bar behaviour */
+    .ios7 .ui-mobile-viewport {
+        background-color: none;
+        background-image: none;
+    }
+
+    .ios7 .ui-page-active {
+        padding-top: 20px;
+    }
+
+    .ios7 .ui-bar-a,
+    body.ios7 {
+        background-color: #F6BE41;
+        background-image: none;
+    }
+
+    .ios7 .ui-bar-a {
+        border-color: #F6BE41;
+    }
+
+    .ios7 #map_box {
+        top: 20px;
+        background-color: #534741;
+        background-image: url('../images/mapbg.png');
+    }
+
 
 /* all app classes and selectors */
 
