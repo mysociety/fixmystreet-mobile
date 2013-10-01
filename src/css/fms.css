@@ -218,6 +218,15 @@
         border-color: #F6BE41;
     }
 
+    .ios7 .ui-header-fixed {
+        padding-top: 20px;
+    }
+
+    .ios7 .ui-header-fixed .ui-btn-left,
+    .ios7 .ui-header-fixed .ui-btn-right {
+        top: 24px;
+    }
+
     .ios7 #map_box {
         top: 20px;
         background-color: #534741;
