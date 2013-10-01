@@ -233,6 +233,9 @@
         background-image: url('../images/mapbg.png');
     }
 
+    .ios7 #around-page #locating {
+        bottom: -22px;
+    }
 
 /* all app classes and selectors */
 
