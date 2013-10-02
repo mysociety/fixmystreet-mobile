@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>974147E5-3721-440F-874B-BE8E2FD35F53</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FixMyStreet</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>76028608-9C0B-4A78-85BA-C9A7B884576D</key>
+		<string>ssh://git.mysociety.org/data/git/public/fixmystreet-mobile.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iPhone/FixMyStreet.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>76028608-9C0B-4A78-85BA-C9A7B884576D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://git.mysociety.org/data/git/public/fixmystreet-mobile.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>76028608-9C0B-4A78-85BA-C9A7B884576D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>76028608-9C0B-4A78-85BA-C9A7B884576D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>fixmystreet-mobile</string>
+		</dict>
+	</array>
+</dict>
+</plist>

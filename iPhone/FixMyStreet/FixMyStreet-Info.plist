@@ -19,6 +19,7 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
+				<string>fms-Icon</string>
 				<string>Icon</string>
 				<string>fms-Icon-Small-29</string>
 				<string>fms-Icon-80</string>
