@@ -184,7 +184,11 @@
                 if ( !fixmystreet.map ) {
                     $('#relocate').hide();
                     $('#mark-here').hide();
-                    $('#pc').attr('placeholder', FMS.strings.search_placeholder).focus();
+                    // if we are going to display the help then we don't want to focus on
+                    // the search box as it will show through the help
+                    if ( FMS.usedBefore ) {
+                        $('#pc').attr('placeholder', FMS.strings.search_placeholder).focus();
+                    }
                 }
                 $('#front-howto').html('<p>' + msg + '</p>');
                 $('#front-howto').show();
