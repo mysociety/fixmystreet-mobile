@@ -237,6 +237,10 @@
         bottom: -22px;
     }
 
+    .ios7 #map_box .olLayerDiv div {
+        display: block !important;
+    }
+
 /* all app classes and selectors */
 
     /* This is a bit of hackery as without it jquerymobile never sets the page
