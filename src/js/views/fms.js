@@ -14,7 +14,9 @@
             },
 
             back: function(e) {
-                if ( this._back ) {
+                if ( $('#help').is(':visible') ) {
+                    FMS.helpHide();
+                } else if ( this._back ) {
                     this._back(e);
                 } else if ( this.prev ) {
                     this.onClickButtonPrev(e);
