@@ -264,7 +264,7 @@
                     }
                 }
 
-                if ( this.model.get('title_list') && this.model.get('title_list').length > 0 ) {
+                if ( this.model.get('titles_list') && this.model.get('titles_list').length > 0 ) {
                     if ( $('#form_title').val() === '' ) {
                         this.validationError('form_title', FMS.strings.required);
                         isValid = 0;
@@ -283,7 +283,7 @@
                 FMS.currentUser.set('name', $('#form_name').val());
                 FMS.currentUser.set('may_show_name', $('#form_may_show_name').is(':checked'));
 
-                if ( this.model.get('title_list') && this.model.get('title_list').length > 0 ) {
+                if ( this.model.get('titles_list') && this.model.get('titles_list').length > 0 ) {
                     FMS.currentUser.set('title', $('#form_title').val());
                 }
 
