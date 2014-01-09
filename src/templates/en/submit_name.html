@@ -15,7 +15,7 @@
         <div>
             <select data-role="none" placeholder="Title" id="form_title" name="title" required>
                 <option value="">Title</option>
-                <% for ( var i = 0; i < model.titles_list.length; i++ ) { var title = model.titles_list[i]; print( '<option value="' + title + '">' + title + '</option>' ); } %>
+                <% for ( var i = 0; i < model.titles_list.length; i++ ) { var title = model.titles_list[i]; print( '<option value="' + title + '"' + ( user.title && user.title == title ? ' selected' : '' ) + '>' + title + '</option>' ); } %>
             </select>
         </div>
         <% } %>
