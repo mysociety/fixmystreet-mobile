@@ -4,7 +4,9 @@ FixMyStreet Mobile App
 This is the FixMyStreet mobile app for reporting problems to an instance of the
 FixMyStreet platform - https://github.com/mysociety/fixmystreet.
 
-It's still in development at the moment.
+It's still in development at the moment and only a small amount of time
+has been spent on making it re-brandable/re-usable so if you want to
+create your own version on top of it you may be in for a bumpy ride.
 
 The FixMyStreet mobile app uses PhoneGap and has versions for Android and iOS.
 
