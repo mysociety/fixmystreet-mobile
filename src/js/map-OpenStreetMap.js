@@ -3,11 +3,14 @@ function set_map_config(perm) {
     if ($('#map_permalink').length) {
         permalink_id = 'map_permalink';
     }
+    fixmystreet.nav_control = new OpenLayers.Control.Navigation({});
     fixmystreet.controls = [
+        new OpenLayers.Control.Attribution(),
         new OpenLayers.Control.ArgParser(),
-        //new OpenLayers.Control.Navigation(),
+        fixmystreet.nav_control,
         new OpenLayers.Control.PanZoomFMS({id: 'fms_pan_zoom' })
     ];
+    fixmystreet.map_type = OpenLayers.Layer.OSM.Mapnik;
 }
 
 // http://www.openstreetmap.org/openlayers/OpenStreetMap.js (added maxResolution)

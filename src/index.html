@@ -47,7 +47,16 @@
 
         <script type="text/javascript" src="js/OpenLayers.fixmystreet.js"></script>
         <script type="text/javascript" src="js/map-OpenLayers.js"></script>
-        <script type="text/javascript" src="js/map-bing-ol.js"></script>
+        <script type="text/javascript">
+            var scriptElement = document.createElement("script");
+            scriptElement.type = "text/javascript";
+            if ( CONFIG.isUK ) {
+                scriptElement.src = "js/map-bing-ol.js";
+            } else {
+                scriptElement.src = "js/map-OpenStreetMap.js";
+            }
+            $('head').prepend(scriptElement);
+        </script>
 
         <script type="text/javascript" src="js/locate.js"></script>
         <script type="text/javascript" src="js/strings.js"></script>
