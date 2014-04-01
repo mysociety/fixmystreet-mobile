@@ -407,6 +407,9 @@ OpenLayers.Control.ActionAfterDrag = OpenLayers.Class(OpenLayers.Control, {
     onDragStart: function(evt) {
         if ( $('#confirm-map').css('display') == 'block' ) {
             $('#reposition').show();
+        } else {
+            $('#relocate').show();
+            $('#front-howto').hide();
         }
     }
 });
