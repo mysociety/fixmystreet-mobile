@@ -14,6 +14,14 @@
     <div id="errors"></div>
 
     <div class="inputcard">
+        <% if ( typeof model.titles_list !== 'undefined' ) { %>
+        <div>
+            <select data-role="none" placeholder="Title" id="form_title" name="title" required>
+                <option value="">Title</option>
+                <% for ( var i = 0; i < model.titles_list.length; i++ ) { var title = model.titles_list[i]; print( '<option value="' + title + '"' + ( user.title && user.title == title ? ' selected' : '' ) + '>' + title + '</option>' ); } %>
+            </select>
+        </div>
+        <% } %>
         <div>
             <input data-role="none" type="text" value="<%= user.name %>" name="name" id="form_name" placeholder="Please enter your name" required>
         </div>
