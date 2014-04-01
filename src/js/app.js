@@ -245,7 +245,7 @@ var tpl = {
                     FMS.iPhoneModel = model;
 
                     // fix overlap of status bar in ios7
-                    if (parseFloat(window.device.version) === 7.0) {
+                    if (parseFloat(window.device.version) >= 7.0) {
                         $('body').addClass('ios7');
                     }
                 }
