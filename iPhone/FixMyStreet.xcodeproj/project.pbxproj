@@ -526,7 +526,6 @@
 					"-weak_framework",
 					CoreMedia,
 					"-weak-lSystem",
-					"-forceload",
 					"-ObjC",
 				);
 				PRODUCT_NAME = FixMyStreet;
@@ -560,7 +559,6 @@
 					"-weak_framework",
 					CoreMedia,
 					"-weak-lSystem",
-					"-forceload",
 					"-ObjC",
 				);
 				PRODUCT_NAME = FixMyStreet;
