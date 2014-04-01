@@ -5,7 +5,8 @@ var CONFIG = {
     // Name of app to use in alert dialog titles amongst other things
     APP_NAME: '',
 
-    // URL of the fixmystreet install to report to
+    // URL of the fixmystreet install to report to, e.g
+    // http://www.fixmystreet.com/ - you must include the http
     FMS_URL: '',
 
     // namespace for storing drafts etc in. Should not need to change
