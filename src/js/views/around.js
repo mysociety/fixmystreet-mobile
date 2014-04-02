@@ -20,6 +20,7 @@
                 'vclick #mark-here': 'onClickMark',
                 'vclick #locate-here': 'onClickMark',
                 'vclick #reposition': 'onClickReposition',
+                'vclick #go-offline': 'onClickGoOffline',
                 'vclick a.address': 'goAddress',
                 'submit #postcodeForm': 'search'
             },
@@ -186,8 +187,12 @@
                     $('#mark-here').hide();
                     // if we are going to display the help then we don't want to focus on
                     // the search box as it will show through the help
-                    if ( FMS.usedBefore ) {
+                    if ( FMS.usedBefore && (details.err && ! details.err == 'location_check_failed') ) {
                         $('#pc').attr('placeholder', FMS.strings.search_placeholder).focus();
+                    }
+
+                    if ( details.err == 'location_check_failed' ) {
+                        $('#go-offline').show();
                     }
                 }
                 $('#front-howto').html('<p>' + msg + '</p>');
@@ -203,6 +208,7 @@
             },
 
             displayButtons: function(isLocationSet) {
+                $('#go-offline').hide();
                 if ( fixmystreet.map ) {
                     fixmystreet.nav.activate();
                     fixmystreet.actionafterdrag.activate();
@@ -285,6 +291,11 @@
                     this.model.set('lon', null);
                 }
                 this.displayButtons(false);
+            },
+
+            onClickGoOffline: function(e) {
+                e.preventDefault();
+                this.navigate('offline');
             },
 
             decrementDraftCount: function() {
