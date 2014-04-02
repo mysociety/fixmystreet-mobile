@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2013-09-18 18:01+0100\n"
+"POT-Creation-Date: 2014-04-02 17:08+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -116,6 +116,10 @@ msgstr ""
 msgid "Further Details"
 msgstr ""
 
+#: templates/around.html:53
+msgid "Go Offline"
+msgstr ""
+
 #: templates/strings.js:41
 msgid "Got location."
 msgstr ""
@@ -208,7 +212,7 @@ msgid ""
 "back online."
 msgstr ""
 
-#: templates/submit_confirm.html:21 templates/submit_name.html:26
+#: templates/submit_confirm.html:29 templates/submit_name.html:26
 msgid "Optionally enter your phone number"
 msgstr ""
 
@@ -268,7 +272,7 @@ msgid ""
 "wish your name to be shown on the site, untick the box below"
 msgstr ""
 
-#: templates/strings.js:8 templates/submit_confirm.html:18
+#: templates/strings.js:8 templates/submit_confirm.html:26
 #: templates/submit_name.html:23
 msgid "Please enter your name"
 msgstr ""
@@ -297,7 +301,7 @@ msgstr ""
 msgid "Remove Photo"
 msgstr ""
 
-#: templates/submit_confirm.html:29 templates/submit_password.html:15
+#: templates/submit_confirm.html:37 templates/submit_password.html:15
 msgid "Report"
 msgstr ""
 
@@ -333,7 +337,7 @@ msgstr ""
 msgid "Set Report Location"
 msgstr ""
 
-#: templates/submit_confirm.html:25 templates/submit_name.html:31
+#: templates/submit_confirm.html:33 templates/submit_name.html:31
 #: templates/submit_password.html:33
 msgid "Show my name publicly"
 msgstr ""
@@ -459,6 +463,7 @@ msgstr ""
 msgid "This report has a position."
 msgstr ""
 
+#: templates/submit_confirm.html:19 templates/submit_confirm.html:20
 #: templates/submit_name.html:16 templates/submit_name.html:17
 msgid "Title"
 msgstr ""
