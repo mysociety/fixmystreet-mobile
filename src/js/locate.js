@@ -7,7 +7,7 @@
             lookup: function(q) {
                 var that = this;
                 if (!q) {
-                    this.trigger('search_failed', { msg: FMS.strings.missing_location } );
+                    this.trigger('search_failed', { msg: FMS.strings.missing_location, err: 'missing_location' } );
                     return false;
                 }
 
@@ -24,14 +24,14 @@
                             } else if ( data.suggestions ) {
                                 that.trigger( 'search_failed', { suggestions: data.suggestions, locations: data.locations } );
                             } else {
-                                that.trigger( 'search_failed', { msg: data.error } );
+                                that.trigger( 'search_failed', { msg: data.error, err: 'data_error' } );
                             }
                         } else {
-                            that.trigger( 'search_failed', { msg: FMS.strings.location_problem } );
+                            that.trigger( 'search_failed', { msg: FMS.strings.location_problem, err: 'location_problem' } );
                         }
                     },
                     error: function(data, status, errorThrown) {
-                        that.trigger( 'search_failed', { msg: FMS.strings.location_problem } );
+                        that.trigger( 'search_failed', { msg: FMS.strings.location_problem, err: 'location_problem' } );
                     }
                 } );
             },
@@ -68,7 +68,7 @@
                         if ( err && err.code == PositionError.PERMISSION_DENIED ) {
                             errorMsg = FMS.strings.geolocation_denied;
                         }
-                        that.trigger('gps_failed', { msg: errorMsg } );
+                        that.trigger('gps_failed', { msg: errorMsg, err: 'gps_failed' } );
                     },
                     { timeout: 20000, enableHighAccuracy: true }
                 );
@@ -110,13 +110,13 @@
                     timeout: 10000,
                     success: function(data) {
                         if (data.error) {
-                            that.trigger('gps_failed', { msg: data.error } );
+                            that.trigger('gps_failed', { msg: data.error, err: 'data_error' } );
                             return;
                         }
                         that.trigger('gps_located', { coordinates: coords, details: data } );
                     },
                     error: function (data, status, errorThrown) {
-                        that.trigger('gps_failed', { msg: FMS.strings.location_check_failed } );
+                        that.trigger('gps_failed', { msg: FMS.strings.location_check_failed, err: 'location_check_failed' } );
                     }
                 } );
             }
