@@ -26,6 +26,8 @@
                 $('#load-screen').hide();
                 if ( FMS.isOffline ) {
                     this.navigate( 'offline' );
+                } else if ( navigator && navigator.connection && navigator.connection.type == Connection.CELL ) {
+                    this.navigate( 'offline' );
                 } else if ( FMS.currentDraft && (
                     FMS.currentDraft.get('title') || FMS.currentDraft.get('lat') ||
                     FMS.currentDraft.get('details') || FMS.currentDraft.get('file') )
