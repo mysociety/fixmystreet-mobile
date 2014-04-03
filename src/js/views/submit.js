@@ -336,6 +336,13 @@
                     this.validationError('form_password', FMS.validationStrings.password );
                 }
 
+                if ( $('#form_name').val() && this.model.get('titles_list') && this.model.get('titles_list').length > 0 ) {
+                    if ( $('#form_title').val() === '' ) {
+                        this.validationError('form_title', FMS.strings.required);
+                        isValid = 0;
+                    }
+                }
+
                 return isValid;
             },
 
@@ -350,6 +357,9 @@
                     this.model.set('may_show_name', $('#form_may_show_name').is(':checked'));
                     FMS.currentUser.set('name', $('#form_name').val());
                     FMS.currentUser.set('may_show_name', $('#form_may_show_name').is(':checked'));
+                    if ( this.model.get('titles_list') && this.model.get('titles_list').length > 0 ) {
+                        FMS.currentUser.set('title', $('#form_title').val());
+                    }
                     FMS.currentUser.save();
                 } else {
                     // if this is set then we are registering a password
