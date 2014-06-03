@@ -14,7 +14,7 @@
             },
 
             back: function(e) {
-                if ( $('#help').is(':visible') ) {
+                if ( $('#help #dismiss').is(':visible') ) {
                     FMS.helpHide();
                 } else if ( this._back ) {
                     this._back(e);
