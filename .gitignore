@@ -9,6 +9,9 @@ tags
 
 src/js/config.js
 Android/bin/
+platforms
+plugins
+hooks
 iPhone/FixMyStreet.xcodeproj/project.xcworkspace/xcuserdata
 iPhone/FixMyStreet.xcodeproj/xcuserdata
 iPhone/CordovaLib/CordovaLib.xcodeproj/project.xcworkspace/xcuserdata
