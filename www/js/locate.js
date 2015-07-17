@@ -1,4 +1,12 @@
 (function(FMS, Backbone, _) {
+    // The Geolocation docs refer to PositionError but it's not made clear
+    // where it's actually defined, if anywhere.
+    // So let's define it ourselves if it doesn't already exist.
+    var PositionError = window.PositionError || {};
+    PositionError.PERMISSION_DENIED = PositionError.PERMISSION_DENIED || 1;
+    PositionError.POSITION_UNAVAILABLE = PositionError.POSITION_UNAVAILABLE || 2;
+    PositionError.TIMEOUT = PositionError.TIMEOUT || 3;
+
     _.extend( FMS, {
         Locate: function() { return {
             locating: 0,
