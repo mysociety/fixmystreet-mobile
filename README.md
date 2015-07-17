@@ -46,16 +46,18 @@ service, which we **don't** use!
 5. Add the cordova plugins we use. As of writing the list is: (from `cordova plugin list`)
 
    ```
-   org.apache.cordova.camera 0.3.2 "Camera"
-   org.apache.cordova.device 0.2.12 "Device"
-   org.apache.cordova.file 1.3.1 "File"
-   org.apache.cordova.file-transfer 0.4.6 "File Transfer"
-   org.apache.cordova.geolocation 0.3.10 "Geolocation"
-   org.apache.cordova.network-information 0.2.12 "Network Information"
-   org.apache.cordova.splashscreen 0.3.3 "Splashscreen"
+   cordova-plugin-camera 1.2.0 "Camera"
+   cordova-plugin-device 1.0.1 "Device"
+   cordova-plugin-file 2.1.0 "File"
+   cordova-plugin-file-transfer 1.2.1 "File Transfer"
+   cordova-plugin-geolocation 1.0.1 "Geolocation"
+   cordova-plugin-network-information 1.0.1 "Network Information"
+   cordova-plugin-splashscreen 2.1.0 "Splashscreen"
+   cordova-plugin-statusbar 1.0.1 "StatusBar"
+   cordova-plugin-whitelist 1.0.0 "Whitelist"
    ```
 
-   So to install them: `cordova plugin install org.apache.cordova.camera org.apache.cordova.device org.apache.cordova.file org.apache.cordova.file-transfer org.apache.cordova.geolocation org.apache.cordova.network-information org.apache.cordova.splashscreen`
+   So to install them: `cordova plugin add cordova-plugin-camera cordova-plugin-device cordova-plugin-file cordova-plugin-file-transfer cordova-plugin-geolocation cordova-plugin-network-information cordova-plugin-splashscreen cordova-plugin-statusbar cordova-plugin-whitelist`
 
 6. Copy `www/js/config.js-example to www/js/config.js` and edit if needed
 
