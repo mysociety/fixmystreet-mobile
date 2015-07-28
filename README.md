@@ -51,13 +51,14 @@ service, which we **don't** use!
    cordova-plugin-file 2.1.0 "File"
    cordova-plugin-file-transfer 1.2.1 "File Transfer"
    cordova-plugin-geolocation 1.0.1 "Geolocation"
+   cordova-plugin-inappbrowser 1.0.1 "InAppBrowser"
    cordova-plugin-network-information 1.0.1 "Network Information"
    cordova-plugin-splashscreen 2.1.0 "Splashscreen"
    cordova-plugin-statusbar 1.0.1 "StatusBar"
    cordova-plugin-whitelist 1.0.0 "Whitelist"
    ```
 
-   So to install them: `cordova plugin add cordova-plugin-camera cordova-plugin-device cordova-plugin-file cordova-plugin-file-transfer cordova-plugin-geolocation cordova-plugin-network-information cordova-plugin-splashscreen cordova-plugin-statusbar cordova-plugin-whitelist`
+   So to install them: `cordova plugin add cordova-plugin-camera cordova-plugin-device cordova-plugin-file cordova-plugin-file-transfer cordova-plugin-geolocation cordova-plugin-inappbrowser cordova-plugin-network-information cordova-plugin-splashscreen cordova-plugin-statusbar cordova-plugin-whitelist`
 
 6. Copy `www/js/config.js-example to www/js/config.js` and edit if needed
 

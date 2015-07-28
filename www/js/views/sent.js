@@ -28,7 +28,7 @@
 
             onClickOpenReport: function(e) {
                 e.preventDefault();
-                window.open(FMS.createdReport.get('site_url'), '_system');
+                FMS.openExternalURL(FMS.createdReport.get('site_url'));
                 return false;
             },
 
@@ -36,7 +36,7 @@
                 e.preventDefault();
                 var el = $('#rate_app');
                 var href = el.attr('href');
-                window.open(href, '_system');
+                FMS.openExternalURL(href);
                 return false;
             }
         })

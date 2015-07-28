@@ -144,9 +144,13 @@ var tpl = {
 
         openExternal: function(e) {
             e.preventDefault();
-            var el = $(e.srcElement);
-            window.open(el.attr('href'), '_system');
+            var href = $(e.srcElement).attr('href');
+            FMS.openExternalURL(href);
             return false;
+        },
+
+        openExternalURL: function(url) {
+            window.cordova.InAppBrowser.open(url, '_system');
         },
 
         setHelpHeight: function() {
