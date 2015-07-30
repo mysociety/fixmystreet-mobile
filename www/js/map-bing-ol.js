@@ -27,7 +27,7 @@ OpenLayers.Layer.Bing = OpenLayers.Class(OpenLayers.Layer.XYZ, {
         var z = this.map.getZoom() + this.zoomOffset;
         var copyrights;
         var logo = '';
-        if (z >= 16) {
+        if (z >= 16 && CONFIG.isUK) {
             copyrights = 'Contains Ordnance Survey data &copy; Crown copyright and database right 2010';
         } else {
             logo = '<a href="http://www.bing.com/maps/"><img border=0 src="http://dev.virtualearth.net/Branding/logo_powered_by.png"></a>';
@@ -87,7 +87,7 @@ OpenLayers.Layer.Bing = OpenLayers.Class(OpenLayers.Layer.XYZ, {
             this.map.getZoom() + this.zoomOffset;
 
         var url;
-        if (z >= 16) {
+        if (z >= 16 && CONFIG.isUK) {
             url = [
                 "http://tilma.mysociety.org/sv/${z}/${x}/${y}.png",
                 "http://a.tilma.mysociety.org/sv/${z}/${x}/${y}.png",
@@ -96,7 +96,7 @@ OpenLayers.Layer.Bing = OpenLayers.Class(OpenLayers.Layer.XYZ, {
             ];
         } else {
             var type = '';
-            if (z > 10) { type = '&productSet=mmOS'; }
+            if (z > 10 && CONFIG.isUK) { type = '&productSet=mmOS'; }
             url = [
                 "http://ecn.t0.tiles.virtualearth.net/tiles/r${id}.png?g=701" + type,
                 "http://ecn.t1.tiles.virtualearth.net/tiles/r${id}.png?g=701" + type,
