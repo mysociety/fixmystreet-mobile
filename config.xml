@@ -26,7 +26,8 @@
     <preference name="android-minSdkVersion" value="16" />
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarBackgroundColor" value="#F6BE41" />
+    <preference name="StatusBarStyle" value="default" />
 
     <platform name="android">
         <icon src="res/android/ldpi.png" density="ldpi" />

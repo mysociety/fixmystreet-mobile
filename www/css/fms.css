@@ -204,10 +204,6 @@
         background-image: none;
     }
 
-    .ios7 .ui-page-active {
-        padding-top: 20px;
-    }
-
     .ios7 .ui-bar-a,
     body.ios7 {
         background-color: #F6BE41;
@@ -218,13 +214,9 @@
         border-color: #F6BE41;
     }
 
-    .ios7 .ui-header-fixed {
-        padding-top: 20px;
-    }
-
     .ios7 .ui-header-fixed .ui-btn-left,
     .ios7 .ui-header-fixed .ui-btn-right {
-        top: 24px;
+        top: 4px;
     }
 
     .ios7 #map_box {
