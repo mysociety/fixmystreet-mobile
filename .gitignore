@@ -3,6 +3,7 @@
 ._*
 .DS_Store
 .sass-cache
+*.css.map
 tags
 
 *.mo
