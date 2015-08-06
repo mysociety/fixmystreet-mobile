@@ -44,3 +44,8 @@ body.ios7 {
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
+
+#load-screen .radar,
+#locating .radar {
+    background-image: url('../images/radar-makemyisland.png');
+}
