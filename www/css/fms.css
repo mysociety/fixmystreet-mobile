@@ -910,6 +910,7 @@
     #help {
         position: fixed;
         top: 0px;
+        right: 0px;
         display: none;
         z-index: 3005;
         height: 100%;
