@@ -1,3 +1,10 @@
+/*
+this function extens the current FMS object (at this point is empty, created in index.html)
+. _.extend: Copy all of the properties in the source objects over to the destination object,
+and return the destination object. It's in-order, so the last source will override
+properties of the same name in previous arguments.
+http://underscorejs.org/#extend
+*/
 (function (FMS, Backbone, _, $) {
     _.extend(FMS, {
         appRouter: Backbone.Router.extend({
