@@ -1,0 +1,39 @@
+<div id="submit-header" data-role="header">
+    <h1>Your details</h1>
+</div>
+
+<div data-role="content">
+    <p class="notopmargin">
+    You are logged in as <%= user.email %>.
+    </p>
+
+    <p>
+    Please confirm your name, if you want it to be public and optionally your phone number.
+    </p>
+
+    <div id="errors"></div>
+
+    <div class="inputcard">
+        <% if ( typeof model.titles_list !== 'undefined' ) { %>
+        <div>
+            <select data-role="none" placeholder="Title" id="form_title" name="title" required>
+                <option value="">Title</option>
+                <% for ( var i = 0; i < model.titles_list.length; i++ ) { var title = model.titles_list[i]; print( '<option value="' + title + '"' + ( user.title && user.title == title ? ' selected' : '' ) + '>' + title + '</option>' ); } %>
+            </select>
+        </div>
+        <% } %>
+        <div>
+            <input data-role="none" type="text" value="<%= user.name %>" name="name" id="form_name" placeholder="Please enter your name" required>
+        </div>
+        <div>
+            <input data-role="none" type="tel" value="<%= user.phone %>" name="name" id="form_phone" placeholder="Optionally enter your phone number">
+        </div>
+        <div class="checkbox-group noborder">
+            <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <% if ( typeof user.may_show_name == 'undefined' || user.may_show_name ) { %>checked<% } %>>
+            <label class="inline" for="form_may_show_name">Show my name publicly</label>
+        </div>
+    </div>
+    <div class="bottom-btn">
+        <input data-role="button" data-theme="a" type="button" id="report" name="report" value="Report">
+    </div>
+</div>
