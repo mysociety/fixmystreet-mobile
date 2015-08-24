@@ -88,11 +88,17 @@ OpenLayers.Layer.Bing = OpenLayers.Class(OpenLayers.Layer.XYZ, {
 
         var url;
         if (z >= 16) {
-            url = [
+            /*url = [
                 "http://tilma.mysociety.org/sv/${z}/${x}/${y}.png",
                 "http://a.tilma.mysociety.org/sv/${z}/${x}/${y}.png",
                 "http://b.tilma.mysociety.org/sv/${z}/${x}/${y}.png",
                 "http://c.tilma.mysociety.org/sv/${z}/${x}/${y}.png"
+            ];*/
+            url = [
+                "http://tile.openstreetmap.org/${z}/${x}/${y}.png",
+                "http://a.tile.openstreetmap.org/${z}/${x}/${y}.png",
+                "http://b.tile.openstreetmap.org/${z}/${x}/${y}.png",
+                "http://c.tile.openstreetmap.org/${z}/${x}/${y}.png",
             ];
         } else {
             var type = '';
@@ -106,7 +112,7 @@ OpenLayers.Layer.Bing = OpenLayers.Class(OpenLayers.Layer.XYZ, {
         }
         var s = '' + x + y + z;
         url = this.selectUrl(s, url);
-       
+
         var id = this.get_quadkey(x, y, z);
         var path = OpenLayers.String.format(url, {'id': id, 'x': x, 'y': y, 'z': z});
         return path;

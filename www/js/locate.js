@@ -53,8 +53,10 @@
                         if ( that.watch_id === undefined ) { FMS.printDebug( 'no watch id' ); return; }
 
                         if ( minAccuracy && location.coords.accuracy > minAccuracy ) {
+                          // updates the location bar.
                             that.trigger('gps_locating', location.coords.accuracy);
                         } else {
+                          // does this here means we have a good location?
                             that.locating = 0;
                             navigator.geolocation.clearWatch( that.watch_id );
                             delete that.watch_id;

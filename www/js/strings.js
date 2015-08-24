@@ -50,7 +50,8 @@
             try_again: 'Try Again',
             save_for_later: 'Save for Later',
             no_connection: 'No network connection available for submitting your report. Please try again later.',
-            more_details: 'More details'
+            more_details: 'More details',
+            appName: "CurriApp"
         }
     });
 })(FMS, _);

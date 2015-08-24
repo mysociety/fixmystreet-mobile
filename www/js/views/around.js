@@ -76,6 +76,7 @@
                     this.locate();
                     this.displayButtons(false);
                 }
+            $('#appName').html(FMS.strings.appName);
             },
 
             _back: function(e) {
@@ -135,7 +136,7 @@
                         {
                             graphicZIndex: 3000,
                             graphicName: 'circle',
-                            'externalGraphic': 'images/gps-marker.svg', 
+                            'externalGraphic': 'images/gps-marker.svg',
                             pointRadius: 16
                         }
                     );
@@ -159,7 +160,7 @@
                         var currentPos = this.projectCoords(FMS.currentPosition);
                         var markerPos = this.getMarkerPosition(true);
 
-                        // Displaying the button if the report is in the same place as the 
+                        // Displaying the button if the report is in the same place as the
                         // GPS location could be confusing so check they are different.
                         // The slight margin of error is there to account for both rounding
                         // wiggle in the projectCoords and also so that small changes due to

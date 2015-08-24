@@ -10,8 +10,13 @@
     </author>
     <content src="index.html" />
 
-    <access origin=".*.tile.openstreetmap.org"/>
+    <access origin="*" />
+    <access origin="192.169.1.203"/>
+    <access origin="http://192.169.1.203"/>
+    <access origin="186.15.83.26"/>
     <access origin="tilma.mysociety.org"/>
+    <access origin="openstreetmaps.org"/>
+    <access origin="*.openstreetmaps.org"/>
     <access origin="a.tilma.mysociety.org"/>
     <access origin="b.tilma.mysociety.org"/>
     <access origin="c.tilma.mysociety.org"/>

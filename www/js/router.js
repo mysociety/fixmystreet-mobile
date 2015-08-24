@@ -35,6 +35,7 @@ http://underscorejs.org/#extend
             },
 
             initialize: function() {
+              console.log("initialized router");
             },
 
             pause: function() {
@@ -155,6 +156,7 @@ http://underscorejs.org/#extend
 
             changeView: function(view) {
                 FMS.printDebug( 'change View to ' + view.id );
+                console.log( 'change View to ' + view.id );
                 $(view.el).attr('data-role', 'page');
                 if ( view.prev ) {
                     $(view.el).attr('data-add-back-btn', 'true');
