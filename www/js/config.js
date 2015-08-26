@@ -7,8 +7,9 @@ var CONFIG = {
 
     // URL of the fixmystreet install to report to
     //FMS_URL: '192.168.1.204',
-    //FMS_URL: '186.15.83.26',
-    FMS_URL: 'http://192.168.1.203/',
+    //FMS_URL: 'http://186.15.83.26',
+    FMS_URL: 'http://avisame.curridabat.go.cr',
+    //FMS_URL: 'http://192.168.1.203/',
 
     // namespace for storing drafts etc in. Should not need to change
     NAMESPACE: 'fixmystreet',

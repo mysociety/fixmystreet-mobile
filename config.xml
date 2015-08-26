@@ -13,7 +13,11 @@
     <access origin="*" />
     <access origin="192.169.1.203"/>
     <access origin="http://192.169.1.203"/>
+    <access origin="http://186.15.83.26"/>
     <access origin="186.15.83.26"/>
+    <access origin="http://avisame.curridabat.go.cr"/>
+    <access origin="avisame.curridabat.go.cr"/>
+    <access origin="*.curridabat.go.cr"/>
     <access origin="tilma.mysociety.org"/>
     <access origin="openstreetmaps.org"/>
     <access origin="*.openstreetmaps.org"/>
