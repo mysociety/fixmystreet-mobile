@@ -20,10 +20,12 @@
             onClickLogin: function(e) {
                 // prevent form submission from onscreen keyboard
                 e.preventDefault();
+                window.analytics.trackEvent('Login', 'Clicked Login Button', 'before validation');
                 $('#login').focus();
                 if ( this.validate() ) {
                     var that = this;
-                    console.log("validation OK. after validation before ajax");
+                    window.analytics.trackEvent('Login', 'Clicked Login Button', 'validation OK');
+                    //console.log("validation OK. after validation before ajax");
                     $.ajax( {
                         url: CONFIG.FMS_URL + '/auth/ajax/sign_in',
                         type: 'POST',
@@ -49,7 +51,8 @@
                             }
                         },
                         error: function() {
-                          console.log("Login ajax call Error");
+                          window.analytics.trackEvent('Login', 'Clicked Login Button', 'login error');
+                          //console.log("Login ajax call Error");
                             that.validationError('signinForm', FMS.strings.login_error);
                             /*navigator.notification.alert(
                               'Error login in',
@@ -68,12 +71,14 @@
             onClickLogout: function(e) {
                 e.preventDefault();
                 var that = this;
+                window.analytics.trackEvent('Login', 'Clicked Logout Button', 'before ajax request');
                 $.ajax( {
                     url: CONFIG.FMS_URL + '/auth/ajax/sign_out',
                     type: 'GET',
                     dataType: 'json',
                     timeout: 30000,
                     success: function( data, status ) {
+                        window.analytics.trackEvent('Login', 'Clicked Logout Button', 'user logged out');
                         FMS.isLoggedIn = 0;
                         that.model.set('password', '');
                         that.model.save();
@@ -84,6 +89,7 @@
                         that.$('#password_row').show();
                     },
                     error: function() {
+                        window.analytics.trackEvent('Login', 'Clicked Logout Button', 'error logging out');
                         that.validationError('err', FMS.strings.logout_error);
                     }
                 } );

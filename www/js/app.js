@@ -84,6 +84,7 @@ var tpl = {
         checkLoggedInStatus: function() {
             if ( FMS.isOffline ) {
             } else {
+              window.analytics.trackEvent('Login', 'checkLoggedInStatus', 'before check');
                 $.ajax( {
                     url: CONFIG.FMS_URL + '/auth/ajax/check_auth',
                     type: 'GET',
@@ -91,9 +92,11 @@ var tpl = {
                     timeout: 30000,
                     success: function( data, status ) {
                         FMS.isLoggedIn = 1;
+                        window.analytics.trackEvent('Login', 'checkLoggedInStatus', 'user logged in');
                     },
                     error: function() {
                         FMS.isLoggedIn = 0;
+                        window.analytics.trackEvent('Login', 'checkLoggedInStatus', 'user not logged in');
                     }
                 } );
             }
@@ -143,6 +146,7 @@ var tpl = {
         },
 
         openExternal: function(e) {
+            window.analytics.trackEvent('ReportInteraction', 'Open External', 'Report Nr. ' + e.srcElement.getAttribute('reportid'));
             e.preventDefault();
             var el = $(e.srcElement);
             window.open(el.attr('href'), '_system');
@@ -179,6 +183,8 @@ var tpl = {
         },
 
         helpShow: function(e) {
+            window.analytics.trackEvent('HelpWin', 'ShowHelp', 'Show help from screen ' + Backbone.history.getFragment());
+            //console.log("showing the help");
             if (e) {
                 e.preventDefault();
             }
@@ -186,12 +192,14 @@ var tpl = {
             $('#display-help').hide();
             var onShow = function() {
                 $('#help').show();
-                $('#dismiss').show(); 
+                $('#dismiss').show();
             };
             help.animate({left: 0}, onShow );
         },
 
         helpHide: function(e) {
+            window.analytics.trackEvent('HelpWin', 'HideHelp', 'hide help from screen ' + Backbone.history.getFragment());
+            //console.log("hiding the help");
             if (e) {
                 e.preventDefault();
             }
@@ -202,7 +210,7 @@ var tpl = {
             if ( help.hasClass('android2') ) {
                 $('body').scrollTop(0);
             }
-            var onHide = function() { 
+            var onHide = function() {
                 $('#display-help').show();
                 $('#helpContent').scrollTop(0);
                 if ( $('#help').hasClass('android2') ) {
@@ -222,6 +230,7 @@ var tpl = {
         },
 
         initialize: function () {
+          // this runs on deviceready
             if ( this.initialized == 1 ) {
                 return this;
             }
@@ -301,7 +310,16 @@ var tpl = {
                 navigator.splashscreen.hide();
                 $('#display-help').show();
             });
-        }
+            window.analytics.startTrackerWithId(CONFIG.GA_CODE);
+            this.bind('all', this._trackPageview);
+        },// end of initilize (ondevice ready)
+        _trackPageview: function() { // from here: http://nerds.airbnb.com/how-to-add-google-analytics-page-tracking-to-57536/
+          var url;
+          url = Backbone.history.getFragment();
+          //return _gaq.push(['_trackPageview', "/" + url]);
+          window.analytics.trackView(url);
+          //ga('send', 'pageview', "/" + url);
+        },
     });
 
     function onResume() {

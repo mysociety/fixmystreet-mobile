@@ -435,6 +435,7 @@
             },
 
             locationCheckFailed: function() {
+                window.analytics.trackEvent('Location', 'Loc Check Fail', 'unable to locate user');
                 this.displayAlert(FMS.strings.location_check_failed);
             },
 

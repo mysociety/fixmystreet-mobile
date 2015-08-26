@@ -47,7 +47,7 @@ function fms_markers_list(pins, transform) {
 function getNavControl(map) {
     var nav;
     for (var i = 0; i< map.controls.length; i++) {
-        if (map.controls[i].displayClass == 
+        if (map.controls[i].displayClass ==
                                 "olControlNavigation") {
             nav = map.controls[i];
             return nav;
@@ -109,7 +109,7 @@ function fixmystreet_onload() {
             backgroundWidth: 186,
             backgroundHeight: 110,
             backgroundXOffset: -93,
-            backgroundYOffset: -110 
+            backgroundYOffset: -110
         }
     });
     var pin_layer_options = {
@@ -122,7 +122,7 @@ function fixmystreet_onload() {
     // This layer is for displaying the location of the current report.
     // It's in its own layer as that means canceling a report means we only
     // need to switch layer visibility rather than fetching the position of the
-    // existing reports all over again. 
+    // existing reports all over again.
     fixmystreet.report_location = new OpenLayers.Layer.Vector("Report", pin_layer_options);
     fixmystreet.report_location.setVisibility(false)
     fixmystreet.map.addLayer(fixmystreet.report_location);
@@ -165,7 +165,8 @@ function fixmystreet_onload() {
             var popup = new OpenLayers.Popup.FramedCloud("popup",
                 feature.geometry.getBounds().getCenterLonLat(),
                 null,
-                feature.attributes.title + "<br><a onclick=\"FMS.openExternal(event); return false;\" href=\"" + CONFIG.FMS_URL + "/report/" + feature.attributes.id + "\">More details</a>",
+                //feature.attributes.title + "<br><a onclick=\"FMS.openExternal(event); return false;\" href=\"" + CONFIG.FMS_URL + "/report/" + feature.attributes.id + " REPORTID="feature.attributes.id"\">More details</a>",
+                feature.attributes.title + '<br><a onclick="FMS.openExternal(event); return false;" href="' + CONFIG.FMS_URL + '/report/' + feature.attributes.id + '" REPORTID="' + feature.attributes.id + '"' + '>More details</a>',
                 { size: new OpenLayers.Size(0,0), offset: new OpenLayers.Pixel(0,-40) },
                 true, onPopupClose);
             feature.popup = popup;
@@ -386,7 +387,7 @@ OpenLayers.Control.ActionAfterDrag = OpenLayers.Class(OpenLayers.Control, {
 
     defaultHandlerOptions: {
         'stopDown': false
-        /* important, otherwise it prevent the click-drag event from 
+        /* important, otherwise it prevent the click-drag event from
            triggering the normal click-drag behavior on the map to pan it */
     },
 
@@ -396,13 +397,13 @@ OpenLayers.Control.ActionAfterDrag = OpenLayers.Class(OpenLayers.Control, {
         );
         OpenLayers.Control.prototype.initialize.apply(
             this, arguments
-        ); 
+        );
         this.handler = new OpenLayers.Handler.Drag(
             this, {
                 'move': this.onDragStart
             }, this.handlerOptions
         );
-    }, 
+    },
 
     onDragStart: function(evt) {
         if ( $('#confirm-map').css('display') == 'block' ) {
