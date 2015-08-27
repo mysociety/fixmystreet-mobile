@@ -92,6 +92,17 @@
 
             };
         </script>
+
+        <script type="text/javascript">
+            // Include the cobrand's CSS, if CONFIG.COBRAND is set
+            if (CONFIG && CONFIG.COBRAND) {
+                var linkElement = document.createElement("link");
+                linkElement.href = 'cobrands/' + CONFIG.COBRAND + '/css/style.css';
+                linkElement.type = "text/css";
+                linkElement.rel = 'stylesheet';
+                $('head').append(linkElement);
+            }
+        </script>
     </head>
     <body onload="onload()">
     <div id="map_box">
