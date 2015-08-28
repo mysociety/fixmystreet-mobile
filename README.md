@@ -17,9 +17,13 @@ The FixMyStreet mobile app uses PhoneGap and has versions for Android and iOS.
 Running
 -------
 
-To get it up and running you will need to create a config.js file in src/js/ based
-on the src/js/config-example.js file. This has configuration for which FMS instance
+To get it up and running you will need to create `www/js/config.js` based
+on the `www/js/config.js-example` file. This has configuration for which FMS instance
 to use etc.
+
+You should also create a `config.xml` file based on `config.xml-example`.
+The only change you should need to make is to add the hostname of your FMS installation
+in an `<access origin=""/>` tag.
 
 Setup
 -----
@@ -38,7 +42,7 @@ Note that this is not the same as the phonegap CLI and the two should not be
 mixed up. The latter gives you access to Adobe's proprietary phonegap build
 service, which we **don't** use!
 
-3. Checkout the project
+3. Checkout the project, copy `config.xml-example` to `config.xml` and edit to suit.
 
 4. `cd` into the project directory and install the Cordova platforms you need:
 `cordova platform add android` and `cordova platform add ios`
@@ -63,7 +67,7 @@ service, which we **don't** use!
 
    So to install them: `cordova plugin add cordova-plugin-camera cordova-plugin-device cordova-plugin-dialogs cordova-plugin-file cordova-plugin-file-transfer cordova-plugin-geolocation cordova-plugin-inappbrowser cordova-plugin-media cordova-plugin-media-capture cordova-plugin-network-information cordova-plugin-splashscreen cordova-plugin-statusbar cordova-plugin-whitelist`
 
-6. Copy `www/js/config.js-example to www/js/config.js` and edit if needed
+6. Copy `www/js/config.js-example` to `www/js/config.js` and edit if needed
 
 7. To run the project on one of the platforms, use: `cordova emulate ios` or `cordova emulate android`
 (You might need to `npm install -g ios-sim` to run it on ios)
@@ -77,19 +81,38 @@ ever use that functionality.
 
 Basic structure
 ---------------
-* www - JS, HTML, CSS and image files
-* templates - templates with strings to be translated
-* locale - gettext translation files
-* bin - helper scripts for translation
+* `www` - JS, HTML, CSS and image files
+* `templates` - templates with strings to be translated
+* `locale` - gettext translation files
+* `bin` - helper scripts for translation
 
-src Stucture
+`www` Stucture
 ------------
-* css - css files
-* js - project javascript files
-* js/views - backbone view files
-* js/models - backgone model files
-* jslib - third party javascript libraries and files
-* templates - underscore templates for the pages
+* `css` - css files
+* `js` - project javascript files
+* `js/views` - backbone view files
+* `js/models` - backgone model files
+* `jslib` - third party javascript libraries and files
+* `templates` - underscore templates for the pages
+* `cobrands` - template overrides and stylesheets for your own cobrand
+
+Cobranding
+----------
+
+If you want to change the appearance of the app (e.g. to change the colour scheme, or provide
+your own FAQ/help text), you can use your own templates and stylesheets to achieve this.
+
+Rather than editing the existing templates in `www/templates/en`, you should override the default
+template by placing your own version in `www/cobrands/<cobrand name>/templates/en` and set the
+`CONFIG.COBRAND` value appropriately in `www/js/config.js`.
+
+For example to change the intro text that's shown when you first launch the app, set
+`CONFIG.COBRAND` to `mycobrand` and then copy `www/templates/en/initial_help.html` to
+`www/cobrands/mycobrand/templates/en/initial_help.html` and edit it with your new text.
+
+To change the colour theme or other styles used in the app, create
+`www/cobrands/mycobrand/css/style.css` and add your own CSS rules. If `CONFIG.COBRAND` is set to
+`mycobrand` then this new CSS file will be included in the page HTML automatically.
 
 Translation
 -----------

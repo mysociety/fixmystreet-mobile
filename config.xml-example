@@ -21,13 +21,17 @@
     <access origin="ecn.t2.tiles.virtualearth.net"/>
     <access origin="ecn.t3.tiles.virtualearth.net"/>
     <access origin="mapit.mysociety.org"/>
-    <access origin="www.fixmystreet.com"/>
+
+    <!-- Replace this with the hostname of your FMS installation -->
+    <access origin="fixmystreet.example.org"/>
 
     <preference name="android-minSdkVersion" value="16" />
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="#F6BE41" />
     <preference name="StatusBarStyle" value="default" />
+
+    <!-- If you change the background colour of the app, change this value to match. -->
+    <preference name="StatusBarBackgroundColor" value="#F6BE41" />
 
     <platform name="android">
         <icon src="res/android/ldpi.png" density="ldpi" />
