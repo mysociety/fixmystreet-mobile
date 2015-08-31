@@ -1,14 +1,14 @@
 <div id="submit-header" data-role="header">
-    <h1>Your details</h1>
+    <h1>Detalles del usuario</h1>
 </div>
 
 <div data-role="content">
     <p class="notopmargin">
-    You are logged in as <%= user.email %>.
+    Usted esta registrado con <%= user.email %>.
     </p>
 
     <p>
-    Please confirm your name, if you want it to be public and optionally your phone number.
+    Por favor confirme su nombre y si quiere que aparezca publicamente con el reporte. Opcionalmente puede añadir su nr. de telefono para que podamos contactarlo si necesitamos mas detalles.
     </p>
 
     <div id="errors"></div>
@@ -23,17 +23,17 @@
         </div>
         <% } %>
         <div>
-            <input data-role="none" type="text" value="<%= user.name %>" name="name" id="form_name" placeholder="Please enter your name" required>
+            <input data-role="none" type="text" value="<%= user.name %>" name="name" id="form_name" placeholder="Por favor introduzca su nombre" required>
         </div>
         <div>
-            <input data-role="none" type="tel" value="<%= user.phone %>" name="name" id="form_phone" placeholder="Optionally enter your phone number">
+            <input data-role="none" type="tel" value="<%= user.phone %>" name="name" id="form_phone" placeholder="Introduzca su nr. telefónico (opcional)">
         </div>
         <div class="checkbox-group noborder">
             <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <% if ( typeof user.may_show_name == 'undefined' || user.may_show_name ) { %>checked<% } %>>
-            <label class="inline" for="form_may_show_name">Show my name publicly</label>
+            <label class="inline" for="form_may_show_name">Mostrar mi nombre públicamente</label>
         </div>
     </div>
     <div class="bottom-btn">
-        <input data-role="button" data-theme="a" type="button" id="report" name="report" value="Report">
+        <input data-role="button" data-theme="a" type="button" id="report" name="report" value="Enviar Reporte">
     </div>
 </div>
