@@ -7,7 +7,7 @@ tags
 
 *.mo
 
-src/js/config.js
+www/js/config.js
 Android/bin/
 platforms
 plugins

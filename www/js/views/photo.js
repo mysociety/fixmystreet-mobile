@@ -103,7 +103,7 @@
                 move.fail( function() { that.addPhotoFail(); } );
             },
 
-            addPhotoFail: function() {
+            addPhotoFail: function(message) {
                 $('#photo').show();
                 $.mobile.loading('hide');
                 if ( message != 'no image selected' &&

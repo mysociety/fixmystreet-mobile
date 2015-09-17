@@ -13,15 +13,46 @@ var tpl = {
         var loadTemplate = function (index) {
             var name = names[index];
             FMS.printDebug('Loading template: ' + name + ', index: ' + index);
-            $.get('templates/' + CONFIG.LANGUAGE + '/' + name + '.html', function (data) {
-                that.templates[name] = data;
-                index++;
-                if (index < names.length) {
-                    loadTemplate(index);
-                } else {
-                    callback();
-                }
-            });
+            // Build a list of possible paths to the template, which will be tried in order.
+            var template_paths = [
+                'templates/' + CONFIG.LANGUAGE + '/' + name + '.html'
+            ];
+            // cobrands can override the base templates by creating the appropriate file in
+            // /www/cobrands/<cobrand name>/templates/<language>, so put the cobranded template
+            // path first in the list if we're using a cobrand.
+            if (CONFIG.COBRAND) {
+                template_paths.unshift('cobrands/' + CONFIG.COBRAND + '/templates/' + CONFIG.LANGUAGE + '/' + name + '.html');
+            }
+            // Fetch a template by loading it over AJAX.
+            // Returns a jqXHR object so failures can be handed elsewhere
+            var getTemplate = function(template_path) {
+                FMS.printDebug("Fetching template: " + template_path);
+                return $.get(template_path, function (data) {
+                    FMS.printDebug("success!")
+                    that.templates[name] = data;
+                    index++;
+                    if (index < names.length) {
+                        loadTemplate(index);
+                    } else {
+                        callback();
+                    }
+                });
+            };
+
+            // Try to get the first template in template_paths, working down the list
+            // in case of failure.
+            var tryToGetTemplate = function() {
+                getTemplate(template_paths[0])
+                    .fail(function() {
+                        template_paths.shift();
+                        if (template_paths.length) {
+                            tryToGetTemplate();
+                        }
+                    });
+            }
+
+            // Kick-off template loading for this template.
+            tryToGetTemplate();
         };
 
         loadTemplate(0);
@@ -148,9 +179,13 @@ var tpl = {
         openExternal: function(e) {
             window.analytics.trackEvent('ReportInteraction', 'Open External', 'Report Nr. ' + e.srcElement.getAttribute('reportid'));
             e.preventDefault();
-            var el = $(e.srcElement);
-            window.open(el.attr('href'), '_system');
+            var href = $(e.srcElement).attr('href');
+            FMS.openExternalURL(href);
             return false;
+        },
+
+        openExternalURL: function(url) {
+            window.cordova.InAppBrowser.open(url, '_system');
         },
 
         setHelpHeight: function() {
