@@ -1,7 +1,7 @@
 (function(FMS, Backbone, _, $) {
     _.extend( FMS, {
         Report: Backbone.Model.extend({
-            urlRoot: CONFIG.FMS_URL + 'report/ajax',
+            urlRoot: CONFIG.FMS_URL + '/report/ajax',
 
             defaults: {
                 lat: 0,
@@ -177,12 +177,12 @@
                         });
                         window.setTimeout( checkUpload, 15000 );
                         FMS.uploading = true;
-                        ft.upload(fileURI, CONFIG.FMS_URL + "report/new/mobile", fileUploadSuccess, fileUploadFail, fileOptions);
+                        ft.upload(fileURI, CONFIG.FMS_URL + "/report/new/mobile", fileUploadSuccess, fileUploadFail, fileOptions);
                     };
                     setupChecker();
                 } else {
                     $.ajax( {
-                        url: CONFIG.FMS_URL + "report/new/mobile",
+                        url: CONFIG.FMS_URL + "/report/new/mobile",
                         type: 'POST',
                         data: params,
                         dataType: 'json',
