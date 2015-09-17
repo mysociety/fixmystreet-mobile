@@ -22,6 +22,8 @@
             },
 
             locationUpdate: function( accuracy ) {
+                window.analytics.trackEvent('Location', 'locationUpdate', 'got trigger (before function runs)', details);
+                console.log('running locationUpdate function bla bla');
                 if ( accuracy && accuracy < 500 ) {
                     $('#progress-bar').css( 'background-color', 'orange' );
                 } else if ( accuracy && accuracy < 250 ) {
@@ -56,17 +58,19 @@
                 this.stopListening(FMS.locator, 'gps_failed');
                 $(document).undelegate('.ui-content', 'touchmove', false);
                 $('#locating').hide();
-                //$("#locatorDebug").html("Current location: " + FMS.currentPosition);
+                $("#locatorDebug").html("Current location: " + FMS.currentPosition);
                 FMS.currentDraft.set("lat",9.9118);
                 FMS.currentDraft.set("lon",-84.0341);
                 //navigator.notification.alert("notification bla bla", null, CONFIG.APP_NAME);
             },
 
             failedLocation: function(details) {
+                window.analytics.trackEvent('Location', 'update', 'failedLocation', details);
                 this.finishedLocating();
             },
 
             gotLocation: function(info) {
+                window.analytics.trackEvent('Location', 'update', 'gotLocation', info);
                 this.finishedLocating();
             }
         })

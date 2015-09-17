@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.mysociety.FixMyStreet" android-versionCode="41" version="2.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>FixMyStreet</name>
+<widget id="cr.go.curridabat.YoAlcalde" android-versionCode="41" version="2.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Yo Alcalde</name>
     <description>
-        Report problems on FixMyStreet
+        Reportar problemas en la cuidad de Curridabat, Costa Rica
     </description>
 
-    <author href="http://mysociety.org" email="team@mysociety.org">
-        mySociety
+    <author href="http://www.curridabat.go.cr" email="yoalcalde@curridabat.go.cr">
+        Municipalidad de Curridabat
     </author>
     <content src="index.html" />
 
@@ -44,16 +44,44 @@
         <icon src="res/android/xhdpi.png" density="xhdpi" />
     </platform>
 
+
     <platform name="ios">
-        <!-- iPhone / iPod Touch -->
-        <icon src="res/ios/Icon.png" width="57" height="57" />
-        <icon src="res/ios/Icon@2x.png" width="114" height="114" />
+
+     </platform>
+
+
+    <platform name="ios">
+
+        <!-- iOS 7.0+ -->
+        <!-- iPhone / iPod Touch  -->
+        <icon src="res/ios/appicon-60.png" width="60" height="60" />
+        <icon src="res/ios/appicon-60@2x.png" width="120" height="120" />
         <!-- iPad -->
-        <icon src="res/ios/Icon-120.png" width="120" height="120" />
+        <icon src="res/ios/appicon-76.png" width="76" height="76" />
+        <icon src="res/ios/appicon-76@2x.png" width="152" height="152" />
+        <!-- iOS 6.1 -->
+        <!-- Spotlight Icon -->
+        <icon src="res/ios/icon-40.png" width="40" height="40" />
+        <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+        <!-- iPhone / iPod Touch -->
+        <icon src="res/ios/appicon.png" width="57" height="57" />
+        <icon src="res/ios/appicon@2x.png" width="114" height="114" />
+        <!-- iPad -->
+        <icon src="res/ios/appicon-72.png" width="72" height="72" />
+        <icon src="res/ios/appicon-72@2x.png" width="144" height="144" />
+        <!-- iPhone Spotlight and Settings Icon -->
+        <icon src="res/ios/appicon-Small.png" width="29" height="29" />
+        <icon src="res/ios/appicon-Small@2x.png" width="58" height="58" />
+        <!-- iPad Spotlight and Settings Icon -->
+        <icon src="res/ios/appicon-Small-50.png" width="50" height="50" />
+        <icon src="res/ios/appicon-Small-50@2x.png" width="100" height="100" />
+
 
         <!-- Splash Screens -->
         <splash src="res/ios/Default.png" width="320" height="480"/>
         <splash src="res/ios/Default@2x.png" width="640" height="960"/>
         <splash src="res/ios/Default-568h@2x.png" width="640" height="1136"/>
+        <splash src="res/ios/Default-667h@2x.png" width="750" height="1334"/>
+
      </platform>
 </widget>

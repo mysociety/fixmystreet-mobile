@@ -56,6 +56,7 @@ http://underscorejs.org/#extend
 
             around: function(){
                 var aroundView = new FMS.AroundView({ model: FMS.currentDraft });
+                FMS.aroundView = aroundView;
                 this.changeView(aroundView);
             },
 
