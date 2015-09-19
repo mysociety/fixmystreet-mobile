@@ -45,10 +45,7 @@ service, which we **don't** use!
 3. Checkout the project, copy `config.xml-example` to `config.xml` and edit to suit.
 
 4. `cd` into the project directory and install the Cordova platforms you need:
-`cordova platform add android` and `cordova platform add ios`
-
-5. Add the cordova plugins we use. As of writing the list is: (from `cordova plugin list`)
-
+`cordova platform add android` and `cordova platform add ios`. This command add the next plugins to the platform:
    ```
    cordova-plugin-camera 1.2.0 "Camera"
    cordova-plugin-device 1.0.1 "Device"
@@ -65,11 +62,9 @@ service, which we **don't** use!
    cordova-plugin-whitelist 1.0.0 "Whitelist"
    ```
 
-   So to install them: `cordova plugin add cordova-plugin-camera cordova-plugin-device cordova-plugin-dialogs cordova-plugin-file cordova-plugin-file-transfer cordova-plugin-geolocation cordova-plugin-inappbrowser cordova-plugin-media cordova-plugin-media-capture cordova-plugin-network-information cordova-plugin-splashscreen cordova-plugin-statusbar cordova-plugin-whitelist`
+5. Copy `www/js/config.js-example` to `www/js/config.js` and edit if needed
 
-6. Copy `www/js/config.js-example` to `www/js/config.js` and edit if needed
-
-7. To run the project on one of the platforms, use: `cordova emulate ios` or `cordova emulate android`
+6. To run the project on one of the platforms, use: `cordova emulate ios` or `cordova emulate android`
 (You might need to `npm install -g ios-sim` to run it on ios)
 
 You should then be able to build and run it like any other Cordova project.
