@@ -780,12 +780,11 @@
 /* photo screen */
     div.photo {
         position: relative;
-        display: inline-block;
+        display: inline-flex;
     }
 
     div.photo-wrapper {
         margin: auto;
-        text-align: center;
     }
 
     img.small {
@@ -795,8 +794,8 @@
     }
 
     img.placeholder {
-        height: 199px;
-        width: 270px;
+        height: 75px;
+        width: 100px;
     }
 
     #id_del_photo_button.photo-corner-button {
@@ -985,3 +984,11 @@
         right: 5px;
     }
 	
+	.photo-btn .ui-btn{
+		height: 25px;
+	}
+	
+	.photo-btn .ui-btn-inner{
+		display: inline;
+		position: static;
+	}
