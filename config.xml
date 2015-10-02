@@ -38,6 +38,11 @@
     <preference name="StatusBarBackgroundColor" value="#000000" />
 
     <platform name="android">
+		<splash src="res/android/drawable-mdpi/background.png" qualifier="mdpi" />
+		<splash src="res/android/drawable-hdpi/background.png" qualifier="hdpi" />
+		<splash src="res/android/drawable-xhdpi/background.png" qualifier="xhdpi" />
+		<splash src="res/android/drawable-xxhdpi/background.png" qualifier="xxhdpi" />
+		<splash src="res/android/drawable-xxxhdpi/background.png" qualifier="xxxhdpi" />
         <icon src="res/android/ldpi.png" density="ldpi" />
         <icon src="res/android/mdpi.png" density="mdpi" />
         <icon src="res/android/hdpi.png" density="hdpi" />
