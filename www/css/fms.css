@@ -33,7 +33,7 @@
     }
 
     textarea{
-        min-height: 13em;
+        min-height: 11em;
     }
 
     select{
@@ -788,28 +788,26 @@
     }
 
     img.small {
-        min-height: 45%;
-        max-width: 85%;
-        max-height: 70%;
+        height: 75px;
+		width: 75px;
     }
 
     img.placeholder {
-        height: 75px;
-        width: 100px;
+        height: 66px;
+        width: 88px;
     }
 
     #id_del_photo_button.photo-corner-button {
         position: absolute;
-        bottom: -15px;
-        right: 0px;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
+        bottom: 60px;
+        left: 65px;
+        border-radius: 60%;
         background-color: rgb(186,21,28);
-        padding: 12px;
+        padding: 5px;
         color: #fff;
         text-shadow: none;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 15px;
     }
 
     @media only screen and (max-width: 800px) and (min-width: 600px) {
@@ -986,9 +984,19 @@
 	
 	.photo-btn .ui-btn{
 		height: 25px;
+		width: 90%;
 	}
 	
 	.photo-btn .ui-btn-inner{
 		display: inline;
 		position: static;
+		width: 80%;
+	}
+	
+	#locatorDebug{
+		display: none;
+	}
+	
+	#around-page > div:nth-child(4) > div.ui-btn.ui-btn-up-c.ui-shadow.ui-btn-corner-all{
+		display: none;
 	}
