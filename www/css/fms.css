@@ -1000,3 +1000,30 @@
 	#around-page > div:nth-child(4) > div.ui-btn.ui-btn-up-c.ui-shadow.ui-btn-corner-all{
 		display: none;
 	}
+	
+	#sidebar-wrapper{
+		background-color: #2A3441;
+		z-index: 10000;
+	}
+	
+	.menu-item{
+		right: 5px;
+		text-shadow: none;
+		color: #DDDDDD;
+		display: block;
+		border: 0;
+		border-bottom: 1px solid #DDDDDD;
+		margin: 1em 0;
+		padding: 10px 10px 10px 10px;
+	}
+	
+	.ui-link{
+		color: #DDDDDD;
+	}
+	
+	.general-info{
+		color: #DDDDDD;
+		position: absolute;
+		bottom: 4em;
+	}
+	
