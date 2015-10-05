@@ -5,10 +5,26 @@
     <a id="cancel" class="nodisplay" data-role="button" data-icon="arrow-l">Cancelar</a>
     <h1 id="appName"></h1>
     <a id="login-options" data-icon="fms-account" class="nodisplay ui-btn-right">Cuenta</a>-->
-	<a id="menu-button" class="nodisplay ui-btn ui-btn-left ui-btn-up-a ui-shadow ui-btn-corner-all" data-role="none" href="#">
-        <span class="ui-btn-inner"><span class="ui-menu-access"></span></span>
-    </a>
-    <h1 id="appName"></h1>
+    <button id="menu-lateral">
+		<span class="glyphicon glyphicon-th-list"></span>
+	</button>
+	<h1 id="appName"></h1>
+	<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"></li>
+				<li>
+                    <a href="#">Opcion 1</a>
+                </li>
+                <li>
+                    <a href="#">Opcion 2</a>
+                </li>
+                <li>
+                    <a href="#">Opcion 3</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 
     <div id="locating" class="nodisplay">
@@ -59,3 +75,10 @@
   <button id='manual-gps-refresh' onclick="updateGPSDebug()"></button>
   <div id="locatorDebug" >ini</div>
 </div>
+
+<script>
+	$("#menu-lateral").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+});
+</script>
