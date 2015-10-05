@@ -51,12 +51,6 @@
 
 
     <platform name="ios">
-
-     </platform>
-
-
-    <platform name="ios">
-
         <!-- iOS 7.0+ -->
         <!-- iPhone / iPod Touch  -->
         <icon src="res/ios/appicon-60.png" width="60" height="60" />
@@ -89,4 +83,5 @@
         <splash src="res/ios/Default-667h@2x.png" width="750" height="1334"/>
 
      </platform>
+
 </widget>
