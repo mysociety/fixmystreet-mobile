@@ -66,8 +66,11 @@ http://underscorejs.org/#extend
             },
 
             existing: function(){
-                var existingView = new FMS.ExistingView({ model: FMS.currentDraft });
-                this.changeView(existingView);
+                //var existingView = new FMS.ExistingView({ model: FMS.currentDraft });
+                //this.changeView(existingView);
+				var aroundView = new FMS.AroundView({ model: FMS.currentDraft });
+                FMS.aroundView = aroundView;
+                this.changeView(aroundView);
             },
 
             home: function(){
