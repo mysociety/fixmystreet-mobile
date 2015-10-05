@@ -793,8 +793,8 @@
     }
 
     img.placeholder {
-        height: 66px;
-        width: 88px;
+        height: 10%;
+        width: 30%;
     }
 
     #id_del_photo_button.photo-corner-button {
