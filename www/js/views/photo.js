@@ -87,7 +87,7 @@
                 var that = this;
                 move.done( function( file ) {
                     $('#nophoto_title').hide();
-                    $('#photo_title').html(FMS.strings.photo_added).show();
+                    //$('#photo_title').html(FMS.strings.photo_added).show();
                     $('#photo').attr('src', file.toURL()).addClass('small').removeClass('placeholder');
                     that.model.set('file', file.toURL());
                     FMS.saveCurrentDraft();

@@ -58,7 +58,7 @@
                 this.stopListening(FMS.locator, 'gps_failed');
                 $(document).undelegate('.ui-content', 'touchmove', false);
                 $('#locating').hide();
-                $("#locatorDebug").html("Current location: " + FMS.currentPosition);
+                //$("#locatorDebug").html("Current location: " + FMS.currentPosition);
                 FMS.currentDraft.set("lat",9.9118);
                 FMS.currentDraft.set("lon",-84.0341);
                 //navigator.notification.alert("notification bla bla", null, CONFIG.APP_NAME);

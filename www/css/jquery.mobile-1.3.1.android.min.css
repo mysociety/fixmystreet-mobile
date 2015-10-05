@@ -14,11 +14,11 @@
 .ui-body-a .ui-link:visited{color:#2489ce}
 .ui-body-a .ui-link:hover{color:#2489ce}
 .ui-body-a .ui-link:active{color:#2489ce}
-.ui-btn-up-a{border:1px solid #111;background:#333;font-weight:700;color:#fff;text-shadow:0 1px 0 #111;background-image:-webkit-gradient(linear,left top,left bottom,from(#444),to(#2d2d2d));background-image:-webkit-linear-gradient(#444,#2d2d2d);background-image:-moz-linear-gradient(#444,#2d2d2d);background-image:-ms-linear-gradient(#444,#2d2d2d);background-image:-o-linear-gradient(#444,#2d2d2d);background-image:linear-gradient(#444,#2d2d2d)}
+.ui-btn-up-a{border:1px solid #111;background:rgb(121,171,193);font-weight:700;color:#fff;text-shadow:0 1px 0 #111;}
 .ui-btn-up-a:visited,.ui-btn-up-a a.ui-link-inherit{color:#fff}
-.ui-btn-hover-a{border:1px solid #000;background:#444;font-weight:700;color:#fff;text-shadow:0 1px 0 #111;background-image:-webkit-gradient(linear,left top,left bottom,from(#555),to(#383838));background-image:-webkit-linear-gradient(#555,#383838);background-image:-moz-linear-gradient(#555,#383838);background-image:-ms-linear-gradient(#555,#383838);background-image:-o-linear-gradient(#555,#383838);background-image:linear-gradient(#555,#383838)}
+.ui-btn-hover-a{border:1px solid #000;background:#444;font-weight:700;color:#fff;text-shadow:0 1px 0 #111;}
 .ui-btn-hover-a:visited,.ui-btn-hover-a:hover,.ui-btn-hover-a a.ui-link-inherit{color:#fff}
-.ui-btn-down-a{border:1px solid #000;background:#222;font-weight:700;color:#fff;text-shadow:0 1px 0 #111;background-image:-webkit-gradient(linear,left top,left bottom,from(#202020),to(#2c2c2c));background-image:-webkit-linear-gradient(#202020,#2c2c2c);background-image:-moz-linear-gradient(#202020,#2c2c2c);background-image:-ms-linear-gradient(#202020,#2c2c2c);background-image:-o-linear-gradient(#202020,#2c2c2c);background-image:linear-gradient(#202020,#2c2c2c)}
+.ui-btn-down-a{border:1px solid #000;background:rgb(39, 86, 107);;font-weight:700;color:#fff;text-shadow:0 1px 0 #111;}
 .ui-btn-down-a:visited,.ui-btn-down-a:hover,.ui-btn-down-a a.ui-link-inherit{color:#fff}
 .ui-btn-up-a,.ui-btn-hover-a,.ui-btn-down-a{font-family:Helvetica,Arial,sans-serif;text-decoration:none}
 .ui-bar-b{border:1px solid #456f9a;background:#5e87b0;color:#fff;font-weight:700;text-shadow:0 1px 0 #3e6790;background-image:-webkit-gradient(linear,left top,left bottom,from(#6facd5),to(#497bae));background-image:-webkit-linear-gradient(#6facd5,#497bae);background-image:-moz-linear-gradient(#6facd5,#497bae);background-image:-ms-linear-gradient(#6facd5,#497bae);background-image:-o-linear-gradient(#6facd5,#497bae);background-image:linear-gradient(#6facd5,#497bae)}
