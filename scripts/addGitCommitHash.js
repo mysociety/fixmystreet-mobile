@@ -49,10 +49,10 @@ module.exports = function(context) {
     //console.log(target);
     switch(target){
       case 'android':
-        fileToReplace = "platforms/android/assets/www/templates/es/around.html";
+        fileToReplace = "platforms/android/assets/www/index.html";
         break;
       case 'ios':
-        fileToReplace = "platforms/ios/www/templates/es/around.html";
+        fileToReplace = "platforms/ios/www/index.html";
         break;
     }
     //console.log(fileToReplace);
