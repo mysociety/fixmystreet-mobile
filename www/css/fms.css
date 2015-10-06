@@ -781,6 +781,7 @@
     div.photo {
         position: relative;
         display: inline-flex;
+		background-size: contain;
     }
 
     div.photo-wrapper {
@@ -1027,9 +1028,10 @@
 		bottom: 4em;
 		width: 90%;
 		left: 0px;
-    font-size: 60%;
-    margin-left: 10px;
+		font-size: 60%;
+		margin-left: 10px;
 	}
+	
   .git-commig-hash{
     font-size: 60%;
   }

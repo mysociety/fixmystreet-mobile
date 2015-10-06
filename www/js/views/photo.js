@@ -88,7 +88,8 @@
                 move.done( function( file ) {
                     $('#nophoto_title').hide();
                     //$('#photo_title').html(FMS.strings.photo_added).show();
-                    $('#photo').attr('src', file.toURL()).addClass('small').removeClass('placeholder');
+                    $('#photo').css('background-image','url('+file.toURL()+')').addClass('small').removeClass('placeholder');
+					
                     that.model.set('file', file.toURL());
                     FMS.saveCurrentDraft();
 
@@ -119,8 +120,6 @@
                 var del = FMS.files.deleteURI( this.model.get('file') );
 
                 del.done( function() {
-                    $('#photo_title').hide();
-                    $('#nophoto_title').show();
                     $('#id_del_photo_button').hide();
                     that.model.set('file', '');
                     FMS.saveCurrentDraft(true);
