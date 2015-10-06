@@ -23,8 +23,17 @@
                 if ( this.model.get('file') ) {
                     $('#id_photo_button').parents('.ui-btn').hide();
                     $('#id_existing').parents('.ui-btn').hide();
-                    window.setTimeout( function() { $('#id_del_photo_button').show(); }, 250 );
+                    window.setTimeout( function() {
+                      $('#id_del_photo_button').show();
+                      $('#photo-container').css('background-image','url(' + this.model.get('file').toURL() + ')');
+                    }, 250 );
+
+
+
                 }
+
+
+
             },
 
             getOptions: function(isFromAlbum) {
@@ -88,8 +97,9 @@
                 move.done( function( file ) {
                     $('#nophoto_title').hide();
                     //$('#photo_title').html(FMS.strings.photo_added).show();
-                    $('#photo').css('background-image','url('+file.toURL()+')').addClass('small').removeClass('placeholder');
-					
+                    //$('#photo').css('background-image','url('+file.toURL()+')').addClass('small').removeClass('placeholder');
+                    $('#photo-container').css('background-image','url('+file.toURL()+')');
+
                     that.model.set('file', file.toURL());
                     FMS.saveCurrentDraft();
 
@@ -123,7 +133,8 @@
                     $('#id_del_photo_button').hide();
                     that.model.set('file', '');
                     FMS.saveCurrentDraft(true);
-                    $('#photo').attr('src', 'images/placeholder-photo.png').addClass('placeholder').removeClass('small');
+                    //$('#photo').attr('src', 'images/placeholder-photo.png').addClass('placeholder').removeClass('small');
+                    $('#photo-container').css('background-image','url(images/placeholder-photo.png)');
 
                     $('#photo-next-btn .ui-btn-text').text('Skip');
                     $('#id_photo_button').parents('.ui-btn').show();

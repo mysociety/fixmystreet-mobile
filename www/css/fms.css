@@ -781,17 +781,20 @@
     div.photo {
         position: relative;
         display: inline-flex;
-		background-size: contain;
+    }
+    div#photo-container{
+      height: 75px;
+      width: 75px;
+      background-image: url(images/placeholder-photo.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
     }
 
     div.photo-wrapper {
         margin: auto;
     }
 
-    img.small {
-        height: 75px;
-		    width: 75px;
-    }
 
     img.placeholder {
         height: 10%;
@@ -1031,7 +1034,7 @@
 		font-size: 60%;
 		margin-left: 10px;
 	}
-	
+
   .git-commig-hash{
     font-size: 60%;
   }
