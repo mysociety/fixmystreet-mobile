@@ -1,33 +1,16 @@
+<script>
+	$("#menu-lateral").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		//$("#around-header").toggleClass("toggled");
+	});
+</script>
 <div data-id="locate" id="around-header" data-role="header">
-    <!--<a id="view-my-reports" class="nodisplay ui-btn ui-btn-left ui-btn-up-a ui-shadow ui-btn-corner-all" data-role="none" href="#">
-        <span class="ui-btn-inner"<span class="ui-icon">Drafts <span class="draft_count"><% print( FMS.allDrafts.length ) %></span></span></span>
-    </a>
-    <a id="cancel" class="nodisplay" data-role="button" data-icon="arrow-l">Cancelar</a>
-    <h1 id="appName"></h1>
-    <a id="login-options" data-icon="fms-account" class="nodisplay ui-btn-right">Cuenta</a>-->
     <button id="menu-lateral">
 		<span class="glyphicon glyphicon-th-list"></span>
 	</button>
 	<h1 id="appName"></h1>
-	<div id="wrapper" >
-        <div id="sidebar-wrapper" class="side-menu">
-            <ul class="sidebar-nav" >
-                <li class="menu-item">
-                    <a href="#">Todos los reportes</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#">Mis reportes</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#">Mi perfil</a>
-                </li>
-				<li class="menu-item">
-                    <a href="#">Ayuda</a>
-                </li>
-            </ul>
-			<span class="general-info">App creada por la Municipalidad de Curridabat Ciudad Próspera <span>
-        </div>
-    </div>
+	
 </div>
 
     <div id="locating" class="nodisplay">
@@ -79,9 +62,4 @@
   <div id="locatorDebug" >ini</div>
 </div>
 
-<script>
-	$("#menu-lateral").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-});
-</script>
+
