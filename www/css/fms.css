@@ -789,7 +789,7 @@
 
     img.small {
         height: 75px;
-		width: 75px;
+		    width: 75px;
     }
 
     img.placeholder {
@@ -1033,3 +1033,6 @@
   .git-commig-hash{
     font-size: 60%;
   }
+#sidebar-wrapper{
+  top: 3em;
+}
