@@ -1,0 +1,53 @@
+<div data-id="locate" id="around-header" data-role="header">
+    <a id="view-my-reports" class="nodisplay ui-btn ui-btn-left ui-btn-up-a ui-shadow ui-btn-corner-all" data-role="none" href="#">
+        <span class="ui-btn-inner"<span class="ui-btn-text">Drafts <span class="draft_count"><% print( FMS.allDrafts.length ) %></span></span></span>
+    </a>
+    <a id="cancel" class="nodisplay" data-role="button" data-icon="arrow-l">Cancel</a>
+    <h1><% print( CONFIG.APP_NAME ) %></h1>
+    <a id="login-options" data-icon="fms-account" class="nodisplay ui-btn-right">Account</a>
+</div>
+
+    <div id="locating" class="nodisplay">
+        <div class="radar"></div>
+        <div id="progress">
+            <div id="progress-bar">
+            </div>
+        </div>
+
+        <p>
+        Finding your location
+        </p>
+
+        <p>
+        <input data-theme="c" type="button" id="locate_cancel" value="Cancel">
+        </p>
+    </div>
+<div data-role="content">
+    <div class="frontpage-menu">
+        <form class="inputcard" name="postcodeForm" id="postcodeForm">
+        <input type="search" id="pc" name="pc" placeholder="Search or scroll the map">
+        <% if ( FMS.testing ) { %>
+        <div class="testing">
+            Test version. Reports will not be sent to the council.
+        </div>
+        <% } %>
+        </form>
+        <a data-role="none" id="relocate" class="nodisplay"></a>
+
+        <div class="nodisplay" id="front-howto"></div>
+    </div>
+
+        <a id="mark-here" data-role="button" data-theme="a" class="map-bottom-btn">
+        New Report Here
+        </a>
+        <a id="locate-here" data-role="button" data-theme="a" class="map-bottom-btn">
+        Set Report Location
+        </a>
+        <a id="reposition" data-role="button" data-theme="c" class="map-bottom-btn nodisplay">
+        Reposition Report Here
+        </a>
+        <a id="confirm-map" data-role="button" data-theme="a" class="map-bottom-btn">
+        Confirm Location
+        </a>
+
+</div>

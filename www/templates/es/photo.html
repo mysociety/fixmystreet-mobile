@@ -1,0 +1,48 @@
+<div data-role="header">
+        <!--<a id="photo-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Omitir foto</a>-->
+        <h1>Enviar reporte</h1>
+</div>
+<div data-role="content">
+        <% var photoClass = 'nodisplay', nophotoClass = 'nodisplay';
+        if ( file != '' ) {
+            photoClass = '';
+        } else {
+            nophotoClass = '';
+        } %>
+    <h2 id="photo_title" class="<% print( photoClass ); %>">
+        Photo for report
+    </h2>
+    <div class="photo-wrapper">
+    <div>
+		<div class="gmailstyletest">
+			<div>
+				<label for="form_title">Subject</label>
+				<input data-role="none" type="text" name="title" id="form_title" placeholder="Titulo del reporte" value="<%= title %>" required>
+			</div>
+
+			<div>
+				<%= categories %>
+			</div>
+
+			<div class="noborder">
+				<label for="form_detail">Details</label>
+				<textarea data-role="none" name="detail" id="form_detail" placeholder="Detalles del problema. Por favor sea lo más explicito posible." required><%= details %></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="photo">
+    <div id='photo-container'></div>
+	<div class="photo-btn">
+		<input data-icon="fms-photo-existing" type="button" id="id_existing" data-theme="c" value="Seleccionar foto" >
+		<input data-icon="fms-photo-new" id="id_photo_button" type="button" data-theme="c" value="Tomar foto">
+    </div>
+	<a data-role="none" id="id_del_photo_button" class="photo-corner-button">X</a>
+    </div>
+    <div class="send">
+	<input id="id_send_report_button" type="button" data-theme="a" value="Enviar reporte">
+	</div>
+	</div>
+    <div class="bottom-btn">
+
+    </div>
+</div>

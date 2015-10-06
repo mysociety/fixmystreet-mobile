@@ -1,0 +1,57 @@
+<script>
+	$("#menu-lateral").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+	});
+</script>
+<div data-id="locate" id="around-header" data-role="header">
+    <button id="menu-lateral">
+		<span class="glyphicon glyphicon-th-list"></span>
+	</button>
+	<h1 id="appName"></h1>
+</div>
+
+    <div id="locating" class="nodisplay">
+        <div class="radar"></div>
+        <div id="progress">
+            <div id="progress-bar">
+            </div>
+        </div>
+
+        <p>
+        Localizando su ubicación
+        </p>
+
+        <p>
+        <input data-theme="c" type="button" id="locate_cancel" value="Cancel">
+        </p>
+    </div>
+<div data-role="content">
+    <div class="frontpage-menu">
+        <form class="inputcard" name="postcodeForm" id="postcodeForm">
+        <input type="search" id="pc" name="pc" placeholder="Search or scroll the map">
+        <% if ( FMS.testing ) { %>
+        <div class="testing">
+            Test version. Reports will not be sent to the council.
+        </div>
+        <% } %>
+        </form>
+        <a data-role="none" id="relocate" class="nodisplay"></a>
+
+        <div class="nodisplay" id="front-howto"></div>
+    </div>
+
+        <a id="mark-here" data-role="button" data-theme="a" class="map-bottom-btn">
+        Crear un nuevo reporte
+        </a>
+        <a id="locate-here" data-role="button" data-theme="a" class="map-bottom-btn">
+        Set Report Location
+        </a>
+        <a id="reposition" data-role="button" data-theme="c" class="map-bottom-btn nodisplay">
+        Reposicionar
+        </a>
+        <a id="confirm-map" data-role="button" data-theme="a" class="map-bottom-btn">
+        Confirmar posición
+        </a>
+
+</div>
