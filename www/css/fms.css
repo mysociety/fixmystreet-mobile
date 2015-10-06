@@ -205,12 +205,12 @@
 
     .ios7 .ui-bar-a,
     body.ios7 {
-        background-color: #F6BE41;
+        background-color: #79abc1;
         background-image: none;
     }
 
     .ios7 .ui-bar-a {
-        border-color: #F6BE41;
+        border-color: #79abc1;
     }
 
     .ios7 .ui-header-fixed .ui-btn-left,
@@ -644,7 +644,7 @@
 
     #pc {
         padding-left: 0.2em;
-        border-left: 1px solid #F6BE41;
+        border-left: 1px solid #79abc1;
     }
 
     #postcodeForm .ui-icon-searchfield::after {
@@ -1030,11 +1030,6 @@
     font-size: 60%;
     margin-left: 10px;
 	}
-	
-	#sidebar-wrapper{
-		top: 3em;
-	}
-	
   .git-commig-hash{
     font-size: 60%;
   }
