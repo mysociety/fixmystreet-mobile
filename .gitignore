@@ -21,3 +21,4 @@ compiled
 locale/lang_list
 www/cordova.js
 www/cordova_plugins.js
+src/js/config.js

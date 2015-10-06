@@ -286,7 +286,7 @@
     }
     .inputcard > div,
     .gmailstyletest > div,
-    .ui-field-contain 
+    .ui-field-contain
     {
         border:none;
         border-bottom: 1px solid #ccc;
@@ -834,7 +834,7 @@
         background-image: url(../images/photos.png);
     }
 
-    @media only screen and (min-resolution: 320dpi), 
+    @media only screen and (min-resolution: 320dpi),
     only screen and (-webkit-min-device-pixel-ratio: 2) {
         div[data-role='header'] .ui-icon-fms-account {
             background-image: url(../images/user@x2.png);
@@ -981,31 +981,31 @@
         top: 5px;
         right: 5px;
     }
-	
+
 	.photo-btn .ui-btn{
 		height: 25px;
 		width: 90%;
 	}
-	
+
 	.photo-btn .ui-btn-inner{
 		display: inline;
 		position: static;
 		width: 80%;
 	}
-	
+
 	#locatorDebug{
 		display: none;
 	}
-	
+
 	#around-page > div:nth-child(4) > div.ui-btn.ui-btn-up-c.ui-shadow.ui-btn-corner-all{
 		display: none;
 	}
-	
+
 	#sidebar-wrapper{
 		background-color: #2A3441;
 		z-index: 10000;
 	}
-	
+
 	.menu-item{
 		right: 5px;
 		text-shadow: none;
@@ -1016,20 +1016,25 @@
 		margin: 1em 0;
 		padding: 10px 10px 10px 10px;
 	}
-	
+
 	.ui-link{
 		color: #DDDDDD;
 	}
-	
+
 	.general-info{
 		color: #DDDDDD;
 		position: absolute;
 		bottom: 4em;
-		width: 100%;
+		width: 90%;
 		left: 0px;
+    font-size: 60%;
+    margin-left: 10px;
 	}
 	
 	#sidebar-wrapper{
 		top: 3em;
 	}
 	
+  .git-commig-hash{
+    font-size: 60%;
+  }

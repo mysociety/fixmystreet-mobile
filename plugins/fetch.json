@@ -79,5 +79,14 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "com.jamiestarke.webviewdebug": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jrstarke/webview-debug.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
