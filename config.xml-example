@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.mysociety.FixMyStreet" android-versionCode="41" version="2.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>FixMyStreet</name>
+    <description>
+        Report problems on FixMyStreet
+    </description>
+
+    <author href="http://mysociety.org" email="team@mysociety.org">
+        mySociety
+    </author>
+    <content src="index.html" />
+
+    <access origin=".*.tile.openstreetmap.org"/>
+    <access origin="tilma.mysociety.org"/>
+    <access origin="a.tilma.mysociety.org"/>
+    <access origin="b.tilma.mysociety.org"/>
+    <access origin="c.tilma.mysociety.org"/>
+    <access origin="dev.virtualearth.net"/>
+    <access origin="ecn.t0.tiles.virtualearth.net"/>
+    <access origin="ecn.t1.tiles.virtualearth.net"/>
+    <access origin="ecn.t2.tiles.virtualearth.net"/>
+    <access origin="ecn.t3.tiles.virtualearth.net"/>
+    <access origin="mapit.mysociety.org"/>
+
+    <!-- Replace this with the hostname of your FMS installation -->
+    <access origin="fixmystreet.example.org"/>
+
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="orientation" value="portrait" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarStyle" value="default" />
+
+    <!-- If you change the background colour of the app, change this value to match. -->
+    <preference name="StatusBarBackgroundColor" value="#F6BE41" />
+
+    <platform name="android">
+        <icon src="res/android/ldpi.png" density="ldpi" />
+        <icon src="res/android/mdpi.png" density="mdpi" />
+        <icon src="res/android/hdpi.png" density="hdpi" />
+        <icon src="res/android/xhdpi.png" density="xhdpi" />
+    </platform>
+
+    <platform name="ios">
+        <!-- iPhone / iPod Touch -->
+        <icon src="res/ios/Icon.png" width="57" height="57" />
+        <icon src="res/ios/Icon@2x.png" width="114" height="114" />
+        <!-- iPad -->
+        <icon src="res/ios/Icon-120.png" width="120" height="120" />
+
+        <!-- Splash Screens -->
+        <splash src="res/ios/Default.png" width="320" height="480"/>
+        <splash src="res/ios/Default@2x.png" width="640" height="960"/>
+        <splash src="res/ios/Default-568h@2x.png" width="640" height="1136"/>
+     </platform>
+</widget>
