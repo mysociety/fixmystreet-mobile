@@ -28,6 +28,6 @@ var CONFIG = {
     // Set to 1 to log debug messages to the console
     DEBUG: 0,
 
-    // Whether the FMS installation is within the United Kingdom. Should not need to change.
-    isUK: 0
+    // Bing Maps API key if needed
+    BING_MAPS_API_KEY: ''
 };
