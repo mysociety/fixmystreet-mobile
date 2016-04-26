@@ -36,7 +36,6 @@
                         lon: res.report.longitude,
                         title: res.report.title,
                         details: res.report.detail,
-                        photo: res.report.photo && res.report.photo.url ? CONFIG.FMS_URL + res.report.photo.url : null,
                         meta: res.report.meta,
                         confirmed_pp: res.report.confirmed_pp,
                         created_pp: res.report.created_pp,
