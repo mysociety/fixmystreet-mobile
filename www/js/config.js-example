@@ -6,7 +6,8 @@ var CONFIG = {
     APP_NAME: 'FixMyStreet',
 
     // URL of the fixmystreet install to report to. See also config.xml-example
-    FMS_URL: 'http://fixmystreet.example.org/',
+    // Make sure it does *not* end with a slash.
+    FMS_URL: 'http://fixmystreet.example.org',
 
     // Name of the cobrand to use for templates, stylesheets etc.
     // Cobrand files should be placed in a new directory within www/cobrands/

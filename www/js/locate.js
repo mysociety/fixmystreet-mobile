@@ -108,7 +108,7 @@
                 }
                 var that = this;
                 $.ajax( {
-                    url: CONFIG.FMS_URL + 'report/new/ajax',
+                    url: CONFIG.FMS_URL + '/report/new/ajax',
                     global: showSpinner,
                     dataType: 'json',
                     data: {
