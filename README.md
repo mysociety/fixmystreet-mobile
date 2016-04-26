@@ -50,13 +50,17 @@ SDK Manager (run `android` on the command line to launch it)
 5. `cd` into the project directory and run `cordova prepare` to load up the
 cordova platforms and plugins we use.
 
-7. Install Apache Ant (`brew install ant`, if you use Homebrew) for Android build support, and `ios-sim` (`npm install -g ios-sim`) for iOS simulator support.
+6. Create a new 'Android Virtual Device' for emulating a real device by running
+`android avd` and using one of the 'Device Definitions' on the second tab as a
+template. It doesn't matter which one, but set the CPU type to 'Atom (x86)'
+otherwise it will be very very slow. Enable 'Use Host GPU', if available, to
+massively speed up the UI. Ticking 'Hardware keyboard present' will allow you
+to use your keyboard instead of hunting-and-pecking the on-screen keyboard.
 
-8. Create a new 'Android Virtual Device' for emulating a real device by running `android avd` and using one of the 'Device Definitions' on the second tab as a template. It doesn't matter which one, but set the CPU type to 'Atom (x86)' otherwise it will be very very slow. Enable 'Use Host GPU', if available, to massively speed up the UI. Ticking 'Hardware keyboard present' will allow you to use your keyboard instead of hunting-and-pecking the on-screen keyboard.
+7. Copy `www/js/config.js-example to www/js/config.js` and edit if needed
 
-9. Copy `www/js/config.js-example to www/js/config.js` and edit if needed
-
-10. To run the project on one of the platforms, use: `cordova emulate ios` or `cordova emulate android`
+8. To run the project on one of the platforms, use: `cordova emulate ios` or
+`cordova emulate android`
 
 Basic structure
 ---------------
