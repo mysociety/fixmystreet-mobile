@@ -260,6 +260,8 @@ var tpl = {
             if ( this.initialized == 1 ) {
                 return this;
             }
+            // Stop iOS scrolling the webview when it shows the keyboard
+            cordova.plugins.Keyboard.disableScroll(true);
             $('#load-screen').height( $(window).height() );
             FMS.initialized = 1;
             if ( navigator && navigator.splashscreen ) {
