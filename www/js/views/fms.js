@@ -69,8 +69,7 @@
 
             navigate: function( route, reverse ) {
                 if ( FMS.isAndroid ) {
-                    var softkeyboard = window.plugins.SoftKeyBoard;
-                    softkeyboard.hide();
+                    cordova.plugins.Keyboard.close();
                 }
                 if ( reverse ) {
                     FMS.router.reverseTransition();
