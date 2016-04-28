@@ -57,34 +57,6 @@
         background-image: url('../images/mapbg.png');
     }
 
-    .ui-icon-plus,
-    .ui-icon-minus,
-    .ui-icon-delete,
-    .ui-icon-arrow-r,
-    .ui-icon-arrow-l,
-    .ui-icon-arrow-u,
-    .ui-icon-arrow-d,
-    .ui-icon-check,
-    .ui-icon-gear,
-    .ui-icon-refresh,
-    .ui-icon-forward,
-    .ui-icon-back,
-    .ui-icon-grid,
-    .ui-icon-star,
-    .ui-icon-alert,
-    .ui-icon-info,
-    .ui-icon-home,
-    .ui-icon-bars,
-    .ui-icon-edit,
-    .ui-icon-search,
-    .ui-icon-searchfield::after,
-    .ui-icon-checkbox-off,
-    .ui-icon-checkbox-on,
-    .ui-icon-radio-off,
-    .ui-icon-radio-on {
-        background-size: 810px 54px;
-    }
-
     .ui-input-search {
         background-image: none;
         background-color: rgba(255,255,255,0.95);
@@ -117,29 +89,19 @@
         border-radius:0;
         margin: 0 -1px;
     }
+    /* Make checkbox icon the white version, not black */
     .ui-icon.ui-icon-checkbox-on,
     .ui-icon.ui-icon-checkbox-off
     {
         background-image: url(images/icons-18-white.png);
     }
-    @media only screen and (min-resolution: 320dpi),
-    only screen and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+           only screen and (min--moz-device-pixel-ratio: 1.3),
+           only screen and (min-resolution: 200dpi) {
         .ui-icon.ui-icon-checkbox-on,
         .ui-icon.ui-icon-checkbox-off
         {
             background-image: url(images/icons-36-white.png);
-        }
-    }
-
-    div[data-role='header'] .ui-icon
-    {
-        background-image: url(images/icons-18-black.png);
-    }
-    @media only screen and (min-resolution: 320dpi),
-    only screen and (-webkit-min-device-pixel-ratio: 2) {
-        div[data-role='header'] .ui-icon
-        {
-            background-image: url(images/icons-36-black.png);
         }
     }
     .ui-controlgroup-controls .ui-checkbox label,
@@ -658,8 +620,9 @@
         background-position: 0px 0px;
         background-image: url(../images/search.png);
     }
-    @media only screen and (min-resolution: 320dpi),
-    only screen and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+           only screen and (min--moz-device-pixel-ratio: 1.3),
+           only screen and (min-resolution: 200dpi) {
         #postcodeForm .ui-icon-searchfield::after {
             background-image: url(../images/search@x2.png);
         }
@@ -675,16 +638,6 @@
     #postcodeForm .ui-btn-down-c {
         background-image: none;
         background-color: rgba(0,0,0,0);
-    }
-
-    #postcodeForm .ui-icon {
-        background-image: url(images/icons-18-black.png);
-    }
-    @media only screen and (min-resolution: 320dpi),
-    only screen and (-webkit-min-device-pixel-ratio: 2) {
-        #postcodeForm .ui-icon {
-            background-image: url(images/icons-36-black.png);
-        }
     }
 
     div.testing {
@@ -713,15 +666,6 @@
         border: 1px;
         -webkit-box-shadow: none;
         box-shadow: none;
-    }
-    #drafts li.ui-li-has-alt > a .ui-icon {
-        background-image: url(images/icons-18-black.png);
-    }
-    @media only screen and (min-resolution: 320dpi),
-    only screen and (-webkit-min-device-pixel-ratio: 2) {
-        #drafts li.ui-li-has-alt > a .ui-icon {
-            background-image: url(images/icons-36-black.png);
-        }
     }
 
     #drafts li.ui-btn-down-c,
@@ -838,8 +782,9 @@
         background-image: url(../images/photos.png);
     }
 
-    @media only screen and (min-resolution: 320dpi), 
-    only screen and (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+           only screen and (min--moz-device-pixel-ratio: 1.3),
+           only screen and (min-resolution: 200dpi) {
         div[data-role='header'] .ui-icon-fms-account {
             background-image: url(../images/user@x2.png);
         }
