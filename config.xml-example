@@ -15,6 +15,9 @@
     <access origin="*://a.tilma.mysociety.org" />
     <access origin="*://b.tilma.mysociety.org" />
     <access origin="*://c.tilma.mysociety.org" />
+    <access origin="*://a-tilma.mysociety.org" />
+    <access origin="*://b-tilma.mysociety.org" />
+    <access origin="*://c-tilma.mysociety.org" />
     <access origin="*://dev.virtualearth.net" />
     <access origin="*://ecn.t0.tiles.virtualearth.net" />
     <access origin="*://ecn.t1.tiles.virtualearth.net" />
