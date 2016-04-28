@@ -1,4 +1,4 @@
-function set_map_config() {
+function _set_map_config() {
     var nav_opts = { zoomWheelEnabled: false };
     //if (fixmystreet.page == 'around' && $('html').hasClass('mobile')) {
         nav_opts = {};
@@ -11,6 +11,10 @@ function set_map_config() {
         fixmystreet.nav_control,
         new OpenLayers.Control.PanZoomFMS({id: 'fms_pan_zoom' })
     ];
+}
+
+function set_map_config(perm) {
+    _set_map_config();
     fixmystreet.map_type = OpenLayers.Layer.Bing;
 }
 
@@ -20,19 +24,9 @@ OpenLayers.Layer.Bing = OpenLayers.Class(OpenLayers.Layer.XYZ, {
     setMap: function() {
         OpenLayers.Layer.XYZ.prototype.setMap.apply(this, arguments);
         this.updateAttribution();
-        this.map.events.register("moveend", this, this.updateAttribution);
     },
 
-    updateAttribution: function() {
-        var z = this.map.getZoom() + this.zoomOffset;
-        var copyrights;
-        var logo = '';
-        if (z >= 16 && CONFIG.isUK) {
-            copyrights = 'Contains Ordnance Survey data &copy; Crown copyright and database right 2010';
-        } else {
-            logo = '<a href="http://www.bing.com/maps/"><img border=0 src="http://dev.virtualearth.net/Branding/logo_powered_by.png"></a>';
-            copyrights = '&copy; 2011 <a href="http://www.bing.com/maps/">Microsoft</a>. &copy; AND, Navteq, Ordnance Survey';
-        }
+    _updateAttribution: function(copyrights, logo) {
         this.attribution = OpenLayers.String.format(this.attributionTemplate, {
             logo: logo,
             copyrights: copyrights
@@ -45,16 +39,20 @@ OpenLayers.Layer.Bing = OpenLayers.Class(OpenLayers.Layer.XYZ, {
         }
     },
 
+    updateAttribution: function() {
+        var copyrights = '&copy; 2011 <a href="https://www.bing.com/maps/">Microsoft</a>. &copy; AND, Navteq';
+        var logo = '<a href="https://www.bing.com/maps/"><img border=0 src="//dev.virtualearth.net/Branding/logo_powered_by.png"></a>';
+        this._updateAttribution(copyrights, logo);
+    },
+
     initialize: function(name, options) {
         var url = [];
         options = OpenLayers.Util.extend({
             /* Below line added to OSM's file in order to allow minimum zoom level */
-            maxResolution: 156543.0339/Math.pow(2, options.zoomOffset || 0),
-            numZoomLevels: 18,
-            transitionEffect: "resize",
+            maxResolution: 156543.03390625/Math.pow(2, options.zoomOffset || 0),
+            numZoomLevels: 19,
             sphericalMercator: true,
             buffer: 0
-            //attribution: "© Microsoft / OS 2010"
         }, options);
         var newArguments = [name, url, options];
         OpenLayers.Layer.XYZ.prototype.initialize.apply(this, newArguments);
@@ -86,30 +84,22 @@ OpenLayers.Layer.Bing = OpenLayers.Class(OpenLayers.Layer.XYZ, {
             OpenLayers.Util.indexOf(this.serverResolutions, res) :
             this.map.getZoom() + this.zoomOffset;
 
-        var url;
-        if (z >= 16 && CONFIG.isUK) {
-            url = [
-                "http://tilma.mysociety.org/sv/${z}/${x}/${y}.png",
-                "http://a.tilma.mysociety.org/sv/${z}/${x}/${y}.png",
-                "http://b.tilma.mysociety.org/sv/${z}/${x}/${y}.png",
-                "http://c.tilma.mysociety.org/sv/${z}/${x}/${y}.png"
-            ];
-        } else {
-            var type = '';
-            if (z > 10 && CONFIG.isUK) { type = '&productSet=mmOS'; }
-            url = [
-                "http://ecn.t0.tiles.virtualearth.net/tiles/r${id}.png?g=701" + type,
-                "http://ecn.t1.tiles.virtualearth.net/tiles/r${id}.png?g=701" + type,
-                "http://ecn.t2.tiles.virtualearth.net/tiles/r${id}.png?g=701" + type,
-                "http://ecn.t3.tiles.virtualearth.net/tiles/r${id}.png?g=701" + type
-            ];
-        }
+        var url = this.get_urls(bounds, z);
         var s = '' + x + y + z;
         url = this.selectUrl(s, url);
        
         var id = this.get_quadkey(x, y, z);
         var path = OpenLayers.String.format(url, {'id': id, 'x': x, 'y': y, 'z': z});
         return path;
+    },
+
+    get_urls: function(bounds, z) {
+        return [
+            "https://ecn.t0.tiles.virtualearth.net/tiles/r${id}.png?g=3467",
+            "https://ecn.t1.tiles.virtualearth.net/tiles/r${id}.png?g=3467",
+            "https://ecn.t2.tiles.virtualearth.net/tiles/r${id}.png?g=3467",
+            "https://ecn.t3.tiles.virtualearth.net/tiles/r${id}.png?g=3467"
+        ];
     },
 
     CLASS_NAME: "OpenLayers.Layer.Bing"
