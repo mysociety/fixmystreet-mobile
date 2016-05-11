@@ -3,16 +3,15 @@
 # This file is distributed under the same license as the main FixMyStreet code.
 # Struan Donald <struan@mysociety.org>, 2013.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
 "POT-Creation-Date: 2013-09-18 18:01+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-09-18 18:01+0100\n"
+"Last-Translator: Struan <struan@mysociety.org>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
-"Language: \n"
+"Language: en-gb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"

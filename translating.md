@@ -11,7 +11,7 @@ Quickstart
 ../fixmystreet/commonlib/bin/gettext-makemo FixMyStreetMobileApp
 perl -I../fixmystreet/commonlib/perllib -I../fixmystreet/local  bin/localise_templates
 
-copy compiled/$lang/*.html to www/$lang/templates
+copy compiled/$lang/*.html to www/templates/$lang
 copy compiled/lang/*.js to www/js
 
 The list of languages to generate templates for should be included in
