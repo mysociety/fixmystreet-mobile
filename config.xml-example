@@ -4,7 +4,7 @@
     <description>
         Report problems on FixMyStreet
     </description>
-    <author email="team@mysociety.org" href="http://mysociety.org">
+    <author email="apps@mysociety.org" href="https://www.mysociety.org">
         mySociety
     </author>
     <content src="index.html" />
