@@ -5,6 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta charset="utf-8">
 
+        <script type="text/javascript">
+            function add_script(s) {
+                var script = document.createElement("script");
+                script.src = s;
+                $('head').prepend(script);
+            }
+        </script>
         <script type="text/javascript" src="jslib/jquery-1.9.1.min.js"></script>
         <!--<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">-->
         <script type="text/javascript">
@@ -35,6 +42,12 @@
         <script type="text/javascript" src="js/mobile_config.js"></script>
         <script type="text/javascript" src="jslib/jquery.mobile-1.3.1.min.js"></script>
         <script type="text/javascript" src="jslib/moment-2.0.0.min.js"></script>
+        <script type="text/javascript">
+            if (CONFIG && CONFIG.LANGUAGE == 'sv') {
+                add_script('jslib/moment-2.0.0.sv.min.js');
+            }
+        </script>
+
         <script type="text/javascript" src="cordova.js"></script>
 
         <script type="text/javascript" src="jslib/lodash.min.js"></script>
@@ -48,18 +61,13 @@
         <script type="text/javascript" src="js/map-OpenLayers.js"></script>
 
         <script type="text/javascript">
-            function add_script(s) {
-                var script = document.createElement("script");
-                script.src = "js/" + s;
-                $('head').prepend(script);
-            }
             if (CONFIG && CONFIG.MAP_TYPE == 'FMS') {
-                add_script("map-bing-ol.js");
-                add_script("map-fms.js");
+                add_script("js/map-bing-ol.js");
+                add_script("js/map-fms.js");
             } else if (CONFIG && CONFIG.MAP_TYPE == 'Bing') {
-                add_script("map-bing-ol.js");
+                add_script("js/map-bing-ol.js");
             } else {
-                add_script("map-OpenStreetMap.js");
+                add_script("js/map-OpenStreetMap.js");
             }
         </script>
 
