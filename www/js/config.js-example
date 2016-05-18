@@ -14,6 +14,10 @@ var CONFIG = {
     // Leave as null to use the default templates.
     COBRAND: null,
 
+    // Type of map to use; possible options currently are 'OSM', 'Bing' or
+    // 'FMS' (UK only). The default is OSM.
+    MAP_TYPE: 'OSM',
+
     // namespace for storing drafts etc in. Should not need to change
     NAMESPACE: 'fixmystreet',
 
