@@ -261,7 +261,9 @@ var tpl = {
                 return this;
             }
             // Stop iOS scrolling the webview when it shows the keyboard
-            cordova.plugins.Keyboard.disableScroll(true);
+            if ( typeof cordova !== 'undefined' ) {
+                cordova.plugins.Keyboard.disableScroll(true);
+            }
             $('#load-screen').height( $(window).height() );
             FMS.initialized = 1;
             if ( navigator && navigator.splashscreen ) {
@@ -335,7 +337,11 @@ var tpl = {
                 FMS.setupHelp();
 
                 Backbone.history.start();
-                navigator.splashscreen.hide();
+                if ( navigator && navigator.splashscreen ) {
+                    navigator.splashscreen.hide();
+                } else {
+                    $('#load-screen').hide();
+                }
                 $('#display-help').show();
             });
         }
@@ -368,6 +374,10 @@ var androidStartUp = function() {
 };
 
 function onload() {
-    document.addEventListener('deviceready', FMS.initialize, false);
-    window.setTimeout( androidStartUp, 2000 );
+    if( typeof cordova !== 'undefined' ) {
+        document.addEventListener('deviceready', FMS.initialize, false);
+        window.setTimeout( androidStartUp, 2000 );
+    } else {
+        FMS.initialize();
+    }
 }
