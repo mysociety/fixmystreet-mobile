@@ -92,7 +92,7 @@
                     that.model.set('file', file.toURL());
                     FMS.saveCurrentDraft();
 
-                    $('#photo-next-btn .ui-btn-text').text('Next');
+                    $('#photo-next-btn .ui-btn-text').text(FMS.strings.next);
                     $('#id_photo_button').parents('.ui-btn').hide();
                     $('#id_existing').parents('.ui-btn').hide();
                     $('#photo').show();

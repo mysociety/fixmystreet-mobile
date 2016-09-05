@@ -20,6 +20,7 @@
             password: 'Please enter a password'
         },
         strings: {
+            next: 'Next',
             login_error: 'There was a problem logging you in. Please try again later.',
             logout_error: 'There was a problem logging you out. Please try again later.',
             login_details_error: 'There was a problem logging you in. Please check your email and password and that you have confirmed your password.',
