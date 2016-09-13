@@ -165,7 +165,7 @@ function fixmystreet_onload() {
             var popup = new OpenLayers.Popup.FramedCloud("popup",
                 feature.geometry.getBounds().getCenterLonLat(),
                 null,
-                feature.attributes.title + "<br><a onclick=\"FMS.openExternal(event); return false;\" href=\"" + CONFIG.FMS_URL + "/report/" + feature.attributes.id + "\">More details</a>",
+                feature.attributes.title + "<br><a onclick=\"FMS.openExternal(event); return false;\" href=\"" + CONFIG.FMS_URL + "/report/" + feature.attributes.id + "\">" + FMS.strings.more_details + "</a>",
                 { size: new OpenLayers.Size(0,0), offset: new OpenLayers.Pixel(0,-40) },
                 true, onPopupClose);
             feature.popup = popup;

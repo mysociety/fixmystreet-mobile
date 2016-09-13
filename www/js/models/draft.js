@@ -21,7 +21,7 @@
                 if ( this.get('title') ) {
                     desc += this.get('title');
                 } else {
-                    desc += 'Untitled draft';
+                    desc += FMS.strings.untitled_draft;
                 }
                 desc += '<br><small>' + moment.utc( this.get('created') ).fromNow() + '</small>';
 
