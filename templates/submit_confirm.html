@@ -1,10 +1,11 @@
 <div id="submit-header" data-role="header">
+    <a data-rel="back" data-icon="arrow-l" class="ui-btn-left">[% loc('Back') %]</a>
     <h1>[% loc('Your details') %]</h1>
 </div>
 
 <div data-role="content">
     <p class="notopmargin">
-    [% tprintf('You are logged in as %s', '<%= user.email %>') %].
+    [% tprintf(loc('You are logged in as %s'), '<%= user.email %>') %].
     </p>
 
     <p>

@@ -1,0 +1,164 @@
+/* line 8, style.scss */
+.ios7 .ui-bar-a,
+body.ios7 {
+  background-color: #005cb9;
+}
+
+/* line 13, style.scss */
+.ios7 .ui-bar-a {
+  border-color: #005cb9;
+}
+
+/* line 17, style.scss */
+#load-screen,
+#locating {
+  background: #005cb9;
+  color: white;
+}
+
+/* line 23, style.scss */
+#locating #progress-bar {
+  background-color: #FFFF99;
+}
+
+/* line 27, style.scss */
+#view-my-reports .draft_count {
+  background-color: #ba151c;
+  color: #fff;
+  border-color: #ffea3d;
+}
+
+/* line 33, style.scss */
+#display-help {
+  background-color: #eed11c;
+  color: grey;
+}
+
+/* line 39, style.scss */
+.ui-bar-a, .ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
+  color: #eee;
+  border-color: #00366d;
+  background: #0069d3;
+}
+
+/* line 46, style.scss */
+.ui-corner-all,
+.ui-btn-corner-all {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 55, style.scss */
+#around-page .ui-header .ui-title {
+  text-indent: -99999px;
+  margin: 0;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  background-image: url("../images/logo-footer.png");
+  background-repeat: no-repeat;
+  background-size: 35% auto;
+}
+@media (max-width: 374px) {
+  /* line 71, style.scss */
+  #around-page .ui-header .ui-title {
+    background-position: 55% 18%;
+  }
+  /* line 76, style.scss */
+  #around-page .ui-header .ui-btn-inner {
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+  }
+  /* line 80, style.scss */
+  #around-page .ui-header .ui-btn-icon-left .ui-btn-inner {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 414px) {
+  /* line 87, style.scss */
+  #around-page .ui-header .ui-title {
+    background-position: 55% top;
+  }
+}
+@media (min-width: 415px) {
+  /* line 94, style.scss */
+  #around-page .ui-header .ui-title {
+    background-position: center top;
+    background-size: auto 75%;
+  }
+}
+
+/* line 101, style.scss */
+#load-screen .radar,
+#locating .radar {
+  background-image: url("../images/radar-cuidomiciudad.png");
+}
+
+/* line 106, style.scss */
+.ui-icon {
+  background-image: url("../../../css/images/icons-18-white.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-resolution: 200dpi) {
+  /* line 112, style.scss */
+  .ui-icon {
+    background-image: url("../../../css/images/icons-36-white.png");
+  }
+}
+/* line 117, style.scss */
+div[data-role='header'] .ui-icon-fms-account {
+  background-image: url(../../../images/user-white@x2.png);
+  background-size: 18px 18px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-resolution: 200dpi) {
+  /* line 124, style.scss */
+  div[data-role='header'] .ui-icon-fms-account {
+    background-image: url(../../../images/user-white@x2.png);
+  }
+}
+/* line 129, style.scss */
+#helpContent {
+  background-color: #005cb9;
+  text-shadow: none;
+  color: white;
+  padding: 1em;
+}
+/* line 135, style.scss */
+#helpContent h1 {
+  text-align: center;
+  background-image: url("../images/logo-footer.png");
+  background-size: contain;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-position: center top;
+  text-indent: -9999999px;
+}
+/* line 144, style.scss */
+#helpContent h2 {
+  text-align: center;
+}
+/* line 148, style.scss */
+#helpContent img {
+  width: 200px;
+  display: block;
+  margin: 0.5em auto;
+}
+/* line 153, style.scss */
+#helpContent img.last-image {
+  margin-bottom: 3em;
+}
+/* line 158, style.scss */
+#helpContent a, #helpContent a:visited {
+  color: #eed11c;
+}
+
+/* line 163, style.scss */
+#dismiss {
+  color: white;
+  text-shadow: 0px 1px 0px silver;
+}
+
+/* line 169, style.scss */
+#locating p {
+  text-shadow: none;
+}

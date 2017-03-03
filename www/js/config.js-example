@@ -34,7 +34,16 @@ var CONFIG = {
     DEBUG: 0,
 
     // Bing Maps API key if needed
-    BING_MAPS_API_KEY: ''
+    BING_MAPS_API_KEY: '',
+
+    PINS: {
+        location: {
+            image: 'images/pin@x2.png',
+            background: 'images/pin_shadow@x2.png',
+            image_svg: 'images/pin.svg',
+            background_svg: 'images/pin_shadow.svg'
+        }
+    }
 };
 
 

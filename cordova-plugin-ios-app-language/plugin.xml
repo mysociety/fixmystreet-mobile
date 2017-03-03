@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin id="cordova-plugin-ios-app-language" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>iOS App Localization</name>
+    <author>mySociety</author>
+    <description>
+        Cordova/Phonegap plugin that allows you to control the iOS localization used by the UI
+    </description>
+    <keywords>cordova, ios, app, name, cfbundlelocalizations</keywords>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <preference name="IOS_LOCALIZATION"/>
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="CFBundleLocalizations">
+            <array>
+                <string>$IOS_LOCALIZATION</string>
+            </array>
+        </config-file>
+    </platform>
+</plugin>

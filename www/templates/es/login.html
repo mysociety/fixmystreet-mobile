@@ -1,0 +1,43 @@
+<div id="submit-header" data-role="header">
+    <a id="reports-next-btn" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Inicio</a>
+    <h1>Abrir sesión</h1>
+</div>
+
+<div data-role="content">
+    <% if ( FMS.isLoggedIn ) { %>
+    <div id="signed_in_row">
+        <p class="notopmargin">You are signed in as <%= email %></p>
+        <div id="err" class="nodisplay"></div>
+        <div class="bottom-btn">
+            <input type="button" id="logout" name="logout" value="Cerrar sesión" data-theme="a">
+        </div>
+    </div>
+    <div id="password_row" class="nodisplay">
+        <p class="notopmargin">
+        ¡Sesión cerrada!
+        </p>
+    <% } else { %>
+    <div id="password_row">
+    <% } %>
+        <form name="signinForm" class="inputcard" id="signinForm">
+        <div>
+            <input data-role="none" type="email" value="" name="email" id="form_email" placeholder="Su email" required>
+        </div>
+        <div>
+            <input data-role="none" type="password" value="" name="password" id="form_password" placeholder="Su contraseña" required>
+        </div>
+        <div class="noborder">
+            <input type="submit" id="login" name="login" value="Abrir sesión" data-theme="a">
+        </div>
+        </form>
+    </div>
+    <div id="success_row" class="nodisplay">
+        <p class="notopmargin">
+        ¡Sesión abierta!
+        </p>
+        <div id="err" class="nodisplay"></div>
+        <div class="bottom-btn">
+            <input type="button" id="logout" name="logout" value="Cerrar sesión" data-theme="a">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div id="search-header" data-role="header">
+    <a href="#" id="locate" data-transition="slidedown" class="ui-btn-left">Cancelar</a>
+    <h1>Buscar</h1>
+</div>
+<div data-role="content">
+    <div id="front-main">
+        <h3 class="notopmargin">Introduzca un código postal cercano, o el nombre de una calle o área</h3>
+        <form class="inputcard" name="postcodeForm" id="postcodeForm">
+            <div>
+                <input data-role="none" type="text" name="pc" value="" id="pc" size="10" maxlength="200" placeholder="ej. ‘10103’ o ‘Ave. Alma Mater, Santo Domingo’">
+            </div>
+        </form>
+        <input type="button" value="Ir" id="submit" data-theme="a">
+    </div>
+
+    <div id="front-howto">
+        <% if (typeof msg != 'undefined' && msg !== '') { %>
+            <h2><%= msg %></h2>
+        <% } %>
+    </div>
+</div>

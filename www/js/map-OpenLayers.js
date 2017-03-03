@@ -65,13 +65,13 @@ function fixmystreet_onload() {
             backgroundGraphicZIndex: 10
         })
     });
-    var location_img = 'images/pin@x2.png';
-    var location_bg_img = 'images/pin_shadow@x2.png';
+    var location_img = CONFIG.PINS.location.image;
+    var location_bg_img = CONFIG.PINS.location.background;
     if ( typeof device !== 'undefined' && (
         (device.platform == 'Android' && parseInt(device.version, 10) > 2) ||
         (device.platform !== 'Android') ) ) {
-        location_img = 'images/pin.svg';
-        location_bg_img = 'images/pin_shadow.svg';
+        location_img = CONFIG.PINS.location.image_svg;
+        location_bg_img = CONFIG.PINS.location.background_svg;
     }
 
     pin_layer_style_map.addUniqueValueRules('default', 'size', {
