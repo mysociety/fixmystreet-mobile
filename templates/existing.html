@@ -10,7 +10,7 @@
         <div class="meta">
         <p>
         <% if ( category && category != '[% loc('-- Pick a category --') %]' ) { %>
-            [% tprintf('Saved in the %s category', '<%= category %>') %]
+            [% tprintf(loc('Saved in the %s category'), '<%= category %>') %]
         <% } %>
         </p>
 
