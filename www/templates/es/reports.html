@@ -1,0 +1,30 @@
+<div data-role="header" data-position="fixed">
+        <a id="reports-next-btn" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Inicio</a>
+        <h1>Informes preliminares</h1>
+</div>
+<div id="drafts">
+    <p id="noreports" class="nodisplay">Si comienza a compilar un informe, pero no lo termina ni lo envía, este aparecerá en este menú para que lo pueda completar más tarde</p>
+    <div id="report-list" class="nodisplay">
+        <p class="notopmargin">
+        Estos son sus borradores, informes no enviados. Para completarlos y enviarlos, abra un informe cuando esté conectado(a) al internet.
+        </p>
+        <ul data-role="listview" data-split-theme="c" data-inset="true" data-split-icon="delete" class="notopmargin reports">
+            <% drafts.each(function(draft) {
+                if ( draft ) {
+                    var classes = [];
+                    if ( draft.get('lat') ) {
+                        classes.push('with_location');
+                    }
+                    if ( draft.get('file') ) {
+                        classes.push('with_photo');
+                    }
+                    var draftClass = '';
+                    if ( classes.length ) {
+                        draftClass = 'class="' + classes.join(' ') + '"';
+                    }
+                    print( '<li id="' + draft.id + '"' + draftClass + '><a href="#" class="use_report">' + draft.description() + '</a><a class="del_report" href="#" title="delete">Eliminar</a></li>' );
+                }
+                } ); %>
+        </ul>
+    </div>
+</div>

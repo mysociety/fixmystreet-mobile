@@ -1,0 +1,22 @@
+<div id="report-created-header" data-role="header">
+    <a class="ui-btn-left">Inicio</a>
+    <h1>Informe creado</h1>
+</div>
+<div data-role="content">
+    <% if ( typeof email_confirm != 'undefined' && email_confirm === 1 ) { %>
+    <h3>Email de confirmación enviado</h3>
+
+    <p>
+    Le hemos enviado un email de confirmación que le llegará en unos minutos. Una vez que llegue haga click sobre el enlace dentro del email para confirmar su informe.
+    </p>
+    <% } else { %>
+    <h3>Gracias. Su informe será enviado inmediatamente a las autoridades.</h3>
+
+    <p class="center"><input type="button" data-theme="a" id="open_report" value="Véalo en la pagina web"></p>
+    <% } %>
+
+
+    <div class="bottom-btn">
+        <input type="button" id="id_report_another" data-theme="a" value="Comenzar un nuevo informe" >
+    </div>
+</div>
