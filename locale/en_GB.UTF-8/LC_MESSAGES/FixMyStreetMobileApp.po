@@ -115,9 +115,7 @@ msgid "Enter a nearby GB postcode, or street name and area"
 msgstr ""
 
 #: templates/submit_set_password.html:11
-msgid ""
-"Enter a password for your account. This won't be activated till you click "
-"the link in the confirmation email"
+msgid "Enter a password for your account. This won't be activated till you click the link in the confirmation email"
 msgstr ""
 
 #: templates/around.html:18 templates/offline.html:14
@@ -153,9 +151,7 @@ msgid "I've already got one - login"
 msgstr ""
 
 #: templates/reports.html:6
-msgid ""
-"If you start compiling a report, but don't finish and send it, it'll appear "
-"in this menu so you can finish it later"
+msgid "If you start compiling a report, but don't finish and send it, it'll appear in this menu so you can finish it later"
 msgstr ""
 
 #: templates/strings.js:46
@@ -183,9 +179,7 @@ msgid "More details"
 msgstr ""
 
 #: templates/strings.js:32
-msgid ""
-"More than one location matched that name. Select one below or try entering "
-"street name and area, or a postcode."
+msgid "More than one location matched that name. Select one below or try entering street name and area, or a postcode."
 msgstr ""
 
 #: templates/around.html:41
@@ -198,9 +192,7 @@ msgid "Next"
 msgstr ""
 
 #: templates/strings.js:54
-msgid ""
-"No network connection available for submitting your report. Please try again "
-"later."
+msgid "No network connection available for submitting your report. Please try again later."
 msgstr ""
 
 #: templates/submit_name.html:10
@@ -212,16 +204,11 @@ msgid "Offline"
 msgstr ""
 
 #: templates/offline.html:25
-msgid ""
-"Oh dear - we can't detect an internet connection. However you can still edit "
-"the report now and send it later."
+msgid "Oh dear - we can't detect an internet connection. However you can still edit the report now and send it later."
 msgstr ""
 
 #: templates/offline.html:27
-msgid ""
-"Oh dear - we can't detect an internet connection. However you can still "
-"start a report now and complete it later, by going to 'drafts' when you're "
-"back online."
+msgid "Oh dear - we can't detect an internet connection. However you can still start a report now and complete it later, by going to 'drafts' when you're back online."
 msgstr ""
 
 #: templates/submit_confirm.html:30 templates/submit_name.html:27
@@ -241,9 +228,7 @@ msgid "Please choose a category"
 msgstr ""
 
 #: templates/submit_confirm.html:12 templates/submit_password.html:22
-msgid ""
-"Please confirm your name, if you want it to be public and optionally your "
-"phone number."
+msgid "Please confirm your name, if you want it to be public and optionally your phone number."
 msgstr ""
 
 #: templates/strings.js:36
@@ -279,9 +264,7 @@ msgid "Please enter your email address"
 msgstr ""
 
 #: templates/strings.js:9
-msgid ""
-"Please enter your full name, councils need this information - if you do not "
-"wish your name to be shown on the site, untick the box below"
+msgid "Please enter your full name, councils need this information - if you do not wish your name to be shown on the site, untick the box below"
 msgstr ""
 
 #: templates/strings.js:8 templates/submit_confirm.html:27
@@ -379,9 +362,7 @@ msgid "Skip"
 msgstr ""
 
 #: templates/strings.js:40
-msgid ""
-"Sorry, but we weren't able to establish your location accurately enough to "
-"show you a map. Please enter a location in the search box instead"
+msgid "Sorry, but we weren't able to establish your location accurately enough to show you a map. Please enter a location in the search box instead"
 msgstr ""
 
 #: templates/sent.html:20
@@ -409,26 +390,19 @@ msgid "There is no internet connection"
 msgstr ""
 
 #: templates/save_offline.html:8
-msgid ""
-"There isn't an internet connection, do you want to save the current report "
-"for later?"
+msgid "There isn't an internet connection, do you want to save the current report for later?"
 msgstr ""
 
 #: templates/strings.js:38
-msgid ""
-"There was a problem checking if we have all the details we need. Please try "
-"again later."
+msgid "There was a problem checking if we have all the details we need. Please try again later."
 msgstr ""
 
 #: templates/strings.js:37
-msgid ""
-"There was a problem checking we cover this location. Please try again later."
+msgid "There was a problem checking we cover this location. Please try again later."
 msgstr ""
 
 #: templates/strings.js:27
-msgid ""
-"There was a problem logging you in. Please check your email and password and "
-"that you have confirmed your password."
+msgid "There was a problem logging you in. Please check your email and password and that you have confirmed your password."
 msgstr ""
 
 #: templates/strings.js:25
@@ -460,23 +434,15 @@ msgid "There was a problem uploading your report."
 msgstr ""
 
 #: templates/strings.js:28
-msgid ""
-"There was a problem with your email/password combination. If you have "
-"forgotten your password, or do not have one, you can set one by returning to "
-"the email screen and selecting the set password option. Passwords are not "
-"activated until the link in the confirmation email is clicked."
+msgid "There was a problem with your email/password combination. If you have forgotten your password, or do not have one, you can set one by returning to the email screen and selecting the set password option. Passwords are not activated until the link in the confirmation email is clicked."
 msgstr ""
 
 #: templates/reports.html:9
-msgid ""
-"These are your draft, unsent reports. To finish and send them, open a report "
-"when online."
+msgid "These are your draft, unsent reports. To finish and send them, open a report when online."
 msgstr ""
 
 #: templates/submit_email.html:14
-msgid ""
-"This app needs to send you a confirmation email before we can send your "
-"report to the council."
+msgid "This app needs to send you a confirmation email before we can send your report to the council."
 msgstr ""
 
 #: templates/offline.html:33
@@ -514,9 +480,7 @@ msgid "View it on the site"
 msgstr ""
 
 #: templates/sent.html:10
-msgid ""
-"We've sent you a confirmation email which may take a few minutes to arrive. "
-"Once it arrives click the link in the email to confirm your report."
+msgid "We've sent you a confirmation email which may take a few minutes to arrive. Once it arrives click the link in the email to confirm your report."
 msgstr ""
 
 #: templates/login.html:24
