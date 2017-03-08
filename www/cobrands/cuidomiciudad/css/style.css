@@ -1,0 +1,55 @@
+/* line 8, style.scss */
+.ios7 .ui-bar-a,
+body.ios7 {
+  background-color: #005cb9;
+}
+
+/* line 13, style.scss */
+.ios7 .ui-bar-a {
+  border-color: #005cb9;
+}
+
+/* line 17, style.scss */
+#load-screen,
+#locating {
+  background: #005cb9;
+  color: white;
+}
+
+/* line 23, style.scss */
+#locating #progress-bar {
+  background-color: #FFFF99;
+}
+
+/* line 27, style.scss */
+#view-my-reports .draft_count {
+  background-color: #ba151c;
+  color: #fff;
+  border-color: #ffea3d;
+}
+
+/* line 33, style.scss */
+#display-help {
+  background-color: #eed11c;
+  color: grey;
+}
+
+/* line 39, style.scss */
+.ui-bar-a, .ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
+  color: #eee;
+  border-color: #00366d;
+  background: #0069d3;
+}
+
+/* line 46, style.scss */
+.ui-corner-all,
+.ui-btn-corner-all {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 52, style.scss */
+#load-screen .radar,
+#locating .radar {
+  background-image: url("../images/radar-cuidomiciudad.png");
+}
