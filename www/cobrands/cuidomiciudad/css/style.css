@@ -65,3 +65,15 @@ body.ios7 {
     background-image: url("../../../css/images/icons-36-white.png");
   }
 }
+/* line 68, style.scss */
+div[data-role='header'] .ui-icon-fms-account {
+  background-image: url(../../../images/user-white@x2.png);
+  background-size: 18px 18px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-resolution: 200dpi) {
+  /* line 75, style.scss */
+  div[data-role='header'] .ui-icon-fms-account {
+    background-image: url(../../../images/user-white@x2.png);
+  }
+}
