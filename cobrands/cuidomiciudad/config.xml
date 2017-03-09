@@ -27,7 +27,7 @@
     <access origin="*://mapit.mysociety.org" />
     <!-- Replace this with the hostname of your FMS installation -->
     <access origin="https://cuidomiciudad.fixmystreet.dev.mysociety.org" />
-    <access origin="*://dfdbcd34.ngrok.io" />
+    <access origin="https://cuidomiciudad.mysociety.org" />
 
     <preference name="android-minSdkVersion" value="16" />
     <preference name="orientation" value="portrait" />
