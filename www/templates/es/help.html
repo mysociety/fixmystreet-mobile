@@ -1,60 +1,98 @@
-<h1>Frequently Asked Questions</h1>
+<h1>Preguntas Frecuentes</h1>
 <dl>
-    <dt>What is <% print( CONFIG.APP_NAME ) %>?</dt>
-    <dd><% print( CONFIG.APP_NAME ) %> is a website and app to help people report local problems they&rsquo;ve found to their council.</dd>
+    <dt>¿En qué consiste la plataforma<% print( CONFIG.APP_NAME ) %>?</dt>
+    <dd><% print( CONFIG.APP_NAME ) %> es una plataforma y una applicación colaborativa que permite a la ciudadanía reportar, 
+        ver y discutir problemas locales, haciéndolos llegar al Municipio correspondiente simplemente 
+        al localizarlos en un mapa. De esta manera, el proyecto busca involucrar de manera activa a 
+        vecinos y vecinas en el cuidado de sus barrios, colaborando con la gestión municipal.</dd>
 
-    <dt>How do I use this app?</dt>
-    <dd>The app will attempt to locate you automatically but if it can't or you want to report
-    a problem elsewhere you can search by postcode or location. To start reporting a problem scroll
-    the map till the crosshair is over the location of the problem and press 'New Report here'.
+    <dt>¿Cómo uso esta applicación?</dt>
+    <dd>La applicación intentará a localizarse automaticamente. Si no es posible o quiere reportar un problema en un otro lugar 
+    se puede buscar el lugar por zona o nombre de la calle. Para usar la applicación y reportar un problema, se desplaza el 
+        iconográfico en la plana hasta que encuentre el lugar del problema. Haz click en el buzon "nueva reporte aquí" y entregar
+        los datos del problema en el formulario.
     </dd>
 
-    <dt>What happens to the information I provide?</dt>
-    <dd><strong>All the information you provide will be sent to the council</strong>.
-        The title, category and details of your report will be displayed on the website. By default
-        your name will also be displayed on the website but you can choose to have this hidden.
-        We will <strong>never display your email or phone number on the site</strong>.</dd>
+    <dt>¿Cómo se resuelven los problemas?</dt>
+    <dd>Los reportes se mandan a la Alcaldía del Distrito Nacional por correo electrónico para ser canalizados
+        al Departamento correspondiente. El Municipio puede entonces resolver el problema de la forma que lo hace 
+        normalmente y en los plazos correspondientes. En su defecto, puedes usar el sitio para discutir el problema
+        con otras personas y luego en conjunto dirigirse al Municipio para la búsqueda de una solución. </dd>
 
-    <dt>What if I want to remain anonymous?</dt>
-    <dd>If you unselect 'Show my name publicly' when entering your details then your name will not be displayed on the website.
-    <strong>Your name, email and phone number, if you provided it, will always be sent to the council.</strong></dd>
+    <dt>¿Cómo creo mi cuenta?</dt>
+    <dd>Para ser parte de la comunidad de <% print( CONFIG.APP_NAME ) %>, debo crear una cuenta suministrando
+        un nombre completo, el correo electrónico y completando datos adicionales que pueden ser
+        solicitados para poder dar seguimiento al reporte. Si deseas, publicamos tu reporte anónimo,
+        simplemente debes eliminar la opción de “Mostrar Públicamente”, pero tu reporte y correo si 
+        le llegarán a la Alcaldía.</dd>
 
-    <dt>What if I've accidentally included personal information in a report</dt>
-    <dd>To have a report edited email <a href="mailto:support@fixmystreet.com">support@fixmystreet.com</a> with 
-        details of the report.</dd>
+    <dt>¿Qué pasa con mis datos?</dt>
+    <dd><p><% print( CONFIG.APP_NAME ) %> jamás publicará tu email, teléfono ni datos al público, ni entregaremos estos datos
+        a otra entidad, salvo los casos legales previstos. Asimismo, tampoco te enviará spam ni correos no 
+        deseados. Ver Política de Privacidad.</p>
+    <p>Tenga en cuenta que los informes y actualizaciones de <% print( CONFIG.APP_NAME ) %> se muestran públicamente en 
+        el sitio web. Por esta razón, no incluya datos personales como su dirección o la dirección de otra 
+        persona o su número de teléfono en su informe inicial, que pueden proporcionarse cuando la Alcaldía 
+        se ponga en contacto con usted. Esto es para su propia seguridad y la de todos los que usan este 
+        servicio. Todos los informes y actualizaciones pueden hacerse de forma anónima bloqueando la casilla 
+        "Mostrar públicamente".</p></dd>
 
-    <dt>I've forgotten my password, how do I reset it?</dt>
-    <dd>If you've forgotten your password you can reset it by selecting the "set a password" option when
-        next submitting a report. Please note that you have to click the link in the confirmation email to
-        activate or change your password.</dd>
+    <dt>¿Cómo contacto a <% print( CONFIG.APP_NAME ) %>?</dt>
+    <dd>Escríbenos a <a href="mailto:info@cuidomiciudad.do">info@cuidomiciudad.do</a></dd>
 
-    <dt>What sort of problems should I report with <% print( CONFIG.APP_NAME ) %>?</dt>
-    <dd><% print( CONFIG.APP_NAME ) %> is primarily for reporting things which are
-    <strong>broken or dirty or damaged or dumped, and need fixing, cleaning
-    or clearing</strong>.</dd>
+    <dt>¿Qué tipo de problemas puedo reportar  <% print( CONFIG.APP_NAME ) %>?</dt>
+    <dd><% print( CONFIG.APP_NAME ) %> es principalmente para reportar cosas que
+        <strong>estén en mal estado, sucias o funcionando ilegal o indebidamente, y que necesiten ser arregladas o fiscalizadas</strong>
+         como por ejemplo:
+    <ul>
+    <li>Construcciones Ilegales
+    <li>Ocupación de Área Verde
+    <li>Ocupación de Restos de Vía
+    <li>Vertederos Improvisados
+    <li>Falta de Recolección de Basura
+    <li>Comercios en Espacios Públicos
+    <li>Violaciones de Aceras por Construcciones
+    <li>Contaminación Visual Espacios Públicos (Vallas, bajantes, afiches, etc…)
+    </ul>
+        Nuestra plataforma también te permite:
+    <ul>
+    <li>Consultar tus reportes
+    <li>Consultar los reportes por sector
+    <li>Consultar problemas resueltos
+    <li>Actualizar tus reportes y los de otras personas. Puedes notificar que un problema ya fue resuelto o que se ha reactivado.
+        </ul>
+    </dd></dd>
 
-    <dt>What isn&rsquo;t <% print( CONFIG.APP_NAME ) %> for?</dt>
-    <dd><% print( CONFIG.APP_NAME ) %> is not a way of getting in touch with your council for all
-    issues &ndash; please use <% print( CONFIG.APP_NAME ) %> only for problems such as the above.</dd>
+    <dt>¿Para qué NO es <% print( CONFIG.APP_NAME ) %>?</dt>
+    <dd><% print( CONFIG.APP_NAME ) %> es un mecanismo para ponerse en contacto con la Municipalidad, pero no para todo tipo de problemas. <strong>Debes contactar directamente con la autoridad competente para el reporte problemas como </strong></dd>
+        <dd><ul><li>Robos, hurtos, agresiones o cualquier tipo de delito
+    <li>Ruidos o contaminación ambiental
+    <li>Comportamiento antisocial
+    <li>Personas en actitud sospechosa    
+    <li>Situaciones de emergencia
+    <li>Reclamos contra los vecinos
+    <li>Reclamos contra el Municipio
+    <li>Maltrato animal
+    <li>Fugas de gas
+    <li>Incendios
+    <li>Propuestas para temas de tránsito y movilidad
+    <li>Permisos municipales
+            </ul></dd>
+    
 
-    <dt>Is it free?</dt>
-    <dd>The site and app are free to use, yes. <% print( CONFIG.APP_NAME ) %> is run
-    by a registered charity, though, so if you want to make a contribution, <a
-    onclick="FMS.openExternal(event); return false;" href="https://secure.mysociety.org/donate/">please do</a>.
-    For more information see the <a onclick="FMS.openExternal(event); return false;" href="http://www.fixmystreet.com/faq/">website</a>.
+    <dt>¿Qué pasa con el contenido inapropiado?</dt>
+    <dd><% print( CONFIG.APP_NAME ) %> no es responsable por el contenido o la precisión de la información entregada o 
+        compartida por sus usuarios. Nos reservamos el derecho de editar o remover problemas o reportes 
+        que consideremos inapropiados luego de ser informados de esto por algún usuario.
+        
+        <p>Favor NO realizar comentarios que: </p>
+        <ul><li>Sean comentarios difamatorios, capaces de dañar la reputación de una persona u organización. 
+            Si fue demandado con éxito, usted podría ser considerado responsable por daños y costos considerables.
+            <li>Impliquen a otras personas en sus informes. Los informes sobre comportamiento antisocial, crueldad animal,
+                actividades criminales, entre otros, no deben ser reportados en [% site_name %]. En estos casos, canalice 
+                su denuncia a la entidad que corresponda.
+            <li>Constituyan mensajes legales, acosadores, difamatorios, abusivos, amenazantes, dañinos, obscenos, sexualmente
+                orientados, homofóbicos o racialmente ofensivos.
+            <li>Sean spam o inundaciones, es decir, favor no volver a publicar el mismo mensaje, o mensajes muy similares, más de una vez
+        </ul>
     </dd>
-
-    <dt>Who built <% print( CONFIG.APP_NAME ) %>?</dt>
-    <dd>The site and this app was built by <a onclick="FMS.openExternal(event); return false;" href="http://www.mysociety.org/">mySociety</a>.</dd>
-    <dt>Thanks to...</dt>
-    <dd>
-    <a onclick="FMS.openExternal(event); return false;" href="http://www.ordnancesurvey.co.uk">Ordnance Survey</a> (for the maps,
-    UK postcodes, and UK addresses &ndash; data &copy; Crown copyright, all
-    rights reserved, Ministry of Justice 100037819&nbsp;2008), the entire free software
-    community (this particular project was brought to you by Phonegap, Backbone, jQuery mobile
-    and the number 161.290) and <a
-    onclick="FMS.openExternal(event); return false;" href="http://www.bytemark.co.uk/">Bytemark</a> (who kindly host all
-    our servers).
-
-    Let us know if we&rsquo;ve missed anyone.</dd>
-</dl>
