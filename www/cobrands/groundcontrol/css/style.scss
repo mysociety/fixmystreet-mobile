@@ -1,0 +1,177 @@
+@import "compass";
+
+$gc_orange: rgb(245, 130, 32);
+$gc_dark_green: rgb(80, 184, 72);
+$gc_light_green: rgb(178, 210, 53);
+
+$text-color: #222;
+
+.ios7 .ui-bar-a,
+body.ios7 {
+    background-color: white;
+}
+
+.ios7 .ui-bar-a {
+    border-color: white;
+}
+
+#load-screen,
+#locating {
+    background: white;
+    color: white;
+}
+
+#locating #progress-bar {
+    background-color: #FFFF99;
+}
+
+#view-my-reports .draft_count {
+    background-color: rgb(186,21,28);
+    color: #fff;
+    border-color: #ffea3d;
+}
+
+#display-help {
+    background-color: $gc_dark_green;
+    color: gray;
+}
+
+
+.ui-bar-a, .ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
+    color: $text-color;
+    border-color: darken($gc_orange, 15%);
+    @include background(lighten($gc_orange, 5%));
+}
+
+.ui-corner-all,
+.ui-btn-corner-all {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#around-page .ui-header {
+    // We want the CMC logo in the header instead of plain text
+    .ui-title {
+        text-indent: -99999px;
+        margin: 0;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+        background-image: url('../images/gc-logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    // background image is sized according to screen size,
+    // so it's centered on the screen and the baseline matches
+    // the buttons
+
+//    // up to iPhone 6 size
+//    @media (max-width: 374px) {
+//        .ui-title {
+//            background-position: 55% 18%;
+//        }
+//        // On narrow screens (e.g. iPhone 5S), make the button padding a little
+//        // tighter to make room for the logo
+//        .ui-btn-inner {
+//            padding-left: 0.35em;
+//            padding-right: 0.35em;
+//        }
+//        .ui-btn-icon-left .ui-btn-inner {
+//            padding-left: 30px;
+//        }
+//    }
+//
+//    // up to & including iPhone 6+ size
+//    @media (max-width: 414px) {
+//        .ui-title {
+//            background-position: 55% top;
+//        }
+//    }
+//
+//    // bigger than iPhone 6, e.g. high res android or iPad
+//    @media (min-width: 415px) {
+//        .ui-title {
+//            background-position: center top;
+//            background-size: auto 75%;
+//        }
+//    }
+}
+
+
+
+
+#load-screen .radar,
+#locating .radar {
+    background-image: url('../images/gc-logo.png');
+}
+
+
+
+// Use white icons in buttons
+//.ui-icon {
+//    background-image: url("../../../css/images/icons-18-white.png");
+//}
+//@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+//       only screen and (min--moz-device-pixel-ratio: 1.3),
+//       only screen and (min-resolution: 200dpi) {
+//    .ui-icon {
+//       background-image: url("../../../css/images/icons-36-white.png");
+//    }
+//}
+//
+//div[data-role='header'] .ui-icon-fms-account {
+//    background-image: url(../../../images/user-white@x2.png);
+//    background-size: 18px 18px;
+//}
+//@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+//       only screen and (min--moz-device-pixel-ratio: 1.3),
+//       only screen and (min-resolution: 200dpi) {
+//    div[data-role='header'] .ui-icon-fms-account {
+//        background-image: url(../../../images/user-white@x2.png);
+//    }
+//}
+
+#helpContent {
+    background-color: $gc_orange;
+    text-shadow: none;
+    color: white;
+    padding: 1em;
+
+    h1 {
+        text-align: center;
+        background-image: url('../images/logo-footer.png');
+        background-size: contain;
+        height: 2em;
+        background-repeat: no-repeat;
+        background-position: center top;
+        text-indent: -9999999px;
+    }
+    h2 {
+        text-align: center;
+    }
+
+    img {
+        width: 200px;
+        display: block;
+        margin: 0.5em auto;
+
+        &.last-image {
+            margin-bottom: 3em;
+        }
+    }
+
+    a, a:visited {
+        color: $gc_orange;
+    }
+}
+
+#dismiss {
+    color: white;
+    text-shadow: 0px 1px 0px silver;
+}
+
+
+#locating p {
+    text-shadow: none;
+}
