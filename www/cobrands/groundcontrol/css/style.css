@@ -1,0 +1,114 @@
+/* line 9, style.scss */
+.ios7 .ui-bar-a,
+body.ios7 {
+  background-color: white;
+}
+
+/* line 14, style.scss */
+.ios7 .ui-bar-a {
+  border-color: white;
+}
+
+/* line 18, style.scss */
+#load-screen,
+#locating {
+  background: white;
+  color: white;
+}
+
+/* line 24, style.scss */
+#locating #progress-bar {
+  background-color: #FFFF99;
+}
+
+/* line 28, style.scss */
+#view-my-reports .draft_count {
+  background-color: #ba151c;
+  color: #fff;
+  border-color: #ffea3d;
+}
+
+/* line 34, style.scss */
+#display-help {
+  background-color: #50b848;
+  color: gray;
+}
+
+/* line 40, style.scss */
+.ui-bar-a, .ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
+  color: #222;
+  border-color: #c05d09;
+  background: #f69038;
+}
+
+/* line 46, style.scss */
+.ui-corner-all,
+.ui-btn-corner-all {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 54, style.scss */
+#around-page .ui-header .ui-title {
+  text-indent: -99999px;
+  margin: 0;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  background-image: url("../images/gc-logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+/* line 104, style.scss */
+#load-screen .radar,
+#locating .radar {
+  background-image: url("../images/gc-logo.png");
+}
+
+/* line 135, style.scss */
+#helpContent {
+  background-color: #f58220;
+  text-shadow: none;
+  color: white;
+  padding: 1em;
+}
+/* line 141, style.scss */
+#helpContent h1 {
+  text-align: center;
+  background-image: url("../images/logo-footer.png");
+  background-size: contain;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-position: center top;
+  text-indent: -9999999px;
+}
+/* line 150, style.scss */
+#helpContent h2 {
+  text-align: center;
+}
+/* line 154, style.scss */
+#helpContent img {
+  width: 200px;
+  display: block;
+  margin: 0.5em auto;
+}
+/* line 159, style.scss */
+#helpContent img.last-image {
+  margin-bottom: 3em;
+}
+/* line 164, style.scss */
+#helpContent a, #helpContent a:visited {
+  color: #f58220;
+}
+
+/* line 169, style.scss */
+#dismiss {
+  color: white;
+  text-shadow: 0px 1px 0px silver;
+}
+
+/* line 175, style.scss */
+#locating p {
+  text-shadow: none;
+}
