@@ -31,7 +31,7 @@
                     this.navigate( 'login' );
                 } else if ( FMS.currentDraft && (
                     FMS.currentDraft.get('title') || FMS.currentDraft.get('lat') ||
-                    FMS.currentDraft.get('details') || FMS.currentDraft.get('file') )
+                    FMS.currentDraft.get('details') || FMS.currentDraft.get('files').length > 0 )
                 ) {
                     this.navigate( 'existing' );
                 } else {

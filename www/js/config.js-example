@@ -50,6 +50,14 @@ var CONFIG = {
     // elements in your CSS.
     HELP_DISABLED: false,
 
+    // Set this to true if the user must provide at least one photo when making
+    // a report. If this is true the 'skip' button on the photo page is removed
+    // and 'next' doesn't appear until at least one photo is attached.
+    PHOTO_REQUIRED: false,
+
+    // The maximum number of photos the user can attach to a report.
+    MAX_PHOTOS: 3,
+
     // If this is true then the user must login as the first step after
     // installing the app, and before making any reports.
     LOGIN_REQUIRED: false,

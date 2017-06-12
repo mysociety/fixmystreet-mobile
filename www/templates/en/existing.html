@@ -17,8 +17,8 @@
         <p><% print( moment( created ).fromNow() ) %></p>
         </div>
 
-        <% if ( file ) { %>
-            <div class="photo" style="background-image: url(<%= file %>)"></div>
+        <% if ( files.length > 0 ) { %>
+            <div class="photo" style="background-image: url(<%= files[0] %>)"></div>
         <% } %>
 
         <% if ( details ) { %>
