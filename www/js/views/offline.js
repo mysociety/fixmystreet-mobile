@@ -15,7 +15,7 @@
                 'vclick .ui-btn-right': 'onClickButtonNext',
                 'vclick #id_photo_button': 'takePhoto',
                 'vclick #id_existing': 'addPhoto',
-                'vclick #id_del_photo_button': 'deletePhoto',
+                'vclick .del_photo_button': 'deletePhoto',
                 'vclick #locate': 'onClickLocate',
                 'vclick #locate_cancel': 'onClickCancel',
                 'blur input': 'toggleNextButton',
@@ -86,7 +86,7 @@
 
                 var that = this;
                 move.done( function( file ) {
-                    $('#photo').attr('src', file.toURL());
+                    $('.photo-wrapper .photo img').attr('src', file.toURL());
                     that.model.set('file', file.toURL());
                     FMS.saveCurrentDraft();
 
@@ -113,7 +113,7 @@
                 del.done( function() {
                     that.model.set('file', '');
                     FMS.saveCurrentDraft();
-                    $('#photo').attr('src', '');
+                    $('.photo-wrapper .photo img').attr('src', '');
 
                     $('#photo-next-btn .ui-btn-text').text('Skip');
                     $('#display_photo').hide();

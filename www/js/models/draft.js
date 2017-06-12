@@ -3,17 +3,19 @@
         Draft: Backbone.Model.extend({
             localStorage: new Backbone.LocalStorage(CONFIG.NAMESPACE + '-drafts'),
 
-            defaults: {
-                lat: 0,
-                lon: 0,
-                title: '',
-                details: '',
-                may_show_name: '',
-                category: '',
-                phone: '',
-                pc: '',
-                file: '',
-                created: moment.utc()
+            defaults: function() {
+                return {
+                    lat: 0,
+                    lon: 0,
+                    title: '',
+                    details: '',
+                    may_show_name: '',
+                    category: '',
+                    phone: '',
+                    pc: '',
+                    files: [],
+                    created: moment.utc()
+                };
             },
 
             description: function() {
@@ -33,7 +35,7 @@
                     this.get('title') ||
                     this.get('details') ||
                     this.get('category') ||
-                    this.get('file')
+                    this.get('files').length
                 ) {
                     return true;
                 }

@@ -14,17 +14,11 @@
                 'vclick .ui-btn-right': 'onClickButtonNext',
                 'vclick #id_photo_button': 'takePhoto',
                 'vclick #id_existing': 'addPhoto',
-                'vclick #id_del_photo_button': 'deletePhoto'
+                'vclick .del_photo_button': 'deletePhoto'
             },
 
             beforeDisplay: function() {
                 this.fixPageHeight();
-                this.$('#id_del_photo_button').hide();
-                if ( this.model.get('file') ) {
-                    $('#id_photo_button').parents('.ui-btn').hide();
-                    $('#id_existing').parents('.ui-btn').hide();
-                    window.setTimeout( function() { $('#id_del_photo_button').show(); }, 250 );
-                }
             },
 
             getOptions: function(isFromAlbum) {
@@ -52,7 +46,7 @@
             takePhoto: function(e) {
                 e.preventDefault();
                 $.mobile.loading('show');
-                $('#photo').hide();
+                $('.photo-wrapper .photo img').hide();
                 var that = this;
 
                 var options = this.getOptions();
@@ -63,7 +57,7 @@
             addPhoto: function(e) {
                 e.preventDefault();
                 $.mobile.loading('show');
-                $('#photo').hide();
+                $('.photo-wrapper .photo img').hide();
                 var that = this;
                 var options = this.getOptions(true);
                 navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, options);
@@ -86,25 +80,30 @@
 
                 var that = this;
                 move.done( function( file ) {
-                    $('#nophoto_title').hide();
-                    $('#photo_title').html(FMS.strings.photo_added).show();
-                    $('#photo').attr('src', file.toURL()).addClass('small').removeClass('placeholder');
-                    that.model.set('file', file.toURL());
+                    // $('#nophoto_title').hide();
+                    // $('#photo_title').html(FMS.strings.photo_added).show();
+                    // $('.photo-wrapper .photo img').attr('src', file.toURL()).addClass('small').removeClass('placeholder');
+                    var files = that.model.get('files');
+                    files.push(file.toURL());
+                    that.model.set('files', files);
                     FMS.saveCurrentDraft();
 
-                    $('#photo-next-btn .ui-btn-text').text(FMS.strings.next);
-                    $('#id_photo_button').parents('.ui-btn').hide();
-                    $('#id_existing').parents('.ui-btn').hide();
-                    $('#photo').show();
-                    window.setTimeout(function() { $('#id_del_photo_button').show() }, 500);
-                    window.setTimeout(function() { $.mobile.loading('hide') }, 100);
+                    // $('#photo-next-btn .ui-btn-text').text(FMS.strings.next);
+                    // $('#id_photo_button').parents('.ui-btn').hide();
+                    // $('#id_existing').parents('.ui-btn').hide();
+                    // $('.photo-wrapper .photo img').show();
+                    // window.setTimeout(function() { $('.del_photo_button').show() }, 500);
+                    window.setTimeout(function() {
+                        $.mobile.loading('hide');
+                        that.rerender();
+                    }, 100);
                 });
 
                 move.fail( function() { that.addPhotoFail(); } );
             },
 
             addPhotoFail: function(message) {
-                $('#photo').show();
+                $('.photo-wrapper .photo img').show();
                 $.mobile.loading('hide');
                 if ( message != 'no image selected' &&
                     message != 'Selection cancelled.' &&
@@ -115,22 +114,34 @@
 
             deletePhoto: function(e) {
                 e.preventDefault();
+                var files = this.model.get('files');
+                var index = parseInt($(e.target).data('fileIndex'));
+                var deleted_file = files.splice(index, 1)[0];
+
+                var del = FMS.files.deleteURI( deleted_file );
+
                 var that = this;
-                var del = FMS.files.deleteURI( this.model.get('file') );
-
                 del.done( function() {
-                    $('#photo_title').hide();
-                    $('#nophoto_title').show();
-                    $('#id_del_photo_button').hide();
-                    that.model.set('file', '');
+                    // $('#photo_title').hide();
+                    // $('#nophoto_title').show();
+                    // $('.del_photo_button').hide();
+                    that.model.set('files', files);
                     FMS.saveCurrentDraft(true);
-                    $('#photo').attr('src', 'images/placeholder-photo.png').addClass('placeholder').removeClass('small');
-
-                    $('#photo-next-btn .ui-btn-text').text('Skip');
-                    $('#id_photo_button').parents('.ui-btn').show();
-                    $('#id_existing').parents('.ui-btn').show();
+                    that.rerender();
+                    // $('.photo-wrapper .photo img').attr('src', 'images/placeholder-photo.png').addClass('placeholder').removeClass('small');
+                    //
+                    // $('#photo-next-btn .ui-btn-text').text('Skip');
+                    // $('#id_photo_button').parents('.ui-btn').show();
+                    // $('#id_existing').parents('.ui-btn').show();
                 });
 
+            },
+
+            rerender: function() {
+                // Simply calling this.render() breaks the DOM in a weird and
+                // interesting way, so this is a convenience wrapper around
+                // the correct router call.
+                FMS.router.photo();
             }
         })
     });
