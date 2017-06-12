@@ -107,7 +107,7 @@
                 $('.form-error').removeClass('form-error');
             },
 
-            destroy: function() { FMS.printDebug('destory for ' + this.id); this._destroy(); this.remove(); },
+            destroy: function() { FMS.printDebug('destroy for ' + this.id); this._destroy(); this.remove(); },
 
             _destroy: function() {}
         })

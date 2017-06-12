@@ -124,7 +124,7 @@
 
     function moveFile (src, dest, newName) {
 
-        FMS.printDebug( 'moveing file ' + src.fullPath + ' to ' + dest.fullPath );
+        FMS.printDebug( 'moving file ' + src.fullPath + ' to ' + dest.fullPath );
 
         var move = $.Deferred();
 
@@ -166,7 +166,7 @@
 
         var file = $.Deferred();
 
-        window.resolveLocalFileSystemURI( uri, file.resolve, file.reject);
+        window.resolveLocalFileSystemURL( uri, file.resolve, file.reject);
 
         return file.promise();
     }
