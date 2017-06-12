@@ -13,7 +13,7 @@ body.ios7 {
 #load-screen,
 #locating {
   background: white;
-  color: white;
+  color: #222;
 }
 
 /* line 24, style.scss */
@@ -63,17 +63,18 @@ body.ios7 {
 /* line 104, style.scss */
 #load-screen .radar,
 #locating .radar {
-  background-image: url("../images/gc-logo.png");
+  background-image: url("../images/gc-logo-big.jpg");
+  background-size: contain;
 }
 
-/* line 135, style.scss */
+/* line 136, style.scss */
 #helpContent {
   background-color: #f58220;
   text-shadow: none;
   color: white;
   padding: 1em;
 }
-/* line 141, style.scss */
+/* line 142, style.scss */
 #helpContent h1 {
   text-align: center;
   background-image: url("../images/logo-footer.png");
@@ -83,32 +84,45 @@ body.ios7 {
   background-position: center top;
   text-indent: -9999999px;
 }
-/* line 150, style.scss */
+/* line 151, style.scss */
 #helpContent h2 {
   text-align: center;
 }
-/* line 154, style.scss */
+/* line 155, style.scss */
 #helpContent img {
   width: 200px;
   display: block;
   margin: 0.5em auto;
 }
-/* line 159, style.scss */
+/* line 160, style.scss */
 #helpContent img.last-image {
   margin-bottom: 3em;
 }
-/* line 164, style.scss */
+/* line 165, style.scss */
 #helpContent a, #helpContent a:visited {
   color: #f58220;
 }
 
-/* line 169, style.scss */
+/* line 170, style.scss */
 #dismiss {
   color: white;
   text-shadow: 0px 1px 0px silver;
 }
 
-/* line 175, style.scss */
+/* line 176, style.scss */
 #locating p {
   text-shadow: none;
+}
+
+/* line 180, style.scss */
+#details-extra-page div[data-role="content"] {
+  padding: 1em 0;
+}
+/* line 183, style.scss */
+#details-extra-page div[data-role="content"] label {
+  font-weight: bold;
+}
+/* line 187, style.scss */
+#details-extra-page div[data-role="content"] h2 {
+  margin: 0;
 }
