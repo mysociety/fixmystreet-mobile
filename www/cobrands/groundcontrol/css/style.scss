@@ -18,7 +18,7 @@ body.ios7 {
 #load-screen,
 #locating {
     background: white;
-    color: white;
+    color: $text-color;
 }
 
 #locating #progress-bar {
@@ -103,7 +103,8 @@ body.ios7 {
 
 #load-screen .radar,
 #locating .radar {
-    background-image: url('../images/gc-logo.png');
+    background-image: url('../images/gc-logo-big.jpg');
+    background-size: contain;
 }
 
 
@@ -174,4 +175,16 @@ body.ios7 {
 
 #locating p {
     text-shadow: none;
+}
+
+#details-extra-page div[data-role="content"] {
+    padding: 1em 0;
+
+    label {
+        font-weight: bold;
+    }
+
+    h2 {
+        margin :0;
+    }
 }
