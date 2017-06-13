@@ -16,3 +16,4 @@ locale/lang_list
 /config.xml
 /node_modules
 /package.json
+/package-lock.json

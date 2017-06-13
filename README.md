@@ -25,6 +25,9 @@ You should also create a `config.xml` file based on `config.xml-example`.
 The only change you should need to make is to add the hostname of your FMS installation
 in an `<access origin=""/>` tag.
 
+You'll also need `package.json` and `package-lock.json` which can be similarly
+created from the `-example` files.
+
 Setup
 -----
 This project uses Apache Cordova to produce Android and iOS apps. There is
