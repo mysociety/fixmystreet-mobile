@@ -744,9 +744,9 @@
         width: 270px;
     }
 
-    #id_del_photo_button.photo-corner-button {
+    .del_photo_button.photo-corner-button {
         position: absolute;
-        bottom: -15px;
+        top: -15px;
         right: 0px;
         -webkit-border-radius: 50%;
         border-radius: 50%;
