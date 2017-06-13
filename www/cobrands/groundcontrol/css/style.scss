@@ -31,9 +31,8 @@ body.ios7 {
     border-color: #ffea3d;
 }
 
-#display-help {
-    background-color: $gc_dark_green;
-    color: gray;
+#display-help, #help {
+    display: none;
 }
 
 
@@ -132,40 +131,6 @@ body.ios7 {
 //        background-image: url(../../../images/user-white@x2.png);
 //    }
 //}
-
-#helpContent {
-    background-color: $gc_orange;
-    text-shadow: none;
-    color: white;
-    padding: 1em;
-
-    h1 {
-        text-align: center;
-        background-image: url('../images/logo-footer.png');
-        background-size: contain;
-        height: 2em;
-        background-repeat: no-repeat;
-        background-position: center top;
-        text-indent: -9999999px;
-    }
-    h2 {
-        text-align: center;
-    }
-
-    img {
-        width: 200px;
-        display: block;
-        margin: 0.5em auto;
-
-        &.last-image {
-            margin-bottom: 3em;
-        }
-    }
-
-    a, a:visited {
-        color: $gc_orange;
-    }
-}
 
 #dismiss {
     color: white;
