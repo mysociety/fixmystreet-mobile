@@ -48,7 +48,11 @@ var CONFIG = {
     // Set this to true if you want to disable the help button on the right hand
     // side of the screen. NB you'll also need to hide #display-help and #help
     // elements in your CSS.
-    HELP_DISABLED: false
+    HELP_DISABLED: false,
+
+    // If this is true then the user must login as the first step after
+    // installing the app, and before making any reports.
+    LOGIN_REQUIRED: false
 };
 
 

@@ -118,21 +118,28 @@ var tpl = {
         },
 
         checkLoggedInStatus: function() {
+            var p = $.Deferred();
+
             if ( FMS.isOffline ) {
+                p.resolve();
             } else {
                 $.ajax( {
                     url: CONFIG.FMS_URL + '/auth/ajax/check_auth',
                     type: 'GET',
                     dataType: 'json',
                     timeout: 30000,
-                    success: function( data, status ) {
-                        FMS.isLoggedIn = 1;
-                    },
-                    error: function() {
-                        FMS.isLoggedIn = 0;
-                    }
-                } );
+                })
+                .done(function() {
+                    FMS.isLoggedIn = 1;
+                    p.resolve();
+                })
+                .fail(function() {
+                    FMS.isLoggedIn = 0;
+                    p.resolve();
+                })
             }
+
+            return p;
         },
 
         saveCurrentDraft: function(force) {
@@ -339,20 +346,21 @@ var tpl = {
                 FMS.allDrafts.fetch();
                 FMS.checkOnlineStatus();
                 FMS.loadCurrentDraft();
-                FMS.checkLoggedInStatus();
-                if (!CONFIG.HELP_DISABLED) {
-                    FMS.setupHelp();
-                }
+                FMS.checkLoggedInStatus().done(function() {
+                    if (!CONFIG.HELP_DISABLED) {
+                        FMS.setupHelp();
+                    }
 
-                Backbone.history.start();
-                if ( navigator && navigator.splashscreen ) {
-                    navigator.splashscreen.hide();
-                } else {
-                    $('#load-screen').hide();
-                }
-                if (!CONFIG.HELP_DISABLED) {
-                    $('#display-help').show();
-                }
+                    Backbone.history.start();
+                    if ( navigator && navigator.splashscreen ) {
+                        navigator.splashscreen.hide();
+                    } else {
+                        $('#load-screen').hide();
+                    }
+                    if (!CONFIG.HELP_DISABLED) {
+                        $('#display-help').show();
+                    }
+                });
             });
         }
     });

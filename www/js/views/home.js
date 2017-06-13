@@ -24,8 +24,11 @@
 
             afterDisplay: function() {
                 $('#load-screen').hide();
+
                 if ( FMS.isOffline ) {
                     this.navigate( 'offline' );
+                } else if ( !FMS.isLoggedIn && CONFIG.LOGIN_REQUIRED ) {
+                    this.navigate( 'login' );
                 } else if ( FMS.currentDraft && (
                     FMS.currentDraft.get('title') || FMS.currentDraft.get('lat') ||
                     FMS.currentDraft.get('details') || FMS.currentDraft.get('file') )
