@@ -40,8 +40,7 @@
                                 that.model.set('name', data.name);
                                 that.model.save();
                                 FMS.isLoggedIn = 1;
-                                that.$('#password_row').hide();
-                                that.$('#success_row').show();
+                                that.rerender();
                             } else {
                                 that.validationError('signinForm', FMS.strings.login_details_error);
                             }
@@ -65,11 +64,7 @@
                         FMS.isLoggedIn = 0;
                         that.model.set('password', '');
                         that.model.save();
-                        that.$('#form_email').val('');
-                        that.$('#form_password').val('');
-                        that.$('#success_row').hide();
-                        that.$('#signed_in_row').hide();
-                        that.$('#password_row').show();
+                        that.rerender();
                     },
                     error: function() {
                         that.validationError('err', FMS.strings.logout_error);
@@ -102,6 +97,20 @@
                 }
 
                 return isValid;
+            },
+
+            beforeDisplay: function() {
+                this.fixPageHeight();
+                if ( !FMS.isLoggedIn && CONFIG.LOGIN_REQUIRED ) {
+                    this.$("#reports-next-btn").hide();
+                }
+            },
+
+            rerender: function() {
+                // Simply calling this.render() breaks the DOM in a weird and
+                // interesting way, so this is a convenience wrapper around
+                // the correct router call.
+                FMS.router.login();
             }
         })
     });
