@@ -197,7 +197,7 @@
             },
 
             displayHelpIfFirstTime: function() {
-                if ( !FMS.usedBefore ) {
+                if ( !FMS.usedBefore && !CONFIG.HELP_DISABLED ) {
                     FMS.helpShow();
                 }
             },

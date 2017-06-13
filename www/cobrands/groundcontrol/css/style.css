@@ -29,26 +29,25 @@ body.ios7 {
 }
 
 /* line 34, style.scss */
-#display-help {
-  background-color: #50b848;
-  color: gray;
+#display-help, #help {
+  display: none;
 }
 
-/* line 40, style.scss */
+/* line 39, style.scss */
 .ui-bar-a, .ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
   color: #222;
   border-color: #c05d09;
   background: #f69038;
 }
 
-/* line 46, style.scss */
+/* line 45, style.scss */
 .ui-corner-all,
 .ui-btn-corner-all {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 
-/* line 54, style.scss */
+/* line 53, style.scss */
 #around-page .ui-header .ui-title {
   text-indent: -99999px;
   margin: 0;
@@ -60,69 +59,33 @@ body.ios7 {
   background-position: center center;
 }
 
-/* line 104, style.scss */
+/* line 103, style.scss */
 #load-screen .radar,
 #locating .radar {
   background-image: url("../images/gc-logo-big.jpg");
   background-size: contain;
 }
 
-/* line 136, style.scss */
-#helpContent {
-  background-color: #f58220;
-  text-shadow: none;
-  color: white;
-  padding: 1em;
-}
-/* line 142, style.scss */
-#helpContent h1 {
-  text-align: center;
-  background-image: url("../images/logo-footer.png");
-  background-size: contain;
-  height: 2em;
-  background-repeat: no-repeat;
-  background-position: center top;
-  text-indent: -9999999px;
-}
-/* line 151, style.scss */
-#helpContent h2 {
-  text-align: center;
-}
-/* line 155, style.scss */
-#helpContent img {
-  width: 200px;
-  display: block;
-  margin: 0.5em auto;
-}
-/* line 160, style.scss */
-#helpContent img.last-image {
-  margin-bottom: 3em;
-}
-/* line 165, style.scss */
-#helpContent a, #helpContent a:visited {
-  color: #f58220;
-}
-
-/* line 170, style.scss */
+/* line 135, style.scss */
 #dismiss {
   color: white;
   text-shadow: 0px 1px 0px silver;
 }
 
-/* line 176, style.scss */
+/* line 141, style.scss */
 #locating p {
   text-shadow: none;
 }
 
-/* line 180, style.scss */
+/* line 145, style.scss */
 #details-extra-page div[data-role="content"] {
   padding: 1em 0;
 }
-/* line 183, style.scss */
+/* line 148, style.scss */
 #details-extra-page div[data-role="content"] label {
   font-weight: bold;
 }
-/* line 187, style.scss */
+/* line 152, style.scss */
 #details-extra-page div[data-role="content"] h2 {
   margin: 0;
 }

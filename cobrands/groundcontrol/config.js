@@ -31,10 +31,24 @@ var CONFIG = {
     UPLOAD_TIMEOUT: 120000,
 
     // Set to 1 to log debug messages to the console
-    DEBUG: 0,
+    DEBUG: 1,
 
     // Bing Maps API key if needed
     BING_MAPS_API_KEY: '',
+
+    // Set this to true if you want to disable the help button on the right hand
+    // side of the screen. NB you'll also need to hide #display-help and #help
+    // elements in your CSS.
+    HELP_DISABLED: true,
+
+    // Set this to true if the user must provide at least one photo when making
+    // a report. If this is true the 'skip' button on the photo page is removed
+    // and 'next' doesn't appear until at least one photo is attached.
+    PHOTO_REQUIRED: true,
+
+    // If this is true then the user must login as the first step after
+    // installing the app, and before making any reports.
+    LOGIN_REQUIRED: true,
 
     PINS: {
         location: {
