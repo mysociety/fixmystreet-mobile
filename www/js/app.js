@@ -100,6 +100,11 @@ var tpl = {
         printDebug: function(msg) {
             if ( CONFIG.DEBUG ) {
                 console.log(msg);
+
+                // Some messages get logged before we've had a chance to
+                // attach the debugger, so keep them all for later reference.
+                FMS.debug_messages = FMS.debug_messages || [];
+                FMS.debug_messages.push(msg);
             }
         },
 
