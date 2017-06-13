@@ -48,7 +48,7 @@ body.ios7 {
 }
 
 /* line 53, style.scss */
-#around-page .ui-header .ui-title {
+#around-page .ui-header .ui-title, #login .ui-header .ui-title {
   text-indent: -99999px;
   margin: 0;
   padding-top: 0.6em;
@@ -59,33 +59,33 @@ body.ios7 {
   background-position: center center;
 }
 
-/* line 103, style.scss */
+/* line 68, style.scss */
 #load-screen .radar,
 #locating .radar {
   background-image: url("../images/gc-logo-big.jpg");
   background-size: contain;
 }
 
-/* line 135, style.scss */
+/* line 100, style.scss */
 #dismiss {
   color: white;
   text-shadow: 0px 1px 0px silver;
 }
 
-/* line 141, style.scss */
+/* line 106, style.scss */
 #locating p {
   text-shadow: none;
 }
 
-/* line 145, style.scss */
+/* line 110, style.scss */
 #details-extra-page div[data-role="content"] {
   padding: 1em 0;
 }
-/* line 148, style.scss */
+/* line 113, style.scss */
 #details-extra-page div[data-role="content"] label {
   font-weight: bold;
 }
-/* line 152, style.scss */
+/* line 117, style.scss */
 #details-extra-page div[data-role="content"] h2 {
   margin: 0;
 }
