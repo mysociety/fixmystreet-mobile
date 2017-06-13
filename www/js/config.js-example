@@ -43,7 +43,12 @@ var CONFIG = {
             image_svg: 'images/pin.svg',
             background_svg: 'images/pin_shadow.svg'
         }
-    }
+    },
+
+    // Set this to true if you want to disable the help button on the right hand
+    // side of the screen. NB you'll also need to hide #display-help and #help
+    // elements in your CSS.
+    HELP_DISABLED: false
 };
 
 
