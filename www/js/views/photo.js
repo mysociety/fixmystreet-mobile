@@ -21,6 +21,17 @@
                 this.fixPageHeight();
             },
 
+            afterDisplay: function() {
+                // The height of the photos container needs to be adjusted
+                // depending on the number of photos - if there are 3 photos
+                // then the 'add photo' UI isn't shown so we should use all the
+                // vertical space for the thumbnails.
+                var wrapperHeight = $(".ui-content").height();
+                wrapperHeight -= $(".ui-content h2").outerHeight(true);
+                wrapperHeight -= $(".ui-content .bottom-btn").outerHeight(true)
+                $(".photo-wrapper").height(wrapperHeight);
+            },
+
             getOptions: function(isFromAlbum) {
                 var options = {
                     destinationType: Camera.DestinationType.FILE_URI,
@@ -80,19 +91,11 @@
 
                 var that = this;
                 move.done( function( file ) {
-                    // $('#nophoto_title').hide();
-                    // $('#photo_title').html(FMS.strings.photo_added).show();
-                    // $('.photo-wrapper .photo img').attr('src', file.toURL()).addClass('small').removeClass('placeholder');
                     var files = that.model.get('files');
                     files.push(file.toURL());
                     that.model.set('files', files);
                     FMS.saveCurrentDraft();
 
-                    // $('#photo-next-btn .ui-btn-text').text(FMS.strings.next);
-                    // $('#id_photo_button').parents('.ui-btn').hide();
-                    // $('#id_existing').parents('.ui-btn').hide();
-                    // $('.photo-wrapper .photo img').show();
-                    // window.setTimeout(function() { $('.del_photo_button').show() }, 500);
                     window.setTimeout(function() {
                         $.mobile.loading('hide');
                         that.rerender();

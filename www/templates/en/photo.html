@@ -33,8 +33,7 @@
             </div>
         <% } else { %>
             <% _.each(files, function(file, index) { %>
-                <div class="photo">
-                    <img class="small" src="<%= file %>" />
+                <div class="photo" style="background-image: url('<%= file %>');">
                     <a data-role="none" class="photo-corner-button del_photo_button" data-file-index="<%= index %>">X</a>
                 </div>
             <% });%>
