@@ -59,33 +59,43 @@ body.ios7 {
   background-position: center center;
 }
 
-/* line 68, style.scss */
+/* line 65, style.scss */
+#login .ui-header.loggedout {
+  visibility: hidden;
+}
+
+/* line 70, style.scss */
+#login .ui-content img {
+  max-width: 100%;
+}
+
+/* line 77, style.scss */
 #load-screen .radar,
 #locating .radar {
   background-image: url("../images/gc-logo-big.jpg");
   background-size: contain;
 }
 
-/* line 100, style.scss */
+/* line 109, style.scss */
 #dismiss {
   color: white;
   text-shadow: 0px 1px 0px silver;
 }
 
-/* line 106, style.scss */
+/* line 115, style.scss */
 #locating p {
   text-shadow: none;
 }
 
-/* line 110, style.scss */
+/* line 119, style.scss */
 #details-extra-page div[data-role="content"] {
   padding: 1em 0;
 }
-/* line 113, style.scss */
+/* line 122, style.scss */
 #details-extra-page div[data-role="content"] label {
   font-weight: bold;
 }
-/* line 117, style.scss */
+/* line 126, style.scss */
 #details-extra-page div[data-role="content"] h2 {
   margin: 0;
 }

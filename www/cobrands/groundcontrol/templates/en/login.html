@@ -1,0 +1,44 @@
+<div id="submit-header" data-role="header" class="<% if ( !FMS.isLoggedIn ) { %>loggedout<% } %>">
+    <a id="reports-next-btn" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Home</a>
+    <h1>Login</h1>
+</div>
+
+<div data-role="content">
+    <% if ( FMS.isLoggedIn ) { %>
+    <div id="signed_in_row">
+        <p class="notopmargin">You are signed in as <%= email %></p>
+        <div id="err" class="nodisplay"></div>
+        <div class="bottom-btn">
+            <input type="button" id="logout" name="logout" value="Sign Out" data-theme="a">
+        </div>
+    </div>
+    <div id="password_row" class="nodisplay">
+        <p class="notopmargin">
+        Signed out!
+        </p>
+    <% } else { %>  
+    <img src="cobrands/groundcontrol/images/gc-logo-big.jpg" />
+    <div id="password_row">
+    <% } %>
+        <form name="signinForm" class="inputcard" id="signinForm">
+        <div>
+            <input data-role="none" type="email" value="" name="email" id="form_email" placeholder="Your Email" required>
+        </div>
+        <div>
+            <input data-role="none" type="password" value="" name="password" id="form_password" placeholder="Your password" required>
+        </div>
+        <div class="noborder">
+            <input type="submit" id="login" name="login" value="Login" data-theme="a">
+        </div>
+        </form>
+    </div>
+    <div id="success_row" class="nodisplay">
+        <p class="notopmargin">
+        Signed in!
+        </p>
+        <div id="err" class="nodisplay"></div>
+        <div class="bottom-btn">
+            <input type="button" id="logout" name="logout" value="Sign Out" data-theme="a">
+        </div>
+    </div>
+</div>

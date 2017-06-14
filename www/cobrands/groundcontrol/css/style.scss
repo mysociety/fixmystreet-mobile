@@ -62,6 +62,15 @@ body.ios7 {
     }
 }
 
+#login .ui-header.loggedout {
+    visibility: hidden;
+}
+
+
+#login .ui-content img {
+    max-width: 100%;
+}
+
 
 
 
