@@ -2,7 +2,7 @@
     _.extend( FMS, {
         FMSView: Backbone.View.extend({
             tag: 'div',
-            bottomMargin: 20,
+            bottomMargin: 0,
             contentSelector: '[data-role="content"]',
 
             events: {

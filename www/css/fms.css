@@ -161,37 +161,36 @@
     }
 
 /* ios 7 tweaks to deal with different status bar behaviour */
-    .ios7 .ui-mobile-viewport {
+    .ios .ui-mobile-viewport {
         background-color: none;
         background-image: none;
     }
 
-    .ios7 .ui-bar-a,
-    body.ios7 {
+    .ios .ui-bar-a,
+    body.ios {
         background-color: #F6BE41;
         background-image: none;
     }
 
-    .ios7 .ui-bar-a {
+    .ios .ui-bar-a {
         border-color: #F6BE41;
     }
 
-    .ios7 .ui-header-fixed .ui-btn-left,
-    .ios7 .ui-header-fixed .ui-btn-right {
+    .ios .ui-header-fixed .ui-btn-left,
+    .ios .ui-header-fixed .ui-btn-right {
         top: 4px;
     }
 
-    .ios7 #map_box {
-        top: 20px;
+    .ios #map_box {
         background-color: #534741;
         background-image: url('../images/mapbg.png');
     }
 
-    .ios7 #around-page #locating {
-        bottom: -22px;
+    .ios #around-page #locating {
+        bottom: -2px;
     }
 
-    .ios7 #map_box .olLayerDiv div {
+    .ios #map_box .olLayerDiv div {
         display: block !important;
     }
 
@@ -210,7 +209,7 @@
     #drafts,
     div[data-role='content'] {
         position: relative;
-        margin: 20px 10px;
+        margin: 10px 10px 20px 10px;
         background-color: rgba(255, 255, 255, 0.9);
     }
 

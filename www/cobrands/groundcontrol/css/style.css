@@ -1,53 +1,54 @@
 /* line 9, style.scss */
-.ios7 .ui-bar-a,
-body.ios7 {
-  background-color: white;
+.ios .ui-bar-a,
+body.ios, .ui-bar-a {
+  background: white;
 }
 
 /* line 14, style.scss */
-.ios7 .ui-bar-a {
+.ios .ui-bar-a, .ui-bar-a {
   border-color: white;
+  color: #222;
 }
 
-/* line 18, style.scss */
+/* line 19, style.scss */
 #load-screen,
 #locating {
   background: white;
   color: #222;
 }
 
-/* line 24, style.scss */
+/* line 25, style.scss */
 #locating #progress-bar {
   background-color: #FFFF99;
 }
 
-/* line 28, style.scss */
+/* line 29, style.scss */
 #view-my-reports .draft_count {
   background-color: #ba151c;
   color: #fff;
   border-color: #ffea3d;
 }
 
-/* line 34, style.scss */
+/* line 35, style.scss */
 #display-help, #help {
   display: none;
 }
 
-/* line 39, style.scss */
-.ui-bar-a, .ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
+/* line 40, style.scss */
+.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
   color: #222;
   border-color: #c05d09;
   background: #f69038;
 }
 
-/* line 45, style.scss */
+/* line 46, style.scss */
 .ui-corner-all,
 .ui-btn-corner-all {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 
-/* line 53, style.scss */
+/* line 54, style.scss */
 #around-page .ui-header .ui-title, #login .ui-header .ui-title {
   text-indent: -99999px;
   margin: 0;
@@ -59,43 +60,44 @@ body.ios7 {
   background-position: center center;
 }
 
-/* line 65, style.scss */
+/* line 66, style.scss */
 #login .ui-header.loggedout {
   visibility: hidden;
+  display: none;
 }
 
-/* line 70, style.scss */
+/* line 72, style.scss */
 #login .ui-content img {
   max-width: 100%;
 }
 
-/* line 77, style.scss */
+/* line 76, style.scss */
 #load-screen .radar,
 #locating .radar {
   background-image: url("../images/gc-logo-big.jpg");
   background-size: contain;
 }
 
-/* line 109, style.scss */
+/* line 82, style.scss */
 #dismiss {
   color: white;
   text-shadow: 0px 1px 0px silver;
 }
 
-/* line 115, style.scss */
+/* line 88, style.scss */
 #locating p {
   text-shadow: none;
 }
 
-/* line 119, style.scss */
+/* line 92, style.scss */
 #details-extra-page div[data-role="content"] {
   padding: 1em 0;
 }
-/* line 122, style.scss */
+/* line 95, style.scss */
 #details-extra-page div[data-role="content"] label {
   font-weight: bold;
 }
-/* line 126, style.scss */
+/* line 99, style.scss */
 #details-extra-page div[data-role="content"] h2 {
   margin: 0;
 }
