@@ -295,11 +295,7 @@ var tpl = {
                 if ( typeof device !== 'undefined' && device.platform === 'iOS' ) {
                     var model = parseInt(device.model.replace('iPhone',''), 10);
                     FMS.iPhoneModel = model;
-
-                    // fix overlap of status bar in ios7
-                    if (parseFloat(window.device.version) >= 7.0) {
-                        $('body').addClass('ios7');
-                    }
+                    $('body').addClass('ios');
                 }
 
                 _.extend(FMS, {
@@ -318,9 +314,6 @@ var tpl = {
                 }
 
                 FMS.windowHeight = $(window).height();
-                if ( $('body').hasClass('ios7') ) {
-                    FMS.windowHeight -= 20;
-                }
 
                 if ( localStorage.usedBefore ) {
                     FMS.usedBefore = 1;

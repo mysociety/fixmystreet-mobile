@@ -1,11 +1,11 @@
 /* line 8, style.scss */
-.ios7 .ui-bar-a,
-body.ios7 {
+.ios .ui-bar-a,
+body.ios {
   background-color: #005cb9;
 }
 
 /* line 13, style.scss */
-.ios7 .ui-bar-a {
+.ios .ui-bar-a {
   border-color: #005cb9;
 }
 

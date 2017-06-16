@@ -202,13 +202,9 @@ OpenLayers.Map.prototype.getCurrentSize = function() {
 function show_map(event) {
     if (typeof fixmystreet !== 'undefined' && fixmystreet.page == 'around') {
         // Immediately go full screen map if on around page
-        var mapTop = 0;
-        if ( $('body').hasClass('ios7') ) {
-            mapTop = 20;
-        }
         $('#map_box').css({
             position: 'fixed',
-            top: mapTop, left: 0, right: 0, bottom: 0,
+            top: 0, left: 0, right: 0, bottom: 0,
             height: FMS.windowHeight,
             margin: 0
         });

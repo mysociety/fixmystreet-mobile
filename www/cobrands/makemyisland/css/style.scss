@@ -3,12 +3,12 @@
 $yellow: rgb(249, 255, 198);
 $blue: rgb(159, 217, 234);
 
-.ios7 .ui-bar-a,
-body.ios7 {
+.ios .ui-bar-a,
+body.ios {
     background-color: $blue;
 }
 
-.ios7 .ui-bar-a {
+.ios .ui-bar-a {
     border-color: $blue;
 }
 
