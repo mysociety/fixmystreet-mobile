@@ -36,3 +36,8 @@ var CONFIG = {
     // Bing Maps API key if needed
     BING_MAPS_API_KEY: ''
 };
+
+
+// This bit is so this can be imported as a nodejs module for hook processing
+var module = module || {};
+module.exports = CONFIG;
