@@ -66,8 +66,6 @@
         <splash height="1334" src="res/ios/splash/Default-750@2x~iphone6-portrait_750x1334.png" width="750" />
         <splash height="2208" src="res/ios/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" width="1242" />
     </platform>
-    <engine name="android" spec="^5.1.1" />
-    <engine name="ios" spec="^4.4.0" />
     <plugin name="cordova-plugin-camera" spec="~2.1.1" />
     <plugin name="cordova-plugin-device" spec="~1.1.1" />
     <plugin name="cordova-plugin-dialogs" spec="~1.2.0" />
@@ -86,4 +84,6 @@
     <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
     <plugin name="ionic-plugin-keyboard" spec="~2.0.1" />
     <hook src="scripts/prepare_index_html.js" type="after_prepare" />
+    <engine name="ios" spec="~4.4.0" />
+    <engine name="android" spec="~6.2.3" />
 </widget>
