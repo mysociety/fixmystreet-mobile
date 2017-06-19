@@ -59,3 +59,7 @@ var CONFIG = {
         }
     }
 };
+
+// This bit is so this can be imported as a nodejs module for hook processing
+var module = module || {};
+module.exports = CONFIG;
