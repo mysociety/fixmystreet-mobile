@@ -11,13 +11,6 @@
     <access origin="http://127.0.0.1*" />
     <access origin="*://*.openstreetmap.org" />
     <access origin="*://*.opencyclemap.org" />
-    <access origin="*://tilma.mysociety.org" />
-    <access origin="*://a.tilma.mysociety.org" />
-    <access origin="*://b.tilma.mysociety.org" />
-    <access origin="*://c.tilma.mysociety.org" />
-    <access origin="*://a-tilma.mysociety.org" />
-    <access origin="*://b-tilma.mysociety.org" />
-    <access origin="*://c-tilma.mysociety.org" />
     <access origin="*://dev.virtualearth.net" />
     <access origin="*://ecn.t0.tiles.virtualearth.net" />
     <access origin="*://ecn.t1.tiles.virtualearth.net" />
@@ -92,4 +85,5 @@
     <plugin name="cordova-plugin-statusbar" spec="~2.1.2" />
     <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
     <plugin name="ionic-plugin-keyboard" spec="~2.0.1" />
+    <hook src="scripts/prepare_index_html.js" type="after_prepare" />
 </widget>
