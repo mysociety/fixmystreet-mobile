@@ -1,6 +1,6 @@
 {
-    "name": "org.mysociety.groundcontrol",
-    "version": "1.0.1",
+    "name": "org.mysociety.groundcontrolapp",
+    "version": "1.0",
     "displayName": "Ground Control",
     "cordova": {
         "platforms": [
@@ -17,8 +17,8 @@
             "cordova-plugin-inappbrowser": {},
             "cordova-plugin-media": {},
             "cordova-plugin-media-capture": {
-                "CAMERA_USAGE_DESCRIPTION": "undefined",
-                "PHOTOLIBRARY_USAGE_DESCRIPTION": "undefined"
+                "CAMERA_USAGE_DESCRIPTION": "To take photos of problems",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": "To attach existing photos to reports"
             },
             "cordova-plugin-network-information": {},
             "cordova-plugin-splashscreen": {},
