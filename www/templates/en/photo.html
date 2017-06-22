@@ -40,7 +40,7 @@
         <% } %>
     </div>
 
-    <% if ( files.length < 3 ) { %>
+    <% if ( files.length < CONFIG.MAX_PHOTOS ) { %>
         <div class="bottom-btn">
             <input data-icon="fms-photo-existing" type="button" id="id_existing" data-theme="c" value="Add an existing photo" >
             <input data-icon="fms-photo-new" id="id_photo_button" type="button" data-theme="a" value="Take a new photo">
