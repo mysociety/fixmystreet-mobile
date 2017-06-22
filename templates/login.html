@@ -6,7 +6,7 @@
 <div data-role="content">
     <% if ( FMS.isLoggedIn ) { %>
     <div id="signed_in_row">
-        <p class="notopmargin">[% tprintf('You are signed in as %s', '<%= email %>') %]</p>
+        <p class="notopmargin">[% tprintf(loc('You are signed in as %s'), '<%= email %>') %]</p>
         <div id="err" class="nodisplay"></div>
         <div class="bottom-btn">
             <input type="button" id="logout" name="logout" value="[% loc('Sign Out') %]" data-theme="a">
@@ -27,7 +27,7 @@
             <input data-role="none" type="password" value="" name="password" id="form_password" placeholder="[% loc('Your password') %]" required>
         </div>
         <div class="noborder">
-            <input type="submit" id="login" name="login" value="Login" data-theme="a">
+            <input type="submit" id="login" name="login" value="[% loc('Login') %]" data-theme="a">
         </div>
         </form>
     </div>

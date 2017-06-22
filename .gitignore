@@ -13,4 +13,4 @@ platforms
 plugins
 compiled
 locale/lang_list
-config.xml
+/config.xml

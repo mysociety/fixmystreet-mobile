@@ -434,6 +434,7 @@
             },
 
             locationCheckFailed: function() {
+                this.finishedLocating();
                 this.displayAlert(FMS.strings.location_check_failed);
             },
 

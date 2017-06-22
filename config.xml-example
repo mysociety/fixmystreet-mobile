@@ -105,5 +105,6 @@
     <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
     <plugin name="ionic-plugin-keyboard" spec="~2.0.1" />
     <engine name="android" spec="~5.1.1" />
+    <hook src="scripts/prepare_index_html.js" type="after_prepare" />
 </widget>
 

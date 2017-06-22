@@ -1,0 +1,37 @@
+<div data-role="header">
+        <a data-rel="back" data-icon="arrow-l" class="ui-btn-left">Atrás</a>
+        <h1>Añadir foto</h1>
+        <% if ( file == '' ) { %>
+        <a id="photo-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Saltar</a>
+        <% } else { %>
+        <a id="photo-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Siguiente</a>
+        <% } %>
+</div>
+<div data-role="content">
+        <% var photoClass = 'nodisplay', nophotoClass = 'nodisplay';
+        if ( file != '' ) { 
+            photoClass = '';
+        } else { 
+            nophotoClass = '';
+        } %>
+    <h2 id="nophoto_title" class="<% print( nophotoClass ); %>">
+        Añadir una foto <em>(opcional)</em>
+    </h2>
+    <h2 id="photo_title" class="<% print( photoClass ); %>">
+        Foto para el informe
+    </h2>
+    <div class="photo-wrapper">
+    <div class="photo">
+    <% if ( file == '' ) { %>
+        <img class="placeholder" src="images/placeholder-photo.png" alt="" id="photo">
+    <% } else { %>
+        <img class="small" id="photo" src="<%= file %>" />
+    <% } %>
+    <a data-role="none" id="id_del_photo_button" class="photo-corner-button">X</a>
+    </div>
+    </div>
+    <div class="bottom-btn">
+        <input data-icon="fms-photo-existing" type="button" id="id_existing" data-theme="c" value="Añadir una foto existente" >
+        <input data-icon="fms-photo-new" id="id_photo_button" type="button" data-theme="a" value="Tomar una nueva foto">
+    </div>
+</div>

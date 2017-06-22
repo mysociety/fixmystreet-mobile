@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin id="cordova-plugin-ios-displayname" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>iOS Display Name</name>
+    <author>mySociety</author>
+    <description>
+        Cordova/Phonegap plugin that allows you to control the iOS display name of your app.
+    </description>
+    <keywords>cordova, ios, app, name, cfbundledisplayname</keywords>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <preference name="IOS_DISPLAY_NAME"/>
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="CFBundleDisplayName">
+            <string>$IOS_DISPLAY_NAME</string>
+        </config-file>
+    </platform>
+</plugin>

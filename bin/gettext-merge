@@ -31,7 +31,7 @@ do
         echo $X
         if [ -e FixMyStreetMobileApp.po ]
         then
-            msgmerge -o New.po FixMyStreetMobileApp.po ../../FixMyStreetMobileApp.po
+            msgmerge --no-wrap -o New.po FixMyStreetMobileApp.po ../../FixMyStreetMobileApp.po
             mv New.po FixMyStreetMobileApp.po
         fi
         cd - >/dev/null

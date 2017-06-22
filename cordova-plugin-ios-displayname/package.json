@@ -1,0 +1,28 @@
+{
+  "name": "cordova-plugin-ios-displayname",
+  "version": "1.0.0",
+  "description": "\n        Cordova/Phonegap plugin that allows you to control the iOS display name of your app.\n    ",
+  "cordova": {
+    "id": "cordova-plugin-ios-displayname",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "ios",
+    "app",
+    "name",
+    "cfbundledisplayname",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "",
+  "license": "MIT"
+}

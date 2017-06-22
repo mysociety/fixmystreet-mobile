@@ -1,0 +1,28 @@
+{
+  "name": "cordova-plugin-ios-app-language",
+  "version": "1.0.0",
+  "description": "\n        Cordova/Phonegap plugin that allows you to control the iOS localization used by the UI\n    ",
+  "cordova": {
+    "id": "cordova-plugin-ios-app-language",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "ios",
+    "app",
+    "name",
+    "cfbundlelocalizations",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "",
+  "license": "MIT"
+}

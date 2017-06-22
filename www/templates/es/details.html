@@ -1,0 +1,22 @@
+<div data-role="header">
+        <a data-rel="back" data-icon="arrow-l" class="ui-btn-left">Atrás</a>
+        <h1>Detalles</h1>
+        <a id="next" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Siguiente</a>
+</div>
+<div data-role="content">
+    <div class="gmailstyletest">
+        <div>
+            <label for="form_title">Título</label>
+            <input data-role="none" type="text" name="title" id="form_title" placeholder="Indique un título" value="<%= title %>" required>
+        </div>
+
+        <div>
+            <%= categories %>
+        </div>
+
+        <div class="noborder">
+            <label for="form_detail">Detalles</label>
+            <textarea data-role="none" name="detail" id="form_detail" placeholder="Por favor, provea detalles del problema." required><%= details %></textarea>
+        </div>
+    </div>
+</div>
