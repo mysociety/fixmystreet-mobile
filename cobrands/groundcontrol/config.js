@@ -46,6 +46,9 @@ var CONFIG = {
     // and 'next' doesn't appear until at least one photo is attached.
     PHOTO_REQUIRED: true,
 
+    // The maximum number of photos the user can attach to a report.
+    MAX_PHOTOS: 10,
+
     // If this is true then the user must login as the first step after
     // installing the app, and before making any reports.
     LOGIN_REQUIRED: true,
