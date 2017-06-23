@@ -25,6 +25,11 @@ msgstr ""
 msgid "(optional)"
 msgstr "(opcional)"
 
+#: templates/photo.html:20
+#, fuzzy
+msgid "(required)"
+msgstr "requerido(a)"
+
 #: templates/existing.html:12 templates/strings.js:42
 msgid "-- Pick a category --"
 msgstr "-- Seleccione una categoría --"
@@ -42,10 +47,11 @@ msgid "Account"
 msgstr "Cuenta"
 
 #: templates/photo.html:3
-msgid "Add Photo"
+#, fuzzy
+msgid "Add Photos"
 msgstr "Añadir foto"
 
-#: templates/photo.html:18
+#: templates/photo.html:16
 msgid "Add a Photo"
 msgstr "Añadir una foto"
 
@@ -53,7 +59,7 @@ msgstr "Añadir una foto"
 msgid "Add a Photo "
 msgstr "Añadir una foto "
 
-#: templates/offline.html:56 templates/photo.html:34
+#: templates/offline.html:56 templates/photo.html:45
 msgid "Add an existing photo"
 msgstr "Añadir una foto existente"
 
@@ -215,7 +221,7 @@ msgid "New Report Here"
 msgstr "Nuevo informe aquí"
 
 #: templates/details.html:4 templates/details_extra.html:4
-#: templates/photo.html:7 templates/strings.js:23
+#: templates/photo.html:9 templates/strings.js:23
 msgid "Next"
 msgstr "Siguiente"
 
@@ -255,8 +261,9 @@ msgstr "Número de teléfono"
 msgid "Photo added"
 msgstr "Foto añadida"
 
-#: templates/photo.html:21
-msgid "Photo for report"
+#: templates/photo.html:25
+#, fuzzy
+msgid "Photos for report"
 msgstr "Foto para el informe"
 
 #: templates/strings.js:11
@@ -403,7 +410,7 @@ msgstr "¡Sesión abierta!"
 msgid "Signed out!"
 msgstr "¡Sesión cerrada!"
 
-#: templates/offline.html:4 templates/photo.html:5
+#: templates/offline.html:4 templates/photo.html:6
 msgid "Skip"
 msgstr "Saltar"
 
@@ -423,7 +430,7 @@ msgstr "Título"
 msgid "Submit"
 msgstr "Enviar"
 
-#: templates/offline.html:55 templates/photo.html:35
+#: templates/offline.html:55 templates/photo.html:46
 msgid "Take a new photo"
 msgstr "Tomar una nueva foto"
 
