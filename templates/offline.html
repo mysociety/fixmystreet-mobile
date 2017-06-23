@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <% if ( file != '' ) { %>
+        <% if ( files.length > 0 ) { %>
         <div id="add_photo" style="display: none">
         <% } else { %>
         <div id="add_photo">
@@ -56,16 +56,16 @@
             <input data-icon="fms-photo-existing" value="[% loc('Add an existing photo') %]" type="button" name="existing" id="id_existing" data-role="button" data-theme="c">
         </div>
 
-        <% if ( file == '' ) { %>
+        <% if ( files.length == 0 ) { %>
         <div id="display_photo" style="display: none">
         <% } else { %>
         <div id="display_photo">
         <% } %>
             <label>[% loc('Your Photo') %]</label>
             <div class="photo">
-            <img class="small" id="photo" src="<%= file %>" />
+            <img class="small" id="photo" src="<%= files[0] %>" />
             </div>
-            <input value="[% loc('Remove Photo') %]" type="button" name="del_photo_button" id="id_del_photo_button" data-role="button" data-theme="a">
+            <input value="[% loc('Remove Photo') %]" type="button" name="del_photo_button" class="del_photo_button" data-role="button" data-theme="a">
         </div>
     </div>
 </div>
