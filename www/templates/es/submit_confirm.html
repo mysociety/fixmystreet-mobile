@@ -5,11 +5,11 @@
 
 <div data-role="content">
     <p class="notopmargin">
-    You are logged in as <%= user.email %>.
+    Estas registrado como <%= user.email %>.
     </p>
 
     <p>
-    Por favor, confirme su nombre, si quiere que se haga público y opcionalmente su número de teléfono.
+    Por favor confirme si desea mostrar su nombre o telefono en el reporte público.
     </p>
 
     <div id="errors"></div>
@@ -27,7 +27,7 @@
             <input data-role="none" type="text" value="<%= user.name %>" name="name" id="form_name" placeholder="Por favor, introduzca su nombre" required>
         </div>
         <div>
-            <input data-role="none" type="tel" value="<%= user.phone %>" name="name" id="form_phone" placeholder="Opcionalmente introduzca su número de teléfono">
+            <input data-role="none" type="tel" value="<%= user.phone %>" name="name" id="form_phone" placeholder="Número de telefono (opcional)">
         </div>
         <div class="checkbox-group noborder">
             <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <% if ( typeof user.may_show_name == 'undefined' || user.may_show_name ) { %>checked<% } %>>
