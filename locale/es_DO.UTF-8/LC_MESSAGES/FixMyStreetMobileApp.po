@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the main FixMyStreet code.
 # Struan Donald <struan@mysociety.org>, 2013.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: my-society\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
 "POT-Creation-Date: 2017-06-22 15:28+0100\n"
-"PO-Revision-Date: 2017-03-06 13:18-0500\n"
+"PO-Revision-Date: 2017-06-26 15:22+0100\n"
 "Last-Translator: applingua <team@applingua.com>\n"
 "Language-Team: Spanish, Dominican Republic\n"
 "Language: es_DO\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
+"X-Generator: Poedit 2.0.2\n"
 "X-Crowdin-Project: my-society\n"
 "X-Crowdin-Language: es-DO\n"
 "X-Crowdin-File: FixMyStreet.po\n"
@@ -32,11 +31,11 @@ msgstr "-- Seleccione una categoría --"
 
 #: templates/submit.html:56
 msgid "<strong>No</strong> Let me confirm my report by email"
-msgstr ""
+msgstr "<strong>No</strong>- confirmar mi notificación por email"
 
 #: templates/submit.html:46
 msgid "<strong>Yes</strong> I have a password"
-msgstr ""
+msgstr "<strong>Sí</strong>- tengo una contraseña"
 
 #: templates/around.html:7
 msgid "Account"
@@ -84,9 +83,8 @@ msgid "Confirm Location"
 msgstr "Confirmar ubicación"
 
 #: templates/submit.html:18
-#, fuzzy
 msgid "Confirm details"
-msgstr "Más detalles"
+msgstr "Confirmar detalles"
 
 #: templates/submit_password.html:47
 msgid "Confirm name"
@@ -122,7 +120,7 @@ msgstr "Descartar"
 
 #: templates/submit.html:42
 msgid "Do you have a %s password?"
-msgstr ""
+msgstr "¿Tiene una contraseña %s?"
 
 #: templates/reports.html:3
 msgid "Draft Reports"
@@ -137,9 +135,8 @@ msgid "Enter a nearby GB postcode, or street name and area"
 msgstr "Introduzca un código postal cercano, o el nombre de una calle o área"
 
 #: templates/submit.html:76
-#, fuzzy
 msgid "Enter a password (optional)"
-msgstr "Por favor, introduzca la contraseña"
+msgstr "Introduzca una contraseña (opcional)"
 
 #: templates/submit_set_password.html:11
 msgid "Enter a password for your account. This won't be activated till you click the link in the confirmation email"
@@ -211,7 +208,7 @@ msgstr "Más de una ubicación corresponde a ese nombre. Seleccione una abajo o 
 
 #: templates/submit.html:20 templates/submit.html:59
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: templates/around.html:41
 msgid "New Report Here"
@@ -247,13 +244,12 @@ msgid "Optionally enter your phone number"
 msgstr "Opcionalmente introduzca su número de teléfono"
 
 #: templates/submit.html:72
-#, fuzzy
 msgid "Password"
-msgstr "Su contraseña"
+msgstr "Contraseña"
 
 #: templates/submit.html:28 templates/submit.html:67
 msgid "Phone number"
-msgstr ""
+msgstr "Número de teléfono"
 
 #: templates/strings.js:49
 msgid "Photo added"
@@ -269,7 +265,7 @@ msgstr "Por favor, seleccione una categoría"
 
 #: templates/submit_confirm.html:12 templates/submit_password.html:22
 msgid "Please confirm your name, if you want it to be public and optionally your phone number."
-msgstr "Por favor, confirme su nombre, si quiere que se haga público y opcionalmente su número de teléfono."
+msgstr "Por favor confirme si desea mostrar su nombre o telefono en el reporte público."
 
 #: templates/strings.js:36
 msgid "Please enter a location"
@@ -351,7 +347,7 @@ msgstr "Reposicione el informe aquí"
 
 #: templates/submit.html:88
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: templates/strings.js:53
 msgid "Save for Later"
@@ -363,7 +359,7 @@ msgstr "Guardar para más tarde"
 
 #: templates/submit.html:86
 msgid "Save this report for completion later"
-msgstr ""
+msgstr "Guardar este informe para finalizarlo más tarde"
 
 #: templates/existing.html:13
 msgid "Saved in the %s category"
@@ -425,7 +421,7 @@ msgstr "Título"
 
 #: templates/submit.html:3
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: templates/offline.html:55 templates/photo.html:35
 msgid "Take a new photo"
@@ -448,9 +444,8 @@ msgid "There isn't an internet connection, do you want to save the current repor
 msgstr "No hay conexión al internet, ¿quiere guardar el presente informe para más tarde?"
 
 #: templates/android_error.html:14
-#, fuzzy
 msgid "There seems to have been a problem starting the app. Please quit and try again."
-msgstr "Hubo un problema al enviar su informe. Por favor, inténtelo de nuevo más tarde."
+msgstr "Ha sido un problema comenzando el app. Por favour, salirlo y intentar comenzarlo de nuevo."
 
 #: templates/strings.js:38
 msgid "There was a problem checking if we have all the details we need. Please try again later."
@@ -543,21 +538,20 @@ msgid "We've sent you a confirmation email which may take a few minutes to arriv
 msgstr "Le hemos enviado un email de confirmación que le llegará en unos minutos. Una vez que llegue haga click sobre el enlace dentro del email para confirmar su informe."
 
 #: templates/submit.html:48
-#, fuzzy
 msgid "Yes I have a password"
-msgstr "Por favor, introduzca la contraseña"
+msgstr "Sí, tengo una contraseña"
 
 #: templates/submit_confirm.html:8
 msgid "You are logged in as %s"
-msgstr ""
+msgstr "Estas registrado como %s"
 
 #: templates/login.html:9
 msgid "You are signed in as %s"
-msgstr ""
+msgstr "Estas registrado como %s"
 
 #: templates/submit.html:15
 msgid "You are signed in as <span id=\"username\">%s</span>"
-msgstr ""
+msgstr "Estas registrado como <span id=\"username\">%s</span>"
 
 #: templates/login.html:24
 msgid "Your Email"
@@ -574,14 +568,12 @@ msgid "Your details"
 msgstr "Sus detalles"
 
 #: templates/submit.html:38
-#, fuzzy
 msgid "Your email"
 msgstr "Su email"
 
 #: templates/submit.html:21 templates/submit.html:60
-#, fuzzy
 msgid "Your name"
-msgstr "Confirmar nombre"
+msgstr "Su nombre"
 
 #: templates/login.html:27 templates/submit.html:50
 #: templates/submit_password.html:12 templates/submit_set_password.html:15
@@ -589,9 +581,8 @@ msgid "Your password"
 msgstr "Su contraseña"
 
 #: templates/submit.html:29 templates/submit.html:68
-#, fuzzy
 msgid "Your phone number (optional)"
-msgstr "Por favor, introduzca su número de teléfono (opcional)"
+msgstr "Número de telefono (opcional)"
 
 #: templates/save_offline.html:13
 msgid "discard"
