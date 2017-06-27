@@ -30,6 +30,7 @@
             location_error: '[% loc('Location error') %]',
             location_problem: '[% loc('There was a problem looking up your location.') %]',
             multiple_locations: '[% loc('More than one location matched that name. Select one below or try entering street name and area, or a postcode.') %]',
+            multiple_matches: '[% loc('Multiple matches found') %]',
             sync_error: '[% loc('An error was encountered when submitting your report: ') %]',
             unknown_sync_error: '[% loc('There was a problem submitting your report. Please try again later.') %]',
             report_send_error: '[% loc('There was a problem submitting your report. Please try again.') %]',

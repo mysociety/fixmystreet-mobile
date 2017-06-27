@@ -1,0 +1,35 @@
+<h1>Om <% print( CONFIG.APP_NAME ) %></h1>
+<dl>
+    <dt>Vad är <% print( CONFIG.APP_NAME ) %>?</dt>
+    <dd><% print( CONFIG.APP_NAME ) %> är en app för att underlätta rapportering av problem i gatumiljön till kommuner.</dd>
+
+    <dt>Hur används appen?</dt>
+    <dd>Appen kommer att försöka hitta din position automatiskt, alternativet är att söka på postnummer eller plats. För att rapportera ett problem, navigera kartan så att platsen med problemet lokaliseras och klicka på 'Ny rapportering här'.</dd>
+
+    <dt>Vad händer med informationen som jag anger?</dt>
+    <dd><strong>All information som du anger kommer att skickas till kommunen.</strong> Din rapports titel, kategori och detaljer kommer att visas offentligt på <% print( CONFIG.APP_NAME ) %>. Som standard visas också ditt namn på <% print( CONFIG.APP_NAME ) %>, men du kan göra ett aktivt val för att dölja uppgiften. <strong>Din e-postadress eller ditt telefonnummer kommer aldrig visas offentligt på <% print( CONFIG.APP_NAME ) %></strong>.</dd>
+
+    <dt>Hur kan jag välja att vara anonym?</dt>
+    <dd>Avmarkera 'Visa mitt namn offentligt' när du fyller i dina uppgifter så kommer ditt namn inte att visas på <% print( CONFIG.APP_NAME ) %>. <strong>Ditt namn, din e-postadress och ditt telefonnummer (om du anger det) kommer alltid att skickas till kommunen.</strong></dd>
+
+    <dt>Vad gör jag om jag om personlig information angivits i en rapport av misstag?</dt>
+    <dd>Kontakta <% print( CONFIG.APP_NAME ) %>-supporten på <a href="mailto:info@fixamingata.se">info@fixamingata.se</a> så hjälper vi dig.</dd>
+
+    <dt>Hur kan jag återställa mitt lösenord?</dt>
+    <dd>Om du har glömt bort ditt lösenord kan det återställas genom att välja 'Sätt ett lösenord'-alternativet vid nästa tillfälle en rapport skapas. Notera att du alltid måste klicka på länken i bekräftelsemejlet för att aktivera eller ändra ditt lösenord.</dd>
+
+    <dt>Vilken sorts problem skall jag rapportera med <% print( CONFIG.APP_NAME ) %>?</dt>
+    <dd><% print( CONFIG.APP_NAME ) %> är huvudsakligen till för att rapportera saker som är <strong>trasiga, smutsiga, skadade, tippade, eller behöver lagas, rensas eller städas upp</strong>.</dd>
+
+    <dt>Vad är <% print( CONFIG.APP_NAME ) %> inte till för?</dt>
+    <dd><% print( CONFIG.APP_NAME ) %> är inte till för att kontakta din kommun i andra ärenden än ovan. Vänligen använd bara <% print( CONFIG.APP_NAME ) %> för ärenden som kan kopplas till angivna kategorier.</dd>
+
+    <dt>Är <% print( CONFIG.APP_NAME ) %> gratis?</dt>
+    <dd>Webbplats och app är gratis att använda.</dd>
+
+    <dt>Vilka ligger bakom <% print( CONFIG.APP_NAME ) %>?</dt>
+    <dd><% print( CONFIG.APP_NAME ) %> är en e-tjänst som drivs av <a href="http://sambruk.se/">Föreningen Sambruk</a> och är framtagen i samarbete med <a href="http://kivos.se/">KIVOS</a> och <a href="http://ffkp.se/">FFKP</a>. <% print( CONFIG.APP_NAME ) %> är baserad på FixMyStreet, ett projekt skapat av brittiska <a onclick="FMS.openExternal(event); return false;" href="http://www.mysociety.org/">mySociety</a>.</dd>
+    <dt>Tack till...</dt>
+    <dd>
+    <a onclick="FMS.openExternal(event); return false;" href="http://www.openstreetmap.org/">OpenStreetMap</a> och <a onclick="FMS.openExternal(event); return false;" href="http://www.mapquest.com/">MapQuest</a> (för kartorna), fri programvarurörelsen (detta projekt använder Phonegap, Backbone, och jQuery Mobile) och FixMyStreet. Säg till om vi har missat någon.</dd>
+</dl>

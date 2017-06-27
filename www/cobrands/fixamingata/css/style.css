@@ -1,0 +1,57 @@
+/* line 6, style.scss */
+.ios7 .ui-bar-a,
+body.ios7 {
+  background-color: #8dbfdc;
+}
+
+/* line 11, style.scss */
+.ios7 .ui-bar-a {
+  border-color: #8dbfdc;
+}
+
+/* line 15, style.scss */
+#load-screen,
+#locating {
+  background: #8dbfdc;
+  color: white;
+}
+
+/* line 21, style.scss */
+#locating #progress-bar {
+  background-color: #20bbdf;
+}
+
+/* line 25, style.scss */
+#view-my-reports .draft_count {
+  background-color: #4390bd;
+  color: #fff;
+  border-color: transparent;
+}
+
+/* line 31, style.scss */
+#display-help {
+  background-color: #c6deff;
+  color: grey;
+}
+
+/* line 37, style.scss */
+.ui-bar-a, .ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
+  border-color: #529eca;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc5YjRkNiIvPjxzdG9wIG9mZnNldD0iOTglIiBzdG9wLWNvbG9yPSIjYTFjYWUyIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -moz-linear-gradient(180deg, #79b4d6, #a1cae2 98%);
+  background: -webkit-linear-gradient(180deg, #79b4d6, #a1cae2 98%);
+  background: linear-gradient(-90deg, #79b4d6, #a1cae2 98%);
+}
+
+/* line 42, style.scss */
+.ui-corner-all,
+.ui-btn-corner-all {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 48, style.scss */
+#load-screen .radar,
+#locating .radar {
+  background-image: url("../images/radar-fixamingata.png");
+}

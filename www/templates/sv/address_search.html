@@ -1,0 +1,21 @@
+<div id="search-header" data-role="header">
+    <a href="#" id="locate" data-transition="slidedown" class="ui-btn-left">Avbryt</a>
+    <h1>Sök</h1>
+</div>
+<div data-role="content">
+    <div id="front-main">
+        <h3 class="notopmargin">Ange ett närliggande postnummer, eller gatunamn och område</h3>
+        <form class="inputcard" name="postcodeForm" id="postcodeForm">
+            <div>
+                <input data-role="none" type="text" name="pc" value="" id="pc" size="10" maxlength="200" placeholder="ex.v. '107 25' eller 'Vasagatan, Stockholm'">
+            </div>
+        </form>
+        <input type="button" value="Sök" id="submit" data-theme="a">
+    </div>
+
+    <div id="front-howto">
+        <% if (typeof msg != 'undefined' && msg !== '') { %>
+            <h2><%= msg %></h2>
+        <% } %>
+    </div>
+</div>

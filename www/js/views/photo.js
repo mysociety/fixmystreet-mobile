@@ -126,7 +126,7 @@
                     FMS.saveCurrentDraft(true);
                     $('#photo').attr('src', 'images/placeholder-photo.png').addClass('placeholder').removeClass('small');
 
-                    $('#photo-next-btn .ui-btn-text').text('Skip');
+                    $('#photo-next-btn .ui-btn-text').text(FMS.strings.skip);
                     $('#id_photo_button').parents('.ui-btn').show();
                     $('#id_existing').parents('.ui-btn').show();
                 });

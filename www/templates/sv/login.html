@@ -1,0 +1,43 @@
+<div id="submit-header" data-role="header">
+    <a id="reports-next-btn" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Hem</a>
+    <h1>Logga in</h1>
+</div>
+
+<div data-role="content">
+    <% if ( FMS.isLoggedIn ) { %>
+    <div id="signed_in_row">
+        <p class="notopmargin">Du är inloggad som <%= email %></p>
+        <div id="err" class="nodisplay"></div>
+        <div class="bottom-btn">
+            <input type="button" id="logout" name="logout" value="Logga ut" data-theme="a">
+        </div>
+    </div>
+    <div id="password_row" class="nodisplay">
+        <p class="notopmargin">
+        Utloggad!
+        </p>
+    <% } else { %>
+    <div id="password_row">
+    <% } %>
+        <form name="signinForm" class="inputcard" id="signinForm">
+        <div>
+            <input data-role="none" type="email" value="" name="email" id="form_email" placeholder="Din e-postadress" required>
+        </div>
+        <div>
+            <input data-role="none" type="password" value="" name="password" id="form_password" placeholder="Ditt lösenord" required>
+        </div>
+        <div class="noborder">
+            <input type="submit" id="login" name="login" value="Logga in" data-theme="a">
+        </div>
+        </form>
+    </div>
+    <div id="success_row" class="nodisplay">
+        <p class="notopmargin">
+        Inloggad!
+        </p>
+        <div id="err" class="nodisplay"></div>
+        <div class="bottom-btn">
+            <input type="button" id="logout" name="logout" value="Logga ut" data-theme="a">
+        </div>
+    </div>
+</div>

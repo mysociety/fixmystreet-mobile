@@ -49,9 +49,9 @@
 
             toggleNextButton: function() {
                 if ( this.draftHasContent() ) {
-                    $('#offline-next-btn .ui-btn-text').text('Save');
+                    $('#offline-next-btn .ui-btn-text').text(FMS.strings.save);
                 } else {
-                    $('#offline-next-btn .ui-btn-text').text('Skip');
+                    $('#offline-next-btn .ui-btn-text').text(FMS.strings.skip);
                 }
             },
 
@@ -115,7 +115,7 @@
                     FMS.saveCurrentDraft();
                     $('#photo').attr('src', '');
 
-                    $('#photo-next-btn .ui-btn-text').text('Skip');
+                    $('#photo-next-btn .ui-btn-text').text(FMS.strings.skip);
                     $('#display_photo').hide();
                     $('#add_photo').show();
                 });

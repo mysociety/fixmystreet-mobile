@@ -1,0 +1,22 @@
+<div id="report-created-header" data-role="header">
+    <a class="ui-btn-left">Hem</a>
+    <h1>Rapporten är skapad</h1>
+</div>
+<div data-role="content">
+    <% if ( typeof email_confirm != 'undefined' && email_confirm === 1 ) { %>
+    <h3>Bekräftelse via mejl har skickats</h3>
+
+    <p>
+    Vi har skickat ett bekräftelsemejl till dig. Det kan ta några minuter innan det kommer fram. Klicka på länken i meddelandet för att bekräfta din rapport.
+    </p>
+    <% } else { %>
+    <h3>Tack. Din rapport kommer genast att skickas till kommunen.</h3>
+
+    <p class="center"><input type="button" data-theme="a" id="open_report" value="Visa den på webben"></p>
+    <% } %>
+
+
+    <div class="bottom-btn">
+        <input type="button" id="id_report_another" data-theme="a" value="Skapa en ny rapport" >
+    </div>
+</div>
