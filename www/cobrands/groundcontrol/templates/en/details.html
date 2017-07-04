@@ -1,0 +1,22 @@
+<div data-role="header">
+        <a data-rel="back" data-icon="arrow-l" class="ui-btn-left">Back</a>
+        <h1>Details</h1>
+        <a id="next" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+</div>
+<div data-role="content">
+    <div class="gmailstyletest">
+        <div>
+            <label for="form_title">Subject</label>
+            <input data-role="none" type="text" name="title" id="form_title" placeholder="Provide a Summary of the Issue" value="<%= title %>" required>
+        </div>
+
+        <div>
+            <%= categories %>
+        </div>
+
+        <div class="noborder">
+            <label for="form_detail">Details</label>
+            <textarea data-role="none" name="detail" id="form_detail" placeholder="Please add any additional detail that you think would assist the GC team in quoting this works, including the size, quantity, location on site of required works etc." required><%= details %></textarea>
+        </div>
+    </div>
+</div>

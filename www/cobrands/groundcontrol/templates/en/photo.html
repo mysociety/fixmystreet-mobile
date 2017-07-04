@@ -1,0 +1,64 @@
+<div data-role="header">
+        <a data-rel="back" data-icon="arrow-l" class="ui-btn-left">Back</a>
+        <h1>Add Photos</h1>
+        <% if ( files.length == 0 ) { %>
+            <% if ( !CONFIG.PHOTO_REQUIRED ) { %>
+                <a id="photo-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Skip</a>
+            <% } %>
+        <% } else { %>
+        <a id="photo-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Next</a>
+        <% } %>
+</div>
+
+<div data-role="content">
+    <% if ( files.length == 0 ) { %>
+        <h2 id="nophoto_title">
+            Add a Photo
+            <% if ( !CONFIG.PHOTO_REQUIRED ) { %>
+                <em>(optional)</em>
+            <% } else if ( files.length == 0) { %>
+                <em>(required)</em>
+            <%} %>
+        </h2>
+    <% } else { %>
+        <h2 id="photo_title">
+            Photos for Report
+        </h2>
+    <% } %>
+
+    <div class="photo-wrapper">
+        <% if ( files.length == 0 ) { %>
+            <div class="photo">
+                <img class="placeholder" src="images/placeholder-photo.png" alt="">
+            </div>
+        <% } else { %>
+            <%
+                var groups = _.groupBy(files, function(item, index) {
+                    return Math.floor(index/2);
+                });
+                var fileIndex = 0;
+            %>
+            <% _.each(groups, function(filesGroup) { %>
+                <div class="photo-wrapper-row">
+                    <% _.each(filesGroup, function(file, index) { %>
+                        <div class="photo" style="background-image: url('<%= file %>');">
+                            <a data-role="none" class="photo-corner-button del_photo_button" data-file-index="<%= fileIndex %>">X</a>
+                        </div>
+                        <% fileIndex++; %>
+                    <% });%>
+                </div>
+            <% });%>
+        <% } %>
+    </div>
+
+    <% if ( files.length < CONFIG.MAX_PHOTOS ) { %>
+        <div class="bottom-btn">
+            <input data-icon="fms-photo-existing" type="button" id="id_existing" data-theme="c" value="Add an existing photo" >
+            <% if ( files.length == 0 ) { %>
+                <input data-icon="fms-photo-new" id="id_photo_button" type="button" data-theme="a" value="Take a new photo">
+            <% } else { %>
+                <input data-icon="fms-photo-new" id="id_photo_button" type="button" data-theme="a" value="Take another photo">
+            <% } %>
+        </div>
+    <% } %>
+</div>
