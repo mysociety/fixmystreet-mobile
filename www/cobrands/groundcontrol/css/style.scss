@@ -100,3 +100,25 @@ body.ios, .ui-bar-a {
         margin :0;
     }
 }
+
+.gmailstyletest input,
+.gmailstyletest input[type="password"],
+.gmailstyletest input[type="search"],
+.gmailstyletest input[type="email"],
+.gmailstyletest textarea,
+.gmailstyletest select,
+.gmailstyletest input[type="range"] {
+    font-size: 1.2em;
+}
+
+@media (max-width: 320px) {
+    .gmailstyletest input,
+    .gmailstyletest input[type="password"],
+    .gmailstyletest input[type="search"],
+    .gmailstyletest input[type="email"],
+    .gmailstyletest textarea,
+    .gmailstyletest select,
+    .gmailstyletest input[type="range"] {
+        font-size: 1em;
+    }
+}

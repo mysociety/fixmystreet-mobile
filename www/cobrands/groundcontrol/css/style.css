@@ -101,3 +101,27 @@ body.ios, .ui-bar-a {
 #details-extra-page div[data-role="content"] h2 {
   margin: 0;
 }
+
+/* line 104, style.scss */
+.gmailstyletest input,
+.gmailstyletest input[type="password"],
+.gmailstyletest input[type="search"],
+.gmailstyletest input[type="email"],
+.gmailstyletest textarea,
+.gmailstyletest select,
+.gmailstyletest input[type="range"] {
+  font-size: 1.2em;
+}
+
+@media (max-width: 320px) {
+  /* line 115, style.scss */
+  .gmailstyletest input,
+  .gmailstyletest input[type="password"],
+  .gmailstyletest input[type="search"],
+  .gmailstyletest input[type="email"],
+  .gmailstyletest textarea,
+  .gmailstyletest select,
+  .gmailstyletest input[type="range"] {
+    font-size: 1em;
+  }
+}
