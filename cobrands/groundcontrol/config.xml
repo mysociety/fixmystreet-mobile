@@ -27,6 +27,7 @@
     <preference name="StatusBarStyle" value="default" />
     <preference name="deployment-target" value="9.0" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="CameraUsesGeolocation" value="true" />
     <platform name="android">
         <icon density="ldpi" src="res/android/drawable-ldpi/icon.png" />
         <icon density="mdpi" src="res/android/drawable-mdpi/icon.png" />
@@ -69,21 +70,16 @@
     <hook src="scripts/prepare_index_html.js" type="after_prepare" />
     <engine name="android" spec="^6.2.3" />
     <engine name="ios" spec="^4.4.0" />
-    <plugin name="cordova-plugin-camera" spec="~2.1.1" />
-    <plugin name="cordova-plugin-device" spec="~1.1.1" />
-    <plugin name="cordova-plugin-dialogs" spec="~1.2.0" />
-    <plugin name="cordova-plugin-file" spec="~4.1.1" />
-    <plugin name="cordova-plugin-file-transfer" spec="~1.5.0" />
-    <plugin name="cordova-plugin-geolocation" spec="~2.1.0" />
-    <plugin name="cordova-plugin-inappbrowser" spec="~1.3.0" />
-    <plugin name="cordova-plugin-media" spec="~2.2.0" />
-    <plugin name="cordova-plugin-media-capture" spec="~1.4.1">
-        <variable name="CAMERA_USAGE_DESCRIPTION" value="To take photos of problems" />
-        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="To attach existing photos to reports" />
-    </plugin>
-    <plugin name="cordova-plugin-network-information" spec="~1.2.0" />
-    <plugin name="cordova-plugin-splashscreen" spec="~3.2.1" />
-    <plugin name="cordova-plugin-statusbar" spec="~2.1.2" />
-    <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
-    <plugin name="ionic-plugin-keyboard" spec="~2.0.1" />
+    <plugin name="cordova-plugin-camera-with-exif" spec="^1.2.2" />
+    <plugin name="cordova-plugin-device" spec="^1.1.6" />
+    <plugin name="cordova-plugin-dialogs" spec="^1.2.1" />
+    <plugin name="cordova-plugin-file" spec="^4.3.3" />
+    <plugin name="cordova-plugin-file-transfer" spec="^1.5.1" />
+    <plugin name="cordova-plugin-geolocation" spec="^2.1.0" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^1.3.0" />
+    <plugin name="cordova-plugin-network-information" spec="^1.2.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="^3.2.2" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.1.3" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.2.2" />
+    <plugin name="ionic-plugin-keyboard" spec="^2.0.1" />
 </widget>

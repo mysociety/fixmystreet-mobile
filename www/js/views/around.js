@@ -1,6 +1,6 @@
 (function (FMS, Backbone, _, $) {
     _.extend( FMS, {
-        AroundView: FMS.LocatorView.extend({
+        AroundView: FMS.PhotoCaptureView.extend({
             template: 'around',
             id: 'around-page',
 
@@ -18,6 +18,8 @@
                 'vclick #cancel': 'onClickCancel',
                 'vclick #confirm-map': 'onClickReport',
                 'vclick #mark-here': 'onClickMark',
+                'vclick #photo-here': 'addPhotoFromLibrary',
+                'vclick #take-photo': 'takePhoto',
                 'vclick #locate-here': 'onClickMark',
                 'vclick #reposition': 'onClickReposition',
                 'vclick a.address': 'goAddress',
@@ -184,6 +186,8 @@
                 if ( !fixmystreet.map ) {
                     $('#relocate').hide();
                     $('#mark-here').hide();
+                    $('#photo-here').hide();
+                    $('#take-photo').hide();
                     // if we are going to display the help then we don't want to focus on
                     // the search box as it will show through the help
                     if ( FMS.usedBefore ) {
@@ -213,6 +217,8 @@
                     $('#view-my-reports').hide();
                     $('#login-options').hide();
                     $('#mark-here').hide();
+                    $('#photo-here').hide();
+                    $('#take-photo').hide();
                     $('#locate-here').hide();
                     $('#postcodeForm').hide();
                     if ( fixmystreet.map ) {
@@ -231,6 +237,8 @@
                         $('#view-my-reports').show();
                         $('#login-options').show();
                         $('#mark-here').show();
+                        $('#photo-here').show();
+                        $('#take-photo').show();
                         $('#locate-here').hide();
                     }
                     $('#confirm-map').hide();
@@ -497,6 +505,27 @@
                 );
 
                 return centre;
+            },
+
+            capturePhotoSuccess: function(file, latitude, longitude) {
+                // This should be overridden by a subclass.
+                console.log("AroundView.capturePhotoSuccess: %s, latlon: %s,%s", file, latitude, longitude);
+                var files = this.model.get('files');
+                files.push(file.toURL());
+                this.model.set('files', files);
+                console.log(files);
+                this.model.set('lat', latitude );
+                this.model.set('lon', longitude );
+                FMS.saveCurrentDraft();
+
+                var that = this;
+                window.setTimeout(function() {
+                    that.rerender();
+                }, 100);
+            },
+
+            rerender: function() {
+                FMS.router.around();
             }
         })
     });

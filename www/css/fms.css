@@ -532,6 +532,12 @@
         left: 15px;
         right: 15px;
     }
+    #photo-here {
+        bottom: 90px;
+    }
+    #take-photo {
+        bottom: 141px;
+    }
 
     .bottom-btn {
         position: absolute;

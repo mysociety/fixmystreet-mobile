@@ -109,12 +109,12 @@ var tpl = {
         },
 
         checkOnlineStatus: function() {
-            if ( navigator && navigator.connection && ( navigator.connection.type == Connection.NONE ||
-                    navigator.connection.type == Connection.UNKNOWN ) ) {
-                FMS.offline();
-            } else {
+            // if ( navigator && navigator.connection && ( navigator.connection.type == Connection.NONE ||
+            //         navigator.connection.type == Connection.UNKNOWN ) ) {
+            //     FMS.offline();
+            // } else {
                 FMS.online();
-            }
+            // }
         },
 
         checkLoggedInStatus: function() {
@@ -325,7 +325,7 @@ var tpl = {
                 document.addEventListener('pause', function() { FMS.locator.stopTracking(); FMS.saveCurrentDraft(); }, false);
                 document.addEventListener('resume', onResume, false);
                 document.addEventListener('backbutton', function(e) { FMS.router.back(e); }, true);
-                document.addEventListener('offline', function() { FMS.offline(); }, true);
+                // document.addEventListener('offline', function() { FMS.offline(); }, true);
                 document.addEventListener('online', function() { FMS.online(); }, true);
 
                 $(document).on('ajaxStart', function() { $.mobile.loading('show'); } );
