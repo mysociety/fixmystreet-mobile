@@ -1,0 +1,55 @@
+{
+    "name": "org.mysociety.cuidomidn",
+    "version": "1.0.2",
+    "displayName": "CuidoMiCiudad",
+    "cordova": {
+        "platforms": [
+            "ios"
+        ],
+        "plugins": {
+            "cordova-plugin-camera": {
+                "CAMERA_USAGE_DESCRIPTION": "Para tomar fotos de problemas",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": "Para acceder a sus fotos de problemas"
+            },
+            "cordova-plugin-device": {},
+            "cordova-plugin-dialogs": {},
+            "cordova-plugin-file": {},
+            "cordova-plugin-file-transfer": {},
+            "cordova-plugin-geolocation": {
+                "GEOLOCATION_USAGE_DESCRIPTION": " "
+            },
+            "cordova-plugin-inappbrowser": {},
+            "cordova-plugin-media": {
+                "MICROPHONE_USAGE_DESCRIPTION": " "
+            },
+            "cordova-plugin-media-capture": {
+                "CAMERA_USAGE_DESCRIPTION": "Para tomar fotos de problemas",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": "Para acceder a sus fotos de problemas",
+                "MICROPHONE_USAGE_DESCRIPTION": " "
+            },
+            "cordova-plugin-network-information": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "ionic-plugin-keyboard": {}
+        }
+    },
+    "dependencies": {
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-camera": "^2.4.1",
+        "cordova-plugin-compat": "^1.1.0",
+        "cordova-plugin-device": "^1.1.6",
+        "cordova-plugin-dialogs": "^1.3.3",
+        "cordova-plugin-file": "^4.3.3",
+        "cordova-plugin-file-transfer": "^1.6.3",
+        "cordova-plugin-geolocation": "^2.4.3",
+        "cordova-plugin-inappbrowser": "^1.7.1",
+        "cordova-plugin-media": "^2.4.1",
+        "cordova-plugin-media-capture": "^1.4.3",
+        "cordova-plugin-network-information": "^1.3.3",
+        "cordova-plugin-splashscreen": "^3.2.2",
+        "cordova-plugin-statusbar": "^2.2.3",
+        "cordova-plugin-whitelist": "^1.3.2",
+        "ionic-plugin-keyboard": "^2.2.1"
+    }
+}
