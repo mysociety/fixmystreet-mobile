@@ -263,6 +263,7 @@ var tpl = {
             // Stop iOS scrolling the webview when it shows the keyboard
             if ( typeof cordova !== 'undefined' ) {
                 cordova.plugins.Keyboard.disableScroll(true);
+                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
             }
             $('#load-screen').height( $(window).height() );
             FMS.initialized = 1;
