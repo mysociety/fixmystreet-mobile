@@ -64,7 +64,12 @@ var CONFIG = {
 
     // The ratio of the data bounds to the viewport bounds (in each dimension).
     // See http://dev.openlayers.org/releases/OpenLayers-2.13.1/doc/apidocs/files/OpenLayers/Strategy/BBOX-js.html
-    MAP_LOADING_RATIO: 2
+    MAP_LOADING_RATIO: 2,
+
+    // If the user is logged in and this setting is true, the 'Your details'
+    // page is skipped and the report is sent immediately after the report
+    // details have been entered.
+    SKIP_CONFIRM_REPORT: false
 };
 
 

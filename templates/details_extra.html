@@ -1,7 +1,11 @@
 <div data-role="header" data-position="fixed">
         <a data-rel="back" data-icon="arrow-l" class="ui-btn-left">[% loc('Back') %]</a>
         <h1>[% loc('Further Details') %]</h1>
-        <a id="next" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">[% loc('Next') %]</a>
+        <% if (CONFIG.SKIP_CONFIRM_REPORT) { %>
+            <a id="next" class="ui-btn-right">[% loc('Submit') %]</a>
+        <% } else { %>
+            <a id="next" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">[% loc('Next') %]</a>
+        <% } %>
 </div>
 <div data-role="content" data-enhance="false">
     <%= category_extras %>

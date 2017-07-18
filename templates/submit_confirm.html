@@ -3,7 +3,7 @@
     <h1>[% loc('Your details') %]</h1>
 </div>
 
-<div data-role="content">
+<div data-role="content"<% if (CONFIG.SKIP_CONFIRM_REPORT) { %> class="hidden"<% } %>>
     <p class="notopmargin">
     [% tprintf(loc('You are logged in as %s'), '<%= user.email %>') %].
     </p>

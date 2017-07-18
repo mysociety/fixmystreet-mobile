@@ -468,11 +468,25 @@
                 // TODO: this is a temporary measure which should be replaced by a more
                 // sensible login mechanism
                 if ( err.check_name ) {
-                    this.onClickSubmit();
+                    this.doSubmit();
                 } else {
                     if ( err.errors && err.errors.password ) {
                         this.validationError('form_password', err.errors.password );
                     }
+                }
+            },
+
+            afterRender: function() {
+                console.log("SubmitConfirmView.afterRender");
+                if (CONFIG.SKIP_CONFIRM_REPORT) {
+                    var that = this;
+                    setTimeout(function() {
+                        // This needs to be in a setTimeout call otherwise
+                        // the app gets stuck on an empty "Your Details" page.
+                        // This is something to do with the way Backbone routes
+                        // between views, I believe.
+                        that.doSubmit();
+                    }, 10);
                 }
             }
         })
