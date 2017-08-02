@@ -64,7 +64,9 @@ var CONFIG = {
 
     // The ratio of the data bounds to the viewport bounds (in each dimension).
     // See http://dev.openlayers.org/releases/OpenLayers-2.13.1/doc/apidocs/files/OpenLayers/Strategy/BBOX-js.html
-    MAP_LOADING_RATIO: 3
+    MAP_LOADING_RATIO: 3,
+
+    SKIP_CONFIRM_REPORT: true
 };
 
 // This bit is so this can be imported as a nodejs module for hook processing

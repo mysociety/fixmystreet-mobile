@@ -67,7 +67,6 @@
         <splash height="2208" src="res/ios/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" width="1242" />
     </platform>
     <hook src="scripts/prepare_index_html.js" type="after_prepare" />
-    <engine name="ios" spec="^4.4.0" />
     <plugin name="cordova-plugin-camera" spec="^2.4.1">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="To take photos of problems" />
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="To attach existing photos to reports" />
@@ -93,4 +92,6 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.2.3" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <plugin name="ionic-plugin-keyboard" spec="^2.1.0" />
+    <engine name="ios" spec="^4.4.0" />
+    <engine name="android" spec="~6.2.3" />
 </widget>
