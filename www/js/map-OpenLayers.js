@@ -128,7 +128,7 @@ function fixmystreet_onload() {
     fixmystreet.map.addLayer(fixmystreet.report_location);
 
     if (fixmystreet.page == 'around') {
-        fixmystreet.bbox_strategy = new OpenLayers.Strategy.BBOX({ ratio: 1 });
+        fixmystreet.bbox_strategy = new OpenLayers.Strategy.BBOX({ ratio: CONFIG.MAP_LOADING_RATIO });
         pin_layer_options.strategies = [ fixmystreet.bbox_strategy ];
         pin_layer_options.protocol = new OpenLayers.Protocol.HTTP({
             url: CONFIG.FMS_URL + '/ajax',
