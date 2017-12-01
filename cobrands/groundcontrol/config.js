@@ -60,7 +60,11 @@ var CONFIG = {
             image_svg: 'images/pin.svg',
             background_svg: 'images/pin_shadow.svg',
         }
-    }
+    },
+
+    // The ratio of the data bounds to the viewport bounds (in each dimension).
+    // See http://dev.openlayers.org/releases/OpenLayers-2.13.1/doc/apidocs/files/OpenLayers/Strategy/BBOX-js.html
+    MAP_LOADING_RATIO: 3
 };
 
 // This bit is so this can be imported as a nodejs module for hook processing
