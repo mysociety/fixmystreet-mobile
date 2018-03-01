@@ -53,7 +53,9 @@
             try_again: '[% loc('Try Again') %]',
             save_for_later: '[% loc('Save for Later') %]',
             no_connection: '[% loc('No network connection available for submitting your report. Please try again later.') %]',
-            more_details: '[% loc('More details') %]'
+            more_details: '[% loc('More details') %]',
+            skip: '[% loc('Skip') %]',
+            save: '[% loc('Save') %]'
         }
     });
 })(FMS, _);
