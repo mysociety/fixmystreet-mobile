@@ -52,6 +52,14 @@
                 viewHeight = $(window).height(),
                 contentHeight = FMS.windowHeight - header.outerHeight() - this.bottomMargin;
 
+                if ($("body").hasClass("iphone-x")) {
+                    var body = $("body").get(0);
+                    var inset = window.getComputedStyle(body).getPropertyValue("--safe-area-inset-bottom");
+                    // We want the pixel value, not the CSS string
+                    inset = parseInt(inset.replace(/[^\d]*/g, ''));
+                    contentHeight -= inset;
+                }
+
                 this.setHeight( content, contentHeight - top );
             },
 

@@ -278,6 +278,13 @@ var tpl = {
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
             }
             $('#load-screen').height( $(window).height() );
+
+            // Rough-and-ready iPhone X detection so CSS can stop things
+            // obscuring the home indicator at the bottom of the screen.
+            if (window.screen.width == 375 && window.screen.height == 812) {
+                $("body").addClass("iphone-x");
+            }
+
             FMS.initialized = 1;
             if ( navigator && navigator.splashscreen ) {
                 navigator.splashscreen.hide();
