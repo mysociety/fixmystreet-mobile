@@ -6,13 +6,14 @@ $gc_light_green: rgb(178, 210, 53);
 
 $text-color: #222;
 
-.ios7 .ui-bar-a,
-body.ios7 {
-    background-color: white;
+.ios .ui-bar-a,
+body.ios, .ui-bar-a {
+    background: white;
 }
 
-.ios7 .ui-bar-a {
+.ios .ui-bar-a, .ui-bar-a {
     border-color: white;
+    color: $text-color;
 }
 
 #load-screen,
@@ -36,10 +37,10 @@ body.ios7 {
 }
 
 
-.ui-bar-a, .ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
+.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
     color: $text-color;
     border-color: darken($gc_orange, 15%);
-    @include background(lighten($gc_orange, 5%));
+    background: lighten($gc_orange, 5%);
 }
 
 .ui-corner-all,
@@ -64,6 +65,7 @@ body.ios7 {
 
 #login .ui-header.loggedout {
     visibility: hidden;
+    display: none;
 }
 
 
@@ -71,40 +73,11 @@ body.ios7 {
     max-width: 100%;
 }
 
-
-
-
 #load-screen .radar,
 #locating .radar {
     background-image: url('../images/gc-logo-big.jpg');
     background-size: contain;
 }
-
-
-
-// Use white icons in buttons
-//.ui-icon {
-//    background-image: url("../../../css/images/icons-18-white.png");
-//}
-//@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
-//       only screen and (min--moz-device-pixel-ratio: 1.3),
-//       only screen and (min-resolution: 200dpi) {
-//    .ui-icon {
-//       background-image: url("../../../css/images/icons-36-white.png");
-//    }
-//}
-//
-//div[data-role='header'] .ui-icon-fms-account {
-//    background-image: url(../../../images/user-white@x2.png);
-//    background-size: 18px 18px;
-//}
-//@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
-//       only screen and (min--moz-device-pixel-ratio: 1.3),
-//       only screen and (min-resolution: 200dpi) {
-//    div[data-role='header'] .ui-icon-fms-account {
-//        background-image: url(../../../images/user-white@x2.png);
-//    }
-//}
 
 #dismiss {
     color: white;
