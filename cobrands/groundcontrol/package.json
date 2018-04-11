@@ -3,11 +3,15 @@
     "version": "1.1",
     "displayName": "Ground Control",
     "cordova": {
-        "platforms": [],
+        "platforms": [
+            "ios"
+        ],
         "plugins": {
             "cordova-plugin-camera": {},
             "cordova-plugin-geolocation": {},
-            "cordova-plugin-media": {},
+            "cordova-plugin-media": {
+                "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO"
+            },
             "cordova-plugin-media-capture": {},
             "cordova-plugin-splashscreen": {},
             "ionic-plugin-keyboard": {},
@@ -17,7 +21,9 @@
             "cordova-plugin-inappbrowser": {},
             "cordova-plugin-dialogs": {},
             "cordova-plugin-device": {},
-            "cordova-plugin-compat": {}
+            "cordova-plugin-compat": {},
+            "cordova-plugin-file": {},
+            "cordova-plugin-file-transfer": {}
         }
     },
     "dependencies": {
