@@ -18,6 +18,7 @@
     <access origin="*://ecn.t3.tiles.virtualearth.net" />
     <access origin="*://mapit.mysociety.org" />
     <access origin="https://reporting.ground-control.co.uk" />
+    <access origin="https://groundcontrol.eu.ngrok.io" />
     <allow-intent href="mailto:*" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
@@ -26,7 +27,6 @@
     <preference name="StatusBarStyle" value="default" />
     <preference name="deployment-target" value="9.0" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
-
     <platform name="android">
         <icon density="ldpi" src="res/android/drawable-ldpi/icon.png" />
         <icon density="mdpi" src="res/android/drawable-mdpi/icon.png" />
@@ -65,22 +65,17 @@
         <splash height="1136" src="res/ios/splash/Default-568h@2x~iphone_640x1136.png" width="640" />
         <splash height="1334" src="res/ios/splash/Default-750@2x~iphone6-portrait_750x1334.png" width="750" />
         <splash height="2208" src="res/ios/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" width="1242" />
+        <splash height="2436" src="res/ios/splash/Default-1125@3x~iphonex-portrait_1125x2436.png" width="1125" />
     </platform>
     <hook src="scripts/prepare_index_html.js" type="after_prepare" />
-    <engine name="android" spec="^6.2.3" />
-    <engine name="ios" spec="^4.4.0" />
     <plugin name="cordova-plugin-camera" spec="^2.4.1">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="To take photos of problems" />
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="To attach existing photos to reports" />
     </plugin>
-    <plugin name="cordova-plugin-device" spec="^1.1.6" />
-    <plugin name="cordova-plugin-dialogs" spec="^1.3.3" />
     <plugin name="cordova-plugin-file" spec="^4.3.3" />
-    <plugin name="cordova-plugin-file-transfer" spec="^1.6.3" />
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To create accurately positioned reports" />
     </plugin>
-    <plugin name="cordova-plugin-inappbrowser" spec="^1.7.1" />
     <plugin name="cordova-plugin-media" spec="^2.4.1">
         <variable name="MICROPHONE_USAGE_DESCRIPTION" value=" " />
     </plugin>
@@ -89,9 +84,15 @@
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="To attach existing photos to reports" />
         <variable name="MICROPHONE_USAGE_DESCRIPTION" value=" " />
     </plugin>
-    <plugin name="cordova-plugin-network-information" spec="^1.3.3" />
     <plugin name="cordova-plugin-splashscreen" spec="^3.2.2" />
-    <plugin name="cordova-plugin-statusbar" spec="^2.2.3" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <plugin name="ionic-plugin-keyboard" spec="^2.1.0" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
+    <plugin name="cordova-plugin-network-information" spec="^1.3.4" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^1.7.2" />
+    <plugin name="cordova-plugin-dialogs" spec="^1.3.4" />
+    <plugin name="cordova-plugin-device" spec="^1.1.7" />
+    <plugin name="cordova-plugin-compat" spec="^1.1.0" />
+    <engine name="android" spec="^6.2.3" />
+    <engine name="ios" spec="^4.5.4" />
 </widget>
