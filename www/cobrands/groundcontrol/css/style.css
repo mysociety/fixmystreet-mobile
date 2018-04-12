@@ -111,6 +111,10 @@ body.ios, .ui-bar-a {
   left: 0;
   background-color: rgba(64, 64, 64, 0.9);
   z-index: 100;
+  margin: 0;
+  padding: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -123,36 +127,33 @@ body.ios, .ui-bar-a {
 .pothole-size-selector.hidden {
   display: none;
 }
-/* line 125, style.scss */
+/* line 129, style.scss */
 .pothole-size-selector h2 {
   text-align: center;
   color: white;
   text-shadow: none;
-  padding: 1em;
+  padding: 0;
+  margin: 0.75em 0;
 }
-/* line 132, style.scss */
+/* line 137, style.scss */
 .pothole-size-selector ul {
-  padding: 3em;
-  margin: 0;
+  padding: 0;
+  margin: 0 0 1.5em 0;
   width: 75%;
   min-width: 300px;
 }
-/* line 138, style.scss */
-.pothole-size-selector ul li {
-  margin-bottom: 1em;
-}
-/* line 142, style.scss */
+/* line 143, style.scss */
 .pothole-size-selector ul li.not-pothole {
   margin-top: 1.5em;
 }
 
-/* line 148, style.scss */
+/* line 149, style.scss */
 .blurred {
   -webkit-filter: blur(6px);
   filter: blur(6px);
 }
 
-/* line 154, style.scss */
+/* line 155, style.scss */
 .photo .pothole-size-wrapper {
   position: absolute;
   top: 3px;
@@ -160,7 +161,7 @@ body.ios, .ui-bar-a {
   right: 0px;
   padding: 0.5em 0;
 }
-/* line 161, style.scss */
+/* line 162, style.scss */
 .photo .pothole-size-wrapper .pothole-size {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 0.5em;
@@ -168,7 +169,7 @@ body.ios, .ui-bar-a {
   font-weight: bold;
 }
 
-/* line 171, style.scss */
+/* line 172, style.scss */
 .gmailstyletest input,
 .gmailstyletest input[type="password"],
 .gmailstyletest input[type="search"],
@@ -180,7 +181,7 @@ body.ios, .ui-bar-a {
 }
 
 @media (max-width: 320px) {
-  /* line 182, style.scss */
+  /* line 183, style.scss */
   .gmailstyletest input,
   .gmailstyletest input[type="password"],
   .gmailstyletest input[type="search"],
