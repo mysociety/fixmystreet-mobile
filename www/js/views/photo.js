@@ -12,8 +12,8 @@
                 'pageshow': 'afterDisplay',
                 'vclick .ui-btn-left': 'onClickButtonPrev',
                 'vclick .ui-btn-right': 'onClickButtonNext',
-                'vclick #id_photo_button': 'takePhoto',
-                'vclick #id_existing': 'addPhoto',
+                'vclick #id_photo_button': 'takeNewPhoto',
+                'vclick #id_existing': 'addPhotoFromLibrary',
                 'vclick .del_photo_button': 'deletePhoto'
             },
 
@@ -33,7 +33,33 @@
                 $(".photo-wrapper").height(wrapperHeight);
             },
 
-            getOptions: function(isFromAlbum) {
+            takeNewPhoto: function(e) {
+                e.preventDefault();
+                this.getPhoto(false);
+            },
+
+            addPhotoFromLibrary: function(e) {
+                e.preventDefault();
+                this.getPhoto(true);
+            },
+
+            getPhoto: function(isFromAlbum) {
+                $.mobile.loading('show');
+                $('.photo-wrapper .photo img').hide();
+                var that = this;
+                var options = this.getCameraOptions(isFromAlbum);
+                navigator.camera.getPicture(
+                    function(imgURI) {
+                        that.getPhotoSuccess(imgURI);
+                    },
+                    function(error) {
+                        that.getPhotoFail(error);
+                    },
+                    options
+                );
+            },
+
+            getCameraOptions: function(isFromAlbum) {
                 var options = {
                     destinationType: Camera.DestinationType.FILE_URI,
                     sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY,
@@ -55,27 +81,7 @@
                 return options;
             },
 
-            takePhoto: function(e) {
-                e.preventDefault();
-                $.mobile.loading('show');
-                $('.photo-wrapper .photo img').hide();
-                var that = this;
-
-                var options = this.getOptions();
-
-                navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, options);
-            },
-
-            addPhoto: function(e) {
-                e.preventDefault();
-                $.mobile.loading('show');
-                $('.photo-wrapper .photo img').hide();
-                var that = this;
-                var options = this.getOptions(true);
-                navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, options);
-            },
-
-            addPhotoSuccess: function(imgURI) {
+            getPhotoSuccess: function(imgURI) {
                 var move;
                 // on iOS the photos go into a temp folder in the apps own filespace so we
                 // can move them, and indeed have to as the tmp space is cleaned out by the OS
@@ -91,19 +97,20 @@
                 }
 
                 var that = this;
-                move.done( function( file ) {
-                    var files = that.model.get('files');
-                    files.push(file.toURL());
-                    that.model.set('files', files);
-                    FMS.saveCurrentDraft();
-                    $.mobile.loading('hide');
-                    that.rerender();
-                });
-
-                move.fail( function() { that.addPhotoFail(); } );
+                move.done( function( file ) { that.addPhotoToReport(file); });
+                move.fail( function() { that.getPhotoFail(); } );
             },
 
-            addPhotoFail: function(message) {
+            addPhotoToReport: function(file) {
+                var files = this.model.get('files');
+                files.push(file.toURL());
+                this.model.set('files', files);
+                FMS.saveCurrentDraft();
+                $.mobile.loading('hide');
+                this.rerender();
+            },
+
+            getPhotoFail: function(message) {
                 $('.photo-wrapper .photo img').show();
                 $.mobile.loading('hide');
                 if ( message != 'no image selected' &&
