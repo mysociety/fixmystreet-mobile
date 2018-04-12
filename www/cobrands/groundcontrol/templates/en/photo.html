@@ -10,6 +10,18 @@
         <% } %>
 </div>
 
+<div class="pothole-size-selector hidden">
+    <h2>Size of pothole?</h2>
+    <div class="photo"></div>
+    <ul class="photo-pothole-size">
+        <% Object.entries(CONFIG.POTHOLE_SIZES).forEach(function(size) { %>
+            <li><button class="pothole-size-button" data-pothole-size="<%= size[0] %>"><%= size[1] %></button></li>
+        <% }); %>
+        <li class="not-pothole"><button class="pothole-size-button" data-pothole-size="" data-theme="a">Not a pothole</button></li>
+    </ul>
+</div>
+
+
 <div data-role="content">
     <% if ( files.length == 0 ) { %>
         <h2 id="nophoto_title">
@@ -43,6 +55,11 @@
                     <% _.each(filesGroup, function(file, index) { %>
                         <div class="photo" style="background-image: url('<%= file %>');">
                             <a data-role="none" class="photo-corner-button del_photo_button" data-file-index="<%= fileIndex %>">X</a>
+                            <% if (pothole_sizes[file]) { %>
+                                <div class="pothole-size-wrapper">
+                                    <span class="pothole-size"><%= CONFIG.POTHOLE_SIZES[pothole_sizes[file]] %></span>
+                                </div>
+                            <% } %>
                         </div>
                         <% fileIndex++; %>
                     <% });%>

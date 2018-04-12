@@ -101,6 +101,73 @@ body.ios, .ui-bar-a {
     }
 }
 
+.pothole-size-selector {
+    &.hidden {
+        display: none;
+    }
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(64,64,64,0.9);
+    z-index: 100;
+
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+
+    h2 {
+        text-align: center;
+        color: white;
+        text-shadow: none;
+        padding: 1em;
+    }
+
+    ul {
+        padding: 3em;
+        margin: 0;
+        width: 75%;
+        min-width: 300px;
+
+        li {
+            margin-bottom: 1em;
+        }
+
+        li.not-pothole {
+            margin-top: 1.5em;
+        }
+    }
+}
+
+.blurred {
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
+}
+
+.photo {
+    .pothole-size-wrapper {
+        position: absolute;
+        top: 3px;
+        left: 0px;
+        right: 0px;
+        padding: 0.5em 0;
+
+        .pothole-size {
+            background-color: rgba(255,255,255,0.85);
+            padding: 0.5em;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    }
+
+}
+
 .gmailstyletest input,
 .gmailstyletest input[type="password"],
 .gmailstyletest input[type="search"],

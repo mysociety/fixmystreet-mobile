@@ -14,6 +14,12 @@ var CONFIG = {
     // Leave as null to use the default templates.
     COBRAND: 'groundcontrol',
 
+    // If the cobrand needs extra JavaScript files included in index.html,
+    // list them (with full paths) here.
+    COBRAND_EXTRA_JS: [
+        'cobrands/groundcontrol/js/views/pothole_details.js',
+    ],
+
     // Type of map to use; possible options currently are 'OSM', 'Bing' or
     // 'FMS' (UK only). The default is OSM.
     MAP_TYPE: 'OSM',
@@ -66,7 +72,15 @@ var CONFIG = {
     // See http://dev.openlayers.org/releases/OpenLayers-2.13.1/doc/apidocs/files/OpenLayers/Strategy/BBOX-js.html
     MAP_LOADING_RATIO: 3,
 
-    SKIP_CONFIRM_REPORT: true
+    SKIP_CONFIRM_REPORT: true,
+
+    POTHOLE_SIZES: {
+        tiny: "Tiny",
+        small: "Small",
+        medium: "Medium",
+        large: "Large",
+        crater: "Crater"
+    }
 };
 
 // This bit is so this can be imported as a nodejs module for hook processing
