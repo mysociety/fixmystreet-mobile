@@ -134,14 +134,21 @@ body.ios, .ui-bar-a {
         margin: 0.75em 0;
     }
 
+    .photo {
+        // Give wide photos breathing room on narrow screens
+        width: 92%;
+    }
+
     ul {
         padding: 0;
         margin: 0 0 1.5em 0;
         width: 75%;
         min-width: 300px;
+        display: grid;
+        grid-template-columns: 50% 50%;
 
-        li.not-pothole {
-            margin-top: 1.5em;
+        li {
+            margin: 0 0.25em;
         }
     }
 }
