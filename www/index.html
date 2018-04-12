@@ -97,6 +97,12 @@
         <script type="text/javascript" src="js/router.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
 
+        <% if ( CONFIG.COBRAND_EXTRA_JS ) { %>
+            <% CONFIG.COBRAND_EXTRA_JS.forEach(function(path) { %>
+                <script type="text/javascript" src="<%= path %>"></script>
+            <% }); %>
+        <% } %>
+
         <script type="text/javascript">
             var fixmystreet = {
                 'page': 'around',
