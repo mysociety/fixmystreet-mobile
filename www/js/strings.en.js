@@ -51,6 +51,8 @@
             invalid_report: 'Invalid report',
             photo_failed: 'There was a problem taking your photo.',
             photo_added: 'Photo added',
+            camera_access_denied: 'Please allow access to the camera in your phone’s settings.',
+            photo_access_denied: 'Please allow access to photos in your phone’s settings.',
             photo_loading: 'Uploading images may take some time, please be patient',
             upload_aborted: 'There was a problem uploading your report.',
             try_again: 'Try Again',

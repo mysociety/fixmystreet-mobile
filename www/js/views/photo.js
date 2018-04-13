@@ -98,7 +98,7 @@
 
                 var that = this;
                 move.done( function( file ) { that.addPhotoToReport(file); });
-                move.fail( function() { that.getPhotoFail(); } );
+                move.fail( function() { that.getPhotoFail("File move failed."); } );
             },
 
             addPhotoToReport: function(file) {
@@ -113,10 +113,28 @@
             getPhotoFail: function(message) {
                 $('.photo-wrapper .photo img').show();
                 $.mobile.loading('hide');
-                if ( message != 'no image selected' &&
-                    message != 'Selection cancelled.' &&
-                    message != 'Camera cancelled.' ) {
+
+                // Rewrite errors from photo capture failure to be more friendly
+                // (and localised). Map a message to null if it shouldn't
+                // generate a dialog to the user.
+                // Missing messages from this map will default to
+                // FMS.strings.photo_failed.
+                var friendly_messages = {
+                    'no image selected': null,
+                    'No Image Selected': null,
+                    'Selection cancelled.': null,
+                    'Camera cancelled.': null,
+                    'has no access to camera': FMS.strings.camera_access_denied,
+                    // Sadly the cordova-plugin-camera plugin returns this
+                    // string on iOS if the user dismisses the photo picker,
+                    // so we can't present a more helpful 'please allow access'
+                    // message.
+                    'has no access to assets': null
+                };
+                if (typeof friendly_messages[message] === 'undefined') {
                     this.displayAlert(FMS.strings.photo_failed);
+                } else if (friendly_messages[message]) {
+                    this.displayAlert(friendly_messages[message]);
                 }
             },
 
