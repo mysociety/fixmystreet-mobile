@@ -155,6 +155,10 @@
                     params.submit_register = 1;
                 }
 
+                // So cobrands/other views can manipulate form values before
+                // sending to the server.
+                this.trigger('presync', this, params);
+
                 var that = this;
                 if ( model.get('files') && model.get('files').length > 0 ) {
                     var fileUploadSuccess = function(r) {

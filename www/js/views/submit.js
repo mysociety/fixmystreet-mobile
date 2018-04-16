@@ -47,12 +47,19 @@
                         this.navigate( 'save_offline' );
                     } else {
                         this.report = new FMS.Report( this.model.toJSON() );
+                        this.listenTo( this.report, 'presync', this.onPreReportSync );
                         this.listenTo( this.report, 'sync', this.onReportSync );
                         this.listenTo( this.report, 'invalid', this.onReportInvalid );
                         this.listenTo( this.report, 'error', this.onReportError );
                         this.report.save();
                     }
                 }
+            },
+
+            // This hook is so cobrands can make any last-minute changes
+            // to the report before its submitted to the server.
+            onPreReportSync: function(report) {
+                console.log("FMS.SubmitView.onPreReportSync", this, arguments);
             },
 
             onReportSync: function(model, resp, options) {
