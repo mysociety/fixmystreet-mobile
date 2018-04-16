@@ -137,6 +137,8 @@
         position: absolute;
         top: 50%;
         margin: 40px 10px 0px 10px;
+        left: 0;
+        right: 0;
     }
 
     .ui-loader #progress {
