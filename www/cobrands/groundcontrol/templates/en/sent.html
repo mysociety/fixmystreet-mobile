@@ -3,17 +3,20 @@
     <h1>Report Created</h1>
 </div>
 <div data-role="content">
-    <% if ( typeof email_confirm != 'undefined' && email_confirm === 1 ) { %>
-    <h3>Confirmation email sent</h3>
 
-    <p>
-    We've sent you a confirmation email which may take a few minutes to arrive. Once it arrives click the link in the email to confirm your report.
-    </p>
+    <% if (FMS.createdReport.get("quote")) { %>
+        <h3>We have received your report.</h3>
+        <% if (FMS.createdReport.get("quote_accepted") === "error") { %>
+            <p>There was an error sending your quote response.</p>
+            <p>Not to worry, we'll be in touch soon about your quote.</p>
+        <% } else if (FMS.createdReport.get("quote_accepted")) { %>
+            <p>We will be in touch about getting those potholes repaired ASAP.</p>
+        <% } else { %>
+            <p>We'll email the quote to you shortly.</p>
+        <% } %>
     <% } else { %>
-    <h3>Thanks. Your report will be sent immediately.</h3>
-
+        <h3>Thanks. Your report will be sent immediately.</h3>
     <% } %>
-
 
     <div class="bottom-btn">
         <input type="button" id="id_report_another" data-theme="a" value="Start new report" >
