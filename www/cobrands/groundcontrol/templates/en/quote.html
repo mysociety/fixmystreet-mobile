@@ -1,0 +1,37 @@
+<div id="report-created-header" data-role="header">
+    <h1>Pothole Quote</h1>
+</div>
+<div data-role="content">
+    <table class="ui-table">
+        <tr>
+            <th>Item</th>
+            <th>£</th>
+        </tr>
+        <tr>
+            <td>Materials</td>
+            <td><%= FMS.createdReport.get('quote').materials %></td>
+        </tr>
+        <tr>
+            <td>Callout</td>
+            <td><%= FMS.createdReport.get('quote').callout %></td>
+        </tr>
+        <tr>
+            <td>Hire</td>
+            <td><%= FMS.createdReport.get('quote').hire %></td>
+        </tr>
+        <tr>
+            <td>Labour</td>
+            <td><%= FMS.createdReport.get('quote').labour %></td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td><%= FMS.createdReport.get('quote').total %> + VAT</td>
+        </tr>
+    </table>
+
+
+    <div class="bottom-btn">
+        <input type="button" id="reject_quote" data-theme="a" value="Reject quote" >
+        <input type="button" id="accept_quote" data-theme="b" value="Accept quote" >
+    </div>
+</div>
