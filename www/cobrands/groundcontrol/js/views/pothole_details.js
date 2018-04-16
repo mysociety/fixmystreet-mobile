@@ -11,15 +11,21 @@
             'vclick #id_photo_button': 'takeNewPhoto',
             'vclick #id_existing': 'addPhotoFromLibrary',
             'vclick .del_photo_button': 'deletePhoto',
-            'vclick .pothole-size-button': 'potholeSizeSelected'
+            'vclick .pothole-size-button': 'potholeSizeSelected',
+            'vclick .pothole-size': 'resizePotholeForPhoto'
         },
 
         addPhotoToReport: function(file) {
-            this.blurBackground();
             this.currentFile = file;
-            $(".pothole-size-selector .photo").css("background-image", "url("+file.toURL()+")");
-            $(".pothole-size-selector").removeClass('hidden');
             $.mobile.loading('hide');
+            this.showSizeSelector(file.toURL());
+        },
+
+        showSizeSelector: function(url) {
+            this.blurBackground();
+            $(".pothole-size-selector .photo").css("background-image", "url("+url+")");
+            $(".pothole-size-selector .photo").data("photo_url", url);
+            $(".pothole-size-selector").removeClass('hidden');
         },
 
         potholeSizeSelected: function(e) {
@@ -27,12 +33,26 @@
 
             var size = e.target.dataset.potholeSize;
             var pothole_sizes = this.model.get("pothole_sizes") || {};
-            var filekey = this.currentFile.toURL();
+            var filekey = $(".pothole-size-selector .photo").data("photo_url");
             pothole_sizes[filekey] = size;
             this.model.set("pothole_sizes", pothole_sizes);
             this.unblurBackground();
+            $(".pothole-size-selector").addClass('hidden');
+            $(".pothole-size-selector .photo").css("background-image", "");
+            $(".pothole-size-selector .photo").removeData("photo_url");
 
-            FMS.PhotoView.__super__.addPhotoToReport.call(this, this.currentFile);
+            if (this.currentFile) {
+                FMS.PhotoView.__super__.addPhotoToReport.call(this, this.currentFile);
+                this.currentFile = null;
+            } else {
+                this.rerender();
+            }
+        },
+
+        resizePotholeForPhoto: function(e) {
+            e.preventDefault();
+            var url = $(e.target).closest(".photo").data("photoUrl");
+            this.showSizeSelector(url);
         },
 
         blurBackground: function() {

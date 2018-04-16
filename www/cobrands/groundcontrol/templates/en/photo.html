@@ -53,11 +53,11 @@
             <% _.each(groups, function(filesGroup) { %>
                 <div class="photo-wrapper-row">
                     <% _.each(filesGroup, function(file, index) { %>
-                        <div class="photo" style="background-image: url('<%= file %>');">
+                        <div class="photo" style="background-image: url('<%= file %>');" data-photo-url='<%= file %>'>
                             <a data-role="none" class="photo-corner-button del_photo_button" data-file-index="<%= fileIndex %>">X</a>
                             <% if (pothole_sizes[file]) { %>
                                 <div class="pothole-size-wrapper">
-                                    <span class="pothole-size"><%= CONFIG.POTHOLE_SIZES[pothole_sizes[file]] %></span>
+                                    <a data-role="none" class="pothole-size"><%= CONFIG.POTHOLE_SIZES[pothole_sizes[file]] %></a>
                                 </div>
                             <% } %>
                         </div>
