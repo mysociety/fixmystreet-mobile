@@ -18,6 +18,7 @@ var CONFIG = {
     // list them (with full paths) here.
     COBRAND_EXTRA_JS: [
         'cobrands/groundcontrol/js/views/pothole_details.js',
+        'cobrands/groundcontrol/js/views/submit.js',
     ],
 
     // Type of map to use; possible options currently are 'OSM', 'Bing' or
