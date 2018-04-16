@@ -86,6 +86,10 @@
             onRemoveDraft: function() {
                 FMS.clearCurrentDraft();
                 FMS.createdReport = this.report;
+                this.navigateToSuccessPage();
+            },
+
+            navigateToSuccessPage: function() {
                 this.navigate( 'sent' );
             },
 
