@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.mysociety.GroundControlApp" ios-CFBundleVersion="1.1.20180411.1" version="1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="org.mysociety.GroundControlApp" ios-CFBundleVersion="1.1.20180416.3" version="1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>GC Reporter</name>
     <description>
         Report work on Ground Control
@@ -19,11 +19,13 @@
     <access origin="*://mapit.mysociety.org" />
     <access origin="https://reporting.ground-control.co.uk" />
     <access origin="https://groundcontrol.eu.ngrok.io" />
+    <access origin="https://groundcontrol.fixmystreet.dev.mysociety.org" />
     <allow-intent href="mailto:*" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#ffffff" />
     <preference name="StatusBarStyle" value="default" />
     <preference name="deployment-target" value="9.0" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
@@ -57,6 +59,7 @@
         <icon height="58" src="res/groundcontrol/ios/icons/groundcontrol.58.png" width="58" />
         <icon height="50" src="res/groundcontrol/ios/icons/groundcontrol.50.png" width="50" />
         <icon height="100" src="res/groundcontrol/ios/icons/groundcontrol.100.png" width="100" />
+        <icon height="1024" src="res/groundcontrol/ios/icons/groundcontrol.1024.png" width="1024" />
         <splash height="480" src="res/ios/splash/Default~iphone.png" width="320" />
         <splash height="960" src="res/ios/splash/Default@2x~iphone_640x960.png" width="640" />
         <splash height="1024" src="res/ios/splash/Default-Portrait~ipad_768x1024.png" width="768" />
@@ -97,5 +100,6 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
         <string>To save photos of problems</string>
     </edit-config>
-    <engine name="ios" spec="~4.5.4" />
+    <engine name="ios" spec="^4.5.4" />
+    <engine name="android" spec="^6.4.0" />
 </widget>
