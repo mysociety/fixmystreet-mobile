@@ -12,13 +12,9 @@
             <input type="button" id="logout" name="logout" value="Cerrar sesión" data-theme="a">
         </div>
     </div>
-    <div id="password_row" class="nodisplay">
-        <p class="notopmargin">
-        ¡Sesión cerrada!
-        </p>
     <% } else { %>
     <div id="password_row">
-    <% } %>
+        <p class="notopmargin">You are not signed in.</p>
         <form name="signinForm" class="inputcard" id="signinForm">
         <div>
             <input data-role="none" type="email" value="" name="email" id="form_email" placeholder="Su email" required>
@@ -31,13 +27,5 @@
         </div>
         </form>
     </div>
-    <div id="success_row" class="nodisplay">
-        <p class="notopmargin">
-        ¡Sesión abierta!
-        </p>
-        <div id="err" class="nodisplay"></div>
-        <div class="bottom-btn">
-            <input type="button" id="logout" name="logout" value="Cerrar sesión" data-theme="a">
-        </div>
-    </div>
+    <% } %>
 </div>

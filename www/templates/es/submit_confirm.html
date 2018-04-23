@@ -3,7 +3,7 @@
     <h1>Sus detalles</h1>
 </div>
 
-<div data-role="content">
+<div data-role="content"<% if (CONFIG.SKIP_CONFIRM_REPORT) { %> class="hidden"<% } %>>
     <p class="notopmargin">
     Estas registrado como <%= user.email %>.
     </p>
