@@ -400,6 +400,10 @@
         text-align: center;
     }
 
+    #offline textarea {
+        min-height: 0;
+    }
+
 /* home screen */
 
     #front-page div[data-role='content'] {
@@ -776,6 +780,12 @@
         text-shadow: none;
         font-weight: bold;
         font-size: 30px;
+    }
+
+    /* On the offline page the UI is ordered differently, so we want
+      to stop the button overlapping the 'add another photo' butto' */
+    #offline .del_photo_button.photo-corner-button {
+        top: 0;
     }
 
     @media only screen and (max-width: 800px) and (min-width: 600px) {

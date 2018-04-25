@@ -23,9 +23,10 @@
 
             afterDisplay: function() {
                 // The height of the photos container needs to be adjusted
-                // depending on the number of photos - if there are 3 photos
-                // then the 'add photo' UI isn't shown so we should use all the
-                // vertical space for the thumbnails.
+                // depending on the number of photos - if the max number of
+                // photos have already been added then the 'add photo' UI isn't
+                // shown so we should use all the vertical space for the
+                // thumbnails.
                 var wrapperHeight = $(".ui-content").height();
                 wrapperHeight -= $(".ui-content h2").outerHeight(true);
                 wrapperHeight -= $(".ui-content .bottom-btn").outerHeight(true)
@@ -95,11 +96,8 @@
                     files.push(file.toURL());
                     that.model.set('files', files);
                     FMS.saveCurrentDraft();
-
-                    window.setTimeout(function() {
-                        $.mobile.loading('hide');
-                        that.rerender();
-                    }, 100);
+                    $.mobile.loading('hide');
+                    that.rerender();
                 });
 
                 move.fail( function() { that.addPhotoFail(); } );
@@ -125,19 +123,10 @@
 
                 var that = this;
                 del.done( function() {
-                    // $('#photo_title').hide();
-                    // $('#nophoto_title').show();
-                    // $('.del_photo_button').hide();
                     that.model.set('files', files);
                     FMS.saveCurrentDraft(true);
                     that.rerender();
-                    // $('.photo-wrapper .photo img').attr('src', 'images/placeholder-photo.png').addClass('placeholder').removeClass('small');
-                    //
-                    // $('#photo-next-btn .ui-btn-text').text('Skip');
-                    // $('#id_photo_button').parents('.ui-btn').show();
-                    // $('#id_existing').parents('.ui-btn').show();
                 });
-
             },
 
             rerender: function() {
