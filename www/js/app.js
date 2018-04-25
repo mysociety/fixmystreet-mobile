@@ -163,12 +163,12 @@ var tpl = {
 
         removeDraft: function(draftID, removePhoto) {
             var draft = FMS.allDrafts.get(draftID);
-            var uri = draft.get('file');
+            var files = draft.get('files');
             FMS.allDrafts.remove(draft);
             draft.destroy();
 
-            if ( removePhoto && uri ) {
-                return FMS.files.deleteURI( uri );
+            if ( removePhoto && files.length ) {
+                return FMS.files.deleteURIs( files );
             }
             var p = $.Deferred();
             p.resolve();

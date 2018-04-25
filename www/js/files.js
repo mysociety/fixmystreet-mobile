@@ -57,6 +57,16 @@
 
             },
 
+            deleteURIs: function(uris) {
+                console.log("deleteURIs", uris);
+                var deferred = $.Deferred();
+                deferred.resolve();
+                uris.forEach(function(uri) {
+                    deferred = deferred.then(FMS.files.deleteURI(uri));
+                });
+                return deferred;
+            },
+
             // Delete a file from the filesystem
             deleteFile: function (path) {
 
