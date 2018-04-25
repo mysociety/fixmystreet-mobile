@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 var fs = require('fs');
 
-if(fs.existsSync('platforms/android')) {
+var filename = 'platforms/android/app/src/main/AndroidManifest.xml';
+if (fs.existsSync(filename)) {
   var PERMISSIONS_TO_REMOVE = [
     'READ_PHONE_STATE',
     'RECORD_AUDIO',
     'MODIFY_AUDIO_SETTINGS',
     'RECORD_VIDEO'
   ];
-  var MANIFEST = 'platforms/android/AndroidManifest.xml';
-  var manifestLines = fs.readFileSync(MANIFEST).toString().split('\n');
+  var manifestLines = fs.readFileSync(filename).toString().split('\n');
   var newManifestLines = [];
   var PERMISSIONS_REGEX = PERMISSIONS_TO_REMOVE.join('|');
 
@@ -19,5 +19,7 @@ if(fs.existsSync('platforms/android')) {
     }
   });
 
-  fs.writeFileSync(MANIFEST, newManifestLines.join('\n'));
+  fs.writeFileSync(filename, newManifestLines.join('\n'));
+} else {
+  console.log("file didn't exist: ", filename);
 }
