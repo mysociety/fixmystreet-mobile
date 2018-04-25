@@ -6,3 +6,4 @@
         - iPhone X support. #259
     - Development improvements
         - CONFIG.SKIP_CONFIRM_REPORT flag to skip confirmation screen
+        - Ensure compatibility with latest Cordova versions.
