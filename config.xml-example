@@ -8,7 +8,7 @@
         mySociety
     </author>
     <content src="index.html" />
-
+    <allow-intent href="mailto:*" />
     <access origin="http://127.0.0.1*" />
     <access origin="*://*.openstreetmap.org" />
     <access origin="*://*.opencyclemap.org" />
