@@ -145,7 +145,8 @@
 (function (FMS, Backbone, _, $) {
     _.extend( FMS, {
         SubmitInitialPageView: FMS.SubmitView.extend({
-            onClickButtonPrev: function() {
+            onClickButtonPrev: function(e) {
+                e.preventDefault();
                 if ( this.model.get('hasExtras') == 1 ) {
                     this.navigate( 'details_extra', true );
                 } else {

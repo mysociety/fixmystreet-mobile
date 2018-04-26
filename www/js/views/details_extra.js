@@ -21,7 +21,8 @@
                 this.populateFields();
             },
 
-            onClickButtonPrev: function() {
+            onClickButtonPrev: function(e) {
+                e.preventDefault();
                 this.model.set('hasExtras', 0);
                 this.updateCurrentReport();
                 this.navigate( this.prev, true );
