@@ -4,6 +4,8 @@
     - New features
         - Multiple photo support. #107
         - iPhone X support. #259
+    - Bugfixes
+        - Skip empty report details screen.
     - Development improvements
         - CONFIG.SKIP_CONFIRM_REPORT flag to skip confirmation screen
         - Ensure compatibility with latest Cordova versions.

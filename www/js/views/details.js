@@ -87,8 +87,18 @@
                             timeout: 30000,
                             success: function( data, status ) {
                                 if ( data && data.category_extra && data.category_extra.length > 0 ) {
-                                    that.model.set('category_extras', data.category_extra);
-                                    that.navigate('details_extra');
+                                    // Some categories have only hidden fields - in that case we
+                                    // don't want to navigate to the details_extra view.
+                                    var all_hidden = data.category_extra_json.reduce(function(accumulator, field) {
+                                        return accumulator && (field.automated === "hidden_field");
+                                    }, true);
+
+                                    if (all_hidden) {
+                                        that.navigate( that.next );
+                                    } else {
+                                        that.model.set('category_extras', data.category_extra);
+                                        that.navigate('details_extra');
+                                    }
                                 } else {
                                     that.navigate( that.next );
                                 }
