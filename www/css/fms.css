@@ -844,6 +844,11 @@
     }
     #category_meta {
         margin: 0px 15px 15px 15px;
+        padding: 1em 0;
+    }
+
+    #category_meta h2 {
+        line-height: 1em;
     }
 
     #category_meta h4 {
