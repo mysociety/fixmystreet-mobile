@@ -19,16 +19,19 @@
 
             afterRender: function() {
                 this.populateFields();
+                this.enableScrolling();
             },
 
             onClickButtonPrev: function(e) {
                 e.preventDefault();
+                this.disableScrolling();
                 this.model.set('hasExtras', 0);
                 this.updateCurrentReport();
                 this.navigate( this.prev, true );
             },
 
             onClickButtonNext: function() {
+                this.disableScrolling();
                 this.clearValidationErrors();
                 var valid = 1;
                 var that = this;
@@ -50,6 +53,8 @@
                     this.clearValidationErrors();
                     this.updateCurrentReport();
                     this.navigate( this.next );
+                } else {
+                    this.enableScrolling();
                 }
             },
 
@@ -103,6 +108,18 @@
                 this.$('input').each(populate);
                 this.$('select').each(populate);
                 this.$('textarea').each(populate);
+            },
+
+            disableScrolling: function() {
+                if ( typeof cordova !== 'undefined' ) {
+                    cordova.plugins.Keyboard.disableScroll(true);
+                }
+            },
+
+            enableScrolling: function() {
+                if ( typeof cordova !== 'undefined' ) {
+                    cordova.plugins.Keyboard.disableScroll(false);
+                }
             }
         })
     });
