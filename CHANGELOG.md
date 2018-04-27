@@ -7,6 +7,7 @@
     - Bugfixes
         - Skip empty report details screen.
         - Correctly set user title. #156
+        - Show more helpful error if server rejects password. #156
         - Allow mailto: links to be followed. #263
     - Development improvements
         - CONFIG.SKIP_CONFIRM_REPORT flag to skip confirmation screen

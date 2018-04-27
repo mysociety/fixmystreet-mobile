@@ -86,7 +86,7 @@
                 if ( !this._handleInvalid( model, err, options ) ) {
                     var errors = err.errors;
                     var errorList = '<ul><li class="plain">' + FMS.strings.invalid_report + '</li>';
-                    var validErrors = [ 'password', 'category', 'name' ];
+                    var validErrors = [ 'password', 'password_register', 'category', 'name' ];
                     for ( var k in errors ) {
                         if ( validErrors.indexOf(k) >= 0 || errors[k].match(/required/) ) {
                             if ( k === 'password' ) {
