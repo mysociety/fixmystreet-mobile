@@ -15,6 +15,7 @@
                 'vclick .ui-input-clear': 'clearSearchErrors',
                 'blur #pc': 'clearSearchErrors',
                 'vclick #relocate': 'centerMapOnPosition',
+                'vclick #hidepins': 'toggleMarkersVisibility',
                 'vclick #cancel': 'onClickCancel',
                 'vclick #confirm-map': 'onClickReport',
                 'vclick #mark-here': 'onClickMark',
@@ -45,7 +46,7 @@
                 $('#view-my-reports').hide();
                 $('#login-options').hide();
                 $('#postcodeForm').hide();
-                $('#relocate').hide();
+                $('#relocate, #hidepins').addClass("nodisplay");
                 $('#cancel').hide();
                 $('#map_box').removeClass('background-map');
                 this.fixPageHeight();
@@ -101,7 +102,7 @@
             },
 
             gotLocation: function( info ) {
-                $('#relocate').show();
+                $('#relocate, #hidepins').removeClass("nodisplay");
                 this.finishedLocating();
 
                 this.listenTo(FMS.locator, 'gps_current_position', this.positionUpdate);
@@ -121,7 +122,7 @@
 
             positionUpdate: function( info ) {
                 if ( $('#front-howto').is(':hidden') ) {
-                    $('#relocate').show();
+                    $('#relocate, #hidepins').removeClass("nodisplay");
                 }
                 FMS.currentPosition = info.coordinates;
                 var centre = this.projectCoords( info.coordinates );
@@ -182,7 +183,7 @@
                     msg = FMS.strings.location_problem;
                 }
                 if ( !fixmystreet.map ) {
-                    $('#relocate').hide();
+                    $('#relocate, #hidepins').addClass("nodisplay");
                     $('#mark-here').hide();
                     // if we are going to display the help then we don't want to focus on
                     // the search box as it will show through the help
@@ -267,7 +268,6 @@
 
             onClickCancel: function(e) {
                 e.preventDefault();
-                fixmystreet.markers.removeAllFeatures();
                 fixmystreet_activate_drag();
                 // force pins to be refetched and displayed
                 fixmystreet.bbox_strategy.update({force: true});
@@ -352,7 +352,7 @@
             },
 
             goAddress: function(e) {
-                $('#relocate').show();
+                $('#relocate, #hidepins').removeClass("nodisplay");
                 $('#front-howto').html('').hide();
                 var t = $(e.target);
                 var lat = t.attr('data-lat');
@@ -371,7 +371,7 @@
                     $('#pc').attr('placeholder', msg).addClass('error');;
                 } else {
                     $('#front-howto').html(msg);
-                    $('#relocate').hide();
+                    $('#relocate, #hidepins').addClass("nodisplay");
                     $('#front-howto').show();
                 }
             },
@@ -380,7 +380,7 @@
                 $('#pc').attr('placeholder', this.origPcPlaceholder).removeClass('error');;
                 if ( fixmystreet.map ) {
                     $('#front-howto').hide();
-                    $('#relocate').show();
+                    $('#relocate, #hidepins').removeClass("nodisplay");
                 }
             },
 
@@ -400,7 +400,7 @@
                     }
                     $('#front-howto').html('<p>Multiple matches found</p><ul data-role="listview" data-inset="true">' + multiple + '</ul>');
                     $('.ui-page').trigger('create');
-                    $('#relocate').hide();
+                    $('#relocate, #hidepins').addClass("nodisplay");
                     $('#front-howto').show();
                 } else {
                     this.searchError( FMS.strings.location_problem );
@@ -440,7 +440,7 @@
                 e.preventDefault();
                 if ( !fixmystreet.map ) {
                     this.$('#mark-here').hide();
-                    this.$('#relocate').hide();
+                    this.$('#relocate, #hidepins').addClass("nodisplay");
                     $('#front-howto').html('<p>' + FMS.strings.locate_dismissed + '</p>');
                     $('#front-howto').show();
                 }
@@ -495,6 +495,11 @@
                 );
 
                 return centre;
+            },
+
+            toggleMarkersVisibility: function(e) {
+                e.preventDefault();
+                fixmystreet.markers.setVisibility(!fixmystreet.markers.getVisibility());
             }
         })
     });

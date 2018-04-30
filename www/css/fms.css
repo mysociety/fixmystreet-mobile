@@ -598,17 +598,29 @@
 
     }
 
-    #relocate {
-        display: block;
+    #relocate, #hidepins {
+        display: inline-block;
         height: 30px;
         width: 30px;
         padding: 5px;
         margin: 0px;
         background-color: rgba(248,248,248,0.9);
+    }
+
+    #relocate {
         background-image: url(../images/location@x2.png);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 50%;
+    }
+
+    #hidepins {
+        background-image: url(../images/hide-pins-link.png);
+        background-image: url(../images/hide-pins-link.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 80%;
+        margin-left: .3em;
     }
 
     #pc {

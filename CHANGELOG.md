@@ -4,6 +4,7 @@
     - New features
         - Multiple photo support. #107
         - iPhone X support. #259
+        - Button to hide pins on map. #175
     - Bugfixes
         - Skip empty report details screen.
         - Correctly set user title. #156
