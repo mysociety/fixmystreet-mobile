@@ -17,7 +17,10 @@
                 required: 'Please enter your email',
                 email: 'Please enter a valid email'
             },
-            password: 'Please enter a password'
+            password: {
+                required: 'Please enter a password',
+                short: 'Please enter a password at least %d characters long'
+            }
         },
         strings: {
             next: 'Next',

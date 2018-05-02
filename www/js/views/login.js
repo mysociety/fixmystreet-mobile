@@ -78,7 +78,7 @@
 
                 if ( !$('#form_password').val() ) {
                     isValid = 0;
-                    this.validationError('form_password', FMS.validationStrings.password );
+                    this.validationError('form_password', FMS.validationStrings.password.required);
                 }
 
                 var email = $('#form_email').val();

@@ -69,7 +69,15 @@ var CONFIG = {
     // If the user is logged in and this setting is true, the 'Your details'
     // page is skipped and the report is sent immediately after the report
     // details have been entered.
-    SKIP_CONFIRM_REPORT: false
+    SKIP_CONFIRM_REPORT: false,
+
+    // You can optionally enforce a minimum password length if the user is
+    // registering an account when submitting a report. This should match the
+    // same minimum length required by your FixMyStreet server.
+    // Set this to 0 if you wish to disable this check. NB: If the check is
+    // active on the server the user's password may still be rejected if it's
+    // too short.
+    PASSWORD_MIN_LENGTH: 6
 };
 
 

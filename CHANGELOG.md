@@ -12,5 +12,6 @@
         - Allow mailto: links to be followed. #263
         - Stop keyboard obscuring report details text field. #222
     - Development improvements
-        - CONFIG.SKIP_CONFIRM_REPORT flag to skip confirmation screen
+        - CONFIG.SKIP_CONFIRM_REPORT flag to skip confirmation screen.
         - Ensure compatibility with latest Cordova versions.
+        - CONFIG.PASSWORD_MIN_LENGTH key to validate user password.

@@ -17,7 +17,10 @@
                 required: '[% loc('Please enter your email') %]',
                 email: '[% loc('Please enter a valid email') %]'
             },
-            password: '[% loc('Please enter a password') %]'
+            password: {
+                required: '[% loc('Please enter a password') %]',
+                short: '[% loc('Please enter a password at least %d characters long') %]'
+            }
         },
         strings: {
             next: '[% loc('Next') %]',

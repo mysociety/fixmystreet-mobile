@@ -340,11 +340,16 @@
             },
 
             validate: function() {
+                this.clearValidationErrors();
                 var isValid = 1;
 
                 if ( !$('#form_password').val() ) {
                     isValid = 0;
-                    this.validationError('form_password', FMS.validationStrings.password );
+                    this.validationError('form_password', FMS.validationStrings.password.required );
+                } else if ( CONFIG.PASSWORD_MIN_LENGTH && $('#form_password').val().length < CONFIG.PASSWORD_MIN_LENGTH ) {
+                    isValid = 0;
+                    var msg = FMS.validationStrings.password.short.replace('%d', CONFIG.PASSWORD_MIN_LENGTH);
+                    this.validationError('form_password', msg);
                 }
 
                 if ($('#form_name').val() && !this.validateUserTitle()) {
