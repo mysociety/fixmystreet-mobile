@@ -18,6 +18,16 @@
                 'blur input': 'updateCurrentReport'
             },
 
+            initialize: function() {
+                var that = this;
+                window.addEventListener('native.keyboardshow', function(e) {
+                    that.fixDetailTextAreaHeight(e.keyboardHeight);
+                });
+                window.addEventListener('native.keyboardhide', function(e) {
+                    that.fixDetailTextAreaHeight();
+                });
+            },
+
             afterRender: function() {
                 this.$('#form_category').attr('data-role', 'none');
 
@@ -28,13 +38,18 @@
 
             },
 
-            beforeDisplay: function() {
-                this.fixPageHeight();
+            beforeDisplay: function(extra) {
+                this.fixDetailTextAreaHeight();
+            },
+
+            fixDetailTextAreaHeight: function(extra) {
+                extra = extra || 0;
+                this.fixPageHeight(extra);
                 var header = this.$("div[data-role='header']:visible"),
                 detail = this.$('#form_detail'),
                 top = detail.position().top,
                 viewHeight = $(window).height(),
-                contentHeight = viewHeight - header.outerHeight() + 15;
+                contentHeight = viewHeight - header.outerHeight() + 15 - extra;
 
                 detail.height( contentHeight - top );
             },

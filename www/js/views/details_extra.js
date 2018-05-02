@@ -108,18 +108,6 @@
                 this.$('input').each(populate);
                 this.$('select').each(populate);
                 this.$('textarea').each(populate);
-            },
-
-            disableScrolling: function() {
-                if ( typeof cordova !== 'undefined' ) {
-                    cordova.plugins.Keyboard.disableScroll(true);
-                }
-            },
-
-            enableScrolling: function() {
-                if ( typeof cordova !== 'undefined' ) {
-                    cordova.plugins.Keyboard.disableScroll(false);
-                }
             }
         })
     });

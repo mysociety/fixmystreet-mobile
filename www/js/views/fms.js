@@ -45,12 +45,13 @@
                 return this;
             },
 
-            fixPageHeight: function() {
+            fixPageHeight: function(extra) {
+                extra = extra || 0;
                 var header = this.$("div[data-role='header']:visible"),
                 content = this.$(this.contentSelector),
                 top = content.position().top,
                 viewHeight = $(window).height(),
-                contentHeight = FMS.windowHeight - header.outerHeight() - this.bottomMargin;
+                contentHeight = FMS.windowHeight - header.outerHeight() - this.bottomMargin - extra;
 
                 if ($("body").hasClass("iphone-x")) {
                     var body = $("body").get(0);
@@ -113,6 +114,19 @@
             clearValidationErrors: function() {
                 $('div.form-error').remove();
                 $('.form-error').removeClass('form-error');
+            },
+
+            disableScrolling: function() {
+                if ( typeof cordova !== 'undefined' ) {
+                    cordova.plugins.Keyboard.disableScroll(true);
+                    $('body').scrollTop(0);
+                }
+            },
+
+            enableScrolling: function() {
+                if ( typeof cordova !== 'undefined' ) {
+                    cordova.plugins.Keyboard.disableScroll(false);
+                }
             },
 
             destroy: function() { FMS.printDebug('destroy for ' + this.id); this._destroy(); this.remove(); },
