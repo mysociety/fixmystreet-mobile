@@ -1,6 +1,6 @@
 ## Releases
 
-* Unreleased
+* v2.1 (3rd May 2018)
     - New features
         - Multiple photo support. #107
         - iPhone X support. #259
