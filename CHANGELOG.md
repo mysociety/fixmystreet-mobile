@@ -15,3 +15,4 @@
         - CONFIG.SKIP_CONFIRM_REPORT flag to skip confirmation screen.
         - Ensure compatibility with latest Cordova versions.
         - CONFIG.PASSWORD_MIN_LENGTH key to validate user password.
+        - CONFIG.PASSWORD_CHECK_COMMON flag to test password against server.

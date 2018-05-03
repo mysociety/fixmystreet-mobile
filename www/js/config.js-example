@@ -77,7 +77,16 @@ var CONFIG = {
     // Set this to 0 if you wish to disable this check. NB: If the check is
     // active on the server the user's password may still be rejected if it's
     // too short.
-    PASSWORD_MIN_LENGTH: 6
+    PASSWORD_MIN_LENGTH: 6,
+
+    // FMS provides a mechanism for rejecting passwords that are too common.
+    // Set this flag to true if the password should be checked against the
+    // server when a user registers an account via the app.
+    // NB: If this flag is false here but the check is active on the FMS server,
+    // common passwords will still be rejected at the point the report is sent
+    // from the app to the server - which may be a large POST if the report has
+    // photos attached.
+    PASSWORD_CHECK_COMMON: true
 };
 
 

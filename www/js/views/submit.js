@@ -418,14 +418,43 @@
 
             onClickContinue: function(e) {
                 e.preventDefault();
-                if ( this.validate() ) {
-                    $('#continue').focus();
-                    if ( ! this.model.get('submit_clicked') ) {
-                        this.model.set('submit_clicked', 'submit_sign_in');
+                if (this.validate()) {
+                    // The password may be long enough, but is it going to be
+                    // accepted by the server? Check before proceeding.
+                    if (CONFIG.PASSWORD_CHECK_COMMON) {
+                        var that = this;
+                        $.post(
+                            CONFIG.FMS_URL + "/auth/common_password",
+                            { password_register: $('#form_password').val() },
+                            null,
+                            'json'
+                        )
+                        .done(function(result) {
+                            if (result === true) {
+                                that.savePasswordAndContinue();
+                            } else {
+                                that.validationError('form_password', result);
+                            }
+                        })
+                        .fail(function() {
+                            // If this failed for whatever reason (e.g. network
+                            // error etc), don't worry about it as it'll be
+                            // resubmitted with the report.
+                            that.savePasswordAndContinue();
+                        });
+                    } else {
+                        this.savePasswordAndContinue();
                     }
-                    FMS.currentUser.set('password', $('#form_password').val());
-                    this.navigate( this.next );
                 }
+            },
+
+            savePasswordAndContinue: function() {
+                $('#continue').focus();
+                if ( ! this.model.get('submit_clicked') ) {
+                    this.model.set('submit_clicked', 'submit_sign_in');
+                }
+                FMS.currentUser.set('password', $('#form_password').val());
+                this.navigate( this.next );
             }
         })
     });
