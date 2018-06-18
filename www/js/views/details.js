@@ -108,7 +108,7 @@
                                         return accumulator && (field.automated === "hidden_field");
                                     }, true);
 
-                                    if (all_hidden) {
+                                    if (all_hidden && data.unresponsive === '') {
                                         that.navigate( that.next );
                                     } else {
                                         that.model.set('category_extras', data.category_extra);
