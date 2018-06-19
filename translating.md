@@ -6,15 +6,16 @@ FixMyStreet mobile code.
 
 Quickstart
 ----------
-./bin/gettext-extract
-./bin/gettext-merge
-../fixmystreet/commonlib/bin/gettext-makemo FixMyStreetMobileApp
-perl -I../fixmystreet/commonlib/perllib -I../fixmystreet/local  bin/localise_templates
+On Debian, install "liblocale-maketext-lexicon-perl" and
+"libtemplate-perl". On Fedora, install "perl-Locale-gettext" and
+"perl-Locale-Maketext-Lexicon".
 
-copy compiled/$lang/*.html to www/templates/$lang
-copy compiled/$lang/strings.js to www/js/strings.$short_lang.js
-
-(NB `$short_lang` should match `CONFIG.LANGUAGE` in your config.js)
+- ./bin/gettext-extract
+- ./bin/gettext-merge
+- ../fixmystreet/commonlib/bin/gettext-makemo FixMyStreetMobileApp
+- perl -I../fixmystreet/commonlib/perllib -I../fixmystreet/local bin/localise_templates
+- Copy compiled/$lang/*.html to www/templates/$lang
+- Copy compiled/lang/strings.js to www/js/strings.$short_lang.js
 
 The list of languages to generate templates for should be included in
 locale/lang_list and should look like locale/lang_list.example

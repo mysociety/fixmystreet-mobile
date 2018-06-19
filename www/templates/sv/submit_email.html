@@ -1,0 +1,26 @@
+<div id="submit-header" data-role="header">
+    <a data-rel="back" data-icon="arrow-l" class="ui-btn-left">Bakåt</a>
+    <h1>Dina uppgifter</h1>
+</div>
+
+<div data-role="content">
+    <div class="inputcard">
+        <div>
+            <input data-role="none" type="email" value="<%= user.email %>" name="email" id="form_email" placeholder="Ange en giltlig e-postadress" required>
+        </div>
+    </div>
+
+    <p>
+    Appen kommer att skicka ett bekräftelsemejl till din e-postadress innan rapporten sänd till kommunen.
+    </p>
+
+    <p>
+    Ange ett lösenord för att slippa detta steg i framtiden.
+    </p>
+
+    <div class="bottom-btn">
+        <input data-role="button" data-theme="a" type="button" id="email_confirm" name="email_confirm" value="Jag vill inte ange ett lösenord">
+        <input data-role="button" data-theme="a" type="button" id="set_password" name="set_password" value="Jag vill ange ett lösenord">
+        <input data-role="button" data-theme="a" type="button" id="have_password" name="have_password" value="Jag har redan en inloggning">
+    </div>
+</div>

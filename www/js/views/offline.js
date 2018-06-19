@@ -61,9 +61,9 @@
 
             toggleNextButton: function() {
                 if ( this.draftHasContent() ) {
-                    $('#offline-next-btn .ui-btn-text').text('Save');
+                    $('#offline-next-btn .ui-btn-text').text(FMS.strings.save);
                 } else {
-                    $('#offline-next-btn .ui-btn-text').text('Skip');
+                    $('#offline-next-btn .ui-btn-text').text(FMS.strings.skip);
                 }
             },
 

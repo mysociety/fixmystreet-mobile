@@ -1,0 +1,40 @@
+<div id="submit-header" data-role="header">
+    <a data-rel="back" data-icon="arrow-l" class="ui-btn-left">Bakåt</a>
+    <h1>Dina uppgifter</h1>
+</div>
+
+<div data-role="content">
+    <p class="notopmargin">
+    Du är inloggad som <%= user.email %>.
+    </p>
+
+    <p>
+    Bekräfta ditt namn och eventuellt också ditt telefonnummer, och om du vill att ditt namn skall vara offentligt.
+    </p>
+
+    <div id="errors"></div>
+
+    <div class="inputcard">
+        <% if ( typeof model.titles_list !== 'undefined' ) { %>
+        <div>
+            <select data-role="none" placeholder="Titel" id="form_title" name="title" required>
+                <option value="">Titel</option>
+                <% for ( var i = 0; i < model.titles_list.length; i++ ) { var title = model.titles_list[i]; print( '<option value="' + title + '"' + ( user.title && user.title == title ? ' selected' : '' ) + '>' + title + '</option>' ); } %>
+            </select>
+        </div>
+        <% } %>
+        <div>
+            <input data-role="none" type="text" value="<%= user.name %>" name="name" id="form_name" placeholder="Ange ditt namn" required>
+        </div>
+        <div>
+            <input data-role="none" type="tel" value="<%= user.phone %>" name="name" id="form_phone" placeholder="Ange ditt telefonnummer (valfritt)">
+        </div>
+        <div class="checkbox-group noborder">
+            <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <% if ( typeof user.may_show_name == 'undefined' || user.may_show_name ) { %>checked<% } %>>
+            <label class="inline" for="form_may_show_name">Visa mitt namn offentligt</label>
+        </div>
+    </div>
+    <div class="bottom-btn">
+        <input data-role="button" data-theme="a" type="button" id="report" name="report" value="Rapportera">
+    </div>
+</div>

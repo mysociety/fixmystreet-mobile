@@ -1,0 +1,51 @@
+@import "compass";
+
+$lighterblue: rgb(198, 222, 255);
+$darkerblue: rgb(141, 191, 220);
+
+.ios7 .ui-bar-a,
+body.ios7 {
+    background-color: $darkerblue;
+}
+
+.ios7 .ui-bar-a {
+    border-color: $darkerblue;
+}
+
+#load-screen,
+#locating {
+    background: $darkerblue;
+    color: white;
+}
+
+#locating #progress-bar {
+    background-color: #20bbdf;
+}
+
+#view-my-reports .draft_count{
+    background-color: rgb(67, 144, 189);
+    color: #fff;
+    border-color: transparent;
+}
+
+#display-help {
+    background-color: $lighterblue;
+    color: grey;
+}
+
+
+.ui-bar-a, .ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
+    border-color: darken($darkerblue, 15%);
+    @include background(linear-gradient(-90deg, darken($darkerblue, 5%), lighten($darkerblue, 5%) 98%));
+}
+
+.ui-corner-all,
+.ui-btn-corner-all {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#load-screen .radar,
+#locating .radar {
+    background-image: url('../images/radar-fixamingata.png');
+}

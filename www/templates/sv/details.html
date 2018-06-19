@@ -1,0 +1,22 @@
+<div data-role="header">
+        <a data-rel="back" data-icon="arrow-l" class="ui-btn-left">Bakåt</a>
+        <h1>Detaljer</h1>
+        <a id="next" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Nästa</a>
+</div>
+<div data-role="content">
+    <div class="gmailstyletest">
+        <div>
+            <label for="form_title">Ämne</label>
+            <input data-role="none" type="text" name="title" id="form_title" placeholder="Ange en titel" value="<%= title %>" required>
+        </div>
+
+        <div>
+            <%= categories %>
+        </div>
+
+        <div class="noborder">
+            <label for="form_detail">Detaljer</label>
+            <textarea data-role="none" name="detail" id="form_detail" placeholder="Fyll i detaljer kring problemet." required><%= details %></textarea>
+        </div>
+    </div>
+</div>

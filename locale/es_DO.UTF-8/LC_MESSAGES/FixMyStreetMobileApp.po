@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: my-society\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2017-06-22 15:28+0100\n"
+"POT-Creation-Date: 2017-06-27 19:15+0200\n"
 "PO-Revision-Date: 2017-06-26 15:22+0100\n"
 "Last-Translator: applingua <team@applingua.com>\n"
 "Language-Team: Spanish, Dominican Republic\n"
@@ -63,7 +63,7 @@ msgstr "Añadir una foto "
 msgid "Add an existing photo"
 msgstr "Añadir una foto existente"
 
-#: templates/strings.js:33
+#: templates/strings.js:34
 msgid "An error was encountered when submitting your report: "
 msgstr "Un error se ha generado al enviar su informe: "
 
@@ -104,11 +104,11 @@ msgstr "Email de confirmación enviado"
 msgid "Continue"
 msgstr "Continuar"
 
-#: templates/strings.js:41
+#: templates/strings.js:42
 msgid "Could not access location services. Please check permissions."
 msgstr "No se pudo acceder a los servicios de ubicación. Por favor, verificar los permisos."
 
-#: templates/strings.js:44
+#: templates/strings.js:45
 msgid "Could not get location."
 msgstr "No se pudo obtener la ubicación."
 
@@ -160,7 +160,7 @@ msgstr "Detalles adicionales"
 msgid "Go"
 msgstr "Ir"
 
-#: templates/strings.js:43
+#: templates/strings.js:44
 msgid "Got location."
 msgstr "Ubicación localizada."
 
@@ -184,11 +184,11 @@ msgstr "Ya tengo una - abrir sesión"
 msgid "If you start compiling a report, but don't finish and send it, it'll appear in this menu so you can finish it later"
 msgstr "Si comienza a compilar un informe, pero no lo termina ni lo envía, este aparecerá en este menú para que lo pueda completar más tarde"
 
-#: templates/strings.js:46
+#: templates/strings.js:47
 msgid "Invalid email"
 msgstr "Email inválido"
 
-#: templates/strings.js:47
+#: templates/strings.js:48
 msgid "Invalid report"
 msgstr "Informe inválido"
 
@@ -204,13 +204,17 @@ msgstr "Error de ubicación"
 msgid "Login"
 msgstr "Abrir sesión"
 
-#: templates/strings.js:55
+#: templates/strings.js:56
 msgid "More details"
 msgstr "Más detalles"
 
 #: templates/strings.js:32
 msgid "More than one location matched that name. Select one below or try entering street name and area, or a postcode."
 msgstr "Más de una ubicación corresponde a ese nombre. Seleccione una abajo o pruebe indicando el nombre de la calle y área, o un código postal."
+
+#: templates/strings.js:33
+msgid "Multiple matches found"
+msgstr ""
 
 #: templates/submit.html:20 templates/submit.html:59
 msgid "Name"
@@ -225,7 +229,7 @@ msgstr "Nuevo informe aquí"
 msgid "Next"
 msgstr "Siguiente"
 
-#: templates/strings.js:54
+#: templates/strings.js:55
 msgid "No network connection available for submitting your report. Please try again later."
 msgstr "No hay conexión a la red disponible para enviar su informe. Por favor, inténtelo de nuevo más tarde."
 
@@ -257,7 +261,7 @@ msgstr "Contraseña"
 msgid "Phone number"
 msgstr "Número de teléfono"
 
-#: templates/strings.js:49
+#: templates/strings.js:50
 msgid "Photo added"
 msgstr "Foto añadida"
 
@@ -274,7 +278,7 @@ msgstr "Por favor, seleccione una categoría"
 msgid "Please confirm your name, if you want it to be public and optionally your phone number."
 msgstr "Por favor confirme si desea mostrar su nombre o telefono en el reporte público."
 
-#: templates/strings.js:36
+#: templates/strings.js:37
 msgid "Please enter a location"
 msgstr "Por favor, indique una ubicación"
 
@@ -327,7 +331,7 @@ msgstr "Por favor, provea detalles del problema."
 msgid "Please give us some basic details, and you're nearly done."
 msgstr "Por favor, proporciónenos con algunos detalles básicos, y pronto terminaremos."
 
-#: templates/strings.js:39
+#: templates/strings.js:40
 msgid "Please search for a street name and area, or postcode."
 msgstr "Por favor, busque el nombre de la calle y área o código postal."
 
@@ -356,7 +360,7 @@ msgstr "Reposicione el informe aquí"
 msgid "Save"
 msgstr "Guardar"
 
-#: templates/strings.js:53
+#: templates/strings.js:54
 msgid "Save for Later"
 msgstr "Guardar para más tarde"
 
@@ -414,7 +418,7 @@ msgstr "¡Sesión cerrada!"
 msgid "Skip"
 msgstr "Saltar"
 
-#: templates/strings.js:40
+#: templates/strings.js:41
 msgid "Sorry, but we weren't able to establish your location accurately enough to show you a map. Please enter a location in the search box instead"
 msgstr "Lo sentimos, no pudimos establecer su ubicación con la precisión necesaria para mostrarle un mapa. Por favor, como alternativa, incluya una ubicación en la casilla de búsqueda"
 
@@ -454,11 +458,11 @@ msgstr "No hay conexión al internet, ¿quiere guardar el presente informe para 
 msgid "There seems to have been a problem starting the app. Please quit and try again."
 msgstr "Ha sido un problema comenzando el app. Por favour, salirlo y intentar comenzarlo de nuevo."
 
-#: templates/strings.js:38
+#: templates/strings.js:39
 msgid "There was a problem checking if we have all the details we need. Please try again later."
 msgstr "Hubo un problema al verificar si tenemos todos los detalles que necesitamos. Por favor, inténtelo de nuevo más tarde."
 
-#: templates/strings.js:37
+#: templates/strings.js:38
 msgid "There was a problem checking we cover this location. Please try again later."
 msgstr "Hubo un problema al verificar si cubrimos esta ubicación. Por favor, inténtelo de nuevo más tarde."
 
@@ -478,19 +482,19 @@ msgstr "Hubo un problema al cerrar sesión. Por favor, inténtelo de nuevo más 
 msgid "There was a problem looking up your location."
 msgstr "Hubo un problema al buscar su ubicación."
 
-#: templates/strings.js:34
+#: templates/strings.js:35
 msgid "There was a problem submitting your report. Please try again later."
 msgstr "Hubo un problema al enviar su informe. Por favor, inténtelo de nuevo más tarde."
 
-#: templates/strings.js:35
+#: templates/strings.js:36
 msgid "There was a problem submitting your report. Please try again."
 msgstr "Hubo un problema al enviar su informe. Por favor, inténtelo de nuevo más tarde."
 
-#: templates/strings.js:48
+#: templates/strings.js:49
 msgid "There was a problem taking your photo."
 msgstr "Hubo un problema al tomar su foto."
 
-#: templates/strings.js:51
+#: templates/strings.js:52
 msgid "There was a problem uploading your report."
 msgstr "Hubo un problema al subir su informe."
 
@@ -520,7 +524,7 @@ msgstr "Título"
 msgid "To skip this step in future, you can set a password now."
 msgstr "Para saltar este paso en el futuro, puede configurar una contraseña ahora."
 
-#: templates/offline.html:2 templates/strings.js:52
+#: templates/offline.html:2 templates/strings.js:53
 msgid "Try Again"
 msgstr "Inténtelo nuevamente"
 
@@ -532,7 +536,7 @@ msgstr "Informe no enviado"
 msgid "Untitled draft"
 msgstr "Borrador sin título"
 
-#: templates/strings.js:50
+#: templates/strings.js:51
 msgid "Uploading images may take some time, please be patient"
 msgstr "Subir imágenes podría demorar, por favor tenga paciencia"
 
@@ -599,7 +603,7 @@ msgstr "eliminar"
 msgid "e.g. ‘B2 4QA’ or ‘Tib St, Manchester’"
 msgstr "ej. ‘10103’ o ‘Ave. Alma Mater, Santo Domingo’"
 
-#: templates/strings.js:45
+#: templates/strings.js:46
 msgid "required"
 msgstr "requerido(a)"
 

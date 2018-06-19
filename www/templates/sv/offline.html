@@ -1,0 +1,71 @@
+<div data-role="header" data-position="fixed">
+        <a id="offline-prev-btn" class="ui-btn-left">Försök igen</a>
+        <h1>Nedkopplad</h1>
+        <a id="offline-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Hoppa över</a>
+</div>
+    <div id="locating" class="nodisplay">
+        <div class="radar"></div>
+        <div id="progress">
+            <div id="progress-bar">
+            </div>
+        </div>
+
+        <p>
+        Söker efter din plats
+        </p>
+
+        <p>
+        <input data-theme="c" type="button" id="locate_cancel" value="Avbryt">
+        </p>
+    </div>
+<div data-role="content">
+    <div>
+        <p class="notopmargin">
+        <% if ( typeof id != 'undefined' ) { %>
+        Ingen nätverksanslutning finns tillgänglig. Rapporten kan redigeras och skickas senare.
+        <% } else { %>
+        Ingen nätverksanslutning finns tillgänglig. Påbörja rapportering och slutför via utkast vid nästa tillfälle du är uppkopplad.
+        <% } %>
+        </p>
+
+        <p id="locate_result">
+        <% if ( lat ) { %>
+        Den här rapporten har en angiven plats.
+        <% } else { %>
+        <input type="button" data-role="button" data-theme="a" id="locate" value="Hitta plats (valfritt)" >
+        <% } %>
+        </p>
+
+        <div class="inputcard">
+            <div>
+                <input data-role="none" type="text" value="<%= title %>" name="title" id="form_title" placeholder="Ange en titel" required>
+            </div>
+
+            <div>
+                <textarea data-role="none" rows="7" cols="26" name="detail" id="form_detail" placeholder="Please fill in details of the problem." required><%= details %></textarea>
+            </div>
+        </div>
+
+        <% if ( file != '' ) { %>
+        <div id="add_photo" style="display: none">
+        <% } else { %>
+        <div id="add_photo">
+        <% } %>
+            <label>Lägg till ett foto <em>(valfritt)</em></label>
+            <input data-icon="fms-photo-new" value="Ta ett nytt foto" type="button" name="photo_button" id="id_photo_button" data-role="button" data-theme="a">
+            <input data-icon="fms-photo-existing" value="Lägg till ett befintligt foto" type="button" name="existing" id="id_existing" data-role="button" data-theme="c">
+        </div>
+
+        <% if ( file == '' ) { %>
+        <div id="display_photo" style="display: none">
+        <% } else { %>
+        <div id="display_photo">
+        <% } %>
+            <label>Ditt foto</label>
+            <div class="photo">
+            <img class="small" id="photo" src="<%= file %>" />
+            </div>
+            <input value="Radera foto" type="button" name="del_photo_button" id="id_del_photo_button" data-role="button" data-theme="a">
+        </div>
+    </div>
+</div>

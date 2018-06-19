@@ -1,0 +1,99 @@
+<div id="submit-header" data-role="header" data-position="fixed" data-id="locate">
+    <a data-rel="back" data-icon="arrow-l" class="ui-btn-left">Bakåt</a>
+    <h1>Skicka</h1>
+</div>
+
+<div class="container" data-role="content" data-enhance="false">
+    <div class="content" role="main">
+
+
+                <fieldset>
+                    <div id="problem_form">
+                        <% if ( user && user.password ) { %>
+                        <div id="signed_in">
+                            <p>
+                            Du är inloggad som <span id="username"><%= user.name %></span>
+                            </p>
+
+                            <p id="confirm_details">Bekräfta detaljer</p>
+                            <div id="name_details">
+                                <label for="form_may_show_name">Namn</label>
+                                <input type="text" class="validName" value="<%= user.name %>" name="name" id="form_name" placeholder="Ditt namn">
+
+                                <div class="checkbox-group">
+                                    <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" checked>
+                                    <label class="inline" for="form_may_show_name">Visa mitt namn offentligt</label>
+                                </div>
+
+                                <label for="form_phone">Telefonnummer</label>
+                                <input type="text" value="<%= user.phone %>" name="phone" id="form_phone" placeholder="Ditt telefonnummer (valfritt)">
+                            </div>
+
+                            <div class="form-txt-submit-box">
+                                <input class="green-btn" type="button" id="submit_signed_in" name="submit_signed_in" value="Rapportera">
+                            </div>
+                        </div>
+                        <% } else { %>
+                        <div id="signed_out">
+                        <label for="form_email" id="email_label">Din e-postadress</label>
+                        <input type="email" value="<%= user.email %>" name="email" id="form_email" placeholder="Ange en giltlig e-postadress" required>
+
+                            <div id="form_sign_in">
+                                <h4 id="have_password">Har du ett <%= CONFIG.APP_NAME %>-lösenord?</h4>
+
+                                <div id="form_sign_in_yes" class="form-box">
+
+                                    <h5><strong>Ja</strong> Jag har ett lösenord</h5>
+
+                                    <label class="hidden-js n" for="password_sign_in">Ja, jag har ett lösenord</label>
+                                    <div class="form-txt-submit-box">
+                                        <input type="password" name="password_sign_in" id="password_sign_in" placeholder="Ditt lösenord" value="">
+                                        <input class="green-btn" type="button" id="submit_sign_in" name="submit_sign_in" value="Rapportera">
+                                    </div>
+                                </div>
+
+                                <div id="form_sign_in_no" class="form-box">
+                                    <h5 id="let_me_confirm"><strong>Nej</strong> Låt mig bekräfta min rapport via e-post</h5>
+
+                                    <div id="name_details">
+                                        <label for="form_may_show_name">Namn</label>
+                                        <input type="text" class="validName" value="<%= user.name %>" name="name" id="form_name" placeholder="Ditt namn">
+
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" checked>
+                                            <label class="inline" for="form_may_show_name">Visa mitt namn offentligt</label>
+                                        </div>
+
+                                        <label for="form_phone">Telefonnummer</label>
+                                        <input type="text" value="<%= user.phone %>" name="phone" id="form_phone" placeholder="Ditt telefonnummer (valfritt)">
+                                    </div>
+
+                                    <div id="password_surround">
+                                        <label class="form-focus-hidden" for="password_register" id="password_label">Lösenord</label>
+                                    </div>
+
+                                    <div class="form-txt-submit-box form-focus-hidden">
+                                        <input type="password" name="password_register" id="password_register" value="" placeholder="Ange ett lösenord (valfritt)">
+                                        <input class="green-btn" type="button" id="submit_register" name="submit_register" value="Rapportera">
+                                    </div>
+
+                                </div>
+                            </div>
+                            </div>
+                        <% } %>
+
+                            <div id="report_save" class="form-box">
+                                <h5>Spara rapportutkast för att färdigställa senare</h5>
+                                <div class="form-txt-submit-box">
+                                    <input class="green-btn" type="button" id="save_report" name="save_report" value="Spara">
+                                </div>
+                            </div>
+                    </div>
+                </fieldset>
+
+                <input type="hidden" name="submit_problem" value="1">
+            </div>
+
+        </div>
+    </div>
+</div>
