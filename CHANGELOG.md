@@ -1,5 +1,9 @@
 ## Releases
 
+* v2.2 (20th June 2018)_
+    - Bugfixes
+        - Displays message if council does not accept reports #266
+
 * v2.1 (3rd May 2018)
     - New features
         - Multiple photo support. #107
