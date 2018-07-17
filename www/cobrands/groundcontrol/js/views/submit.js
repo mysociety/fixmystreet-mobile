@@ -30,6 +30,7 @@
                     console.log("AJAX quote success", that, this, arguments);
                     if (data.quote) {
                         FMS.createdReport.set('quote', data.quote);
+                        FMS.createdReport.set('quote_rendered', data.quote_rendered);
                         $.mobile.loading('hide');
                         that.navigate('quote');
                     } else {

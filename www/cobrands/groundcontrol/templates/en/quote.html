@@ -2,33 +2,9 @@
     <h1>Pothole Quote</h1>
 </div>
 <div data-role="content">
-    <table class="ui-table">
-        <tr>
-            <th>Item</th>
-            <th>£</th>
-        </tr>
-        <tr>
-            <td>Materials</td>
-            <td><%= FMS.createdReport.get('quote').materials %></td>
-        </tr>
-        <tr>
-            <td>Callout</td>
-            <td><%= FMS.createdReport.get('quote').callout %></td>
-        </tr>
-        <tr>
-            <td>Hire</td>
-            <td><%= FMS.createdReport.get('quote').hire %></td>
-        </tr>
-        <tr>
-            <td>Labour</td>
-            <td><%= FMS.createdReport.get('quote').labour %></td>
-        </tr>
-        <tr>
-            <td>Total</td>
-            <td><%= FMS.createdReport.get('quote').total %> + VAT</td>
-        </tr>
-    </table>
 
+    <!-- This element is replaced with one loaded from the server -->
+    <table id="quote_rendered"></table>
 
     <div class="bottom-btn">
         <p>Do you wish to proceed with this quote, or have it emailed?</p>

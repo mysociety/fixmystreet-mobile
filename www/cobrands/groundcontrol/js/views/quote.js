@@ -16,6 +16,7 @@
             beforeDisplay: function() {
                 this.fixPageHeight();
                 $("#map_box").addClass("blurred");
+                $("#quote_rendered").replaceWith(FMS.createdReport.get('quote_rendered'));
             },
 
             onAcceptOrRejectQuote: function(e) {
