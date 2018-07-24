@@ -139,16 +139,15 @@ body.ios, .ui-bar-a {
         width: 92%;
     }
 
-    ul {
+    table {
         padding: 0;
         margin: 0 0 1.5em 0;
         width: 75%;
         min-width: 300px;
-        display: grid;
-        grid-template-columns: 50% 50%;
 
-        li {
-            margin: 0 0.25em;
+        td {
+            padding: 0 0.25em;
+            width: 50%;
         }
     }
 }

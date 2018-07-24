@@ -13,12 +13,19 @@
 <div class="pothole-size-selector hidden">
     <h2>Size of pothole?</h2>
     <div class="photo"></div>
-    <ul class="photo-pothole-size">
-        <% Object.entries(CONFIG.POTHOLE_SIZES).forEach(function(size) { %>
-            <li><button class="pothole-size-button" data-pothole-size="<%= size[0] %>"><%= size[1] %></button></li>
+    <table class="photo-pothole-size">
+        <% Object.entries(CONFIG.POTHOLE_SIZES).forEach(function(size, index) { %>
+            <% if ( index % 2 == 0 ) { %>
+                <tr>
+            <% } %>
+
+                <td><button class="pothole-size-button" data-pothole-size="<%= size[0] %>" <% if (size[0] === "") { %>data-theme="a"<% } %> ><%= size[1] %></button></td>
+
+            <% if ( index % 2 == 1 ) { %>
+                </tr>
+            <% } %>
         <% }); %>
-        <li><button class="pothole-size-button" data-pothole-size="" data-theme="a">Not pothole</button></li>
-    </ul>
+    </table>
 </div>
 
 
