@@ -31,6 +31,13 @@
                     if (data.quote) {
                         FMS.createdReport.set('quote', data.quote);
                         FMS.createdReport.set('quote_rendered', data.quote_rendered);
+
+                        // This is for future use, in case the accept/reject button UI
+                        // and report confirmation message should be rendered differently
+                        // depending on the user/some other determination made by the server.
+                        // In that case we won't have to rebuild/resubmit the app.
+                        FMS.createdReport.set('quote_controls', data.quote_controls);
+
                         $.mobile.loading('hide');
                         that.navigate('quote');
                     } else {

@@ -17,6 +17,14 @@
                 this.fixPageHeight();
                 $("#map_box").addClass("blurred");
                 $("#quote_rendered").replaceWith(FMS.createdReport.get('quote_rendered'));
+
+                var quote_controls = FMS.createdReport.get('quote_controls');
+                if (typeof quote_controls !== "undefined") {
+                    $("#quote_controls").replaceWith(quote_controls);
+
+                    // Tell jQuery UI to redraw the widgets from the new HTML
+                    $("#quote-page").trigger('create');
+                }
             },
 
             onAcceptOrRejectQuote: function(e) {
@@ -43,6 +51,11 @@
                     } else {
                         FMS.createdReport.set('quote_accepted', 'error');
                     }
+
+                    // Server may have supplied a custom confirmation message
+                    // as an HTML string, store it for rendering by the template.
+                    FMS.createdReport.set('quote_confirmation_message', data.quote_confirmation_message);
+
                     $.mobile.loading('hide');
                     $("#map_box").removeClass("blurred");
                     that.navigate('sent');

@@ -4,16 +4,8 @@
 </div>
 <div data-role="content">
 
-    <% if (FMS.createdReport.get("quote")) { %>
-        <h3>We have received your report.</h3>
-        <% if (FMS.createdReport.get("quote_accepted") === "error") { %>
-            <p>There was an error sending your quote response.</p>
-            <p>Not to worry, we'll be in touch soon about your quote.</p>
-        <% } else if (FMS.createdReport.get("quote_accepted")) { %>
-            <p>We will be in touch about getting those potholes repaired ASAP.</p>
-        <% } else { %>
-            <p>We'll email the quote to you shortly.</p>
-        <% } %>
+    <% if (FMS.createdReport.get("quote_confirmation_message")) { %>
+        <%= FMS.createdReport.get("quote_confirmation_message") %>
     <% } else { %>
         <h3>Thanks. Your report will be sent immediately.</h3>
     <% } %>
