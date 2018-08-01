@@ -1,4 +1,4 @@
-var fms_tile_base = [ [ '', 'a-', 'b-', 'c-' ], 'https://{S}tilma.mysociety.org/sv' ];
+var fms_tile_base = [ [ '', 'a-', 'b-', 'c-' ], 'https://{S}tilma.mysociety.org/oml' ];
 
 function set_map_config(perm) {
     _set_map_config();
