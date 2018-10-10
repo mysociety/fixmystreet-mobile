@@ -623,6 +623,11 @@
         margin-left: .3em;
     }
 
+    #hidepins.showpins {
+        background-image: url(../images/show-pins-link.png);
+        background-image: url(../images/show-pins-link.svg);
+    }
+
     #pc {
         padding-left: 0.2em;
         border-left: 1px solid #F6BE41;

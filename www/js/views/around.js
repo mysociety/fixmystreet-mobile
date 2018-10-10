@@ -217,7 +217,7 @@
                     $('#locate-here').hide();
                     $('#postcodeForm').hide();
                     if ( fixmystreet.map ) {
-                        fixmystreet.markers.setVisibility(false);
+                        this.setMarkersVisibility(false);
                         fixmystreet.select_feature.deactivate();
                         fixmystreet.bbox_strategy.deactivate();
                     }
@@ -240,7 +240,7 @@
                     if ( fixmystreet.map ) {
                         fixmystreet.bbox_strategy.activate();
                         fixmystreet.report_location.setVisibility(false);
-                        fixmystreet.markers.setVisibility(true);
+                        this.setMarkersVisibility(true);
                         fixmystreet.select_feature.deactivate();
                         fixmystreet.select_feature.activate();
                     }
@@ -499,7 +499,16 @@
 
             toggleMarkersVisibility: function(e) {
                 e.preventDefault();
-                fixmystreet.markers.setVisibility(!fixmystreet.markers.getVisibility());
+                this.setMarkersVisibility(!fixmystreet.markers.getVisibility());
+            },
+
+            setMarkersVisibility: function(visible) {
+                fixmystreet.markers.setVisibility(visible);
+                if (visible) {
+                    $("#hidepins").removeClass("showpins");
+                } else {
+                    $("#hidepins").addClass("showpins");
+                }
             }
         })
     });
