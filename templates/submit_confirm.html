@@ -30,7 +30,7 @@
             <input data-role="none" type="tel" value="<%= user.phone %>" name="name" id="form_phone" placeholder="[% loc('Optionally enter your phone number') %]">
         </div>
         <div class="checkbox-group noborder">
-            <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <% if ( typeof user.may_show_name == 'undefined' || user.may_show_name ) { %>checked<% } %>>
+            <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <%= user.may_show_name ? 'checked' : '' %>>
             <label class="inline" for="form_may_show_name">[% loc('Show my name publicly') %]</label>
         </div>
     </div>
