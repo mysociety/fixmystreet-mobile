@@ -1,6 +1,12 @@
 ## Releases
 
-* v2.2 (20th June 2018)_
+* v2.3 (10th October 2018)
+    - Bugfixes
+        - Fixed issue with pins not always appearing when zooming the map.
+        - "Show my name publicly" is now unticked by default. #252
+        - Fixed bug where "undefined" would show instead of correct text.
+
+* v2.2 (20th June 2018)
     - Bugfixes
         - Displays message if council does not accept reports #266
 
