@@ -33,6 +33,7 @@
             location_error: 'Location error',
             location_problem: 'There was a problem looking up your location.',
             multiple_locations: 'More than one location matched that name. Select one below or try entering street name and area, or a postcode.',
+            multiple_matches: 'Multiple matches found',
             sync_error: 'An error was encountered when submitting your report: ',
             unknown_sync_error: 'There was a problem submitting your report. Please try again later.',
             report_send_error: 'There was a problem submitting your report. Please try again.',
@@ -55,7 +56,9 @@
             try_again: 'Try Again',
             save_for_later: 'Save for Later',
             no_connection: 'No network connection available for submitting your report. Please try again later.',
-            more_details: 'More details'
+            more_details: 'More details',
+            skip: 'Skip',
+            save: 'Save'
         }
     });
 })(FMS, _);
