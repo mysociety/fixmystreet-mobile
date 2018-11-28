@@ -1,6 +1,7 @@
 (function (FMS, Backbone, _, $) {
     FMS.PhotoView = FMS.PhotoView.extend({
         currentFile: null,
+        selectingPotholeSize: false,
 
         events: {
             'pagehide': 'destroy',
@@ -26,6 +27,7 @@
             $(".pothole-size-selector .photo").css("background-image", "url("+url+")");
             $(".pothole-size-selector .photo").data("photo_url", url);
             $(".pothole-size-selector").removeClass('hidden');
+            this.selectingPotholeSize = true;
         },
 
         potholeSizeSelected: function(e) {
@@ -41,6 +43,7 @@
             $(".pothole-size-selector .photo").css("background-image", "");
             $(".pothole-size-selector .photo").removeData("photo_url");
 
+            this.selectingPotholeSize = false;
             if (this.currentFile) {
                 FMS.PhotoView.__super__.addPhotoToReport.call(this, this.currentFile);
                 this.currentFile = null;
@@ -61,6 +64,30 @@
 
         unblurBackground: function() {
             $("#photo-page [data-role=header], #photo-page [data-role=content], #map_box").removeClass("blurred");
-        }
+        },
+
+        takeNewPhoto: function(e) {
+            // Some clicks seem to go through the pothole size selector to the
+            // take photo/add photo buttons behind - prevent this if the size
+            // UI is visible.
+            if (this.selectingPotholeSize) {
+                e.preventDefault();
+                return;
+            }
+            FMS.PhotoView.__super__.takeNewPhoto.call(this, e);
+        },
+
+        addPhotoFromLibrary: function(e) {
+            // Some clicks seem to go through the pothole size selector to the
+            // take photo/add photo buttons behind - prevent this if the size
+            // UI is visible.
+            if (this.selectingPotholeSize) {
+                e.preventDefault();
+                return;
+            }
+            FMS.PhotoView.__super__.addPhotoFromLibrary.call(this, e);
+        },
+
+
     });
 })(FMS, Backbone, _, $);
