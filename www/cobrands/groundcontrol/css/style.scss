@@ -137,6 +137,12 @@ body.ios, .ui-bar-a {
     .photo {
         // Give wide photos breathing room on narrow screens
         width: 92%;
+
+        // No need for a big picture if the user just took it and is
+        // still standing over the pothole.
+        height: 100px;
+        flex: initial;
+        -webkit-box-flex: initial;
     }
 
     table {
@@ -148,6 +154,78 @@ body.ios, .ui-bar-a {
         td {
             padding: 0 0.25em;
             width: 50%;
+        }
+    }
+
+    .photo-pothole-size {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 3em;
+
+        .pothole-row {
+            flex: 1;
+            display: flex;
+
+            .pothole-cell {
+                flex: 1;
+                position: relative;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-origin: content-box;
+                padding-bottom: 1.5em;
+                margin: 3px;
+
+                &.pothole-background-tiny {
+                    background-image: url('../images/tiny.jpg');
+                }
+                &.pothole-background-small {
+                    background-image: url('../images/small.jpg');
+                }
+                &.pothole-background-medium {
+                    background-image: url('../images/medium.jpg');
+                }
+                &.pothole-background-large {
+                    background-image: url('../images/large.jpg');
+                }
+                &.pothole-background-crater {
+                    background-image: url('../images/crater.jpg');
+                }
+                &.pothole-background-not-pothole {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 0;
+                    background-color: black;
+
+                    span {
+                        flex: 1;
+                        font-size: 2em;
+                        line-height: 1em;
+                        position: relative;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    text-align: center;
+                    text-shadow: none;
+                    color: white;
+                    background-color: black;
+                    font-size: 0.8em;
+                    font-weight: bold;
+                    line-height: 1em;
+                }
+                @media (max-width: 320px) {
+                    span {
+                        font-size: 0.6em;
+                    }
+                }
+            }
         }
     }
 }

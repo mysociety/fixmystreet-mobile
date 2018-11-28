@@ -138,27 +138,108 @@ body.ios, .ui-bar-a {
 /* line 137, style.scss */
 .pothole-size-selector .photo {
   width: 92%;
+  height: 100px;
+  flex: initial;
+  -webkit-box-flex: initial;
 }
-/* line 142, style.scss */
+/* line 148, style.scss */
 .pothole-size-selector table {
   padding: 0;
   margin: 0 0 1.5em 0;
   width: 75%;
   min-width: 300px;
 }
-/* line 148, style.scss */
+/* line 154, style.scss */
 .pothole-size-selector table td {
   padding: 0 0.25em;
   width: 50%;
 }
+/* line 160, style.scss */
+.pothole-size-selector .photo-pothole-size {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 3em;
+}
+/* line 167, style.scss */
+.pothole-size-selector .photo-pothole-size .pothole-row {
+  flex: 1;
+  display: flex;
+}
+/* line 171, style.scss */
+.pothole-size-selector .photo-pothole-size .pothole-row .pothole-cell {
+  flex: 1;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-origin: content-box;
+  padding-bottom: 1.5em;
+  margin: 3px;
+}
+/* line 181, style.scss */
+.pothole-size-selector .photo-pothole-size .pothole-row .pothole-cell.pothole-background-tiny {
+  background-image: url("../images/tiny.jpg");
+}
+/* line 184, style.scss */
+.pothole-size-selector .photo-pothole-size .pothole-row .pothole-cell.pothole-background-small {
+  background-image: url("../images/small.jpg");
+}
+/* line 187, style.scss */
+.pothole-size-selector .photo-pothole-size .pothole-row .pothole-cell.pothole-background-medium {
+  background-image: url("../images/medium.jpg");
+}
+/* line 190, style.scss */
+.pothole-size-selector .photo-pothole-size .pothole-row .pothole-cell.pothole-background-large {
+  background-image: url("../images/large.jpg");
+}
+/* line 193, style.scss */
+.pothole-size-selector .photo-pothole-size .pothole-row .pothole-cell.pothole-background-crater {
+  background-image: url("../images/crater.jpg");
+}
+/* line 196, style.scss */
+.pothole-size-selector .photo-pothole-size .pothole-row .pothole-cell.pothole-background-not-pothole {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
+  background-color: black;
+}
+/* line 202, style.scss */
+.pothole-size-selector .photo-pothole-size .pothole-row .pothole-cell.pothole-background-not-pothole span {
+  flex: 1;
+  font-size: 2em;
+  line-height: 1em;
+  position: relative;
+}
+/* line 210, style.scss */
+.pothole-size-selector .photo-pothole-size .pothole-row .pothole-cell span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  color: white;
+  background-color: black;
+  font-size: 0.8em;
+  font-weight: bold;
+  line-height: 1em;
+}
+@media (max-width: 320px) {
+  /* line 224, style.scss */
+  .pothole-size-selector .photo-pothole-size .pothole-row .pothole-cell span {
+    font-size: 0.6em;
+  }
+}
 
-/* line 155, style.scss */
+/* line 233, style.scss */
 .blurred {
   -webkit-filter: blur(6px);
   filter: blur(6px);
 }
 
-/* line 161, style.scss */
+/* line 239, style.scss */
 .photo .pothole-size-wrapper {
   position: absolute;
   top: 3px;
@@ -166,7 +247,7 @@ body.ios, .ui-bar-a {
   right: 0px;
   padding: 0.5em 0;
 }
-/* line 168, style.scss */
+/* line 246, style.scss */
 .photo .pothole-size-wrapper .pothole-size {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 0.5em;
@@ -174,7 +255,7 @@ body.ios, .ui-bar-a {
   font-weight: bold;
 }
 
-/* line 178, style.scss */
+/* line 256, style.scss */
 .gmailstyletest input,
 .gmailstyletest input[type="password"],
 .gmailstyletest input[type="search"],
@@ -186,7 +267,7 @@ body.ios, .ui-bar-a {
 }
 
 @media (max-width: 320px) {
-  /* line 189, style.scss */
+  /* line 267, style.scss */
   .gmailstyletest input,
   .gmailstyletest input[type="password"],
   .gmailstyletest input[type="search"],

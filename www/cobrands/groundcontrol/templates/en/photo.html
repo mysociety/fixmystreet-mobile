@@ -13,19 +13,21 @@
 <div class="pothole-size-selector hidden">
     <h2>Size of pothole?</h2>
     <div class="photo"></div>
-    <table class="photo-pothole-size">
+    <div class="photo-pothole-size">
         <% Object.entries(CONFIG.POTHOLE_SIZES).forEach(function(size, index) { %>
             <% if ( index % 2 == 0 ) { %>
-                <tr>
+                <div class="pothole-row">
             <% } %>
 
-                <td><button class="pothole-size-button" data-pothole-size="<%= size[0] %>" <% if (size[0] === "") { %>data-theme="a"<% } %> ><%= size[1] %></button></td>
+                <a class="pothole-cell pothole-size-button pothole-background-<%= size[0] === "" ? "not-pothole" : size[0] %>" data-pothole-size="<%= size[0] %>">
+                    <span><%= size[1] %></span>
+                </a>
 
             <% if ( index % 2 == 1 ) { %>
-                </tr>
+                </div>
             <% } %>
         <% }); %>
-    </table>
+    </div>
 </div>
 
 
@@ -64,7 +66,7 @@
                             <a data-role="none" class="photo-corner-button del_photo_button" data-file-index="<%= fileIndex %>">X</a>
                             <% if (pothole_sizes[file]) { %>
                                 <div class="pothole-size-wrapper">
-                                    <a data-role="none" class="pothole-size"><%= CONFIG.POTHOLE_SIZES[pothole_sizes[file]] %></a>
+                                    <a data-role="none" class="pothole-size"><%= CONFIG.POTHOLE_SIZES[pothole_sizes[file]].split(":")[0] %></a>
                                 </div>
                             <% } %>
                         </div>

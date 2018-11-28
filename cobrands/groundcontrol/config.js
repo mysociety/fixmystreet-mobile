@@ -78,11 +78,12 @@ var CONFIG = {
     SKIP_CONFIRM_REPORT: true,
 
     POTHOLE_SIZES: {
-        tiny: "Tiny",
-        small: "Small",
-        medium: "Medium",
-        large: "Large",
-        crater: "Crater"
+        tiny: "XS: up to 20cm diameter",
+        small: "S: up to 35cm diameter",
+        medium: "M: up to 50cm diameter",
+        large: "L: up to 60cm diameter and deep",
+        crater: "XL: avg. 70cm - 100cm diameter and deep",
+        "": "Not pothole"
     }
 };
 

@@ -33,7 +33,7 @@
         potholeSizeSelected: function(e) {
             e.preventDefault();
 
-            var size = e.target.dataset.potholeSize;
+            var size = $(e.target).closest(".pothole-size-button").data().potholeSize;
             var pothole_sizes = this.model.get("pothole_sizes") || {};
             var filekey = $(".pothole-size-selector .photo").data("photo_url");
             pothole_sizes[filekey] = size;
