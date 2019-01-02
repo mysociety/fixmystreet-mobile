@@ -9,8 +9,8 @@
                 'pagehide': 'destroy',
                 'pagebeforeshow': 'beforeDisplay',
                 'pageshow': 'afterDisplay',
-                'vclick #accept_quote': 'onAcceptOrRejectQuote',
-                'vclick #reject_quote': 'onAcceptOrRejectQuote'
+                'vclick #quote_controls .handle_quote': 'onHandleQuote',
+                'vclick #quote_controls .handle_quote': 'onHandleQuote'
             },
 
             beforeDisplay: function() {
@@ -27,9 +27,9 @@
                 }
             },
 
-            onAcceptOrRejectQuote: function(e) {
+            onHandleQuote: function(e) {
                 e.preventDefault();
-                console.log("onAcceptOrRejectQuote");
+                console.log("onHandleQuote");
 
                 $.mobile.loading('show');
                 var accept = e.target.dataset.accept;
@@ -46,11 +46,6 @@
                 })
                 .done(function(data) {
                     console.log("AJAX accept quote success", that, this, arguments);
-                    if (data.ok == 1) {
-                        FMS.createdReport.set('quote_accepted', !!parseInt(accept));
-                    } else {
-                        FMS.createdReport.set('quote_accepted', 'error');
-                    }
 
                     // Server may have supplied a custom confirmation message
                     // as an HTML string, store it for rendering by the template.
@@ -62,7 +57,6 @@
                 })
                 .fail(function() {
                     console.log("AJAX error", that, this, arguments);
-                    FMS.createdReport.set('quote_accepted', 'error');
                     $.mobile.loading('hide');
                     $("#map_box").removeClass("blurred");
                     that.navigate('sent');

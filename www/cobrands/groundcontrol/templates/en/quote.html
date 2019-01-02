@@ -3,12 +3,12 @@
 </div>
 <div data-role="content">
 
-    <!-- This element is replaced with one loaded from the server -->
+    <!--
+        These elements are replaced with content loaded from the server.
+        This page isn't shown if the server call fails, so no need for
+        'loading' placeholders.
+     -->
     <table id="quote_rendered"></table>
 
-    <div class="bottom-btn" id="quote_controls">
-        <p>Do you wish to proceed with this quote, or have it emailed?</p>
-        <input type="button" id="reject_quote" data-theme="a" value="Email quote" data-accept="0">
-        <input type="button" id="accept_quote" data-theme="b" value="Proceed with quote" data-accept="1">
-    </div>
+    <div class="bottom-btn" id="quote_controls"></div>
 </div>
