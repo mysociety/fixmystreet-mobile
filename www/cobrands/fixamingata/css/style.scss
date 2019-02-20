@@ -3,12 +3,12 @@
 $lighterblue: rgb(198, 222, 255);
 $darkerblue: rgb(141, 191, 220);
 
-.ios7 .ui-bar-a,
-body.ios7 {
+.ios .ui-bar-a,
+body.ios {
     background-color: $darkerblue;
 }
 
-.ios7 .ui-bar-a {
+.ios .ui-bar-a {
     border-color: $darkerblue;
 }
 

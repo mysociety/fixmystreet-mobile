@@ -7,7 +7,7 @@
     <div id="errors"></div>
     <p class="top">
     <% if ( nopassword ) { %>
-    Inga problem - vi gillar inte att förspilla tid med lösenord heller.
+    Ange ditt namn, ditt telefonnummer (valfritt) och huruvida ditt namn skall visas offentligt i våra appar.
     <% } %>
     Ge oss grundläggande information för att skapa ett ärende.
     </p>
@@ -28,7 +28,7 @@
         </div>
         <div data-role="fieldcontain">
             <fieldset data-role="controlgroup">
-                <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <% if ( typeof user.may_show_name == 'undefined' || user.may_show_name ) { %>checked<% } %>>
+                <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <%= user.may_show_name ? 'checked' : '' %>>
                 <label for="form_may_show_name">Visa mitt namn offentligt</label>
             </fieldset>
         </div>

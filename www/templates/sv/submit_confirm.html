@@ -3,7 +3,7 @@
     <h1>Dina uppgifter</h1>
 </div>
 
-<div data-role="content">
+<div data-role="content"<% if (CONFIG.SKIP_CONFIRM_REPORT) { %> class="hidden"<% } %>>
     <p class="notopmargin">
     Du är inloggad som <%= user.email %>.
     </p>
@@ -30,7 +30,7 @@
             <input data-role="none" type="tel" value="<%= user.phone %>" name="name" id="form_phone" placeholder="Ange ditt telefonnummer (valfritt)">
         </div>
         <div class="checkbox-group noborder">
-            <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <% if ( typeof user.may_show_name == 'undefined' || user.may_show_name ) { %>checked<% } %>>
+            <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <%= user.may_show_name ? 'checked' : '' %>>
             <label class="inline" for="form_may_show_name">Visa mitt namn offentligt</label>
         </div>
     </div>

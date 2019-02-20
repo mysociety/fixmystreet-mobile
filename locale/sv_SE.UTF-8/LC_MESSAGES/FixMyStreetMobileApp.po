@@ -5,63 +5,58 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: my-society\n"
+"Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
 "POT-Creation-Date: 2019-02-20 08:38+0100\n"
-"PO-Revision-Date: 2017-06-26 15:22+0100\n"
-"Last-Translator: applingua <team@applingua.com>\n"
-"Language-Team: Spanish, Dominican Republic\n"
-"Language: es_DO\n"
+"PO-Revision-Date: 2019-02-20 08:46+0100\n"
+"Last-Translator: FixaMinGata <info@fixamingata.se>\n"
+"Language-Team: Swedish <team@fixmystreet.com>\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.2\n"
-"X-Crowdin-Project: my-society\n"
-"X-Crowdin-Language: es-DO\n"
-"X-Crowdin-File: FixMyStreet.po\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: templates/photo.html:18
 msgid "(optional)"
-msgstr "(opcional)"
+msgstr "(valfritt)"
 
 #: templates/photo.html:20
-#, fuzzy
 msgid "(required)"
-msgstr "requerido(a)"
+msgstr "(nödvändigt)"
 
 #: templates/existing.html:12 templates/strings.js:46
 msgid "-- Pick a category --"
-msgstr "-- Seleccione una categoría --"
+msgstr "-- Välj en kategori --"
 
 #: templates/submit.html:56
 msgid "<strong>No</strong> Let me confirm my report by email"
-msgstr "<strong>No</strong>- confirmar mi notificación por email"
+msgstr "<strong>Nej</strong> Låt mig bekräfta min rapport via e-post"
 
 #: templates/submit.html:46
 msgid "<strong>Yes</strong> I have a password"
-msgstr "<strong>Sí</strong>- tengo una contraseña"
+msgstr "<strong>Ja</strong> Jag har ett lösenord"
 
 #: templates/around.html:7
 msgid "Account"
-msgstr "Cuenta"
+msgstr "Konto"
 
 #: templates/photo.html:3
-#, fuzzy
 msgid "Add Photos"
-msgstr "Añadir foto"
+msgstr "Lägg till foton"
 
 #: templates/photo.html:16
 msgid "Add a Photo"
-msgstr "Añadir una foto"
+msgstr "Lägg till ett foto"
 
 #: templates/offline.html:52 templates/photo.html:45
 msgid "Add an existing photo"
-msgstr "Añadir una foto existente"
+msgstr "Lägg till ett befintligt foto"
 
 #: templates/strings.js:37
 msgid "An error was encountered when submitting your report: "
-msgstr "Un error se ha generado al enviar su informe: "
+msgstr "Ett fel inträffades när din rapport skickades: "
 
 #: templates/details.html:2 templates/details_extra.html:2
 #: templates/photo.html:2 templates/submit.html:2
@@ -69,557 +64,554 @@ msgstr "Un error se ha generado al enviar su informe: "
 #: templates/submit_name.html:2 templates/submit_password.html:2
 #: templates/submit_set_password.html:2
 msgid "Back"
-msgstr "Atrás"
+msgstr "Bakåt"
 
 #: templates/address_search.html:2 templates/around.html:22
 #: templates/around.html:5 templates/offline.html:18
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Avbryt"
 
 #: templates/existing.html:31
 msgid "Complete report now"
-msgstr "Completar el informe ahora"
+msgstr "Slutför rapportering nu"
 
 #: templates/around.html:51
 msgid "Confirm Location"
-msgstr "Confirmar ubicación"
+msgstr "Bekräfta läget"
 
 #: templates/submit.html:18
 msgid "Confirm details"
-msgstr "Confirmar detalles"
+msgstr "Bekräfta detaljer"
 
 #: templates/submit_password.html:47
 msgid "Confirm name"
-msgstr "Confirmar nombre"
+msgstr "Bekräfta namn"
 
 #: templates/sent.html:7
 msgid "Confirmation email sent"
-msgstr "Email de confirmación enviado"
+msgstr "Bekräftelse via mejl har skickats"
 
 #: templates/submit_set_password.html:19
 msgid "Continue"
-msgstr "Continuar"
+msgstr "Fortsätt"
 
 #: templates/strings.js:45
 msgid "Could not access location services. Please check permissions."
-msgstr "No se pudo acceder a los servicios de ubicación. Por favor, verificar los permisos."
+msgstr "Kunde inte använda platstjänst. Vänligen kontrollera rättigheter."
 
 #: templates/strings.js:48
 msgid "Could not get location."
-msgstr "No se pudo obtener la ubicación."
+msgstr "Position kunde inte hämtas."
 
 #: templates/reports.html:25
 msgid "Delete"
-msgstr "Eliminar"
+msgstr "Ta bort"
 
 #: templates/details.html:18 templates/details.html:3
 msgid "Details"
-msgstr "Detalles"
+msgstr "Detaljer"
 
 #: templates/existing.html:33
 msgid "Discard"
-msgstr "Descartar"
+msgstr "Radera"
 
 #: templates/submit.html:42
 msgid "Do you have a %s password?"
-msgstr "¿Tiene una contraseña %s?"
+msgstr "Har du ett %s-lösenord?"
 
 #: templates/reports.html:3
 msgid "Draft Reports"
-msgstr "Informes preliminares"
+msgstr "Rapportutkast"
 
 #: templates/around.html:3
 msgid "Drafts"
-msgstr "Borradores"
+msgstr "Utkast"
 
 #: templates/address_search.html:7
 msgid "Enter a nearby GB postcode, or street name and area"
-msgstr "Introduzca un código postal cercano, o el nombre de una calle o área"
+msgstr "Ange ett närliggande postnummer, eller gatunamn och område"
 
 #: templates/submit.html:76
 msgid "Enter a password (optional)"
-msgstr "Introduzca una contraseña (opcional)"
+msgstr "Ange ett lösenord (valfritt)"
 
 #: templates/submit_set_password.html:11
 msgid "Enter a password for your account. This won't be activated till you click the link in the confirmation email"
-msgstr "Introduzca la contraseña de su cuenta. Esta no será activada hasta que haga click sobre el enlace en el email de confirmación"
+msgstr "Ange ett lösenord för ditt konto. Lösenordet kommer inte att aktiveras förrän du klickar på länken i bekräftelsen som har skickats till din angivna e-postadress."
 
 #: templates/around.html:18 templates/offline.html:14
 msgid "Finding your location"
-msgstr "Localizando su ubicación"
+msgstr "Söker efter din plats"
 
 #: templates/details_extra.html:3
 msgid "Further Details"
-msgstr "Detalles adicionales"
+msgstr "Mer detaljer"
 
 #: templates/address_search.html:13
 msgid "Go"
-msgstr "Ir"
+msgstr "Sök"
 
 #: templates/strings.js:47
 msgid "Got location."
-msgstr "Ubicación localizada."
+msgstr "Ange plats för rapportering"
 
 #: templates/login.html:2 templates/reports.html:2 templates/sent.html:2
 msgid "Home"
-msgstr "Inicio"
+msgstr "Hem"
 
 #: templates/submit_email.html:22
 msgid "I don't want to set a password"
-msgstr "No quiero configurar una contraseña"
+msgstr "Jag vill inte ange ett lösenord"
 
 #: templates/submit_email.html:23
 msgid "I'd like to set a password"
-msgstr "Me gustaría configurar una contraseña"
+msgstr "Jag vill ange ett lösenord"
 
 #: templates/submit_email.html:24
 msgid "I've already got one - login"
-msgstr "Ya tengo una - abrir sesión"
+msgstr "Jag har redan en inloggning"
 
 #: templates/reports.html:6
 msgid "If you start compiling a report, but don't finish and send it, it'll appear in this menu so you can finish it later"
-msgstr "Si comienza a compilar un informe, pero no lo termina ni lo envía, este aparecerá en este menú para que lo pueda completar más tarde"
+msgstr "En påbörjad rapport, som inte avslutats, kommer att visas i den här menyn för att avslutas vid ett senare tillfälle."
 
 #: templates/strings.js:50
 msgid "Invalid email"
-msgstr "Email inválido"
+msgstr "Ogiltig e-postadress"
 
 #: templates/strings.js:51
 msgid "Invalid report"
-msgstr "Informe inválido"
+msgstr "Ogiltig rapport"
 
 #: templates/offline.html:35
 msgid "Locate (optional)"
-msgstr "Localizar (opcional)"
+msgstr "Hitta plats (valfritt)"
 
 #: templates/strings.js:33
 msgid "Location error"
-msgstr "Error de ubicación"
+msgstr "Platsfel"
 
 #: templates/login.html:26 templates/login.html:3
 msgid "Login"
-msgstr "Abrir sesión"
+msgstr "Logga in"
 
 #: templates/strings.js:61
 msgid "More details"
-msgstr "Más detalles"
+msgstr "Fler detaljer"
 
 #: templates/strings.js:35
 msgid "More than one location matched that name. Select one below or try entering street name and area, or a postcode."
-msgstr "Más de una ubicación corresponde a ese nombre. Seleccione una abajo o pruebe indicando el nombre de la calle y área, o un código postal."
+msgstr "Mer än en plats hittades. Välj ett av alternativen nedan eller sök på gatunamn och ort, eller postnummer."
 
 #: templates/strings.js:36
 msgid "Multiple matches found"
-msgstr ""
+msgstr "Flera träffar hittades"
 
 #: templates/submit.html:20 templates/submit.html:59
 msgid "Name"
-msgstr "Nombre"
+msgstr "Namn"
 
 #: templates/around.html:42
 msgid "New Report Here"
-msgstr "Nuevo informe aquí"
+msgstr "Ny rapportering här"
 
 #: templates/details.html:4 templates/details_extra.html:7
 #: templates/offline.html:4 templates/photo.html:9 templates/strings.js:26
 msgid "Next"
-msgstr "Siguiente"
+msgstr "Nästa"
 
 #: templates/strings.js:60
 msgid "No network connection available for submitting your report. Please try again later."
-msgstr "No hay conexión a la red disponible para enviar su informe. Por favor, inténtelo de nuevo más tarde."
+msgstr "Ingen nätverksanslutning finns tillgänglig för att skicka din rapport. Vänligen försök igen senare."
 
 #: templates/submit_name.html:10
 msgid "No problem - we don't like faffing with passwords either."
-msgstr "No hay problema - tampoco nos gusta tontear con contraseñas."
+msgstr "Ange ditt namn, ditt telefonnummer (valfritt) och huruvida ditt namn skall visas offentligt i våra appar."
 
 #: templates/offline.html:3 templates/save_offline.html:2
 msgid "Offline"
-msgstr "Sin conexión"
+msgstr "Nedkopplad"
 
 #: templates/offline.html:25
 msgid "Oh dear - we can't detect an internet connection. However you can still edit the report now and send it later."
-msgstr "¡Qué horror! - no podemos detectar una conexión al internet. Sin embargo, aún puede editar el informe en este momento y enviarlo más tarde."
+msgstr "Ingen nätverksanslutning finns tillgänglig. Rapporten kan redigeras och skickas senare."
 
 #: templates/offline.html:27
 msgid "Oh dear - we can't detect an internet connection. However you can still start a report now and complete it later, by going to 'drafts' when you're back online."
-msgstr "¡Qué horror! - no podemos detectar una conexión al internet. Sin embargo, aún puede editar el informe en este momento y enviarlo más tarde, yendo a 'borradores' cuando vuelva a estar conectado."
+msgstr "Ingen nätverksanslutning finns tillgänglig. Påbörja rapportering och slutför via utkast vid nästa tillfälle du är uppkopplad."
 
 #: templates/submit_confirm.html:30 templates/submit_name.html:27
 msgid "Optionally enter your phone number"
-msgstr "Número de telefono (opcional)"
+msgstr "Ange ditt telefonnummer (valfritt)"
 
 #: templates/submit.html:72
 msgid "Password"
-msgstr "Contraseña"
+msgstr "Lösenord"
 
 #: templates/submit.html:28 templates/submit.html:67
 msgid "Phone number"
-msgstr "Número de teléfono"
+msgstr "Telefonnummer"
 
 #: templates/strings.js:53
 msgid "Photo added"
-msgstr "Foto añadida"
+msgstr "Foto tillagt"
 
 #: templates/photo.html:25
-#, fuzzy
 msgid "Photos for report"
-msgstr "Foto para el informe"
+msgstr "Foton för rapport"
 
 #: templates/strings.js:55
 msgid "Please allow access to photos in your phone’s settings."
-msgstr ""
+msgstr "Vänligen tillåt tillgång till foton i appens rättigheter."
 
 #: templates/strings.js:54
 msgid "Please allow access to the camera in your phone’s settings."
-msgstr ""
+msgstr "Vänligen tillåt tillgång till kameran i appens rättigheter."
 
 #: templates/strings.js:11
 msgid "Please choose a category"
-msgstr "Por favor, seleccione una categoría"
+msgstr "Sparad i %s-kategorin"
 
 #: templates/submit_confirm.html:12 templates/submit_password.html:22
 msgid "Please confirm your name, if you want it to be public and optionally your phone number."
-msgstr "Por favor confirme si desea mostrar su nombre o telefono en el reporte público."
+msgstr "Bekräfta ditt namn och eventuellt också ditt telefonnummer, och om du vill att ditt namn skall vara offentligt."
 
 #: templates/strings.js:40
 msgid "Please enter a location"
-msgstr "Por favor, indique una ubicación"
+msgstr "Ange en plats"
 
 #: templates/strings.js:4
 msgid "Please enter a message"
-msgstr "Por favor, introduzca un mensaje"
+msgstr "Fyll i detaljer kring problemet"
 
 #: templates/strings.js:21
 msgid "Please enter a password"
-msgstr "Por favor, introduzca la contraseña"
+msgstr "Ange ett lösenord"
 
 #: templates/strings.js:22
-#, fuzzy
 msgid "Please enter a password at least %d characters long"
-msgstr "Por favor, introduzca la contraseña"
+msgstr "Ange ett lösenord som är minst %d tecken långt"
 
 #: templates/strings.js:5
 msgid "Please enter a subject"
-msgstr "Por favor, introduzca un título"
+msgstr "Ange en titel"
 
 #: templates/strings.js:14 templates/strings.js:18
 msgid "Please enter a valid email"
-msgstr "Por favor, introduzca un email válido"
+msgstr "Ange en giltlig e-postadress"
 
 #: templates/strings.js:6
 msgid "Please enter some details"
-msgstr "Por favor, escriba algunos detalles"
+msgstr "Fyll i detaljer kring problemet"
 
 #: templates/strings.js:13 templates/strings.js:17
 msgid "Please enter your email"
-msgstr "Por favor, introduzca su email"
+msgstr "Ange din e-postadress"
 
 #: templates/submit.html:39 templates/submit_email.html:9
 msgid "Please enter your email address"
-msgstr "Por favor, introduzca su dirección de email"
+msgstr "Ange din e-postadress"
 
 #: templates/strings.js:9
 msgid "Please enter your full name, councils need this information - if you do not wish your name to be shown on the site, untick the box below"
-msgstr "Por favor, introduzca su nombre, los ayuntamientos necesitan esta información - si no quiere que su nombre se haga público en esta página web, borre la marca en la casilla de abajo"
+msgstr "Ange ditt fullständiga namn - bocka i alternativet nedan om namnet inte ska visas offentligt på FixaMinGata"
 
 #: templates/strings.js:8 templates/submit_confirm.html:27
 #: templates/submit_name.html:24
 msgid "Please enter your name"
-msgstr "Por favor, introduzca su nombre"
+msgstr "Ange ditt namn"
 
 #: templates/submit_password.html:37
 msgid "Please enter your phone number (optional)"
-msgstr "Por favor, introduzca su número de teléfono (opcional)"
+msgstr "Ange ditt telefonnummer (valfritt)"
 
 #: templates/details.html:19
 msgid "Please fill in details of the problem."
-msgstr "Por favor, provea detalles del problema."
+msgstr "Fyll i detaljer kring problemet"
 
 #: templates/submit_name.html:12
 msgid "Please give us some basic details, and you're nearly done."
-msgstr "Por favor, proporciónenos con algunos detalles básicos, y pronto terminaremos."
+msgstr "Ge oss grundläggande information för att skapa ett ärende."
 
 #: templates/strings.js:43
 msgid "Please search for a street name and area, or postcode."
-msgstr "Por favor, busque el nombre de la calle y área o código postal."
+msgstr "Sök efter ett postnummer eller gatunamn och ort."
 
 #: templates/details.html:10 templates/offline.html:41
 msgid "Provide a title"
-msgstr "Indique un título"
+msgstr "Ange en titel"
 
 #: templates/submit.html:33 templates/submit.html:51 templates/submit.html:77
 #: templates/submit_confirm.html:38 templates/submit_password.html:16
 msgid "Report"
-msgstr "Informe"
+msgstr "Rapportera"
 
 #: templates/sent.html:3
 msgid "Report Created"
-msgstr "Informe creado"
+msgstr "Rapporten är skapad"
 
 #: templates/around.html:48
 msgid "Reposition Report Here"
-msgstr "Reposicione el informe aquí"
+msgstr "Omplacera rapporten hit"
 
 #: templates/strings.js:63 templates/submit.html:88
 msgid "Save"
-msgstr "Guardar"
+msgstr "Spara"
 
 #: templates/strings.js:59
 msgid "Save for Later"
-msgstr "Guardar para más tarde"
+msgstr "Spara till senare"
 
 #: templates/existing.html:32
 msgid "Save for later"
-msgstr "Guardar para más tarde"
+msgstr "Spara till senare"
 
 #: templates/submit.html:86
 msgid "Save this report for completion later"
-msgstr "Guardar este informe para finalizarlo más tarde"
+msgstr "Spara rapportutkast för att färdigställa senare"
 
 #: templates/existing.html:13
 msgid "Saved in the %s category"
-msgstr "Guardado en la categoría %s"
+msgstr "Sparad i %s-kategorin"
 
 #: templates/address_search.html:3
 msgid "Search"
-msgstr "Buscar"
+msgstr "Sök"
 
 #: templates/strings.js:32
 msgid "Search for a place or postcode"
-msgstr "Buscar un lugar o código postal"
+msgstr "Sök efter en plats eller postnummer"
 
 #: templates/around.html:28
 msgid "Search or scroll the map"
-msgstr "Buscar o desplazarse en el map"
+msgstr "Sök eller navigera via kartan"
 
 #: templates/submit_name.html:37
 msgid "Send confirmation email"
-msgstr "Enviar un email de confirmación"
+msgstr "Skicka bekräftelsemejl"
 
 #: templates/around.html:45
 msgid "Set Report Location"
-msgstr "Configurar la ubicación del informe"
+msgstr "Ange plats för rapportering"
 
 #: templates/submit.html:25 templates/submit.html:64
 #: templates/submit_confirm.html:34 templates/submit_name.html:32
 #: templates/submit_password.html:42
 msgid "Show my name publicly"
-msgstr "Mostrar mi nombre públicamente"
+msgstr "Visa mitt namn offentligt"
 
 #: templates/login.html:12
 msgid "Sign Out"
-msgstr "Cerrar sesión"
+msgstr "Logga ut"
 
 #: templates/offline.html:4 templates/photo.html:6 templates/strings.js:62
 msgid "Skip"
-msgstr "Saltar"
+msgstr "Hoppa över"
 
 #: templates/strings.js:44
 msgid "Sorry, but we weren't able to establish your location accurately enough to show you a map. Please enter a location in the search box instead"
-msgstr "Lo sentimos, no pudimos establecer su ubicación con la precisión necesaria para mostrarle un mapa. Por favor, como alternativa, incluya una ubicación en la casilla de búsqueda"
+msgstr "Tyvärr kunde positionen för din placering inte hittas. Vänligen ange en plats i sökrutan istället"
 
 #: templates/sent.html:20
 msgid "Start new report"
-msgstr "Comenzar un nuevo informe"
+msgstr "Skapa en ny rapport"
 
 #: templates/details.html:9
 msgid "Subject"
-msgstr "Título"
+msgstr "Ämne"
 
 #: templates/details_extra.html:5 templates/submit.html:3
 msgid "Submit"
-msgstr "Enviar"
+msgstr "Skicka"
 
 #: templates/offline.html:51 templates/photo.html:46
 msgid "Take a new photo"
-msgstr "Tomar una nueva foto"
+msgstr "Ta ett nytt foto"
 
 #: templates/around.html:31
 msgid "Test version. Reports will not be sent to the council."
-msgstr "Versión de prueba. Los informes no serán enviados al ayuntamiento."
+msgstr "Testversion. Rapporter kommer inte att skickas till kommuner."
 
 #: templates/sent.html:13
 msgid "Thanks. Your report will be sent to the authorities immediately."
-msgstr "Gracias. Su informe será enviado inmediatamente a las autoridades."
+msgstr "Tack. Din rapport kommer genast att skickas till kommunen."
 
 #: templates/save_offline.html:5
 msgid "There is no internet connection"
-msgstr "No hay conexión al internet"
+msgstr "Du är inte ansluten till Internet"
 
 #: templates/save_offline.html:8
 msgid "There isn't an internet connection, do you want to save the current report for later?"
-msgstr "No hay conexión al internet, ¿quiere guardar el presente informe para más tarde?"
+msgstr "Du är inte ansluten till Internet, vill du spara rapporten för att skicka in vid ett senare tillfälle?"
 
 #: templates/android_error.html:14
 msgid "There seems to have been a problem starting the app. Please quit and try again."
-msgstr "Ha sido un problema comenzando el app. Por favour, salirlo y intentar comenzarlo de nuevo."
+msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen."
 
 #: templates/strings.js:42
 msgid "There was a problem checking if we have all the details we need. Please try again later."
-msgstr "Hubo un problema al verificar si tenemos todos los detalles que necesitamos. Por favor, inténtelo de nuevo más tarde."
+msgstr "Ett problem uppstod i samband med genomgång av de detaljer som behövs för rapporteringen. Vänligen försök igen senare."
 
 #: templates/strings.js:41
 msgid "There was a problem checking we cover this location. Please try again later."
-msgstr "Hubo un problema al verificar si cubrimos esta ubicación. Por favor, inténtelo de nuevo más tarde."
+msgstr "Ett problem uppstod i samband med genomgång av att angiven position stödjs. Vänligen försök igen senare."
 
 #: templates/strings.js:30
 msgid "There was a problem logging you in. Please check your email and password and that you have confirmed your password."
-msgstr "Hubo un problema al abrir la sesión. Por favor, verifique su email y contraseña y que haya confirmado su contraseña."
+msgstr "Ett problem uppstod vid din inloggning. Vänligen försök igen senare."
 
 #: templates/strings.js:28
 msgid "There was a problem logging you in. Please try again later."
-msgstr "Hubo un problema al abrir sesión. Por favor, inténtelo de nuevo más tarde."
+msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen."
 
 #: templates/strings.js:29
 msgid "There was a problem logging you out. Please try again later."
-msgstr "Hubo un problema al cerrar sesión. Por favor, inténtelo de nuevo más tarde."
+msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen."
 
 #: templates/strings.js:34
 msgid "There was a problem looking up your location."
-msgstr "Hubo un problema al buscar su ubicación."
+msgstr "Ett problem uppstod i vid fastställande av plats."
 
 #: templates/strings.js:38
 msgid "There was a problem submitting your report. Please try again later."
-msgstr "Hubo un problema al enviar su informe. Por favor, inténtelo de nuevo más tarde."
+msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen."
 
 #: templates/strings.js:39
 msgid "There was a problem submitting your report. Please try again."
-msgstr "Hubo un problema al enviar su informe. Por favor, inténtelo de nuevo más tarde."
+msgstr "Det har uppstått ett problem. Vänligen avsluta appen och försök igen."
 
 #: templates/strings.js:52
 msgid "There was a problem taking your photo."
-msgstr "Hubo un problema al tomar su foto."
+msgstr "Ett problem uppstod då fotot togs."
 
 #: templates/strings.js:57
 msgid "There was a problem uploading your report."
-msgstr "Hubo un problema al subir su informe."
+msgstr "Ett problem uppstod då rapporten laddades upp."
 
 #: templates/strings.js:31
 msgid "There was a problem with your email/password combination. If you have forgotten your password, or do not have one, you can set one by returning to the email screen and selecting the set password option. Passwords are not activated until the link in the confirmation email is clicked."
-msgstr "Hubo un problema con la combinación de su email/contraseña. Si ha olvidado su contraseña, o no tiene una, puede configurarla volviendo a la pantalla de email, y seleccionado la opción configuración de contraseña. Las contraseñas no se activan hasta que no se haga click sobre el enlace en el email de confirmación."
+msgstr "Det finns ett problem med din e-post/lösenords-kombination. Om du har glömt ditt lösenord, eller inte har ett, kan ett nytt anges genom att gå via e-postfönstret och välja alternativet lösenord. Lösenord aktiveras när du klickar på länken i ditt bekräftelsemejl."
 
 #: templates/reports.html:9
 msgid "These are your draft, unsent reports. To finish and send them, open a report when online."
-msgstr "Estos son sus borradores, informes no enviados. Para completarlos y enviarlos, abra un informe cuando esté conectado(a) al internet."
+msgstr "Här finns utkast/ej insända rapporter. Slutför och skicka in dem, då du är uppkopplad."
 
 #: templates/submit_email.html:14
 msgid "This app needs to send you a confirmation email before we can send your report to the council."
-msgstr "Esta aplicación necesita enviarle un email de confirmación antes de que podamos enviar su informe al ayuntamiento."
+msgstr "Appen kommer att skicka ett bekräftelsemejl till din e-postadress innan rapporten skickas till kommunen."
 
 #: templates/offline.html:33
 msgid "This report has a position."
-msgstr "Este informe tiene una posición."
+msgstr "Den här rapporten har en angiven plats."
 
 #: templates/submit_confirm.html:20 templates/submit_confirm.html:21
 #: templates/submit_name.html:17 templates/submit_name.html:18
 #: templates/submit_password.html:27 templates/submit_password.html:28
 msgid "Title"
-msgstr "Título"
+msgstr "Titel"
 
 #: templates/submit_email.html:18
 msgid "To skip this step in future, you can set a password now."
-msgstr "Para saltar este paso en el futuro, puede configurar una contraseña ahora."
+msgstr "Ange ett lösenord för att slippa detta steg i framtiden."
 
 #: templates/offline.html:2 templates/strings.js:58
 msgid "Try Again"
-msgstr "Inténtelo nuevamente"
+msgstr "Försök igen"
 
 #: templates/existing.html:2
 msgid "Unsent Report"
-msgstr "Informe no enviado"
+msgstr "Oskickad rapport"
 
 #: templates/strings.js:27
 msgid "Untitled draft"
-msgstr "Borrador sin título"
+msgstr "Namnlöst utkast"
 
 #: templates/strings.js:56
 msgid "Uploading images may take some time, please be patient"
-msgstr "Subir imágenes podría demorar, por favor tenga paciencia"
+msgstr "Uppladdning av bilder kan ta en stund, vänligen vänta"
 
 #: templates/sent.html:15
 msgid "View it on the site"
-msgstr "Véalo en la pagina web"
+msgstr "Visa den på webben"
 
 #: templates/sent.html:10
 msgid "We've sent you a confirmation email which may take a few minutes to arrive. Once it arrives click the link in the email to confirm your report."
-msgstr "Le hemos enviado un email de confirmación que le llegará en unos minutos. Una vez que llegue haga click sobre el enlace dentro del email para confirmar su informe."
+msgstr "Vi har skickat ett bekräftelsemejl till dig. Det kan ta några minuter innan det kommer fram. Klicka på länken i meddelandet för att bekräfta din rapport."
 
 #: templates/submit.html:48
 msgid "Yes I have a password"
-msgstr "Sí, tengo una contraseña"
+msgstr "Ja, jag har ett lösenord"
 
 #: templates/submit_confirm.html:8
 msgid "You are logged in as %s"
-msgstr "Estas registrado como %s"
+msgstr "Du är inloggad som %s"
 
 #: templates/login.html:17
-#, fuzzy
 msgid "You are not signed in."
-msgstr "Estas registrado como %s"
+msgstr "Du är inte inloggad."
 
 #: templates/login.html:9
 msgid "You are signed in as %s"
-msgstr "Estas registrado como %s"
+msgstr "Du är inloggad som %s"
 
 #: templates/submit.html:15
 msgid "You are signed in as <span id=\"username\">%s</span>"
-msgstr "Estas registrado como <span id=\"username\">%s</span>"
+msgstr "Du är inloggad som <span id=\"username\">%s</span>"
 
 #: templates/login.html:20
 msgid "Your Email"
-msgstr "Su email"
+msgstr "Din e-postadress"
 
 #: templates/submit_confirm.html:3 templates/submit_email.html:3
 #: templates/submit_name.html:3 templates/submit_password.html:3
 #: templates/submit_set_password.html:3
 msgid "Your details"
-msgstr "Sus detalles"
+msgstr "Dina uppgifter"
 
 #: templates/submit.html:38
 msgid "Your email"
-msgstr "Su email"
+msgstr "Din e-postadress"
 
 #: templates/submit.html:21 templates/submit.html:60
 msgid "Your name"
-msgstr "Su nombre"
+msgstr "Ditt namn"
 
 #: templates/login.html:23 templates/submit.html:50
 #: templates/submit_password.html:12 templates/submit_set_password.html:15
 msgid "Your password"
-msgstr "Su contraseña"
+msgstr "Ditt lösenord"
 
 #: templates/submit.html:29 templates/submit.html:68
 msgid "Your phone number (optional)"
-msgstr "Número de telefono (opcional)"
+msgstr "Ditt telefonnummer (valfritt)"
 
 #: templates/save_offline.html:13
 msgid "discard"
-msgstr "eliminar"
+msgstr "radera"
 
 #: templates/address_search.html:10
 msgid "e.g. ‘B2 4QA’ or ‘Tib St, Manchester’"
-msgstr "ej. ‘10103’ o ‘Ave. Alma Mater, Santo Domingo’"
+msgstr "ex.v. ‘107 25’ eller ‘Vasagatan, Stockholm’"
 
 #: templates/strings.js:49
 msgid "required"
-msgstr "requerido(a)"
+msgstr "nödvändigt"
 
 #: templates/save_offline.html:12
 msgid "save"
-msgstr "guardar"
+msgstr "spara"
 
 #~ msgid "Add a Photo "
-#~ msgstr "Añadir una foto "
+#~ msgstr "Lägg till ett foto "
 
 #~ msgid "Remove Photo"
-#~ msgstr "Eliminar foto"
+#~ msgstr "Radera foto"
 
 #~ msgid "Signed in!"
-#~ msgstr "¡Sesión abierta!"
+#~ msgstr "Inloggad!"
 
 #~ msgid "Signed out!"
-#~ msgstr "¡Sesión cerrada!"
+#~ msgstr "Utloggad!"
 
 #~ msgid "Your Photo"
-#~ msgstr "Su foto"
+#~ msgstr "Ditt foto"

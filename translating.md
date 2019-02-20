@@ -15,7 +15,7 @@ On Debian, install "liblocale-maketext-lexicon-perl" and
 - ../fixmystreet/commonlib/bin/gettext-makemo FixMyStreetMobileApp
 - perl -I../fixmystreet/commonlib/perllib -I../fixmystreet/local bin/localise_templates
 - Copy compiled/$lang/*.html to www/templates/$lang
-- Copy compiled/lang/strings.js to www/js/strings.$short_lang.js
+- Copy compiled/$lang/strings.js to www/js/strings.$short_lang.js
 
 The list of languages to generate templates for should be included in
 locale/lang_list and should look like locale/lang_list.example

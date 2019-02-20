@@ -1,7 +1,7 @@
 <div data-role="header" data-position="fixed">
         <a id="offline-prev-btn" class="ui-btn-left">Försök igen</a>
         <h1>Nedkopplad</h1>
-        <a id="offline-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Hoppa över</a>
+        <a id="offline-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right"><%= files.length == 0 ? "Hoppa över" : "Nästa" %></a>
 </div>
     <div id="locating" class="nodisplay">
         <div class="radar"></div>
@@ -42,30 +42,25 @@
             </div>
 
             <div>
-                <textarea data-role="none" rows="7" cols="26" name="detail" id="form_detail" placeholder="Please fill in details of the problem." required><%= details %></textarea>
+                <textarea data-role="none" rows="2" cols="26" name="detail" id="form_detail" placeholder="Please fill in details of the problem." required><%= details %></textarea>
             </div>
         </div>
 
-        <% if ( file != '' ) { %>
-        <div id="add_photo" style="display: none">
-        <% } else { %>
-        <div id="add_photo">
-        <% } %>
-            <label>Lägg till ett foto <em>(valfritt)</em></label>
-            <input data-icon="fms-photo-new" value="Ta ett nytt foto" type="button" name="photo_button" id="id_photo_button" data-role="button" data-theme="a">
-            <input data-icon="fms-photo-existing" value="Lägg till ett befintligt foto" type="button" name="existing" id="id_existing" data-role="button" data-theme="c">
-        </div>
-
-        <% if ( file == '' ) { %>
-        <div id="display_photo" style="display: none">
-        <% } else { %>
-        <div id="display_photo">
-        <% } %>
-            <label>Ditt foto</label>
-            <div class="photo">
-            <img class="small" id="photo" src="<%= file %>" />
+        <% if ( files.length < CONFIG.MAX_PHOTOS ) { %>
+            <div id="add_photo">
+                <input data-icon="fms-photo-new" value="Ta ett nytt foto" type="button" name="photo_button" id="id_photo_button" data-role="button" data-theme="a">
+                <input data-icon="fms-photo-existing" value="Lägg till ett befintligt foto" type="button" name="existing" id="id_existing" data-role="button" data-theme="c">
             </div>
-            <input value="Radera foto" type="button" name="del_photo_button" id="id_del_photo_button" data-role="button" data-theme="a">
-        </div>
+        <% } %>
+
+        <% if ( files.length > 0 ) { %>
+            <div class="photo-wrapper">
+                <% _.each(files, function(file, index) { %>
+                    <div class="photo" style="background-image: url('<%= file %>');">
+                        <a data-role="none" class="photo-corner-button del_photo_button" data-file-index="<%= index %>">X</a>
+                    </div>
+                <% }); %>
+            </div>
+        <% } %>
     </div>
 </div>
