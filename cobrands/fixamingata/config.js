@@ -38,12 +38,55 @@ var CONFIG = {
 
     PINS: {
         location: {
-            image: 'images/pin@x2.png',
-            background: 'images/pin_shadow@x2.png',
-            image_svg: 'images/pin.svg',
-            background_svg: 'images/pin_shadow.svg'
+            image: 'cobrands/fixamingata/images/fmg-pin.png',
+            background: 'cobrands/fixamingata/images/fmg-pin_shadow.png',
+            image_svg: 'cobrands/fixamingata/images/fmg-pin.svg',
+            background_svg: 'cobrands/fixamingata/images/fmg-pin_shadow.svg'
         }
-    }
+    },
+
+    // Set this to true if you want to disable the help button on the right hand
+    // side of the screen. NB you'll also need to hide #display-help and #help
+    // elements in your CSS.
+    HELP_DISABLED: false,
+
+    // Set this to true if the user must provide at least one photo when making
+    // a report. If this is true the 'skip' button on the photo page is removed
+    // and 'next' doesn't appear until at least one photo is attached.
+    PHOTO_REQUIRED: false,
+
+    // The maximum number of photos the user can attach to a report.
+    MAX_PHOTOS: 3,
+
+    // If this is true then the user must login as the first step after
+    // installing the app, and before making any reports.
+    LOGIN_REQUIRED: false,
+
+    // The ratio of the data bounds to the viewport bounds (in each dimension).
+    // See http://dev.openlayers.org/releases/OpenLayers-2.13.1/doc/apidocs/files/OpenLayers/Strategy/BBOX-js.html
+    MAP_LOADING_RATIO: 2,
+
+    // If the user is logged in and this setting is true, the 'Your details'
+    // page is skipped and the report is sent immediately after the report
+    // details have been entered.
+    SKIP_CONFIRM_REPORT: false,
+
+    // You can optionally enforce a minimum password length if the user is
+    // registering an account when submitting a report. This should match the
+    // same minimum length required by your FixMyStreet server.
+    // Set this to 0 if you wish to disable this check. NB: If the check is
+    // active on the server the user's password may still be rejected if it's
+    // too short.
+    PASSWORD_MIN_LENGTH: 6,
+
+    // FMS provides a mechanism for rejecting passwords that are too common.
+    // Set this flag to true if the password should be checked against the
+    // server when a user registers an account via the app.
+    // NB: If this flag is false here but the check is active on the FMS server,
+    // common passwords will still be rejected at the point the report is sent
+    // from the app to the server - which may be a large POST if the report has
+    // photos attached.
+    PASSWORD_CHECK_COMMON: true
 };
 
 // This bit is so this can be imported as a nodejs module for hook processing

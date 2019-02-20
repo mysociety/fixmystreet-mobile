@@ -17,11 +17,11 @@
 
                             <p id="confirm_details">Bekräfta detaljer</p>
                             <div id="name_details">
-                                <label for="form_may_show_name">Namn</label>
+                                <label for="form_name">Namn</label>
                                 <input type="text" class="validName" value="<%= user.name %>" name="name" id="form_name" placeholder="Ditt namn">
 
                                 <div class="checkbox-group">
-                                    <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" checked>
+                                    <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <%= user.may_show_name ? 'checked' : '' %>>
                                     <label class="inline" for="form_may_show_name">Visa mitt namn offentligt</label>
                                 </div>
 
@@ -36,7 +36,7 @@
                         <% } else { %>
                         <div id="signed_out">
                         <label for="form_email" id="email_label">Din e-postadress</label>
-                        <input type="email" value="<%= user.email %>" name="email" id="form_email" placeholder="Ange en giltlig e-postadress" required>
+                        <input type="email" value="<%= user.email %>" name="email" id="form_email" placeholder="Ange din e-postadress" required>
 
                             <div id="form_sign_in">
                                 <h4 id="have_password">Har du ett <%= CONFIG.APP_NAME %>-lösenord?</h4>
@@ -56,11 +56,11 @@
                                     <h5 id="let_me_confirm"><strong>Nej</strong> Låt mig bekräfta min rapport via e-post</h5>
 
                                     <div id="name_details">
-                                        <label for="form_may_show_name">Namn</label>
+                                        <label for="form_name">Namn</label>
                                         <input type="text" class="validName" value="<%= user.name %>" name="name" id="form_name" placeholder="Ditt namn">
 
                                         <div class="checkbox-group">
-                                            <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" checked>
+                                            <input type="checkbox" name="may_show_name" id="form_may_show_name" value="1" <%= user.may_show_name ? 'checked' : '' %>>
                                             <label class="inline" for="form_may_show_name">Visa mitt namn offentligt</label>
                                         </div>
 
