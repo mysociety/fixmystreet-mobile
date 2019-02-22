@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 
-var filename = 'platforms/android/app/src/main/AndroidManifest.xml';
+var filename = 'platforms/android/AndroidManifest.xml';
 if (fs.existsSync(filename)) {
   var manifest = fs.readFileSync(filename).toString();
   if (manifest.indexOf('android:installLocation="auto"') == -1) {
@@ -10,5 +10,5 @@ if (fs.existsSync(filename)) {
       fs.writeFileSync(filename, manifest);
   }
 } else {
-  console.log("file didn't exist: ", filename);
+  console.log("allow-sd-installation.js: file didn't exist: ", filename);
 }
