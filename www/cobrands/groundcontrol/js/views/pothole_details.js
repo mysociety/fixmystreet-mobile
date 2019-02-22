@@ -24,6 +24,9 @@
 
         showSizeSelector: function(url) {
             this.blurBackground();
+            if (window.MobileAccessibility) {
+                window.MobileAccessibility.usePreferredTextZoom(false);
+            }
             $(".pothole-size-selector .photo").css("background-image", "url("+url+")");
             $(".pothole-size-selector .photo").data("photo_url", url);
             $(".pothole-size-selector").removeClass('hidden');
@@ -42,6 +45,9 @@
             $(".pothole-size-selector").addClass('hidden');
             $(".pothole-size-selector .photo").css("background-image", "");
             $(".pothole-size-selector .photo").removeData("photo_url");
+            if (window.MobileAccessibility) {
+                window.MobileAccessibility.usePreferredTextZoom(true);
+            }
 
             this.selectingPotholeSize = false;
             if (this.currentFile) {

@@ -14,6 +14,9 @@
             },
 
             beforeDisplay: function() {
+                if (window.MobileAccessibility) {
+                    window.MobileAccessibility.usePreferredTextZoom(false);
+                }
                 this.fixPageHeight();
                 $("#map_box").addClass("blurred");
                 $("#quote_rendered").replaceWith(FMS.createdReport.get('quote_rendered'));
@@ -24,6 +27,12 @@
 
                     // Tell jQuery UI to redraw the widgets from the new HTML
                     $("#quote-page").trigger('create');
+                }
+            },
+
+            _destroy: function() {
+                if (window.MobileAccessibility) {
+                    window.MobileAccessibility.usePreferredTextZoom(true);
                 }
             },
 

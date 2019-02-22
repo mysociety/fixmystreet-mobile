@@ -230,6 +230,12 @@ body.ios, .ui-bar-a {
     }
 }
 
+#quote_rendered.ui-table {
+    th, td {
+        line-height: 1em;
+    }
+}
+
 .blurred {
     -webkit-filter: blur(6px);
             filter: blur(6px);

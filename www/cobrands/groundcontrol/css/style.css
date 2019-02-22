@@ -233,13 +233,18 @@ body.ios, .ui-bar-a {
   }
 }
 
-/* line 233, style.scss */
+/* line 234, style.scss */
+#quote_rendered.ui-table th, #quote_rendered.ui-table td {
+  line-height: 1em;
+}
+
+/* line 239, style.scss */
 .blurred {
   -webkit-filter: blur(6px);
   filter: blur(6px);
 }
 
-/* line 239, style.scss */
+/* line 245, style.scss */
 .photo .pothole-size-wrapper {
   position: absolute;
   top: 3px;
@@ -247,7 +252,7 @@ body.ios, .ui-bar-a {
   right: 0px;
   padding: 0.5em 0;
 }
-/* line 246, style.scss */
+/* line 252, style.scss */
 .photo .pothole-size-wrapper .pothole-size {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 0.5em;
@@ -255,7 +260,7 @@ body.ios, .ui-bar-a {
   font-weight: bold;
 }
 
-/* line 256, style.scss */
+/* line 262, style.scss */
 .gmailstyletest input,
 .gmailstyletest input[type="password"],
 .gmailstyletest input[type="search"],
@@ -267,7 +272,7 @@ body.ios, .ui-bar-a {
 }
 
 @media (max-width: 320px) {
-  /* line 267, style.scss */
+  /* line 273, style.scss */
   .gmailstyletest input,
   .gmailstyletest input[type="password"],
   .gmailstyletest input[type="search"],

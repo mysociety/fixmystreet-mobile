@@ -100,6 +100,7 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
         <string>To save photos of problems</string>
     </edit-config>
+    <plugin name="phonegap-plugin-mobile-accessibility" spec="https://github.com/phonegap/phonegap-mobile-accessibility.git" />
     <engine name="ios" spec="^4.5.4" />
     <engine name="android" spec="^6.4.0" />
 </widget>
