@@ -20,6 +20,7 @@
                 this.fixPageHeight();
                 $("#map_box").addClass("blurred");
                 $("#quote_rendered").replaceWith(FMS.createdReport.get('quote_rendered'));
+                $("#report-created-header h1").text(FMS.createdReport.get('quote_title'));
 
                 var quote_controls = FMS.createdReport.get('quote_controls');
                 if (typeof quote_controls !== "undefined") {
