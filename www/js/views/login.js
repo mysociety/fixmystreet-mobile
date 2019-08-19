@@ -34,10 +34,10 @@
                         dataType: 'json',
                         timeout: 30000,
                         success: function( data, status ) {
-                            if ( data.name ) {
+                            if ( !data.error ) {
                                 that.model.set('password', $('#form_password').val());
                                 that.model.set('email', $('#form_email').val());
-                                that.model.set('name', data.name);
+                                that.model.set('name', data.name || '');
                                 that.model.save();
                                 FMS.isLoggedIn = 1;
                                 that.rerender();
