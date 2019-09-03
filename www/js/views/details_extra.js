@@ -20,6 +20,14 @@
             afterRender: function() {
                 this.populateFields();
                 this.enableScrolling();
+                // If there are any links in the category extra, e.g. a
+                // "use this other service" link, then they need to be
+                // handled correctly by calling FMS.openExternal
+                // otherwise tapping them doesn't do anything at all.
+                this.$("#category_meta a").click(function(e) {
+                    FMS.openExternal(e.originalEvent);
+                    return false;
+                });
             },
 
             onClickButtonPrev: function(e) {
