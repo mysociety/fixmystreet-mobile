@@ -89,39 +89,23 @@
                     if ( FMS.isOffline ) {
                         this.navigate( 'save_offline' );
                     } else {
-                        var that = this;
-                        $.ajax( {
-                            url: CONFIG.FMS_URL + '/report/new/category_extras',
-                            type: 'POST',
-                            data: {
-                                category: this.model.get('category'),
-                                latitude: this.model.get('lat'),
-                                longitude: this.model.get('lon')
-                            },
-                            dataType: 'json',
-                            timeout: 30000,
-                            success: function( data, status ) {
-                                if ( data && data.category_extra && data.category_extra.length > 0 ) {
-                                    // Some categories have only hidden fields - in that case we
-                                    // don't want to navigate to the details_extra view.
-                                    var all_hidden = data.category_extra_json.reduce(function(accumulator, field) {
-                                        return accumulator && (field.automated === "hidden_field");
-                                    }, true);
+                        var category = this.model.get('categories')[this.model.get('category')];
+                        if ( category && category.category_extra && category.category_extra.length > 0 ) {
+                            // Some categories have only hidden fields - in that case we
+                            // don't want to navigate to the details_extra view.
+                            var all_hidden = category.category_extra_json.reduce(function(accumulator, field) {
+                                return accumulator && (field.automated === "hidden_field");
+                            }, true);
 
-                                    if (all_hidden && !data.unresponsive) {
-                                        that.navigate( that.next );
-                                    } else {
-                                        that.model.set('category_extras', data.category_extra);
-                                        that.navigate('details_extra');
-                                    }
-                                } else {
-                                    that.navigate( that.next );
-                                }
-                            },
-                            error: function() {
-                                that.displayAlert(FMS.strings.category_extra_check_error);
+                            if (all_hidden && !category.unresponsive) {
+                                this.navigate( this.next );
+                            } else {
+                                this.model.set('category_extras', category.category_extra);
+                                this.navigate('details_extra');
                             }
-                        } );
+                        } else {
+                            this.navigate( this.next );
+                        }
                     }
                 }
             },
