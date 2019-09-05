@@ -422,7 +422,8 @@
                 this.pauseMap();
                 this.model.set('lat', info.coordinates.latitude );
                 this.model.set('lon', info.coordinates.longitude );
-                this.model.set('categories', info.details.category );
+                this.model.set('categories_html', info.details.category );
+                this.model.set('categories', info.details.by_category );
                 if ( info.details.titles_list ) {
                     this.model.set('titles_list', info.details.titles_list);
                 }

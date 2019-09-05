@@ -35,7 +35,7 @@
                     this.$('#form_category').val( this.model.get('category') );
                 }
                 this.setSelectClass();
-
+                this.checkForDisabledForm();
             },
 
             beforeDisplay: function(extra) {
@@ -154,6 +154,51 @@
             updateSelect: function() {
                 this.updateCurrentReport();
                 this.setSelectClass();
+                this.checkForDisabledForm();
+            },
+
+            checkForDisabledForm: function() {
+                var categories = this.model.get('categories');
+                var category = categories[this.$('#form_category').val()];
+
+                if (category && category.disable_form && category.disable_form.all) {
+                    this.disableForm(category.disable_form.all);
+                } else {
+                    this.enableForm();
+                }
+            },
+
+            enableForm: function() {
+                this.$(".form-enabled").show();
+                this.$(".form-disabled").hide();
+                this.$("#next").show();
+                this.$("#form-disabled-message").empty();
+            },
+
+            disableForm: function(message) {
+                this.$(".form-disabled").show();
+                this.$(".form-enabled").hide();
+                this.$("#next").hide();
+                this.$("#form-disabled-message").html(message);
+                // If there are any links in the message, e.g. a
+                // "use this other service" link, then they need to be
+                // handled correctly by calling FMS.openExternal
+                // otherwise tapping them doesn't do anything at all.
+                var that = this;
+                this.$("#form-disabled-message a").click(function(e) {
+                    FMS.openExternal(e.originalEvent);
+                    FMS.removeDraft(that.model.id, true).done(
+                        function() { that.onDraftRemove(); }
+                    ).fail(
+                        function() { that.onDraftRemove(); }
+                    );
+                    return false;
+                }).attr('data-role', 'none');
+            },
+
+            onDraftRemove: function() {
+                FMS.clearCurrentDraft();
+                this.navigate( 'around', 'left' );
             },
 
             updateCurrentReport: function() {

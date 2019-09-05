@@ -861,6 +861,14 @@
         margin-bottom: 0px;
     }
 
+    #details-page .form-disabled {
+        display: none;
+    }
+
+    #form-disabled-message {
+        padding: 1em;
+    }
+
 /* open311 extra fields screen */
 
     #details-extra-page div[data-role="content"] {

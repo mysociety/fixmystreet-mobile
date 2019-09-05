@@ -6,17 +6,19 @@
 <div data-role="content">
     <div class="gmailstyletest">
         <div>
+            <%= categories_html %>
+        </div>
+
+        <div class="form-enabled">
             <label for="form_title">[% loc('Subject') %]</label>
             <input data-role="none" type="text" name="title" id="form_title" placeholder="[% loc('Provide a title') %]" value="<%= title %>" required>
         </div>
 
-        <div>
-            <%= categories %>
-        </div>
-
-        <div class="noborder">
+        <div class="noborder form-enabled">
             <label for="form_detail">[% loc('Details') %]</label>
             <textarea data-role="none" name="detail" id="form_detail" placeholder="[% loc('Please fill in details of the problem.') %]" required><%= details %></textarea>
         </div>
+
+        <div class="form-disabled" id="form-disabled-message"></div>
     </div>
 </div>
