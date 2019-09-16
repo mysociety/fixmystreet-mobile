@@ -12,14 +12,21 @@
                 'pageshow': 'afterDisplay',
                 'vclick .ui-btn-left': 'onClickButtonPrev',
                 'vclick .ui-btn-right': 'onClickButtonNext',
+                'vclick #start-new-report': 'startNewReport',
                 'blur textarea': 'updateCurrentReport',
-                'change select': 'updateCurrentReport',
+                'change select': 'updateSelect',
                 'blur input': 'updateCurrentReport'
             },
 
             afterRender: function() {
                 this.populateFields();
                 this.enableScrolling();
+                this.checkForDisabledForm();
+
+                // Make sure the emergency message is right at the top of
+                // the screen.
+                this.$("#form-disabled-banner").css('padding-top', $("#details-extra-page").css('padding-top'));
+
                 // If there are any links in the category extra, e.g. a
                 // "use this other service" link, then they need to be
                 // handled correctly by calling FMS.openExternal
@@ -84,6 +91,66 @@
 
             updateSelect: function() {
                 this.updateCurrentReport();
+                this.checkForDisabledForm();
+            },
+
+            checkForDisabledForm: function() {
+                var disabled = false;
+                var disabled_message = null;
+
+                var that = this;
+                this.$("#category_meta select").each(function() {
+                    var key = $(this).val();
+                    var name = $(this).attr('name');
+                    var extra = that.model.get('category_extras')[name];
+                    if (!extra || !extra.values) {
+                        return;
+                    }
+                    $.each(extra.values, function(i, v) {
+                        if (v.disable === "1" && v.key === key) {
+                            disabled_message = extra.datatype_description;
+                            disabled = true;
+                        }
+                    });
+                });
+
+                if (disabled) {
+                    this.$("#form-disabled-message").html(disabled_message);
+                    // If there are any links in the message, e.g. a
+                    // "use this other service" link, then they need to be
+                    // handled correctly by calling FMS.openExternal
+                    // otherwise tapping them doesn't do anything at all.
+                    this.$("#form-disabled-message a").click(function(e) {
+                        FMS.openExternal(e.originalEvent);
+                        that.$("#start-new-report-wrapper").show();
+                        return false;
+                    }).attr('data-role', 'none');
+
+                    this.$("#form-disabled-banner").show();
+                    this.$("#next").hide();
+                    // Make sure the message comes into view fully.
+                    $(document).scrollTop(0);
+                } else {
+                    this.$("#form-disabled-message").empty();
+                    this.$("#form-disabled-banner").hide();
+                    this.$("#start-new-report-wrapper").hide();
+                    this.$("#next").show();
+                }
+            },
+
+            startNewReport: function() {
+                var that = this;
+                FMS.removeDraft(this.model.id, true).done(
+                    function() { that.onDraftRemove(); }
+                ).fail(
+                    function() { that.onDraftRemove(); }
+                );
+
+            },
+
+            onDraftRemove: function() {
+                FMS.clearCurrentDraft();
+                this.navigate( 'around', 'left' );
             },
 
             updateCurrentReport: function() {

@@ -100,7 +100,12 @@
                             if (all_hidden && !category.unresponsive) {
                                 this.navigate( this.next );
                             } else {
-                                this.model.set('category_extras', category.category_extra);
+                                this.model.set('category_extras_html', category.category_extra);
+                                var extras = {};
+                                $.each(category.category_extra_json, function(i, extra) {
+                                    extras[extra.code] = extra;
+                                });
+                                this.model.set('category_extras', extras);
                                 this.navigate('details_extra');
                             }
                         } else {

@@ -901,6 +901,18 @@
         padding-top: 0.5em;
     }
 
+    #details-extra-page #form-disabled-banner {
+        display: none;
+        margin: -15px -15px 0;
+        background-color: rgba(255, 241, 179, 0.97);
+    }
+
+    #details-extra-page #start-new-report-wrapper {
+        display: none;
+        padding: 1em;
+    }
+
+
 /* submission pages */
 
     #errors {
