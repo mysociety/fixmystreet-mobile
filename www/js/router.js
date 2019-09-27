@@ -11,6 +11,7 @@
                 'around': 'around',
                 'search': 'search',
                 'existing': 'existing',
+                'top_message': 'top_message',
                 'photo': 'photo',
                 'details': 'details',
                 'details_extra': 'details_extra',
@@ -69,6 +70,11 @@
             offline: function() {
                 var offlineView = new FMS.OfflineView({ model: FMS.currentDraft });
                 this.changeView(offlineView);
+            },
+
+            top_message: function(){
+                var topMessageView = new FMS.TopMessageView({ model: FMS.currentDraft });
+                this.changeView(topMessageView);
             },
 
             photo: function(){

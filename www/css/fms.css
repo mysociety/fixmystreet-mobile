@@ -747,6 +747,17 @@
         margin-left: 5px;
     }
 
+/* top message (aka unresponsive) screen */
+
+    #top_message_wrapper {
+        padding: 1em;
+    }
+
+    #top_message_wrapper h1 {
+        margin-top: 0;
+        line-height: 100%;
+    }
+
 /* photo screen */
     div.photo {
         position: relative;

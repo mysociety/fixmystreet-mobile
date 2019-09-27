@@ -17,6 +17,15 @@
                 'vclick .del_photo_button': 'deletePhoto'
             },
 
+            onClickButtonPrev: function(e) {
+                e.preventDefault();
+                if (this.model.get('top_message')) {
+                    this.navigate( 'top_message', true );
+                } else {
+                    this.navigate( this.prev, true );
+                }
+            },
+
             beforeDisplay: function() {
                 this.fixPageHeight();
             },

@@ -319,7 +319,7 @@
                     FMS.saveCurrentDraft();
                     this.navigate( 'offline' );
                 } else {
-                    this.listenTo(FMS.locator, 'gps_located', this.goPhoto);
+                    this.listenTo(FMS.locator, 'gps_located', this.startReport);
                     this.listenTo(FMS.locator, 'gps_failed', this.locationCheckFailed );
                     FMS.locator.check_location( { latitude: position.lat, longitude: position.lon } );
                 }
@@ -418,7 +418,7 @@
                 }
             },
 
-            goPhoto: function(info) {
+            startReport: function(info) {
                 this.pauseMap();
                 this.model.set('lat', info.coordinates.latitude );
                 this.model.set('lon', info.coordinates.longitude );
@@ -429,7 +429,21 @@
                 }
                 FMS.saveCurrentDraft();
 
+                if (info.details.top_message) {
+                    this.model.set('top_message', info.details.top_message);
+                    this.goTopMessage();
+                } else {
+                    this.model.unset('top_message');
+                    this.goPhoto();
+                }
+            },
+
+            goPhoto: function(info) {
                 this.navigate( 'photo' );
+            },
+
+            goTopMessage: function() {
+                this.navigate( 'top_message' );
             },
 
             locationCheckFailed: function() {
