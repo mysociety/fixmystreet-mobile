@@ -1026,23 +1026,28 @@
         visibility: hidden;
     }
 
-/* iPhone X has an 'unsafe' area occupied by the home
+/* Some iOS devices have an 'unsafe' area occupied by the home
 indicator at the bottom of screen, which we need to stop UI controls
 clashing with. */
-body.iphone-x {
-    /* iOS 11–11.1 use constant(), 11.2 uses env() - assign whatever one is valid
+body.ios {
+    /* iOS 11–11.1 use constant(), 11.2– use env() - assign whatever one is valid
        to a CSS variable as this makes things simpler (e.g. with calc()) */
     --safe-area-inset-bottom: constant(safe-area-inset-bottom);
     --safe-area-inset-bottom: env(safe-area-inset-bottom);
 }
 
 /* The OpenLayers attribution control */
-body.iphone-x .olControlAttribution {
+body.ios .olControlAttribution {
     padding-bottom: var(--safe-area-inset-bottom);
 }
 
 /* The "new report here" button  */
-body.iphone-x .map-bottom-btn {
+body.ios .map-bottom-btn {
     /* Can't use env() inside calc(), so assign value to a CSS variable instead */
     bottom: calc(20px + var(--safe-area-inset-bottom));
+}
+
+body.ios #reposition {
+    /* Can't use env() inside calc(), so assign value to a CSS variable instead */
+    bottom: calc(65px + var(--safe-area-inset-bottom));
 }

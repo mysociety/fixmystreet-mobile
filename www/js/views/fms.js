@@ -48,17 +48,19 @@
             fixPageHeight: function(extra) {
                 extra = extra || 0;
                 var header = this.$("div[data-role='header']:visible"),
-                content = this.$(this.contentSelector),
-                top = content.position().top,
-                viewHeight = $(window).height(),
-                contentHeight = FMS.windowHeight - header.outerHeight() - this.bottomMargin - extra;
+                    content = this.$(this.contentSelector);
+                var top = content.position().top,
+                    viewHeight = $(window).height(),
+                    contentHeight = FMS.windowHeight - header.outerHeight() - this.bottomMargin - extra;
 
-                if ($("body").hasClass("iphone-x")) {
+                if ($("body").hasClass("ios")) {
                     var body = $("body").get(0);
                     var inset = window.getComputedStyle(body).getPropertyValue("--safe-area-inset-bottom");
                     // We want the pixel value, not the CSS string
                     inset = parseInt(inset.replace(/[^\d]*/g, ''));
-                    contentHeight -= inset;
+                    if (!isNaN(inset)) {
+                        contentHeight -= inset;
+                    }
                 }
 
                 this.setHeight( content, contentHeight - top );
