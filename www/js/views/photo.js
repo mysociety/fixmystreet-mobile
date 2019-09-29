@@ -59,13 +59,30 @@
                 var options = this.getCameraOptions(isFromAlbum);
                 navigator.camera.getPicture(
                     function(imgURI) {
+                        that.fixiOSStatusBar();
                         that.getPhotoSuccess(imgURI);
                     },
                     function(error) {
+                        that.fixiOSStatusBar();
                         that.getPhotoFail(error);
                     },
                     options
                 );
+            },
+
+            fixiOSStatusBar: function() {
+                // iOS 13 suffers a bug where the status bar height isn't correctly
+                // set after a full-screen overlay (e.g. the photo picker or camera)
+                // is presented. This results in the containing webview being scrolled
+                // up slightly, chopping off the top of the app UI and preventing
+                // the user from proceeding past the photo screen.
+                // This bug should be fixed in either cordova-plugin-camera or
+                // cordova-plugin-statusbar, but until then this workaround
+                // of hiding and showing the status bar fixes the problem.
+                if (device && device.platform === 'iOS' && parseInt(device.version) >= 13) {
+                    StatusBar.hide();
+                    StatusBar.show();
+                }
             },
 
             getCameraOptions: function(isFromAlbum) {
