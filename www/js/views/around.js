@@ -273,6 +273,7 @@
                 fixmystreet.bbox_strategy.update({force: true});
                 if ( this.model.isPartial() ) {
                     FMS.clearCurrentDraft();
+                    this.model = FMS.currentDraft;
                 } else {
                     // it's not partial but we've created a draft anyway so
                     // delete it
@@ -283,6 +284,7 @@
                     }
                     this.model.set('lat', null);
                     this.model.set('lon', null);
+                    this.model.id = undefined;
                 }
                 this.displayButtons(false);
             },
