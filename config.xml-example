@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.mysociety.FixMyStreet" ios-CFBundleVersion="2.3.20181010.1" version="2.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="org.mysociety.FixMyStreet" ios-CFBundleVersion="2.4.20191002.1" version="2.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>FixMyStreet</name>
     <description>
         Report problems on FixMyStreet
@@ -33,10 +33,8 @@
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarStyle" value="default" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-    <!-- If you change the background colour of the app, change this value to match. -->
     <preference name="StatusBarBackgroundColor" value="#F6BE41" />
     <preference name="deployment-target" value="9.0" />
-
     <platform name="android">
         <icon density="ldpi" src="res/android/drawable-ldpi/icon.png" />
         <icon density="mdpi" src="res/android/drawable-mdpi/icon.png" />
@@ -65,11 +63,12 @@
         <icon height="144" src="res/ios/icons/Icon-72@2x.png" width="144" />
         <icon height="29" src="res/ios/icons/Icon-Small.png" width="29" />
         <icon height="58" src="res/ios/icons/Icon-Small@2x.png" width="58" />
-        <icon height="87" src="res/ios/icons/Icon-Small@3x.png" width="87" />
         <icon height="50" src="res/ios/icons/Icon-50.png" width="50" />
+        <icon height="512" src="res/ios/icons/Icon-512.png" width="512" />
+        <icon height="1024" src="res/ios/icons/Icon-1024.png" width="1024" />
         <icon height="100" src="res/ios/icons/Icon-50@2x.png" width="100" />
         <icon height="167" src="res/ios/icons/Icon-83.5@2x.png" width="167" />
-        <icon height="1024" src="res/ios/icons/iTunesArtwork@2x.png" width="1024" />
+        <icon height="87" src="res/ios/icons/Icon-Small@3x.png" width="87" />
         <splash height="480" src="res/ios/splash/Default~iphone.png" width="320" />
         <splash height="960" src="res/ios/splash/Default@2x~iphone_640x960.png" width="640" />
         <splash height="1024" src="res/ios/splash/Default-Portrait~ipad_768x1024.png" width="768" />
@@ -78,8 +77,8 @@
         <splash height="1136" src="res/ios/splash/Default-568h@2x~iphone_640x1136.png" width="640" />
         <splash height="1334" src="res/ios/splash/Default-750@2x~iphone6-portrait_750x1334.png" width="750" />
         <splash height="2208" src="res/ios/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" width="1242" />
-        <splash height="2208" src="res/ios/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" width="1242" />
-        <splash src="res/ios/splash/Default-1125@3x~iphonex-portrait_1125x2436.png" width="1125" height="2436"/>
+        <splash height="2436" src="res/ios/splash/Default-1125@3x~iphonex-portrait_1125x2436.png" width="1125" />
+        <splash height="2688" src="res/ios/splash/Default-1242@3x~iphonexs-max-portrait_1242x2688.png" width="1242" />
     </platform>
     <hook src="scripts/prepare_index_html.js" type="after_prepare" />
     <plugin name="cordova-plugin-camera" spec="^4.0.3" />
@@ -99,7 +98,6 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
-    <engine name="ios" spec="^4.5.4" />
     <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
         <string>To take photos of problems.</string>
     </edit-config>
@@ -107,6 +105,9 @@
         <string>To attach photos of problems to your report.</string>
     </edit-config>
     <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+        <string>To create accurately positioned reports.</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysUsageDescription">
         <string>To create accurately positioned reports.</string>
     </edit-config>
     <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
