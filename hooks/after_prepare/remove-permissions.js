@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var fs = require('fs');
 
-var filename = 'platforms/android/AndroidManifest.xml';
+var filename = 'platforms/android/app/src/main/AndroidManifest.xml';
 if (fs.existsSync(filename)) {
   var PERMISSIONS_TO_REMOVE = [
     'READ_PHONE_STATE',
@@ -21,5 +21,6 @@ if (fs.existsSync(filename)) {
 
   fs.writeFileSync(filename, newManifestLines.join('\n'));
 } else {
-  console.log("remove-permissions.js: file didn't exist: ", filename);
+  console.error("\x1b[31m[ERROR]\x1b[0m remove-permissions.js: file didn't exist: ", filename);
+  process.exit(1);
 }

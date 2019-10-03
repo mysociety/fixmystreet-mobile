@@ -20,7 +20,7 @@ module.exports = function(context) {
     var CONFIG = require("../www/js/config.js");
 
     var files = [
-        "platforms/android/assets/www/index.html",
+        "platforms/android/app/src/main/assets/www/index.html",
         "platforms/ios/www/index.html",
     ];
     files.forEach(function(file) {
@@ -28,7 +28,8 @@ module.exports = function(context) {
             console.log("prepare_index_html.js: patched ", file);
             processTemplate(file, {CONFIG: CONFIG});
         } else {
-            console.log("prepare_index_html.js: file didn't exist: ", file);
+            console.error("\x1b[31m[ERROR]\x1b[0m prepare_index_html.js: file didn't exist: ", file);
+            process.exit(1);
         }
     });
 }
