@@ -108,7 +108,7 @@
                     }
                     $.each(extra.values, function(i, v) {
                         if (v.disable === "1" && v.key === key) {
-                            disabled_message = extra.datatype_description;
+                            disabled_message = v.disable_message;
                             disabled = true;
                         }
                     });
