@@ -198,6 +198,10 @@ var tpl = {
             window.cordova.InAppBrowser.open(url, '_system');
         },
 
+	shouldShowInitialHelp: function() {
+	    return !FMS.usedBefore || CONFIG.ALWAYS_INITIAL_HELP;
+	},
+	
         setHelpHeight: function() {
             var helpContent = $('#helpContent'),
             viewHeight = $(window).height();
@@ -211,7 +215,7 @@ var tpl = {
             viewWidth = $(window).width();
 
             var template;
-            if ( !FMS.usedBefore ) {
+            if ( FMS.shouldShowInitialHelp() ) {
                 template = _.template( tpl.get('initial_help') );
             } else {
                 template = _.template( tpl.get('help') );
@@ -219,7 +223,7 @@ var tpl = {
             helpContent.html(template());
 
             if ( !help.hasClass('android2') ) {
-                if ( FMS.usedBefore ) {
+                if ( !FMS.shouldShowInitialHelp() ) {
                     FMS.setHelpHeight();
                 }
                 help.show();
@@ -257,7 +261,7 @@ var tpl = {
                 if ( $('#help').hasClass('android2') ) {
                     $('#help').hide();
                 }
-                if ( !FMS.usedBefore ) {
+                if ( FMS.shouldShowInitialHelp() ) {
                     var template = _.template( tpl.get('help') );
                     $('#helpContent').html(template());
                     FMS.usedBefore = 1;

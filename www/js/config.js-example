@@ -86,7 +86,12 @@ var CONFIG = {
     // common passwords will still be rejected at the point the report is sent
     // from the app to the server - which may be a large POST if the report has
     // photos attached.
-    PASSWORD_CHECK_COMMON: true
+    PASSWORD_CHECK_COMMON: true,
+
+    // By default, the initial help (see www/templates/en/initial_help.html) is
+    // only shown the first time the app is started. Set this flag to true if
+    // you want to always show the initial help when the app is started.
+    ALWAYS_INITIAL_HELP: false
 };
 
 
