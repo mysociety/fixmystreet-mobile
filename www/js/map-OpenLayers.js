@@ -37,7 +37,8 @@ function fms_markers_list(pins, transform) {
             colour: pin[2],
             size: pin[5] || 'normal',
             id: pin[3],
-            title: pin[4] || ''
+            title: pin[4] || '',
+            base_url: pin[7] || CONFIG.FMS_URL
         });
         markers.push( marker );
     }
@@ -165,7 +166,7 @@ function fixmystreet_onload() {
             var popup = new OpenLayers.Popup.FramedCloud("popup",
                 feature.geometry.getBounds().getCenterLonLat(),
                 null,
-                feature.attributes.title + "<br><a onclick=\"FMS.openExternal(event); return false;\" href=\"" + CONFIG.FMS_URL + "/report/" + feature.attributes.id + "\">" + FMS.strings.more_details + "</a>",
+                feature.attributes.title + "<br><a onclick=\"FMS.openExternal(event); return false;\" href=\"" + feature.attributes.base_url + "/report/" + feature.attributes.id + "\">" + FMS.strings.more_details + "</a>",
                 { size: new OpenLayers.Size(0,0), offset: new OpenLayers.Pixel(0,-40) },
                 true, onPopupClose);
             feature.popup = popup;
