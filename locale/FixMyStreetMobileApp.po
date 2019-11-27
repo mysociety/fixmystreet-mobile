@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2019-02-20 08:38+0100\n"
+"POT-Creation-Date: 2019-11-27 10:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <team@fixmystreet.com>\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "An error was encountered when submitting your report: "
 msgstr ""
 
-#: templates/details.html:2 templates/details_extra.html:2 templates/photo.html:2 templates/submit.html:2 templates/submit_confirm.html:2 templates/submit_email.html:2 templates/submit_name.html:2 templates/submit_password.html:2 templates/submit_set_password.html:2
+#: templates/details.html:2 templates/details_extra.html:2 templates/photo.html:2 templates/submit.html:2 templates/submit_confirm.html:2 templates/submit_email.html:2 templates/submit_name.html:2 templates/submit_password.html:2 templates/submit_set_password.html:2 templates/top_message.html:2
 msgid "Back"
 msgstr ""
 
@@ -209,7 +209,7 @@ msgstr ""
 msgid "New Report Here"
 msgstr ""
 
-#: templates/details.html:4 templates/details_extra.html:7 templates/offline.html:4 templates/photo.html:9 templates/strings.js:26
+#: templates/details.html:4 templates/details_extra.html:7 templates/offline.html:4 templates/photo.html:9 templates/strings.js:26 templates/top_message.html:3
 msgid "Next"
 msgstr ""
 
@@ -329,7 +329,7 @@ msgstr ""
 msgid "Please search for a street name and area, or postcode."
 msgstr ""
 
-#: templates/details.html:10 templates/offline.html:41
+#: templates/details.html:14 templates/offline.html:41
 msgid "Provide a title"
 msgstr ""
 
@@ -401,11 +401,11 @@ msgstr ""
 msgid "Sorry, but we weren't able to establish your location accurately enough to show you a map. Please enter a location in the search box instead"
 msgstr ""
 
-#: templates/sent.html:20
+#: templates/details_extra.html:14 templates/sent.html:20
 msgid "Start new report"
 msgstr ""
 
-#: templates/details.html:9
+#: templates/details.html:13
 msgid "Subject"
 msgstr ""
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: struan@mysociety.org\n"
-"POT-Creation-Date: 2019-02-20 08:38+0100\n"
+"POT-Creation-Date: 2019-11-27 10:05+0100\n"
 "PO-Revision-Date: 2019-02-20 08:46+0100\n"
 "Last-Translator: FixaMinGata <info@fixamingata.se>\n"
 "Language-Team: Swedish <team@fixmystreet.com>\n"
@@ -62,7 +62,7 @@ msgstr "Ett fel inträffades när din rapport skickades: "
 #: templates/photo.html:2 templates/submit.html:2
 #: templates/submit_confirm.html:2 templates/submit_email.html:2
 #: templates/submit_name.html:2 templates/submit_password.html:2
-#: templates/submit_set_password.html:2
+#: templates/submit_set_password.html:2 templates/top_message.html:2
 msgid "Back"
 msgstr "Bakåt"
 
@@ -217,6 +217,7 @@ msgstr "Ny rapportering här"
 
 #: templates/details.html:4 templates/details_extra.html:7
 #: templates/offline.html:4 templates/photo.html:9 templates/strings.js:26
+#: templates/top_message.html:3
 msgid "Next"
 msgstr "Nästa"
 
@@ -327,7 +328,7 @@ msgstr "Ange ditt telefonnummer (valfritt)"
 
 #: templates/details.html:19
 msgid "Please fill in details of the problem."
-msgstr "Fyll i detaljer kring problemet"
+msgstr "Beskriv problemet. Skriv inte några personuppgifter här."
 
 #: templates/submit_name.html:12
 msgid "Please give us some basic details, and you're nearly done."
@@ -337,7 +338,7 @@ msgstr "Ge oss grundläggande information för att skapa ett ärende."
 msgid "Please search for a street name and area, or postcode."
 msgstr "Sök efter ett postnummer eller gatunamn och ort."
 
-#: templates/details.html:10 templates/offline.html:41
+#: templates/details.html:14 templates/offline.html:41
 msgid "Provide a title"
 msgstr "Ange en titel"
 
@@ -412,11 +413,11 @@ msgstr "Hoppa över"
 msgid "Sorry, but we weren't able to establish your location accurately enough to show you a map. Please enter a location in the search box instead"
 msgstr "Tyvärr kunde positionen för din placering inte hittas. Vänligen ange en plats i sökrutan istället"
 
-#: templates/sent.html:20
+#: templates/details_extra.html:14 templates/sent.html:20
 msgid "Start new report"
 msgstr "Skapa en ny rapport"
 
-#: templates/details.html:9
+#: templates/details.html:13
 msgid "Subject"
 msgstr "Ämne"
 
