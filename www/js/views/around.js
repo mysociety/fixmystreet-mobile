@@ -187,7 +187,7 @@
                     $('#mark-here').hide();
                     // if we are going to display the help then we don't want to focus on
                     // the search box as it will show through the help
-                    if ( FMS.usedBefore ) {
+                    if ( !FMS.shouldShowInitialHelp() ) {
                         $('#pc').attr('placeholder', FMS.strings.search_placeholder).focus();
                     }
                 }
@@ -198,7 +198,7 @@
             },
 
             displayHelpIfFirstTime: function() {
-                if ( !FMS.usedBefore && !CONFIG.HELP_DISABLED ) {
+                if ( FMS.shouldShowInitialHelp() && !CONFIG.HELP_DISABLED ) {
                     FMS.helpShow();
                 }
             },
