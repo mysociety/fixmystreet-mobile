@@ -959,16 +959,6 @@
         overflow: scroll;
     }
 
-    #help.android2 {
-        position: absolute;
-        background-color: rgb(255,255,255);
-        overflow: auto;
-    }
-
-    #help.android2 #helpContent {
-        margin-top: 0px;
-    }
-
     #help h1 {
         font-size: 1.25em;
         margin-top: 0px;
@@ -1015,11 +1005,6 @@
         font-size: 2em;
         padding: 3px;
         border-radius: 5px;
-    }
-
-    #help.android2 #dismiss {
-        top: 5px;
-        right: 5px;
     }
 
     .ui-content.hidden {

@@ -222,12 +222,10 @@ var tpl = {
             }
             helpContent.html(template());
 
-            if ( !help.hasClass('android2') ) {
-                if ( !FMS.shouldShowInitialHelp() ) {
-                    FMS.setHelpHeight();
-                }
-                help.show();
+            if ( !FMS.shouldShowInitialHelp() ) {
+                FMS.setHelpHeight();
             }
+            help.show();
             help.css('left', viewWidth);
         },
 
@@ -252,23 +250,15 @@ var tpl = {
             viewWidth = $(window).width();
 
             $('#dismiss').hide();
-            if ( help.hasClass('android2') ) {
-                $('body').scrollTop(0);
-            }
             var onHide = function() { 
                 $('#display-help').show();
                 $('#helpContent').scrollTop(0);
-                if ( $('#help').hasClass('android2') ) {
-                    $('#help').hide();
-                }
                 if ( FMS.shouldShowInitialHelp() ) {
                     var template = _.template( tpl.get('help') );
                     $('#helpContent').html(template());
                     FMS.usedBefore = 1;
                     localStorage.usedBefore = 1;
-                    if ( !$('#help').hasClass('android2') ) {
-                        FMS.setHelpHeight();
-                    }
+                    FMS.setHelpHeight();
                 }
             };
             help.animate({left: viewWidth}, 400, 'swing', onHide );
@@ -294,9 +284,6 @@ var tpl = {
                 if ( typeof device !== 'undefined' && device.platform === 'Android' ) {
                     $.mobile.defaultPageTransition = 'none';
                     FMS.isAndroid = true;
-                    if ( parseInt(device.version) < 3 ) {
-                        $('#help').addClass('android2');
-                    }
                 }
 
                 if ( typeof device !== 'undefined' && device.platform === 'iOS' ) {
