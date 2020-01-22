@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="48" id="se.sambruk.fixamingata" version="2.0.19" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="50" id="se.sambruk.fixamingata" version="2.0.21" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>FixaMinGata</name>
     <description>
         Rapportera problem på FixaMinGata
@@ -15,7 +15,7 @@
     <access origin="a.tile.openstreetmap.org" />
     <access origin="b.tile.openstreetmap.org" />
     <access origin="c.tile.openstreetmap.org" />
-    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-minSdkVersion" value="28" />
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarStyle" value="default" />
@@ -105,7 +105,7 @@
         <variable name="IOS_LOCALIZATION" value="Swedish" />
     </plugin>
     <plugin name="cordova-plugin-media" spec="^5.0.2">
-        <variable name="KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE" value="NO" />      
+        <variable name="KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE" value="NO" />
         <variable name="IOS_LOCALIZATION" value="Swedish" />
     </plugin>
     <plugin name="cordova-plugin-media-capture" spec="^3.0.1">
@@ -129,6 +129,5 @@
     <plugin name="cordova-plugin-ios-app-language" spec="./cordova-plugin-ios-app-language">
         <variable name="IOS_LOCALIZATION" value="Swedish" />
     </plugin>
-    <engine name="android" spec="^7.0.0" />
     <engine name="ios" spec="^4.5.5" />
 </widget>

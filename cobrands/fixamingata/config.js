@@ -86,7 +86,9 @@ var CONFIG = {
     // common passwords will still be rejected at the point the report is sent
     // from the app to the server - which may be a large POST if the report has
     // photos attached.
-    PASSWORD_CHECK_COMMON: true
+    PASSWORD_CHECK_COMMON: true,
+
+    ALWAYS_INITIAL_HELP: true
 };
 
 // This bit is so this can be imported as a nodejs module for hook processing
