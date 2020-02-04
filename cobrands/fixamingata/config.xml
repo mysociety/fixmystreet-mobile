@@ -54,6 +54,7 @@
         <icon height="50" src="res/fixamingata/ios/icons/Icon-50.png" width="50" />
         <icon height="100" src="res/fixamingata/ios/icons/Icon-50@2x.png" width="100" />
         <icon height="167" src="res/fixamingata/ios/icons/Icon-83.5@2x.png" width="167" />
+        <icon height="512" src="res/fixamingata/ios/icons/Icon-512.png" width="512" />
         <icon height="1024" src="res/fixamingata/ios/icons/iTunesArtwork@2x.png" width="1024" />
         <splash height="480" src="res/fixamingata/ios/splash/Default~iphone.png" width="320" />
         <splash height="960" src="res/fixamingata/ios/splash/Default@2x~iphone_640x960.png" width="640" />
@@ -63,6 +64,8 @@
         <splash height="1136" src="res/fixamingata/ios/splash/Default-568h@2x~iphone_640x1136.png" width="640" />
         <splash height="1334" src="res/fixamingata/ios/splash/Default-750@2x~iphone6-portrait_750x1334.png" width="750" />
         <splash height="2208" src="res/fixamingata/ios/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" width="1242" />
+        <splash height="2436" src="res/fixamingata/ios/splash/Default-1125@3x~iphonex-portrait_1125x2436.png" width="1125" />
+        <splash height="2688" src="res/fixamingata/ios/splash/Default-1242@3x~iphonexs-max-portrait_1242x2688.png" width="1242" />
     </platform>
     <hook src="scripts/prepare_index_html.js" type="after_prepare" />
     <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysUsageDescription">
