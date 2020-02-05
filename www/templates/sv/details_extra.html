@@ -7,6 +7,14 @@
             <a id="next" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Nästa</a>
         <% } %>
 </div>
-<div data-role="content" data-enhance="false">
-    <%= category_extras %>
+<div data-role="content">
+    <div id="form-disabled-banner">
+        <div id="form-disabled-message"></div>
+        <div id="start-new-report-wrapper">
+            <a data-role="button" id="start-new-report" data-theme="a">Skapa en ny rapport</a>
+        </div>
+    </div>
+    <div data-enhance="false">
+        <%= category_extras_html %>
+    </div>
 </div>

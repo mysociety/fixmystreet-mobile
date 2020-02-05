@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="48" id="se.sambruk.fixamingata" version="2.0.19" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="50" id="se.sambruk.fixamingata" version="2.0.21" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>FixaMinGata</name>
     <description>
         Rapportera problem på FixaMinGata
@@ -15,7 +15,7 @@
     <access origin="a.tile.openstreetmap.org" />
     <access origin="b.tile.openstreetmap.org" />
     <access origin="c.tile.openstreetmap.org" />
-    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-minSdkVersion" value="28" />
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarStyle" value="default" />
@@ -54,6 +54,7 @@
         <icon height="50" src="res/fixamingata/ios/icons/Icon-50.png" width="50" />
         <icon height="100" src="res/fixamingata/ios/icons/Icon-50@2x.png" width="100" />
         <icon height="167" src="res/fixamingata/ios/icons/Icon-83.5@2x.png" width="167" />
+        <icon height="512" src="res/fixamingata/ios/icons/Icon-512.png" width="512" />
         <icon height="1024" src="res/fixamingata/ios/icons/iTunesArtwork@2x.png" width="1024" />
         <splash height="480" src="res/fixamingata/ios/splash/Default~iphone.png" width="320" />
         <splash height="960" src="res/fixamingata/ios/splash/Default@2x~iphone_640x960.png" width="640" />
@@ -63,6 +64,8 @@
         <splash height="1136" src="res/fixamingata/ios/splash/Default-568h@2x~iphone_640x1136.png" width="640" />
         <splash height="1334" src="res/fixamingata/ios/splash/Default-750@2x~iphone6-portrait_750x1334.png" width="750" />
         <splash height="2208" src="res/fixamingata/ios/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" width="1242" />
+        <splash height="2436" src="res/fixamingata/ios/splash/Default-1125@3x~iphonex-portrait_1125x2436.png" width="1125" />
+        <splash height="2688" src="res/fixamingata/ios/splash/Default-1242@3x~iphonexs-max-portrait_1242x2688.png" width="1242" />
     </platform>
     <hook src="scripts/prepare_index_html.js" type="after_prepare" />
     <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysUsageDescription">
@@ -105,7 +108,7 @@
         <variable name="IOS_LOCALIZATION" value="Swedish" />
     </plugin>
     <plugin name="cordova-plugin-media" spec="^5.0.2">
-        <variable name="KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE" value="NO" />      
+        <variable name="KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE" value="NO" />
         <variable name="IOS_LOCALIZATION" value="Swedish" />
     </plugin>
     <plugin name="cordova-plugin-media-capture" spec="^3.0.1">
@@ -129,6 +132,5 @@
     <plugin name="cordova-plugin-ios-app-language" spec="./cordova-plugin-ios-app-language">
         <variable name="IOS_LOCALIZATION" value="Swedish" />
     </plugin>
-    <engine name="android" spec="^7.0.0" />
-    <engine name="ios" spec="^4.5.5" />
+    <engine name="ios" spec="^5.1.1" />
 </widget>
