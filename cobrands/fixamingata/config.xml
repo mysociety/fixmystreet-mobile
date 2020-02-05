@@ -132,5 +132,5 @@
     <plugin name="cordova-plugin-ios-app-language" spec="./cordova-plugin-ios-app-language">
         <variable name="IOS_LOCALIZATION" value="Swedish" />
     </plugin>
-    <engine name="ios" spec="^4.5.5" />
+    <engine name="ios" spec="^5.1.1" />
 </widget>
