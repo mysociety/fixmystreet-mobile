@@ -279,7 +279,10 @@ var tpl = {
                 return this;
             }
             // Stop iOS scrolling the webview when it shows the keyboard
-            if ( typeof cordova !== 'undefined' ) {
+            if ( typeof Keyboard !== 'undefined' ) {
+                Keyboard.disableScroll(true);
+                Keyboard.hideFormAccessoryBar(false);
+            } else if ( cordova && cordova.plugins && cordova.plugins.Keyboard ) {
                 cordova.plugins.Keyboard.disableScroll(true);
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
             }
