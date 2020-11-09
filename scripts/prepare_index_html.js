@@ -28,8 +28,11 @@ module.exports = function(context) {
             console.log("prepare_index_html.js: patched ", file);
             processTemplate(file, {CONFIG: CONFIG});
         } else {
-            console.error("\x1b[31m[ERROR]\x1b[0m prepare_index_html.js: file didn't exist: ", file);
-            process.exit(1);
+            if ((file.match(/android/) && process.argv.join(" ").match(/build android/)) ||
+                (file.match(/ios/) && process.argv.join(" ").match(/build ios/))) {
+                console.error("\x1b[31m[ERROR]\x1b[0m prepare_index_html.js: file didn't exist: ", file);
+                process.exit(1);
+            }
         }
     });
 }

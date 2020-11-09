@@ -79,7 +79,7 @@
             afterDisplay: function() {},
 
             navigate: function( route, reverse ) {
-                if ( FMS.isAndroid ) {
+                if ( FMS.isAndroid && cordova && cordova.plugins && cordova.plugins.Keyboard ) {
                     cordova.plugins.Keyboard.close();
                 }
                 if ( reverse ) {
@@ -119,14 +119,19 @@
             },
 
             disableScrolling: function() {
-                if ( typeof cordova !== 'undefined' ) {
+                if ( typeof Keyboard !== 'undefined' ) {
+                    Keyboard.disableScroll(true);
+                    $('body').scrollTop(0);
+                } else if ( cordova && cordova.plugins && cordova.plugins.Keyboard ) {
                     cordova.plugins.Keyboard.disableScroll(true);
                     $('body').scrollTop(0);
                 }
             },
 
             enableScrolling: function() {
-                if ( typeof cordova !== 'undefined' ) {
+                if ( typeof Keyboard !== 'undefined' ) {
+                    Keyboard.disableScroll(false);
+                } else if ( cordova && cordova.plugins && cordova.plugins.Keyboard ) {
                     cordova.plugins.Keyboard.disableScroll(false);
                 }
             },
