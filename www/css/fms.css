@@ -923,6 +923,33 @@
         padding: 1em;
     }
 
+    #details-extra-page .visuallyhidden {
+        display: none;
+    }
+
+    /* The details extra page won't scroll vertically on iOS 14 for some reason,
+       so here are a few style workarounds to fit more on the screen at once. */
+
+    /* Hide any images that might appear in the warning notices */
+    .ios #details-extra-page img {
+        display: none;
+    }
+
+    /* reduce padding as much as possible */
+    .ios #details-extra-page .ui-content {
+        padding: 0;
+    }
+    .ios #details-extra-page #category_meta {
+        padding: 0;
+    }
+    .ios #details-extra-page .form-section-description {
+        font-size: 0.8em;
+        line-height: 1.2em;
+    }
+    .ios #details-extra-page label span {
+        font-size: inherit !important;
+    }
+
 
 /* submission pages */
 
