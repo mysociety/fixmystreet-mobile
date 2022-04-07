@@ -56,6 +56,7 @@
         <% if ( files.length > 0 ) { %>
             <div class="photo-wrapper">
                 <% _.each(files, function(file, index) { %>
+                    <% if (window.WkWebView) { file = window.WkWebView.convertFilePath(file); }%>
                     <div class="photo" style="background-image: url('<%= file %>');">
                         <a data-role="none" class="photo-corner-button del_photo_button" data-file-index="<%= index %>">X</a>
                     </div>

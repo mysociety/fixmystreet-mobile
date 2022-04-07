@@ -18,7 +18,9 @@
         </div>
 
         <% if ( files.length > 0 ) { %>
-            <div class="photo" style="background-image: url(<%= files[0] %>)"></div>
+            <% var file = files[0]; %>
+            <% if (window.WkWebView) { file = window.WkWebView.convertFilePath(file); }%>
+            <div class="photo" style="background-image: url(<%= file %>)"></div>
         <% } %>
 
         <% if ( details ) { %>

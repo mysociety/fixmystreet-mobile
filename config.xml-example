@@ -79,6 +79,8 @@
         <splash height="2208" src="res/ios/splash/Default-1242@3x~iphone6s-portrait_1242x2208.png" width="1242" />
         <splash height="2436" src="res/ios/splash/Default-1125@3x~iphonex-portrait_1125x2436.png" width="1125" />
         <splash height="2688" src="res/ios/splash/Default-1242@3x~iphonexs-max-portrait_1242x2688.png" width="1242" />
+        <preference name="scheme" value="app" />
+        <preference name="hostname" value="localhost" />
     </platform>
     <hook src="scripts/prepare_index_html.js" type="after_prepare" />
     <plugin name="cordova-plugin-camera" spec="^4.0.3" />

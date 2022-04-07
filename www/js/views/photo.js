@@ -123,13 +123,13 @@
                 }
 
                 var that = this;
-                move.done( function( file ) { that.addPhotoToReport(file); });
+                move.done( function( file ) { that.addPhotoToReport(file.toURL()); });
                 move.fail( function() { that.getPhotoFail("File move failed."); } );
             },
 
-            addPhotoToReport: function(file) {
+            addPhotoToReport: function(fileURI) {
                 var files = this.model.get('files');
-                files.push(file.toURL());
+                files.push(fileURI);
                 this.model.set('files', files);
                 FMS.saveCurrentDraft();
                 $.mobile.loading('hide');
