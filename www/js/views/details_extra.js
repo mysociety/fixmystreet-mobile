@@ -22,6 +22,7 @@
                 this.populateFields();
                 this.enableScrolling();
                 this.checkForDisabledForm();
+                this.enablePointerEvents();
 
                 // Make sure the emergency message is right at the top of
                 // the screen.
@@ -40,6 +41,7 @@
             onClickButtonPrev: function(e) {
                 e.preventDefault();
                 this.disableScrolling();
+                this.disablePointerEvents();
                 this.model.set('hasExtras', 0);
                 this.updateCurrentReport();
                 this.navigate( this.prev, true );
@@ -47,6 +49,7 @@
 
             onClickButtonNext: function() {
                 this.disableScrolling();
+                this.disablePointerEvents();
                 this.clearValidationErrors();
                 var valid = 1;
                 var that = this;
@@ -130,6 +133,7 @@
                     this.$("#next").hide();
                     // Make sure the message comes into view fully.
                     $(document).scrollTop(0);
+                    $(".ui-content").scrollTop(0);
                 } else {
                     this.$("#form-disabled-message").empty();
                     this.$("#form-disabled-banner").hide();
@@ -183,6 +187,19 @@
                 this.$('input').each(populate);
                 this.$('select').each(populate);
                 this.$('textarea').each(populate);
+            },
+
+            // Disabling pointer events on the .jquerymobile div is required
+            // for interacting with the map, but has the side effect of disabling
+            // scrolling on particularly long extra details pages.
+            // As a workaround we can enable pointer events on the .jquerymobile
+            // div while this view is being shown
+            enablePointerEvents: function() {
+                $(".jquerymobile").removeClass("no-pointer-events");
+            },
+
+            disablePointerEvents: function() {
+                $(".jquerymobile").addClass("no-pointer-events");
             }
         })
     });

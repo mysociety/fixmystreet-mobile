@@ -204,7 +204,7 @@
         display: block !important;
     }
 
-    div.jquerymobile {
+    div.jquerymobile.no-pointer-events {
         pointer-events: none;
     }
 
@@ -882,9 +882,6 @@
 
 /* open311 extra fields screen */
 
-    #details-extra-page div[data-role="content"] {
-        height: auto !important;
-    }
     #category_meta {
         margin: 0px 15px 15px 15px;
         padding: 1em 0;
@@ -910,6 +907,11 @@
     }
     #category_meta label {
         padding-top: 0.5em;
+    }
+
+    /* Stop wide images overflowing horizontally */
+    #category_meta img {
+        max-width: 100%;
     }
 
     #details-extra-page #form-disabled-banner {
