@@ -8,6 +8,8 @@
 	<array>
 		<string>applinks:fixmystreet.eu.ngrok.io</string>
 		<string>webcredentials:fixmystreet.eu.ngrok.io</string>
+		<string>applinks:staging.fixmystreet.com</string>
+		<string>webcredentials:staging.fixmystreet.com</string>
 	</array>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>

@@ -103,6 +103,7 @@
 	<array>
 		<string>www.fixmystreet.com/?pwa</string>
 		<string>fixmystreet.eu.ngrok.io</string>
+		<string>staging.fixmystreet.com</string>
 	</array>
 </dict>
 </plist>

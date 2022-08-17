@@ -9,12 +9,11 @@ let gcmMessageIDKey = "00000000000" // update this with actual ID if using Fireb
 
 // URL for first launch
 //let rootUrl = URL(string: "https://www.fixmystreet.com/?pwa")!
-let rootUrl = URL(string: "https://fixmystreet.eu.ngrok.io/?pwa")!
+let rootUrl = URL(string: "https://staging.fixmystreet.com/?pwa")!
 
 // allowed origin is for what we are sticking to pwa domain
 // This should also appear in Info.plist
-//let allowedOrigins: [String] = ["www.fixmystreet.com"]
-let allowedOrigins: [String] = ["fixmystreet.eu.ngrok.io"]
+let allowedOrigins: [String] = ["fixmystreet.eu.ngrok.io", "staging.fixmystreet.com", "www.fixmystreet.com"]
 
 // auth origins will open in modal and show toolbar for back into the main origin.
 // These should also appear in Info.plist
