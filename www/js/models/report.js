@@ -146,8 +146,8 @@
                     }
                 }
 
-                if ( model.get('submit_clicked') == 'submit_sign_in' ) {
-                    params.submit_sign_in = 1;
+                if ( model.get('submit_clicked') == 'submit_sign_in' || FMS.isLoggedIn ) {
+                    params.submit_sign_in = FMS.isLoggedIn ? 2 : 1;
                     params.password_sign_in = model.get('user').get('password');
                     params.remember_me = 1;
                 } else {

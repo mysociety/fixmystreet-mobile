@@ -120,14 +120,21 @@ var tpl = {
         checkLoggedInStatus: function() {
             var p = $.Deferred();
 
-            if ( FMS.isOffline ) {
+            var data = {};
+            if (FMS.currentUser) {
+                data.username = FMS.currentUser.get("email");
+                data.password_sign_in = FMS.currentUser.get("password");
+            }
+
+            if ( FMS.isOffline || !data ) {
                 p.resolve();
             } else {
                 $.ajax( {
                     url: CONFIG.FMS_URL + '/auth/ajax/check_auth',
-                    type: 'GET',
+                    type: 'POST',
                     dataType: 'json',
                     timeout: 30000,
+                    data: data,
                 })
                 .done(function() {
                     FMS.isLoggedIn = 1;
